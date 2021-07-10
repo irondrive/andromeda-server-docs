@@ -1,0 +1,2577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Server\ServerApp | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Apps_Server_ServerApp" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Server.html">Server</a></li><li class="backslash">\</li><li>ServerApp</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ServerApp    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ServerApp</strong>        extends <a href="../../../Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Server management/info app included with the framework.</p></p>            <p><p>Handles DB config, install, and getting/setting config/logs.</p></p>        </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_API">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$API</td>
+                <td class="last"><p>Reference to the main API, for convenience</p></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_API">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
+        
+                                            <p><p>All apps are constructed when Andromeda runs</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Run">Run</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>The main entry point into the app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Test">Test</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_Test">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUsage">getUsage</a>()
+        
+                                            <p><p>Returns an array of strings showing the CLI usage of the app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLogClass">getLogClass</a>()
+        
+                                            <p><p>Return this app's BaseAppLog class name, if used (or null)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMetadata">getMetadata</a>(string $app, string $key)
+        
+                                            <p><p>Loads a metadata for the given app with the given key</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAppRequires">getAppRequires</a>(string $app)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAppReqVersion">getAppReqVersion</a>(string $app)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getVersion">getVersion</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p><p>Tells the app to commit any changes made outside the database</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_commit">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rollback">rollback</a>()
+        
+                                            <p><p>Tells the app to rollback any changes made outside the database</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_rollback">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDBVersion">getDBVersion</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUpgradeScripts">getUpgradeScripts</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Upgrade">Upgrade</a>()
+        
+                                            <p><p>Iterates over the list of upgrade scripts, running them
+sequentially until the DB is up to date with the code</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CheckUpgrade">CheckUpgrade</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Random">Random</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Generates a random value, usually for dev sanity checking</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetUsages">GetUsages</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Collects usage strings from every installed app and returns them</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RunTests">RunTests</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Runs unit tests on every installed app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ConfigDB">ConfigDB</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Creates a database config with the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Install">Install</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Installs the server by importing its SQL template and creating config</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ListApps">ListApps</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_PHPInfo">PHPInfo</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Prints the phpinfo() page</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ServerInfo">ServerInfo</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Gets miscellaneous server identity information</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TestMail">TestMail</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, $authenticator, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Sends a test email via a given mailer</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EnableApp">EnableApp</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Registers (enables) an app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DisableApp">DisableApp</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Unregisters (disables) an app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetConfig">GetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Loads server config</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetConfig">SetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Sets server config</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetMailers">GetMailers</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Returns a list of the configured mailers</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateMailer">CreateMailer</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, $authenticator, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Creates a new emailer config</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteMailer">DeleteMailer</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes a configured emailer</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetErrors">GetErrors</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Returns the server error log, possibly filtered</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CountErrors">CountErrors</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Counts server error log entries, possibly filtered</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetRequests">GetRequests</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Returns all request logs matching the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CountRequests">CountRequests</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Counts all request logs matching the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAllActions">GetAllActions</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Returns all action logs matching the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CountAllActions">CountAllActions</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Counts all action logs matching the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetActions">GetActions</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Returns all app action logs matching the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CountActions">CountActions</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Counts all app action logs matching the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 98</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>All apps are constructed when Andromeda runs</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
+                <td>$api</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Run">
+        <div class="location">at line 112</div>
+        <code>                    mixed
+    <strong>Run</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The main entry point into the app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>the user input</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>the value to be output to the user</p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\AppBase::Run()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Test">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_Test">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 36</div>
+        <code>                    
+    <strong>Test</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUsage">
+        <div class="location">at line 46</div>
+        <code>        static            array
+    <strong>getUsage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an array of strings showing the CLI usage of the app</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>possible commands</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">at line 42</div>
+        <code>        static            string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>the name of the app</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLogClass">
+        <div class="location">at line 44</div>
+        <code>        static    protected        string|null
+    <strong>getLogClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return this app's BaseAppLog class name, if used (or null)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetadata">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 57</div>
+        <code>        static    protected        
+    <strong>getMetadata</strong>(string $app, string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads a metadata for the given app with the given key</p></p>                <p><p>Loads the app's JSON metadata file but not its code</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAppRequires">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 72</div>
+        <code>        static            array
+    <strong>getAppRequires</strong>(string $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Returns the list of apps this app depends on</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAppReqVersion">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 78</div>
+        <code>        static            int
+    <strong>getAppReqVersion</strong>(string $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Returns the major API version this app is compatible with</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVersion">
+        <div class="location">at line 279</div>
+        <code>        static            string
+    <strong>getVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>the app's version information</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_commit">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 90</div>
+        <code>                    
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tells the app to commit any changes made outside the database</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollback">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_rollback">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 93</div>
+        <code>                    
+    <strong>rollback</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tells the app to rollback any changes made outside the database</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDBVersion">
+        <div class="location">at line 281</div>
+        <code>            protected        <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
+    <strong>getDBVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a></td>
+            <td><p>that database object that stores the app version</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpgradeScripts">
+        <div class="location">at line 283</div>
+        <code>        static    protected        array
+    <strong>getUpgradeScripts</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>the array of upgrade scripts indexed by version (in order!)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Upgrade">
+        <div class="location">at line 288</div>
+        <code>                    void
+    <strong>Upgrade</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Iterates over the list of upgrade scripts, running them
+sequentially until the DB is up to date with the code</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CheckUpgrade">
+        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 139</div>
+        <code>            protected        bool
+    <strong>CheckUpgrade</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>the app action input object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true if the upgrade action was performed</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
+                <td><p>if the DB version does not match</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Random">
+        <div class="location">at line 200</div>
+        <code>            protected        string
+    <strong>Random</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generates a random value, usually for dev sanity checking</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>random value</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\UnknownActionException">UnknownActionException</abbr></td>
+                <td><p>if not debugging or using CLI</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetUsages">
+        <div class="location">at line 215</div>
+        <code>            protected        array
+    <strong>GetUsages</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Collects usage strings from every installed app and returns them</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>array of possible commands</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RunTests">
+        <div class="location">at line 233</div>
+        <code>            protected        array
+    <strong>RunTests</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Runs unit tests on every installed app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>app names mapped to their output</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\UnknownActionException">UnknownActionException</abbr></td>
+                <td><p>if not debugging</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ConfigDB">
+        <div class="location">at line 247</div>
+        <code>            protected        void
+    <strong>ConfigDB</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a database config with the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/DatabaseFailException.html"><abbr title="Andromeda\Apps\Server\DatabaseFailException">DatabaseFailException</abbr></a></td>
+                <td><p>if the config is invalid</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Install">
+        <div class="location">at line 262</div>
+        <code>                    array
+    <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Installs the server by importing its SQL template and creating config</p></p>                <p><p>Also enables all installable apps that exist (retval)</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>list of apps that were enabled</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\UnknownActionException">UnknownActionException</abbr></td>
+                <td><p>if config already exists</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ListApps">
+        <div class="location">at line 301</div>
+        <code>                    array
+    <strong>ListApps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\Config::ListApps()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_PHPInfo">
+        <div class="location">at line 310</div>
+        <code>            protected        void
+    <strong>PHPInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Prints the phpinfo() page</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin-level access</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ServerInfo">
+        <div class="location">at line 329</div>
+        <code>            protected        array
+    <strong>ServerInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets miscellaneous server identity information</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>{uname:string, server:[various], db:Database::getInfo()}</code></p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin-level access</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\Database::getInfo()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TestMail">
+        <div class="location">at line 351</div>
+        <code>            protected        void
+    <strong>TestMail</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, $authenticator, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sends a test email via a given mailer</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin via the accounts app</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/UnknownMailerException.html"><abbr title="Andromeda\Apps\Server\UnknownMailerException">UnknownMailerException</abbr></a></td>
+                <td><p>if the given mailer is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/MailSendFailException.html"><abbr title="Andromeda\Apps\Server\MailSendFailException">MailSendFailException</abbr></a></td>
+                <td><p>if sending the email fails</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EnableApp">
+        <div class="location">at line 384</div>
+        <code>            protected        array
+    <strong>EnableApp</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Registers (enables) an app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>array of enabled apps</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DisableApp">
+        <div class="location">at line 402</div>
+        <code>            protected        array
+    <strong>DisableApp</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unregisters (disables) an app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>array of enabled apps</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetConfig">
+        <div class="location">at line 420</div>
+        <code>            protected        array
+    <strong>GetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads server config</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>if admin, <code>{config:Config, database:Database}</code> \
+if not admin, <code>Config</code></p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\Config::GetClientObject()
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\Database::GetClientObject()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetConfig">
+        <div class="location">at line 436</div>
+        <code>            protected        array
+    <strong>SetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets server config</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Config</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\Config::GetClientObject()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetMailers">
+        <div class="location">at line 449</div>
+        <code>            protected        array
+    <strong>GetMailers</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a list of the configured mailers</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>[id:Emailer]</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\Emailer::GetClientObject()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateMailer">
+        <div class="location">at line 463</div>
+        <code>            protected        array
+    <strong>CreateMailer</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, $authenticator, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a new emailer config</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Emailer</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Server\Emailer::GetClientObject()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteMailer">
+        <div class="location">at line 486</div>
+        <code>            protected        void
+    <strong>DeleteMailer</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes a configured emailer</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/UnknownMailerException.html"><abbr title="Andromeda\Apps\Server\UnknownMailerException">UnknownMailerException</abbr></a></td>
+                <td><p>if given an invalid emailer</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetErrors">
+        <div class="location">at line 505</div>
+        <code>            protected        array
+    <strong>GetErrors</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the server error log, possibly filtered</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CountErrors">
+        <div class="location">at line 518</div>
+        <code>            protected        int
+    <strong>CountErrors</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Counts server error log entries, possibly filtered</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>error log entry count</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetRequests">
+        <div class="location">at line 531</div>
+        <code>            protected        array
+    <strong>GetRequests</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns all request logs matching the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>RequestLog</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/Logging/RequestLog.html#method_GetFullClientObject">
+<abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr>::GetFullClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CountRequests">
+        <div class="location">at line 553</div>
+        <code>            protected        int
+    <strong>CountRequests</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Counts all request logs matching the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>log entry count</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAllActions">
+        <div class="location">at line 566</div>
+        <code>            protected        array
+    <strong>GetAllActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns all action logs matching the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>ActionLog</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/Logging/ActionLog.html#method_GetFullClientObject">
+<abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr>::GetFullClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CountAllActions">
+        <div class="location">at line 588</div>
+        <code>            protected        int
+    <strong>CountAllActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Counts all action logs matching the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>log entry count</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetActions">
+        <div class="location">at line 602</div>
+        <code>            protected        array
+    <strong>GetActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns all app action logs matching the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>BaseAppLog</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\InvalidAppException">InvalidAppException</abbr></td>
+                <td><p>if the given app is invalid</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/Logging/BaseAppLog.html#method_GetFullClientObject">
+<abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>::GetFullClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CountActions">
+        <div class="location">at line 632</div>
+        <code>            protected        int
+    <strong>CountActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Counts all app action logs matching the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>log entry count</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Server\InvalidAppException">InvalidAppException</abbr></td>
+                <td><p>if the given app is invalid</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Files\Filesystem | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:Andromeda_Apps_Files_Filesystem" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Files.html">Files</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Files/Filesystem.html">Filesystem</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>Andromeda\Apps\Files\Filesystem</h1>
+    </div>
+
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a>    </div>
+                <div class="col-md-6"><p>A basic filesystem type that stores files as files (revolutionary)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract class for a filesystem implementation, with the actual disk functions.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>    </div>
+                <div class="col-md-6"><p>An object that manages and points to a filesystem manager</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/InvalidFSTypeException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidFSTypeException">InvalidFSTypeException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the stored filesystem type is not valid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/InvalidNameException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidNameException">InvalidNameException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the given filesystem name is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/InvalidScannedItemException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidScannedItemException">InvalidScannedItemException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the scanned folder item is not a file or folder (not readable)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/InvalidStorageException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidStorageException">InvalidStorageException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the underlying storage connection failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a>    </div>
+                <div class="col-md-6"><p>An Andromeda native filesystem stores only file content.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a>    </div>
+                <div class="col-md-6"><p>Implements an encryption layer on top of the native filesystem.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Apps/Files/Filesystem/Shared.html"><abbr title="Andromeda\Apps\Files\Filesystem\Shared">Shared</abbr></a>    </div>
+                <div class="col-md-6"><p>A shared Andromeda filesystem is &quot;shared&quot; outside Andromeda</p></div>
+            </div>
+            </div>
+    
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

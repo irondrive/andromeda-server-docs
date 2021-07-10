@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../fonts/doctum-font.css">
+        <script src="../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../js/bootstrap.min.js"></script>
+        <script src="../js/typeahead.min.js"></script>
+        <script src="../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:Andromeda_Core" data-root-path="../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../classes.html">Classes</a></li>
+                    <li><a href="../namespaces.html">Namespaces</a></li>
+                    <li><a href="../interfaces.html">Interfaces</a></li>
+                    <li><a href="../traits.html">Traits</a></li>
+                    <li><a href="../doc-index.html">Index</a></li>
+                    <li><a href="../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../Andromeda/Core.html">Core</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>Andromeda\Core</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="../Andromeda/Core/Database.html">Andromeda\Core\Database</a><a href="../Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a><a href="../Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a><a href="../Andromeda/Core/Logging.html">Andromeda\Core\Logging</a>        </div>
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a>    </div>
+                <div class="col-md-6"><p>The base class from which apps must inherit</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/AppDependencyException.html"><abbr title="Andromeda\Core\AppDependencyException">AppDependencyException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that an app dependency was not met</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/AppVersionException.html"><abbr title="Andromeda\Core\AppVersionException">AppVersionException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the app is not compatible with this framework version</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/Config.html"><abbr title="Andromeda\Core\Config">Config</abbr></a>    </div>
+                <div class="col-md-6"><p>The global framework config stored in the database</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/CryptoAuth.html"><abbr title="Andromeda\Core\CryptoAuth">CryptoAuth</abbr></a>    </div>
+                <div class="col-md-6"><p>libsodium wrapper class for authentication-only crypto</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/CryptoKey.html"><abbr title="Andromeda\Core\CryptoKey">CryptoKey</abbr></a>    </div>
+                <div class="col-md-6"><p>libsodium wrapper class for keys</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/CryptoPublic.html"><abbr title="Andromeda\Core\CryptoPublic">CryptoPublic</abbr></a>    </div>
+                <div class="col-md-6"><p>libsodium wrapper class for public-key authenticated crypto</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/CryptoSecret.html"><abbr title="Andromeda\Core\CryptoSecret">CryptoSecret</abbr></a>    </div>
+                <div class="col-md-6"><p>libsodium wrapper class for secret-key authenticated crypto</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>    </div>
+                <div class="col-md-6"><p>A singleton object that stores a version field</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/DecryptionFailedException.html"><abbr title="Andromeda\Core\DecryptionFailedException">DecryptionFailedException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that decryption failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/EmailRecipient.html"><abbr title="Andromeda\Core\EmailRecipient">EmailRecipient</abbr></a>    </div>
+                <div class="col-md-6"><p>A name and address pair email recipient</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/EmailUnavailableException.html"><abbr title="Andromeda\Core\EmailUnavailableException">EmailUnavailableException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that a mailer was requested but none are configured (or it is disabled)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/Emailer.html"><abbr title="Andromeda\Core\Emailer">Emailer</abbr></a>    </div>
+                <div class="col-md-6"><p>A configured email service stored in the database</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/EmptyRecipientsException.html"><abbr title="Andromeda\Core\EmptyRecipientsException">EmptyRecipientsException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that no recipients were given</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/EncryptionFailedException.html"><abbr title="Andromeda\Core\EncryptionFailedException">EncryptionFailedException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that encryption failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a>    </div>
+                <div class="col-md-6"><p>An exception indicating that the app is not installed and needs to be</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/InvalidAppException.html"><abbr title="Andromeda\Core\InvalidAppException">InvalidAppException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating an invalid app name was given</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/InvalidMailTypeException.html"><abbr title="Andromeda\Core\InvalidMailTypeException">InvalidMailTypeException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the configured mailer driver is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/MailSendException.html"><abbr title="Andromeda\Core\MailSendException">MailSendException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that sending mail failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>    </div>
+                <div class="col-md-6"><p>The main container class managing API singletons and running apps</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/MissingMetadataException.html"><abbr title="Andromeda\Core\MissingMetadataException">MissingMetadataException</abbr></a>    </div>
+                <div class="col-md-6"><p>An exception indicating that the metadata file is missing</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a>    </div>
+                <div class="col-md-6"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract class implementing a singleton</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/UnknownActionException.html"><abbr title="Andromeda\Core\UnknownActionException">UnknownActionException</abbr></a>    </div>
+                <div class="col-md-6"><p>An exception indicating that the requested action is invalid for this app</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/UnwriteableDatadirException.html"><abbr title="Andromeda\Core\UnwriteableDatadirException">UnwriteableDatadirException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the configured data directory is not valid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a>    </div>
+                <div class="col-md-6"><p>Describes an app that stores database versions
+and has upgrade scripts for upgrading the database</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a>    </div>
+                <div class="col-md-6"><p>Abstract with some global static utility functions</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/VersionInfo.html"><abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr></a>    </div>
+                <div class="col-md-6"><p>Class for parsing a version string into components</p></div>
+            </div>
+            </div>
+            <h2>Interfaces</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                                            <em><a href="../Andromeda/Core/Transactions.html"><abbr title="Andromeda\Core\Transactions">Transactions</abbr></a></em>
+                        </div>
+                <div class="col-md-6"><p>Simple interface with rollback() and commit()</p></div>
+            </div>
+            </div>
+    
+            <h2>Exceptions</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/CommitAfterRollbackException.html"><abbr title="Andromeda\Core\CommitAfterRollbackException">CommitAfterRollbackException</abbr></a>    </div>
+                <div class="col-md-6"><p>Andromeda cannot rollback and then commit since database/objects state is not sufficiently reset</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/DataWriteFailedException.html"><abbr title="Andromeda\Core\DataWriteFailedException">DataWriteFailedException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that writing to the data file failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/DisableRequiredException.html"><abbr title="Andromeda\Core\DisableRequiredException">DisableRequiredException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the server must be disabled for this request</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/DuplicateSingletonException.html"><abbr title="Andromeda\Core\DuplicateSingletonException">DuplicateSingletonException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that a duplicate singleton was constructed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/FailedAppLoadException.html"><abbr title="Andromeda\Core\FailedAppLoadException">FailedAppLoadException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the server failed to load a configured app</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/FinalizeTransactionException.html"><abbr title="Andromeda\Core\FinalizeTransactionException">FinalizeTransactionException</abbr></a>    </div>
+                <div class="col-md-6"><p>FinalizeOutput requires the database to not already be undergoing a transaction</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/InvalidDataDirException.html"><abbr title="Andromeda\Core\InvalidDataDirException">InvalidDataDirException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the configured data directory is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/JSONDecodingException.html"><abbr title="Andromeda\Core\JSONDecodingException">JSONDecodingException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that JSON decoding failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/JSONEncodingException.html"><abbr title="Andromeda\Core\JSONEncodingException">JSONEncodingException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that JSON encoding failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/JSONException.html"><abbr title="Andromeda\Core\JSONException">JSONException</abbr></a>    </div>
+                <div class="col-md-6"><p>Converts a JSON failure into an exception</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/MaintenanceException.html"><abbr title="Andromeda\Core\MaintenanceException">MaintenanceException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the server is configured as disabled</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/MissingSingletonException.html"><abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that GetInstance() was called on a singleton that has not been constructed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/UnknownAppException.html"><abbr title="Andromeda\Core\UnknownAppException">UnknownAppException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested app is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the database upgrade scripts must be run</p></div>
+            </div>
+            </div>
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

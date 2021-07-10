@@ -1,0 +1,4426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Accounts\AccountsApp | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Apps_Accounts_AccountsApp" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Accounts.html">Accounts</a></li><li class="backslash">\</li><li>AccountsApp</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>AccountsApp    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>AccountsApp</strong>        extends <a href="../../../Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>App for managing accounts and authenticating users.</p></p>            <p><p>Creates and manages accounts, groups of accounts, authentication,
+managing and validating contacts.  Supports account-crypto, two-factor
+authentication, multi-client/session management, authentication via external
+sources, and granular per-account/per-group config.</p></p>        </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_API">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$API</td>
+                <td class="last"><p>Reference to the main API, for convenience</p></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_API">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
+        
+                                            <p><p>All apps are constructed when Andromeda runs</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Run">Run</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>The main entry point into the app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Test">Test</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUsage">getUsage</a>()
+        
+                                            <p><p>Returns an array of strings showing the CLI usage of the app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getName">getName</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLogClass">getLogClass</a>()
+        
+                                            <p><p>Return this app's BaseAppLog class name, if used (or null)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getMetadata">getMetadata</a>(string $app, string $key)
+        
+                                            <p><p>Loads a metadata for the given app with the given key</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAppRequires">getAppRequires</a>(string $app)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAppReqVersion">getAppReqVersion</a>(string $app)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getVersion">getVersion</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getVersion">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p><p>Tells the app to commit any changes made outside the database</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_commit">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rollback">rollback</a>()
+        
+                                            <p><p>Tells the app to rollback any changes made outside the database</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_rollback">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDBVersion">getDBVersion</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUpgradeScripts">getUpgradeScripts</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_getUpgradeScripts">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Upgrade">Upgrade</a>()
+        
+                                            <p><p>Iterates over the list of upgrade scripts, running them
+sequentially until the DB is up to date with the code</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_Upgrade">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CheckUpgrade">CheckUpgrade</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Install">Install</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetConfig">GetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Gets config for this app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetConfig">SetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Sets config for this app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAuthSources">GetAuthSources</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Returns a list of the configured authentication sources</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAccount">GetAccount</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Gets the current account object, or the specified one</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ChangePassword">ChangePassword</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Changes the password for an account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetFullName">SetFullName</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Sets the user's full (real) name</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EmailRecovery">EmailRecovery</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Emails a recovery key to the user's registered contacts</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EnableCrypto">EnableCrypto</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Enables server-side crypto for an account and returns new recovery keys</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DisableCrypto">DisableCrypto</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Disables server side crypto for an account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateAccount">CreateAccount</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Creates a new user account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateSession">CreateSession</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Creates a new session, and possibly a new client for the account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateRecoveryKeys">CreateRecoveryKeys</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Creates a set of recovery keys, optionally replacing existing</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateTwoFactor">CreateTwoFactor</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Creates a two factor authentication source, and recovery keys</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_VerifyTwoFactor">VerifyTwoFactor</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Verifies a two factor source</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateContact">CreateContact</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Adds a contact to the account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_VerifyContact">VerifyContact</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Verifies an account contact</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteAccount">DeleteAccount</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes the current account (and signs out)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteSession">DeleteSession</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes an account session (signing it out)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteClient">DeleteClient</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes an account session and client (signing out fully)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteAllAuth">DeleteAllAuth</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Deletes all registered clients/sessions for an account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteTwoFactor">DeleteTwoFactor</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes a two factor source for an account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteContact">DeleteContact</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes a contact from an account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EditContact">EditContact</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Edits a contact for an account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SearchAccounts">SearchAccounts</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Searches for accounts identified with the given name prefix</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SearchGroups">SearchGroups</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Searches for groups identified with the given name prefix</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ListAccounts">ListAccounts</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Returns a list of all registered accounts</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ListGroups">ListGroups</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Returns a list of all registered groups</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateGroup">CreateGroup</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Creates a new account group</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EditGroup">EditGroup</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Edits properties of an existing group</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetGroup">GetGroup</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Returns the requested group object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteGroup">DeleteGroup</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes an account group</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AddGroupMember">AddGroupMember</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Adds an account to a group</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RemoveGroupMember">RemoveGroupMember</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Removes an account from a group</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetMembership">GetMembership</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Gets metadata for an account group membership</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateAuthSource">CreateAuthSource</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Adds a new external authentication source, optionally testing it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TestAuthSource">TestAuthSource</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Tests an auth source by running an auth query on it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EditAuthSource">EditAuthSource</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Edits the properties of an existing auth source, optionally testing it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteAuthSource">DeleteAuthSource</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Removes an external auth source, deleting accounts associated with it!</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetAccountProps">SetAccountProps</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Sets config on an account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetGroupProps">SetGroupProps</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Sets config on a group</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SendMessage">SendMessage</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Sends a message to the given account or group's contacts</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AddWhitelist">AddWhitelist</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Adds a new entry to the account create whitelist</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RemoveWhitelist">RemoveWhitelist</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Removes an entry from the account create whitelist</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetWhitelist">GetWhitelist</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        
+                                            <p><p>Gets all entries in the account whitelist</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 190</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>All apps are constructed when Andromeda runs</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
+                <td>$api</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Run">
+        <div class="location">at line 207</div>
+        <code>                    mixed
+    <strong>Run</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The main entry point into the app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>the user input</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>the value to be output to the user</p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Accounts\AppBase::Run()
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Test">
+        <div class="location">at line 1518</div>
+        <code>                    
+    <strong>Test</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUsage">
+        <div class="location">at line 135</div>
+        <code>        static            array
+    <strong>getUsage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an array of strings showing the CLI usage of the app</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>possible commands</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getName">
+        <div class="location">at line 129</div>
+        <code>        static            string
+    <strong>getName</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>the name of the app</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLogClass">
+        <div class="location">at line 131</div>
+        <code>        static    protected        string|null
+    <strong>getLogClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return this app's BaseAppLog class name, if used (or null)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getMetadata">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 57</div>
+        <code>        static    protected        
+    <strong>getMetadata</strong>(string $app, string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads a metadata for the given app with the given key</p></p>                <p><p>Loads the app's JSON metadata file but not its code</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAppRequires">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 72</div>
+        <code>        static            array
+    <strong>getAppRequires</strong>(string $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Returns the list of apps this app depends on</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAppReqVersion">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 78</div>
+        <code>        static            int
+    <strong>getAppReqVersion</strong>(string $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>Returns the major API version this app is compatible with</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getVersion">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getVersion">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 84</div>
+        <code>        static            string
+    <strong>getVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>the app's version information</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_commit">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 90</div>
+        <code>                    
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tells the app to commit any changes made outside the database</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollback">
+        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_rollback">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 93</div>
+        <code>                    
+    <strong>rollback</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tells the app to rollback any changes made outside the database</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getDBVersion">
+        <div class="location">at line 133</div>
+        <code>            protected        <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
+    <strong>getDBVersion</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a></td>
+            <td><p>that database object that stores the app version</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpgradeScripts">
+        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_getUpgradeScripts">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 108</div>
+        <code>        static    protected        array
+    <strong>getUpgradeScripts</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>the array of upgrade scripts indexed by version (in order!)</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Upgrade">
+        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_Upgrade">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 117</div>
+        <code>                    void
+    <strong>Upgrade</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Iterates over the list of upgrade scripts, running them
+sequentially until the DB is up to date with the code</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CheckUpgrade">
+        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 139</div>
+        <code>            protected        bool
+    <strong>CheckUpgrade</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>the app action input object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true if the upgrade action was performed</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
+                <td><p>if the DB version does not match</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Install">
+        <div class="location">at line 292</div>
+        <code>                    array|null
+    <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                <p><p>Optionally creates an initial administrator account</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td><p>Account if admin was created</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/UnknownActionException.html"><abbr title="Andromeda\Core\UnknownActionException">UnknownActionException</abbr></a></td>
+                <td><p>if config already exists</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetConfig">
+        <div class="location">at line 319</div>
+        <code>            protected        array
+    <strong>GetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets config for this app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Config</p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Config.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Config">Config</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetConfig">
+        <div class="location">at line 332</div>
+        <code>            protected        array
+    <strong>SetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets config for this app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Config</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Config.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Config">Config</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAuthSources">
+        <div class="location">at line 345</div>
+        <code>            protected        array
+    <strong>GetAuthSources</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a list of the configured authentication sources</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>[id:Auth\Manager]</p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Auth/Manager.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAccount">
+        <div class="location">at line 359</div>
+        <code>            protected        array|null
+    <strong>GetAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the current account object, or the specified one</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td><p>Account</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the specified account is not valid</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ChangePassword">
+        <div class="location">at line 391</div>
+        <code>            protected        void
+    <strong>ChangePassword</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Changes the password for an account</p></p>                <p><p>If currently logged in, this changes the password for the user's account (requiring the old one)
+If not logged in, this allows account recovery by resetting the password via a recovery key.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if the given account or recovery key are invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/ChangeExternalPasswordException.html"><abbr title="Andromeda\Apps\Accounts\ChangeExternalPasswordException">ChangeExternalPasswordException</abbr></a></td>
+                <td><p>if the user's account uses an non-local auth source</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetFullName">
+        <div class="location">at line 438</div>
+        <code>            protected        void
+    <strong>SetFullName</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the user's full (real) name</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not logged in</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EmailRecovery">
+        <div class="location">at line 452</div>
+        <code>            protected        void
+    <strong>EmailRecovery</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Emails a recovery key to the user's registered contacts</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the given username is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/RecoveryKeyCreateException.html"><abbr title="Andromeda\Apps\Accounts\RecoveryKeyCreateException">RecoveryKeyCreateException</abbr></a></td>
+                <td><p>if crypto or two factor are enabled</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EnableCrypto">
+        <div class="location">at line 488</div>
+        <code>            protected        array|null
+    <strong>EnableCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Enables server-side crypto for an account and returns new recovery keys</p></p>                <p><p>Deletes any existing recovery keys, requiring two factor if they exist</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td><p>[id:RecoveryKey] if crypto was not enabled</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/RecoveryKey.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\RecoveryKey">RecoveryKey</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DisableCrypto">
+        <div class="location">at line 522</div>
+        <code>            protected        void
+    <strong>DisableCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Disables server side crypto for an account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateAccount">
+        <div class="location">at line 541</div>
+        <code>            protected        array
+    <strong>CreateAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a new user account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Account</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AccountCreateDeniedException.html"><abbr title="Andromeda\Apps\Accounts\AccountCreateDeniedException">AccountCreateDeniedException</abbr></a></td>
+                <td><p>if the feature is disabled</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AccountExistsException.html"><abbr title="Andromeda\Apps\Accounts\AccountExistsException">AccountExistsException</abbr></a></td>
+                <td><p>if the account already exists</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateSession">
+        <div class="location">at line 617</div>
+        <code>            protected        array
+    <strong>CreateSession</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a new session, and possibly a new client for the account</p></p>                <p><p>The authentication source for the account must be provided if not local.
+First locates the account, then checks the password.  Possibly creates
+a new account if it exists on the external auth source. Then checks the
+client object in use, creating one and checking extra auth if not provided.
+Account crypto is checked, password age is checked, dates are updated.
+Then finally, the session is created and the client is returned.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>{client:Client, account:Account}</code></p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Exceptions/ClientDeniedException.html"><abbr title="Andromeda\Core\Exceptions\ClientDeniedException">ClientDeniedException</abbr></a></td>
+                <td><p>if already logged in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAuthSourceException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAuthSourceException">UnknownAuthSourceException</abbr></a></td>
+                <td><p>if the given auth source is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if the given username/password are wrong</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AccountDisabledException.html"><abbr title="Andromeda\Apps\Accounts\AccountDisabledException">AccountDisabledException</abbr></a></td>
+                <td><p>if the account is not enabled</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownClientException.html"><abbr title="Andromeda\Apps\Accounts\UnknownClientException">UnknownClientException</abbr></a></td>
+                <td><p>if the given client is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/OldPasswordRequiredException.html"><abbr title="Andromeda\Apps\Accounts\OldPasswordRequiredException">OldPasswordRequiredException</abbr></a></td>
+                <td><p>if the old password is required to unlock crypto</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/NewPasswordRequiredException.html"><abbr title="Andromeda\Apps\Accounts\NewPasswordRequiredException">NewPasswordRequiredException</abbr></a></td>
+                <td><p>if a new password is required to be set</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Client.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Client">Client</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateRecoveryKeys">
+        <div class="location">at line 743</div>
+        <code>            protected        array
+    <strong>CreateRecoveryKeys</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a set of recovery keys, optionally replacing existing</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>[id:RecoveryKey]</code></p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not logged in</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/RecoveryKey.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\RecoveryKey">RecoveryKey</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateTwoFactor">
+        <div class="location">at line 770</div>
+        <code>            protected        array
+    <strong>CreateTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a two factor authentication source, and recovery keys</p></p>                <p><p>Also activates crypto for the account, if allowed and not active.
+Doing so will delete all other sessions for the account.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>{twofactor:TwoFactor,recoverykeys:[id:RecoveryKey]}</code> \</p>
+<ul>
+<li>recovery keys are returned only if they don't already exist</li>
+</ul></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/TwoFactor.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\TwoFactor">TwoFactor</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/RecoveryKey.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\RecoveryKey">RecoveryKey</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_VerifyTwoFactor">
+        <div class="location">at line 800</div>
+        <code>            protected        void
+    <strong>VerifyTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verifies a two factor source</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateContact">
+        <div class="location">at line 821</div>
+        <code>            protected        array
+    <strong>CreateContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds a contact to the account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Contact</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/ContactExistsException.html"><abbr title="Andromeda\Apps\Accounts\ContactExistsException">ContactExistsException</abbr></a></td>
+                <td><p>if the contact info is used</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Contact.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Contact">Contact</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_VerifyContact">
+        <div class="location">at line 844</div>
+        <code>            protected        void
+    <strong>VerifyContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Verifies an account contact</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if the given key is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownContactException.html"><abbr title="Andromeda\Apps\Accounts\UnknownContactException">UnknownContactException</abbr></a></td>
+                <td><p>if the contact does not exist</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteAccount">
+        <div class="location">at line 859</div>
+        <code>            protected        void
+    <strong>DeleteAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes the current account (and signs out)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AccountDeleteDeniedException.html"><abbr title="Andromeda\Apps\Accounts\AccountDeleteDeniedException">AccountDeleteDeniedException</abbr></a></td>
+                <td><p>if delete is not allowed</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteSession">
+        <div class="location">at line 884</div>
+        <code>            protected        void
+    <strong>DeleteSession</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes an account session (signing it out)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownSessionException.html"><abbr title="Andromeda\Apps\Accounts\UnknownSessionException">UnknownSessionException</abbr></a></td>
+                <td><p>if an invalid session was provided</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteClient">
+        <div class="location">at line 910</div>
+        <code>            protected        void
+    <strong>DeleteClient</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes an account session and client (signing out fully)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownClientException.html"><abbr title="Andromeda\Apps\Accounts\UnknownClientException">UnknownClientException</abbr></a></td>
+                <td><p>if an invalid client was provided</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteAllAuth">
+        <div class="location">at line 935</div>
+        <code>            protected        void
+    <strong>DeleteAllAuth</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes all registered clients/sessions for an account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteTwoFactor">
+        <div class="location">at line 956</div>
+        <code>            protected        void
+    <strong>DeleteTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes a two factor source for an account</p></p>                <p><p>If this leaves the account without two factor, crypto is disabled</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownTwoFactorException.html"><abbr title="Andromeda\Apps\Accounts\UnknownTwoFactorException">UnknownTwoFactorException</abbr></a></td>
+                <td><p>if the given twofactor is invalid</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteContact">
+        <div class="location">at line 978</div>
+        <code>            protected        void
+    <strong>DeleteContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes a contact from an account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownContactException.html"><abbr title="Andromeda\Apps\Accounts\UnknownContactException">UnknownContactException</abbr></a></td>
+                <td><p>if the contact is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/ContactRequiredException.html"><abbr title="Andromeda\Apps\Accounts\ContactRequiredException">ContactRequiredException</abbr></a></td>
+                <td><p>if a valid contact is required</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EditContact">
+        <div class="location">at line 1001</div>
+        <code>            protected        array
+    <strong>EditContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Edits a contact for an account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownContactException.html"><abbr title="Andromeda\Apps\Accounts\UnknownContactException">UnknownContactException</abbr></a></td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SearchAccounts">
+        <div class="location">at line 1024</div>
+        <code>            protected        array
+    <strong>SearchAccounts</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Searches for accounts identified with the given name prefix</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Account</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/SearchDeniedException.html"><abbr title="Andromeda\Apps\Accounts\SearchDeniedException">SearchDeniedException</abbr></a></td>
+                <td><p>if the feature is disabled</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_LoadAllMatchingInfo">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::LoadAllMatchingInfo</a>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SearchGroups">
+        <div class="location">at line 1046</div>
+        <code>            protected        array
+    <strong>SearchGroups</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Searches for groups identified with the given name prefix</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Group</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/SearchDeniedException.html"><abbr title="Andromeda\Apps\Accounts\SearchDeniedException">SearchDeniedException</abbr></a></td>
+                <td><p>if the feature is disabled</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_LoadAllMatchingName">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::LoadAllMatchingName</a>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ListAccounts">
+        <div class="location">at line 1066</div>
+        <code>            protected        array
+    <strong>ListAccounts</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a list of all registered accounts</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>[id:Account]</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ListGroups">
+        <div class="location">at line 1087</div>
+        <code>            protected        array
+    <strong>ListGroups</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a list of all registered groups</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>[id:Group]</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateGroup">
+        <div class="location">at line 1106</div>
+        <code>            protected        array
+    <strong>CreateGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a new account group</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Group</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/GroupExistsException.html"><abbr title="Andromeda\Apps\Accounts\GroupExistsException">GroupExistsException</abbr></a></td>
+                <td><p>if the group name exists already</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EditGroup">
+        <div class="location">at line 1133</div>
+        <code>            protected        array
+    <strong>EditGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Edits properties of an existing group</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Group</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the group is not found</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetGroup">
+        <div class="location">at line 1166</div>
+        <code>            protected        array
+    <strong>GetGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the requested group object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Group</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the group is invalid</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteGroup">
+        <div class="location">at line 1184</div>
+        <code>            protected        void
+    <strong>DeleteGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes an account group</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the group does not exist</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AddGroupMember">
+        <div class="location">at line 1209</div>
+        <code>            protected        array
+    <strong>AddGroupMember</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds an account to a group</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Group</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the account is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the group is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/DuplicateGroupMembershipException.html"><abbr title="Andromeda\Apps\Accounts\DuplicateGroupMembershipException">DuplicateGroupMembershipException</abbr></a></td>
+                <td><p>if the membership already exists</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RemoveGroupMember">
+        <div class="location">at line 1239</div>
+        <code>            protected        array
+    <strong>RemoveGroupMember</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Removes an account from a group</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Group</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the account is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the group is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/ImmutableGroupException.html"><abbr title="Andromeda\Apps\Accounts\ImmutableGroupException">ImmutableGroupException</abbr></a></td>
+                <td><p>if the group is a default group</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupMembershipException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupMembershipException">UnknownGroupMembershipException</abbr></a></td>
+                <td><p>if the group membership does not exist</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetMembership">
+        <div class="location">at line 1271</div>
+        <code>            protected        array|null
+    <strong>GetMembership</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets metadata for an account group membership</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td><p>GroupJoin</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if given an invalid account</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if given an invalid group</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupMembershipException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupMembershipException">UnknownGroupMembershipException</abbr></a></td>
+                <td><p>if the account is not in the group</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/GroupJoin.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\GroupJoin">GroupJoin</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateAuthSource">
+        <div class="location">at line 1300</div>
+        <code>            protected        array
+    <strong>CreateAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds a new external authentication source, optionally testing it</p></p>                <p><p>This authorizes automatically creating an account for anyone
+that successfully authenticates against the auth source</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Auth\Manager</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Auth/Manager.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TestAuthSource">
+        <div class="location">at line 1325</div>
+        <code>            protected        array
+    <strong>TestAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tests an auth source by running an auth query on it</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Auth\Manager</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAuthSourceException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAuthSourceException">UnknownAuthSourceException</abbr></a></td>
+                <td><p>if the auth source is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthSourceTestFailException.html"><abbr title="Andromeda\Apps\Accounts\AuthSourceTestFailException">AuthSourceTestFailException</abbr></a></td>
+                <td><p>if the test fails</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Auth/Manager.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EditAuthSource">
+        <div class="location">at line 1351</div>
+        <code>            protected        array
+    <strong>EditAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Edits the properties of an existing auth source, optionally testing it</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Auth\Manager</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAuthSourceException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAuthSourceException">UnknownAuthSourceException</abbr></a></td>
+                <td><p>if the auth source is not found</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Auth/Manager.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteAuthSource">
+        <div class="location">at line 1371</div>
+        <code>            protected        void
+    <strong>DeleteAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Removes an external auth source, deleting accounts associated with it!</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not an admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAuthSourceException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAuthSourceException">UnknownAuthSourceException</abbr></a></td>
+                <td><p>if the auth source does not exist</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetAccountProps">
+        <div class="location">at line 1394</div>
+        <code>            protected        array
+    <strong>SetAccountProps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets config on an account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Account</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the account is not found</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetGroupProps">
+        <div class="location">at line 1416</div>
+        <code>            protected        array
+    <strong>SetGroupProps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets config on a group</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Group</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the group is not found</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Group.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Group">Group</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SendMessage">
+        <div class="location">at line 1435</div>
+        <code>            protected        void
+    <strong>SendMessage</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sends a message to the given account or group's contacts</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the given group is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the given account is not found</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AddWhitelist">
+        <div class="location">at line 1470</div>
+        <code>            protected        array
+    <strong>AddWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds a new entry to the account create whitelist</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Whitelist</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Whitelist.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Whitelist">Whitelist</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RemoveWhitelist">
+        <div class="location">at line 1489</div>
+        <code>            protected        void
+    <strong>RemoveWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Removes an entry from the account create whitelist</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetWhitelist">
+        <div class="location">at line 1510</div>
+        <code>            protected        array
+    <strong>GetWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets all entries in the account whitelist</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>[id:Whitelist]</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a></td>
+                <td><p>if not admin</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/Whitelist.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Accounts\Whitelist">Whitelist</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

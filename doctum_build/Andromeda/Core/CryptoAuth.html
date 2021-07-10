@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\CryptoAuth | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_CryptoAuth" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li>CryptoAuth</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>CryptoAuth    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>CryptoAuth</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>libsodium wrapper class for authentication-only crypto</p></p>                    </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_KeyLength">KeyLength</a>()
+        
+                                            <p><p>Returns the length of a key for use with this class</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_NonceLength">NonceLength</a>()
+        
+                                            <p><p>Returns the length of a nonce for use with this class</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GenerateKey">GenerateKey</a>()
+        
+                                            <p><p>Generates a crypto key for use with this class</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GenerateNonce">GenerateNonce</a>()
+        
+                                            <p><p>Generates a crypto nonce for use with this class</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_MakeAuthCode">MakeAuthCode</a>(string $message, string $key)
+        
+                                            <p><p>Creates an authentication code (MAC) from a message and key</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryCheckAuthCode">TryCheckAuthCode</a>(string $mac, string $message, string $key)
+        
+                                            <p><p>Tries to authenticate a message using a secret key</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CheckAuthCode">CheckAuthCode</a>(string $mac, string $message, string $key)
+        
+                                            <p><p>Same as TryCheckAuthCode() but throws an exception on failure</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_KeyLength">
+        <div class="location">at line 158</div>
+        <code>        static            int
+    <strong>KeyLength</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the length of a key for use with this class</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_NonceLength">
+        <div class="location">at line 161</div>
+        <code>        static            int
+    <strong>NonceLength</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the length of a nonce for use with this class</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GenerateKey">
+        <div class="location">at line 164</div>
+        <code>        static            string
+    <strong>GenerateKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generates a crypto key for use with this class</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GenerateNonce">
+        <div class="location">at line 167</div>
+        <code>        static            string
+    <strong>GenerateNonce</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Generates a crypto nonce for use with this class</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_MakeAuthCode">
+        <div class="location">at line 176</div>
+        <code>        static            string
+    <strong>MakeAuthCode</strong>(string $message, string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates an authentication code (MAC) from a message and key</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>the message to create the MAC for</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>the secret key to use for creating the MAC</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>the message authentication code (MAC)</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/EncryptionFailedException.html"><abbr title="Andromeda\Core\EncryptionFailedException">EncryptionFailedException</abbr></a></td>
+                <td><p>if encryption fails</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryCheckAuthCode">
+        <div class="location">at line 191</div>
+        <code>        static            bool
+    <strong>TryCheckAuthCode</strong>(string $mac, string $message, string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Tries to authenticate a message using a secret key</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$mac</td>
+                <td><p>the message authentication code</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td><p>the message to verify</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>the key used in creating the MAC</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true if authentication succeeds</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CheckAuthCode">
+        <div class="location">at line 203</div>
+        <code>        static            void
+    <strong>CheckAuthCode</strong>(string $mac, string $message, string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Same as TryCheckAuthCode() but throws an exception on failure</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$mac</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$message</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/DecryptionFailedException.html"><abbr title="Andromeda\Core\DecryptionFailedException">DecryptionFailedException</abbr></a></td>
+                <td><p>if authentication fails</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../Andromeda/Core/CryptoAuth.html#method_TryCheckAuthCode">
+<abbr title="Andromeda\Core\CryptoAuth">CryptoAuth</abbr>::TryCheckAuthCode</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

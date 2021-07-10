@@ -1,0 +1,1552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Files\Filesystem\NativeCrypt | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Apps_Files_Filesystem_NativeCrypt" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Apps/Files.html">Files</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Apps/Files/Filesystem.html">Filesystem</a></li><li class="backslash">\</li><li>NativeCrypt</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>NativeCrypt    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>NativeCrypt</strong>        extends <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Implements an encryption layer on top of the native filesystem.</p></p>            <p><p>Files are divided into chunks, the size of which can be configured.
+Import and Truncate are not as fast since new data must actually be written.</p>
+<p>The crypto key for the filesystem is stored plainly in the database,
+so this is only useful for off-server untrusted external storages.
+Client-side crypto should be used for any case where the API is not trusted.</p></p>        </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $filesystem, string $masterkey, int $chunksize)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetChunkSize">GetChunkSize</a>()
+        
+                                            <p><p>Returns the preferred byte alignment of the filesystem.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFSManager">GetFSManager</a>()
+        
+                                            <p><p>Returns a reference to the parent FS manager</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetFSManager">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetStorage">GetStorage</a>()
+        
+                                            <p><p>Returns the underlying storage</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetStorage">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetDatabase">GetDatabase</a>()
+        
+                                            <p><p>Returns a database reference</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetDatabase">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RefreshFile">RefreshFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RefreshFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RefreshFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateFolder">CreateFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_CreateFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteFolder">DeleteFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_DeleteFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ImportFile">ImportFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $oldpath)
+        
+                                            <p><p>Creates a new file and imports its content</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteFile">DeleteFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        
+                                            <p><p>Deletes the given file from storage</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_DeleteFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ReadBytes">ReadBytes</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, int $length)
+        
+                                            <p><p>Reads the exact number of desired bytes from the given file</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_WriteBytes">WriteBytes</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, string $data)
+        
+                                            <p><p>Writes to the given file, possibly appending it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Truncate">Truncate</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $length)
+        
+                                            <p><p>Truncates (changes size of) a file</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RenameFile">RenameFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $name)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RenameFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RenameFolder">RenameFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, string $name)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RenameFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_MoveFile">MoveFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_MoveFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_MoveFolder">MoveFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
+        
+                                            <p><p>no-op</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_MoveFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CopyFile">CopyFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $dest)
+        
+                                            <p><p>Copies a file</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_CopyFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CopyFolder">CopyFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_CopyFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFilePath">GetFilePath</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        
+                                            <p><p>The path to a file is simply its ID, broken into prefixes</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_GetFilePath">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ManualCopyFolder">ManualCopyFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
+        
+                                            <p><p>Helper function to emulate copying a folder by copying its contents manually</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ManualCopyFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetChunkIndex">GetChunkIndex</a>(int $byte)
+        
+                                            <p><p>Returns the chunk index storing the given byte offset</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetNumChunks">GetNumChunks</a>(int $bytes)
+        
+                                            <p><p>Returns the number of chunks required to store the given number of bytes</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ReadChunk">ReadChunk</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $index)
+        
+                                            <p><p>Reads and decrypts the given chunk from the file</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_WriteChunk">WriteChunk</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $index, string $data)
+        
+                                            <p><p>Encrypts and writes the given data to the given chunk</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 21</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $filesystem, string $masterkey, int $chunksize)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></td>
+                <td>$filesystem</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$masterkey</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$chunksize</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetChunkSize">
+        <div class="location">at line 28</div>
+        <code>                    int|null
+    <strong>GetChunkSize</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the preferred byte alignment of the filesystem.</p></p>                <p><p>Reads and writes should align to these boundaries for performance</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int|null</td>
+            <td><p>FS chunk size</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetFSManager">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetFSManager">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 37</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>
+    <strong>GetFSManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a reference to the parent FS manager</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetStorage">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetStorage">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 40</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
+    <strong>GetStorage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the underlying storage</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDatabase">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetDatabase">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 43</div>
+        <code>            protected        <a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+    <strong>GetDatabase</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a database reference</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RefreshFile">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RefreshFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 71</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>RefreshFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RefreshFolder">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RefreshFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 72</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$folder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateFolder">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_CreateFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 73</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>CreateFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$folder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteFolder">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_DeleteFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 74</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>DeleteFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$folder</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ImportFile">
+        <div class="location">at line 39</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>ImportFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $oldpath)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a new file and imports its content</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>the database object</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$oldpath</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteFile">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_DeleteFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 43</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>DeleteFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes the given file from storage</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ReadBytes">
+        <div class="location">at line 70</div>
+        <code>                    string
+    <strong>ReadBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, int $length)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reads the exact number of desired bytes from the given file</p></p>                <p><p>Throws an error if the read goes beyond the end of the file</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>file to read</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td><p>byte offset</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td><p>number of bytes</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>file data</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_WriteBytes">
+        <div class="location">at line 98</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>WriteBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, string $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Writes to the given file, possibly appending it</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>file to write</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$start</td>
+                <td><p>byte offset</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td><p>data to write</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Truncate">
+        <div class="location">at line 136</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>Truncate</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $length)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Truncates (changes size of) a file</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>file to truncate</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$length</td>
+                <td><p>desired size in bytes</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RenameFile">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RenameFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 75</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>RenameFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RenameFolder">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RenameFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 76</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>RenameFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, string $name)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$folder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_MoveFile">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_MoveFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 77</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>MoveFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>file to move</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$parent</td>
+                <td><p>new parent folder</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_MoveFolder">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_MoveFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 78</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>MoveFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>no-op</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$folder</td>
+                <td><p>folder to move</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$parent</td>
+                <td><p>new parent folder</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CopyFile">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_CopyFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 38</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>CopyFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $dest)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Copies a file</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>file to copy</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$dest</td>
+                <td><p>new object for destination</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CopyFolder">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_CopyFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 81</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>CopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$folder</td>
+                <td><p>folder to copy</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$dest</td>
+                <td><p>new object for destination</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ManualCopyFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr>::ManualCopyFolder</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetFilePath">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_GetFilePath">
+<abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 87</div>
+        <code>            protected        string
+    <strong>GetFilePath</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The path to a file is simply its ID, broken into prefixes</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ManualCopyFolder">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ManualCopyFolder">
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 54</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a>
+    <strong>ManualCopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Helper function to emulate copying a folder by copying its contents manually</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$folder</td>
+                <td><p>folder to copy</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+                <td>$dest</td>
+                <td><p>new folder object to copy to</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetChunkIndex">
+        <div class="location">at line 34</div>
+        <code>            protected        int
+    <strong>GetChunkIndex</strong>(int $byte)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the chunk index storing the given byte offset</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$byte</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetNumChunks">
+        <div class="location">at line 37</div>
+        <code>            protected        int
+    <strong>GetNumChunks</strong>(int $bytes)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the number of chunks required to store the given number of bytes</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$bytes</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ReadChunk">
+        <div class="location">at line 185</div>
+        <code>            protected        string
+    <strong>ReadChunk</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $index)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Reads and decrypts the given chunk from the file</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>file to read from</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td><p>chunk number</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>decrypted chunk</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_WriteChunk">
+        <div class="location">at line 219</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a>
+    <strong>WriteChunk</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $index, string $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Encrypts and writes the given data to the given chunk</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td><p>file to write to</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$index</td>
+                <td><p>chunk index to write</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$data</td>
+                <td><p>plaintext data to write</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

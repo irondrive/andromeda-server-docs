@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\IOFormat\SafeParam | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_IOFormat_SafeParam" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/IOFormat.html">IOFormat</a></li><li class="backslash">\</li><li>SafeParam</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SafeParam    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>SafeParam</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Class representing a client input parameter</p></p>            <p><p>Provides a consistent interface for sanitizing and validating input values
+A value is considered null if it is an empty string or the string &quot;null&quot;</p></p>        </div>
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        TYPE_RAW
+                                    </td>
+                <td class="last">
+                    <p><em><p>A raw value that does no sanitizing or validating</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_BOOL
+                                    </td>
+                <td class="last">
+                    <p><em><p>A boolean value, see FILTER_VALIDATE_BOOLEAN</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_INT
+                                    </td>
+                <td class="last">
+                    <p><em><p>An integer value, see FILTER_VALIDATE_INT</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_UINT
+                                    </td>
+                <td class="last">
+                    <p><em><p>An integer value, see FILTER_VALIDATE_UINT</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_FLOAT
+                                    </td>
+                <td class="last">
+                    <p><em><p>A float value, see FILTER_VALIDATE_FLOAT</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_RANDSTR
+                                    </td>
+                <td class="last">
+                    <p><em><p>A value matching the format randomly generated by Andromeda</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_ALPHANUM
+                                    </td>
+                <td class="last">
+                    <p><em><p>An alphanumeric (and -_.) value</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_NAME
+                                    </td>
+                <td class="last">
+                    <p><em><p>A value representing a name, allows alphanumerics and -_'(). and space, max length 255</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_EMAIL
+                                    </td>
+                <td class="last">
+                    <p><em><p>An email address value, see FILTER_VALIDATE_EMAIL</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_FSNAME
+                                    </td>
+                <td class="last">
+                    <p><em><p>A file name value, see details</p></em></p>
+                    <p><p>FILTER_FLAG_STRIP_LOW, max length 255, checks for directory traversal, forbids invalid characters \/?*:;}</p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_FSPATH
+                                    </td>
+                <td class="last">
+                    <p><em><p>A filesystem path, see details</p></em></p>
+                    <p><p>FILTER_FLAG_STRIP_LOW, max length 65535, forbids invalid characters ?*:;}</p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_HOSTNAME
+                                    </td>
+                <td class="last">
+                    <p><em><p>A value containing a hostname, see FILTER_FLAG_STRIP_LOW, FILTER_VALIDATE_DOMAIN and FILTER_FLAG_HOSTNAME</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_URL
+                                    </td>
+                <td class="last">
+                    <p><em><p>A value containing a full URL, see FILTER_VALIDATE_URL</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_TEXT
+                                    </td>
+                <td class="last">
+                    <p><em><p>A string value with a max length of 65535, HTML-escapes special characters, see FILTER_SANITIZE_SPECIAL_CHARS</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_OBJECT
+                                    </td>
+                <td class="last">
+                    <p><em><p>A value that itself is a collection of SafeParams (an associative array)</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_ARRAY
+                                    </td>
+                <td class="last">
+                    <p><em><p>can be combined with any type to indicate an array of that type</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_STRINGS
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetTypeString">GetTypeString</a>(int|null $type)
+        
+                                            <p><p>Returns the string representing the given param type for printing</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $key, $value)
+        
+                                            <p><p>Construct a new SafeParam with the given key and value</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetKey">GetKey</a>()
+        
+                                            <p><p>Returns the key name of the SafeParam</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;callable
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_MaxLength">MaxLength</a>(int $len)
+        
+                                            <p><p>Returns a function that checks the max length of the value, for use with GetValue</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetRawValue">GetRawValue</a>()
+        
+                                            <p><p>Returns the raw value of the SafeParam</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    null|mixed|<a href="../../../Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>[]|<a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetValue">GetValue</a>(int $type, callable ...$valfuncs)
+        
+                                            <p><p>Gets the value of the parameter, doing filtering/validation, and JSON decoding for objects/arrays</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_GetTypeString">
+        <div class="location">at line 120</div>
+        <code>        static            string
+    <strong>GetTypeString</strong>(int|null $type)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the string representing the given param type for printing</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 134</div>
+        <code>                    
+    <strong>__construct</strong>(string $key, $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Construct a new SafeParam with the given key and value</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetKey">
+        <div class="location">at line 147</div>
+        <code>                    string
+    <strong>GetKey</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the key name of the SafeParam</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_MaxLength">
+        <div class="location">at line 150</div>
+        <code>        static            callable
+    <strong>MaxLength</strong>(int $len)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a function that checks the max length of the value, for use with GetValue</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$len</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>callable</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetRawValue">
+        <div class="location">at line 154</div>
+        <code>                    
+    <strong>GetRawValue</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the raw value of the SafeParam</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetValue">
+        <div class="location">at line 167</div>
+        <code>                    null|mixed|<a href="../../../Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>[]|<a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+    <strong>GetValue</strong>(int $type, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the value of the parameter, doing filtering/validation, and JSON decoding for objects/arrays</p></p>                <p><p>If the parameter is an object type, a SafeParams object will be returned
+If the parameter is an array type, returns an array of SafeParams</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td><p>the requested type of the parameter</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>null|mixed|<a href="../../../Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>[]|<a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></td>
+            <td><p>the value of the SafeParam</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/SafeParamInvalidException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamInvalidException">SafeParamInvalidException</abbr></a></td>
+                <td><p>if the value fails validation</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr></a></td>
+                <td><p>if an unknown type was requested</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Files | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="namespace" data-name="namespace:Andromeda_Apps_Files" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                <div class="namespace-breadcrumbs">
+        <ol class="breadcrumb">
+            <li><span class="label label-default">Namespace</span></li>
+                    <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Apps/Files.html">Files</a></li><li class="backslash">\</li>
+        </ol>
+    </div>
+            <div id="page-content">
+    <div class="page-header">
+        <h1>Andromeda\Apps\Files</h1>
+    </div>
+
+            <h2>Namespaces</h2>
+        <div class="namespace-list">
+            <a href="../../Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a><a href="../../Andromeda/Apps/Files/Limits.html">Andromeda\Apps\Files\Limits</a><a href="../../Andromeda/Apps/Files/Storage.html">Andromeda\Apps\Files\Storage</a>        </div>
+    
+            <h2>Classes</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/AccessLog.html"><abbr title="Andromeda\Apps\Files\AccessLog">AccessLog</abbr></a>    </div>
+                <div class="col-md-6"><p>Access log for the files app</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/Comment.html"><abbr title="Andromeda\Apps\Files\Comment">Comment</abbr></a>    </div>
+                <div class="col-md-6"><p>A user comment on an item</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/Config.html"><abbr title="Andromeda\Apps\Files\Config">Config</abbr></a>    </div>
+                <div class="col-md-6"><p>App config stored in the database</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/CrossFilesystemException.html"><abbr title="Andromeda\Apps\Files\CrossFilesystemException">CrossFilesystemException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that files cannot be moved across filessytems</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/DeletedByStorageException.html"><abbr title="Andromeda\Apps\Files\DeletedByStorageException">DeletedByStorageException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the item was deleted when refreshed from storage</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/DuplicateItemException.html"><abbr title="Andromeda\Apps\Files\DuplicateItemException">DuplicateItemException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the item target name already exists</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/EmailShareDisabledException.html"><abbr title="Andromeda\Apps\Files\EmailShareDisabledException">EmailShareDisabledException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that emailing share links is not allowed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a>    </div>
+                <div class="col-md-6"><p>Defines a user-stored file</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a>    </div>
+                <div class="col-md-6"><p>App that provides user-facing filesystem services.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a>    </div>
+                <div class="col-md-6"><p>Defines a user-stored folder which groups other items</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/InvalidDLRangeException.html"><abbr title="Andromeda\Apps\Files\InvalidDLRangeException">InvalidDLRangeException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested download byte range is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/InvalidDestinationException.html"><abbr title="Andromeda\Apps\Files\InvalidDestinationException">InvalidDestinationException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the folder destination is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/InvalidFileRangeException.html"><abbr title="Andromeda\Apps\Files\InvalidFileRangeException">InvalidFileRangeException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested byte range for file writing is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/InvalidFileWriteException.html"><abbr title="Andromeda\Apps\Files\InvalidFileWriteException">InvalidFileWriteException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the input file parameter format is incorrect</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/InvalidRootOpException.html"><abbr title="Andromeda\Apps\Files\InvalidRootOpException">InvalidRootOpException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the operation is not valid on a root folder</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/InvalidSharePasswordException.html"><abbr title="Andromeda\Apps\Files\InvalidSharePasswordException">InvalidSharePasswordException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the given share password is invalid</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a>    </div>
+                <div class="col-md-6"><p>An abstract class defining a user-created item in a filesystem.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>    </div>
+                <div class="col-md-6"><p>Authenticator class that implements item access rules</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that access to the requested item is denied</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ItemLogFullException.html"><abbr title="Andromeda\Apps\Files\ItemLogFullException">ItemLogFullException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that only one file/folder access can logged</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ItemSharingDisabledException.html"><abbr title="Andromeda\Apps\Files\ItemSharingDisabledException">ItemSharingDisabledException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that item sharing is not allowed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/Like.html"><abbr title="Andromeda\Apps\Files\Like">Like</abbr></a>    </div>
+                <div class="col-md-6"><p>A user-like (or dislike) on an item</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/RandomWriteDisabledException.html"><abbr title="Andromeda\Apps\Files\RandomWriteDisabledException">RandomWriteDisabledException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that random write access is not allowed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/RootFolder.html"><abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr></a>    </div>
+                <div class="col-md-6"><p>A root folder has no parent or name</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/Share.html"><abbr title="Andromeda\Apps\Files\Share">Share</abbr></a>    </div>
+                <div class="col-md-6"><p>A share granting access to an item</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ShareEveryoneDisabledException.html"><abbr title="Andromeda\Apps\Files\ShareEveryoneDisabledException">ShareEveryoneDisabledException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that sharing to everyone is not allowed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ShareExistsException.html"><abbr title="Andromeda\Apps\Files\ShareExistsException">ShareExistsException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested share already exists</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ShareExpiredException.html"><abbr title="Andromeda\Apps\Files\ShareExpiredException">ShareExpiredException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested share has expired</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ShareGroupDisabledException.html"><abbr title="Andromeda\Apps\Files\ShareGroupDisabledException">ShareGroupDisabledException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that sharing to groups is not allowed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/SharePublicItemException.html"><abbr title="Andromeda\Apps\Files\SharePublicItemException">SharePublicItemException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that a share was requested for a public item</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/ShareURLGenerateException.html"><abbr title="Andromeda\Apps\Files\ShareURLGenerateException">ShareURLGenerateException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the absolute URL of a share cannot be determined</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/SubFolder.html"><abbr title="Andromeda\Apps\Files\SubFolder">SubFolder</abbr></a>    </div>
+                <div class="col-md-6"><p>A subfolder has a parent</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/Tag.html"><abbr title="Andromeda\Apps\Files\Tag">Tag</abbr></a>    </div>
+                <div class="col-md-6"><p>A category tag placed on an item</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UnknownDestinationException.html"><abbr title="Andromeda\Apps\Files\UnknownDestinationException">UnknownDestinationException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested destination folder does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UnknownFileException.html"><abbr title="Andromeda\Apps\Files\UnknownFileException">UnknownFileException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested file does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UnknownFilesystemException.html"><abbr title="Andromeda\Apps\Files\UnknownFilesystemException">UnknownFilesystemException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested filesystem does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UnknownFolderException.html"><abbr title="Andromeda\Apps\Files\UnknownFolderException">UnknownFolderException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested folder does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UnknownItemException.html"><abbr title="Andromeda\Apps\Files\UnknownItemException">UnknownItemException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested item does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UnknownObjectException.html"><abbr title="Andromeda\Apps\Files\UnknownObjectException">UnknownObjectException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested object does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UnknownParentException.html"><abbr title="Andromeda\Apps\Files\UnknownParentException">UnknownParentException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the requested parent does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Apps/Files/UserStorageDisabledException.html"><abbr title="Andromeda\Apps\Files\UserStorageDisabledException">UserStorageDisabledException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that user-added filesystems are not allowed</p></div>
+            </div>
+            </div>
+    
+    
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

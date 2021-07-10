@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\IOFormat\Output | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_IOFormat_Output" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/IOFormat.html">IOFormat</a></li><li class="backslash">\</li><li>Output</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Output    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Output</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Represents the output to be shown to the user</p></p>            <p><p>Output consists of a success/failure flag, an HTTP response code, and a response body.
+The response body can be anything that is JSON encodable.</p></p>        </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isOK">isOK</a>()
+        
+                                            <p><p>Returns whether or not the request succeeded</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetHTTPCode">GetHTTPCode</a>()
+        
+                                            <p><p>Returns the HTTP response code for the request</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetMessage">GetMessage</a>()
+        
+                                            <p><p>Returns the error message string (only if not isOK)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAppdata">GetAppdata</a>()
+        
+                                            <p><p>Returns the response body to be returned (only if isOK)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetMetrics">SetMetrics</a>(array|null $metrics)
+        
+                                            <p><p>Sets performance metrics to be returned</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAsArray">GetAsArray</a>()
+        
+                                            <p><p>Returns the Output object as a client array</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAsString">GetAsString</a>()
+        
+                                            <p><p>Returns the appdata as a single string (or null if not possible)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Success">Success</a>(array $appdata)
+        
+                                            <p><p>Constructs an Output object representing a success response</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ClientException">ClientException</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e, array|null $debug = null)
+        
+                                            <p><p>Constructs an Output object representing a client error, showing the exception and possibly extra debug</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ServerException">ServerException</a>(array|null $debug = null)
+        
+                                            <p><p>Constructs an Output object representing a generic server error, possibly with debug</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ParseArray">ParseArray</a>(array $data)
+        
+                                            <p><p>Parses a response from a remote Andromeda API request into an Output object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_isOK">
+        <div class="location">at line 25</div>
+        <code>                    bool
+    <strong>isOK</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns whether or not the request succeeded</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetHTTPCode">
+        <div class="location">at line 28</div>
+        <code>                    int
+    <strong>GetHTTPCode</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the HTTP response code for the request</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetMessage">
+        <div class="location">at line 31</div>
+        <code>                    string
+    <strong>GetMessage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the error message string (only if not isOK)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAppdata">
+        <div class="location">at line 34</div>
+        <code>                    
+    <strong>GetAppdata</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the response body to be returned (only if isOK)</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetMetrics">
+        <div class="location">at line 37</div>
+        <code>                    void
+    <strong>SetMetrics</strong>(array|null $metrics)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets performance metrics to be returned</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$metrics</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAsArray">
+        <div class="location">at line 44</div>
+        <code>                    array
+    <strong>GetAsArray</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the Output object as a client array</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>if success: <code>{ok:true, code:int, appdata:mixed}</code> \
+if failure: <code>{ok:false, code:int, message:string}</code></p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAsString">
+        <div class="location">at line 59</div>
+        <code>                    string|null
+    <strong>GetAsString</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the appdata as a single string (or null if not possible)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Success">
+        <div class="location">at line 76</div>
+        <code>        static            <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+    <strong>Success</strong>(array $appdata)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Constructs an Output object representing a success response</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$appdata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ClientException">
+        <div class="location">at line 85</div>
+        <code>        static            <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+    <strong>ClientException</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e, array|null $debug = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Constructs an Output object representing a client error, showing the exception and possibly extra debug</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$debug</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ServerException">
+        <div class="location">at line 97</div>
+        <code>        static            <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+    <strong>ServerException</strong>(array|null $debug = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Constructs an Output object representing a generic server error, possibly with debug</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$debug</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ParseArray">
+        <div class="location">at line 114</div>
+        <code>        static            <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+    <strong>ParseArray</strong>(array $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parses a response from a remote Andromeda API request into an Output object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$data</td>
+                <td><p>the response data from the remote request</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
+            <td><p>the output object constructed from the response</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/InvalidParseException.html"><abbr title="Andromeda\Core\IOFormat\InvalidParseException">InvalidParseException</abbr></a></td>
+                <td><p>if the response is malformed</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

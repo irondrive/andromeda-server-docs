@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\Main | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
+        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../js/bootstrap.min.js"></script>
+        <script src="../../js/typeahead.min.js"></script>
+        <script src="../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_Main" data-root-path="../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../classes.html">Classes</a></li>
+                    <li><a href="../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../traits.html">Traits</a></li>
+                    <li><a href="../../doc-index.html">Index</a></li>
+                    <li><a href="../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li>Main</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Main    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Main</strong>        extends <a href="../../Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>The main container class managing API singletons and running apps</p></p>            <p><p>Main is also a Singleton so it can be fetched anywhere with GetInstance().
+A Main handles a single request, with an arbitrary number of appruns.</p></p>        </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetInstance">GetInstance</a>()
+        
+                                            <p><p>Get the instance of the singleton</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/Singleton.html#method_GetInstance">
+<abbr title="Andromeda\Core\Singleton">Singleton</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+        
+                                            <p><p>Initializes the Main API</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    float
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetTime">GetTime</a>()
+        
+                                            <p><p>Gets the timestamp of when the request was started</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetApps">GetApps</a>()
+        
+                                            <p><p>Gets an array of instantiated apps</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\Andromeda\Core\Config">Config</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetConfig">GetConfig</a>()
+        
+                                            <p><p>Returns the global config object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetDatabase">GetDatabase</a>()
+        
+                                            <p><p>Returns the global ObjectDatabase instance</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetInterface">GetInterface</a>()
+        
+                                            <p><p>Returns the interface used for the current request</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetErrorManager">GetErrorManager</a>()
+        
+                                            <p><p>Returns a reference to the global error manager</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\Andromeda\Core\RunContext">RunContext</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetContext">GetContext</a>()
+        
+                                            <p><p>Returns the RunContext that is currently being executed</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_LoadApp">LoadApp</a>(string $app)
+        
+                                            <p><p>Loads the main include file for an app and constructs it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Run">Run</a>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Calls into an app to run the given Input command</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RunRemote">RunRemote</a>(string $url, <a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Calls into a remote API to run the given Input command</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rollback">rollback</a>(<abbr title="Andromeda\Core\Throwable">Throwable</abbr>|null $e = null)
+        
+                                            <p><p>Rolls back the current transaction. Internal only, do not call via apps.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p><p>Commits the current transaction. Internal only, do not call via apps.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_requireDisabled">requireDisabled</a>()
+        
+                                            <p><p>Asserts that the server is disabled via config</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetDebugLevel">GetDebugLevel</a>()
+        
+                                            <p><p>Returns the configured debug level, or the interface's default</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_FinalizeOutput">FinalizeOutput</a>(<a href="../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> $output, bool $isError = false)
+        
+                                            <p><p>Compiles performance metrics and adds them to the given output</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_GetInstance">
+        <div class="location">in <a href="../../Andromeda/Core/Singleton.html#method_GetInstance">
+<abbr title="Andromeda\Core\Singleton">Singleton</abbr></a> at line 20</div>
+        <code>        static            <a href="../../Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a>
+    <strong>GetInstance</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Get the instance of the singleton</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/MissingSingletonException.html"><abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr></a></td>
+                <td><p>if not yet constructed</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 153</div>
+        <code>                    
+    <strong>__construct</strong>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initializes the Main API</p></p>                <p><p>Creates the error manager, initializes the interface, initializes the
+database, loads global config, loads and constructs registered apps</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></td>
+                <td>$interface</td>
+                <td><p>the interface that began the request</p></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/MaintenanceException.html"><abbr title="Andromeda\Core\MaintenanceException">MaintenanceException</abbr></a></td>
+                <td><p>if the server is not enabled</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Andromeda/Core/FailedAppLoadException.html"><abbr title="Andromeda\Core\FailedAppLoadException">FailedAppLoadException</abbr></a></td>
+                <td><p>if a registered app fails to load</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetTime">
+        <div class="location">at line 117</div>
+        <code>                    float
+    <strong>GetTime</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the timestamp of when the request was started</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>float</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetApps">
+        <div class="location">at line 123</div>
+        <code>                    array
+    <strong>GetApps</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets an array of instantiated apps</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetConfig">
+        <div class="location">at line 126</div>
+        <code>                    <abbr title="Andromeda\Core\Andromeda\Core\Config">Config</abbr>|null
+    <strong>GetConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the global config object</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Core\Andromeda\Core\Config">Config</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDatabase">
+        <div class="location">at line 129</div>
+        <code>                    <abbr title="Andromeda\Core\Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>|null
+    <strong>GetDatabase</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the global ObjectDatabase instance</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Core\Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetInterface">
+        <div class="location">at line 132</div>
+        <code>                    <a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a>
+    <strong>GetInterface</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the interface used for the current request</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetErrorManager">
+        <div class="location">at line 135</div>
+        <code>                    <a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a>
+    <strong>GetErrorManager</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a reference to the global error manager</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetContext">
+        <div class="location">at line 138</div>
+        <code>                    <abbr title="Andromeda\Core\Andromeda\Core\RunContext">RunContext</abbr>|null
+    <strong>GetContext</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the RunContext that is currently being executed</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Core\Andromeda\Core\RunContext">RunContext</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_LoadApp">
+        <div class="location">at line 205</div>
+        <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
+    <strong>LoadApp</strong>(string $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads the main include file for an app and constructs it</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Run">
+        <div class="location">at line 237</div>
+        <code>                    
+    <strong>Run</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Calls into an app to run the given Input command</p></p>                <p><p>Calls Run() on the requested app and then saves (but does not commit)
+any modified objects. These calls can be nested - apps can call Run for
+other apps but should always do so via the API, not directly to the app</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>the command to run</p></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/UnknownAppException.html"><abbr title="Andromeda\Core\UnknownAppException">UnknownAppException</abbr></a></td>
+                <td><p>if the requested app is invalid</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RunRemote">
+        <div class="location">at line 282</div>
+        <code>                    
+    <strong>RunRemote</strong>(string $url, <a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Calls into a remote API to run the given Input command</p></p>                <p><p>Note that this breaks transactions - the remote API will
+commit before we get the response to this remote call.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$url</td>
+                <td><p>the base URL of the remote API</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../Andromeda/Core/Main.html#method_Run">
+<abbr title="Andromeda\Core\Main">Main</abbr>::Run</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollback">
+        <div class="location">at line 295</div>
+        <code>                    void
+    <strong>rollback</strong>(<abbr title="Andromeda\Core\Throwable">Throwable</abbr>|null $e = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rolls back the current transaction. Internal only, do not call via apps.</p></p>                <p><p>First rolls back each app, then the database, then saves mandatorySave objects if not a server error</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Core\Throwable">Throwable</abbr>|null</td>
+                <td>$e</td>
+                <td><p>the exception that caused the rollback (or null)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">at line 329</div>
+        <code>                    void
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Commits the current transaction. Internal only, do not call via apps.</p></p>                <p><p>First commits each app, then the database.  Does a rollback
+instead if the request was specified as a dry run.</p></p>        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_requireDisabled">
+        <div class="location">at line 384</div>
+        <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
+    <strong>requireDisabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Asserts that the server is disabled via config</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/DisableRequiredException.html"><abbr title="Andromeda\Core\DisableRequiredException">DisableRequiredException</abbr></a></td>
+                <td><p>if not</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDebugLevel">
+        <div class="location">at line 393</div>
+        <code>                    int
+    <strong>GetDebugLevel</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the configured debug level, or the interface's default</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_FinalizeOutput">
+        <div class="location">at line 412</div>
+        <code>                    void
+    <strong>FinalizeOutput</strong>(<a href="../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> $output, bool $isError = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Compiles performance metrics and adds them to the given output</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
+                <td>$output</td>
+                <td><p>the output object to add metrics to</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isError</td>
+                <td><p>if true, the output is an error response</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

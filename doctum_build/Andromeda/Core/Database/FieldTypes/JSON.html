@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\Database\FieldTypes\JSON | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_Database_FieldTypes_JSON" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Core/Database.html">Database</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Core/Database/FieldTypes.html">FieldTypes</a></li><li class="backslash">\</li><li>JSON</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>JSON    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>JSON</strong>        extends <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Stores a value that is automatically JSON-encoded</p></p>                    </div>
+            
+        
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_myfield">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$myfield</td>
+                <td class="last"><p>The name of this field</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#property_myfield">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_tempvalue">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$tempvalue</td>
+                <td class="last"><p>The possibly-temporary-only value of this field</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#property_tempvalue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_realvalue">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$realvalue</td>
+                <td class="last"><p>The actual value of this field that will exist in the DB</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#property_realvalue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_delta">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$delta</td>
+                <td class="last"><p>Count of how many times this field has been modified</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#property_delta">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_mandatorySave">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$mandatorySave</td>
+                <td class="last"><p>If true, this field should always be saved even in a rollback</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#property_mandatorySave">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_database">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$database</td>
+                <td class="last"><p>Reference to the database</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#property_database">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_parent">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$parent</td>
+                <td class="last"><p>Reference to this field's parent object</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#property_parent">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetOperatorType">GetOperatorType</a>()
+        
+                                            <p><p>Returns OPERATOR_SETEQUAL as the operator used to update this field a DB query</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetOperatorType">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetReturnType">GetReturnType</a>()
+        
+                                            <p><p>Returns RETURN_SCALAR as the basic type of value stored in this field</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetReturnType">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(mixed $defvalue = null, bool $mandatorySave = false)
+        
+                                            <p><p>Declares a new scalar fieldtype (use this in object templates)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method___construct">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Initialize">Initialize</a>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $parent, string $myfield)
+        
+                                            <p><p>Initializes this field by tying it to an actual object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_Initialize">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_InitValue">InitValue</a>($value)
+        
+                                            <p><p>Initializes the value of this field by decoding the given JSON string</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetMyField">GetMyField</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetMyField">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isMandatorySave">isMandatorySave</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_isMandatorySave">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetParent">GetParent</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetParent">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetValue">GetValue</a>(bool $allowTemp = true)
+        
+                                            <p><p>Gets the actual (possibly unserialized) value of this field</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetValue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetDelta">GetDelta</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetDelta">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ResetDelta">ResetDelta</a>()
+        
+                                            <p><p>Resets the delta of this field to 0</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_ResetDelta">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetDBValue">GetDBValue</a>()
+        
+                                            <p><p>Returns this field's value as a JSON string for the DB</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetValue">SetValue</a>(mixed $value, bool $temp = false)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_SetValue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EraseValue">EraseValue</a>()
+        
+                                            <p><p>Uses sodium to securely zero the value of this field</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_EraseValue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></small></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_GetOperatorType">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetOperatorType">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 49</div>
+        <code>        static            int
+    <strong>GetOperatorType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns OPERATOR_SETEQUAL as the operator used to update this field a DB query</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetReturnType">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetReturnType">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 52</div>
+        <code>        static            int
+    <strong>GetReturnType</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns RETURN_SCALAR as the basic type of value stored in this field</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method___construct">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 59</div>
+        <code>                    
+    <strong>__construct</strong>(mixed $defvalue = null, bool $mandatorySave = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Declares a new scalar fieldtype (use this in object templates)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$defvalue</td>
+                <td><p>the default value of the field type</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$mandatorySave</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$mandatorySave">Scalar::$mandatorySave</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Initialize">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_Initialize">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 73</div>
+        <code>                    void
+    <strong>Initialize</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $parent, string $myfield)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initializes this field by tying it to an actual object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+                <td>$parent</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$myfield</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$database">Scalar::$database</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$parent">Scalar::$parent</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$myfield">Scalar::$myfield</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_InitValue">
+        <div class="location">at line 185</div>
+        <code>                    void
+    <strong>InitValue</strong>($value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Initializes the value of this field by decoding the given JSON string</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetMyField">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetMyField">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 89</div>
+        <code>                    string
+    <strong>GetMyField</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$myfield">Scalar::$myfield</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isMandatorySave">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_isMandatorySave">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 92</div>
+        <code>                    bool
+    <strong>isMandatorySave</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$mandatorySave">Scalar::$mandatorySave</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetParent">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetParent">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 95</div>
+        <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+    <strong>GetParent</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$parent">Scalar::$parent</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetValue">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetValue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 101</div>
+        <code>                    
+    <strong>GetValue</strong>(bool $allowTemp = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the actual (possibly unserialized) value of this field</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
+                <td><p>if false, force getting the real (non-temporary) value</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDelta">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetDelta">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 104</div>
+        <code>                    int
+    <strong>GetDelta</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\FieldTypes\Scalar::$delta">Scalar::$delta</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ResetDelta">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_ResetDelta">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 107</div>
+        <code>                    <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a>
+    <strong>ResetDelta</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Resets the delta of this field to 0</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDBValue">
+        <div class="location">at line 193</div>
+        <code>                    
+    <strong>GetDBValue</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns this field's value as a JSON string for the DB</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetValue">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_SetValue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 123</div>
+        <code>                    bool
+    <strong>SetValue</strong>(mixed $value, bool $temp = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>mixed</td>
+                <td>$value</td>
+                <td><p>the value to set for this field</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$temp</td>
+                <td><p>if true, the value is temporary only</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>if false, the value was not modified</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EraseValue">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_EraseValue">
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 136</div>
+        <code>                    void
+    <strong>EraseValue</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Uses sodium to securely zero the value of this field</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

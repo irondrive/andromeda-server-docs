@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Documentation</a></h1>
+    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+        </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+        
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/andromeda.html"><abbr title="\Andromeda">Andromeda</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/andromeda-apps.html"><abbr title="\Andromeda\Apps">Apps</abbr></a></li>
+                                            <li><a href="namespaces/andromeda-core.html"><abbr title="\Andromeda\Core">Core</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Application.html"><abbr title="\Application">Application</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/andromeda.html">Andromeda</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/andromeda-core.html">Core</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/andromeda-core-ioformat.html">IOFormat</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    SafeParams
+
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">22</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.22"  class="phpdocumentor-element-found-in__source" data-line="22" data-modal="source-view"></a>
+    </aside>
+
+            <p class="phpdocumentor-summary">A thin class that manages a collection of SafeParam objects</p>
+
+    <section class="phpdocumentor-description"><p>This class exists rather than having $params directly in Input
+because a param can itself contain a collection of other params
+(see SafeParam::TYPE_OBJECT) represented by another SafeParams</p>
+</section>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#constant_PARAMLOG_ALWAYS">PARAMLOG_ALWAYS</a>
+    <span>
+        &nbsp;= AndromedaCoreConfig::RQLOG_DETAILS_BASIC                    </span>
+</dt>
+<dd>Log the parameter if log details are enabled</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#constant_PARAMLOG_NEVER">PARAMLOG_NEVER</a>
+    <span>
+        &nbsp;= 0                    </span>
+</dt>
+<dd>Never log this input parameter (always used for RAW)</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#constant_PARAMLOG_ONLYFULL">PARAMLOG_ONLYFULL</a>
+    <span>
+        &nbsp;= AndromedaCoreConfig::RQLOG_DETAILS_FULL                    </span>
+</dt>
+<dd>Log the parameter only if details is full</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#property_loglevel">$loglevel</a>
+    <span>
+                &nbsp;: int            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#property_logref">$logref</a>
+    <span>
+                &nbsp;: array&lt;string|int, mixed&gt;|null            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#property_params">$params</a>
+    <span>
+                &nbsp;: array&lt;string|int, mixed&gt;            </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_AddParam">AddParam()</a>
+    <span>
+                        &nbsp;: self    </span>
+</dt>
+<dd>Adds the parameter to this object with the given name and value</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetClientObject">GetClientObject()</a>
+    <span>
+                        &nbsp;: array&lt;string|int, mixed&gt;    </span>
+</dt>
+<dd>Returns a plain associative array of each parameter&#039;s name mapped to its raw value</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetNullParam">GetNullParam()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Same as GetParam() but returns null if the param is present and null</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetOptNullParam">GetOptNullParam()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Same as GetParam() but returns null if the param is not present, or is present and null</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetOptParam">GetOptParam()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Same as GetParam() but returns null if the param is not present</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetParam">GetParam()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Gets the requested parameter (present and not null)</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_HasParam">HasParam()</a>
+    <span>
+                        &nbsp;: bool    </span>
+</dt>
+<dd>Returns true if the named parameter exists</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_SetLogRef">SetLogRef()</a>
+    <span>
+                        &nbsp;: self    </span>
+</dt>
+<dd>Takes an array reference for logging fetched parameters</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -protected">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_LogData">LogData()</a>
+    <span>
+                        &nbsp;: void    </span>
+</dt>
+<dd>Logs the given $data as $key or sets a sub-log reference if it&#039;s a SafeParams</dd>
+
+        </dl>
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PARAMLOG_ALWAYS">
+        PARAMLOG_ALWAYS
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#constant_PARAMLOG_ALWAYS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">69</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.69"  class="phpdocumentor-element-found-in__source" data-line="69" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Log the parameter if log details are enabled</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PARAMLOG_ALWAYS</span>
+    = <span class="phpdocumentor-signature__default-value">AndromedaCoreConfig::RQLOG_DETAILS_BASIC</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PARAMLOG_NEVER">
+        PARAMLOG_NEVER
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#constant_PARAMLOG_NEVER" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">63</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.63"  class="phpdocumentor-element-found-in__source" data-line="63" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Never log this input parameter (always used for RAW)</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PARAMLOG_NEVER</span>
+    = <span class="phpdocumentor-signature__default-value">0</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_PARAMLOG_ONLYFULL">
+        PARAMLOG_ONLYFULL
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#constant_PARAMLOG_ONLYFULL" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">66</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.66"  class="phpdocumentor-element-found-in__source" data-line="66" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Log the parameter only if details is full</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">PARAMLOG_ONLYFULL</span>
+    = <span class="phpdocumentor-signature__default-value">AndromedaCoreConfig::RQLOG_DETAILS_FULL</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_loglevel">
+        $loglevel
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#property_loglevel" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.40"  class="phpdocumentor-element-found-in__source" data-line="40" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">int</span>
+    <span class="phpdocumentor-signature__name">$loglevel</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_logref">
+        $logref
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#property_logref" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.40"  class="phpdocumentor-element-found-in__source" data-line="40" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;|null</span>
+    <span class="phpdocumentor-signature__name">$logref</span>
+     = <span class="phpdocumentor-signature__default-value">null</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_params">
+        $params
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#property_params" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">24</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.24"  class="phpdocumentor-element-found-in__source" data-line="24" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">array&lt;string|int, mixed&gt;</span>
+    <span class="phpdocumentor-signature__name">$params</span>
+     = <span class="phpdocumentor-signature__default-value">array()</span></code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_AddParam">
+        AddParam()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_AddParam" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">33</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.33"  class="phpdocumentor-element-found-in__source" data-line="33" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Adds the parameter to this object with the given name and value</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">AddParam</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">self</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetClientObject">
+        GetClientObject()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetClientObject" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">123</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.123"  class="phpdocumentor-element-found-in__source" data-line="123" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns a plain associative array of each parameter&#039;s name mapped to its raw value</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetClientObject</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">array&lt;string|int, mixed&gt;</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetNullParam">
+        GetNullParam()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetNullParam" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">103</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.103"  class="phpdocumentor-element-found-in__source" data-line="103" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Same as GetParam() but returns null if the param is present and null</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetNullParam</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$minlog</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$valfuncs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$minlog</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$valfuncs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetOptNullParam">
+        GetOptNullParam()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetOptNullParam" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">113</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.113"  class="phpdocumentor-element-found-in__source" data-line="113" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Same as GetParam() but returns null if the param is not present, or is present and null</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetOptNullParam</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$minlog</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$valfuncs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$minlog</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$valfuncs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetOptParam">
+        GetOptParam()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetOptParam" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">92</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.92"  class="phpdocumentor-element-found-in__source" data-line="92" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Same as GetParam() but returns null if the param is not present</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetOptParam</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$minlog</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$valfuncs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$minlog</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$valfuncs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetParam">
+        GetParam()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_GetParam" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">81</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.81"  class="phpdocumentor-element-found-in__source" data-line="81" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Gets the requested parameter (present and not null)</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetParam</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$minlog</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$valfuncs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>the name of the parameter</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>the type of the parameter</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$minlog</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">self::PARAMLOG_ONLYFULL</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>minimum log level for logging (0 for never) - RAW is never logged!</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$valfuncs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Andromeda-Core-IOFormat-SafeParamKeyMissingException.html"><abbr title="\Andromeda\Core\IOFormat\SafeParamKeyMissingException">SafeParamKeyMissingException</abbr></a></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the parameter is not present</p>
+</section>
+
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Andromeda-Core-IOFormat-SafeParamNullValueException.html"><abbr title="\Andromeda\Core\IOFormat\SafeParamNullValueException">SafeParamNullValueException</abbr></a></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the parameter is null</p>
+</section>
+
+                                    </dd>
+                                                <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetValue"><abbr title="\Andromeda\Core\IOFormat\SafeParam::GetValue()">SafeParam::GetValue()</abbr></a></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_HasParam">
+        HasParam()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_HasParam" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">27</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.27"  class="phpdocumentor-element-found-in__source" data-line="27" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns true if the named parameter exists</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">HasParam</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">bool</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_SetLogRef">
+        SetLogRef()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_SetLogRef" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">43</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.43"  class="phpdocumentor-element-found-in__source" data-line="43" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Takes an array reference for logging fetched parameters</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">SetLogRef</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|null&nbsp;</span><span class="phpdocumentor-signature__argument__reference-operator">&amp;</span><span class="phpdocumentor-signature__argument__name">$logref</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$loglevel</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">self</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$logref</span>
+                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$loglevel</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">self</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -protected
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_LogData">
+        LogData()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#method_LogData" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParams.php"><a href="files/core-ioformat-safeparams.html"><abbr title="core/ioformat/SafeParams.php">SafeParams.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">47</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#source-view.47"  class="phpdocumentor-element-found-in__source" data-line="47" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Logs the given $data as $key or sets a sub-log reference if it&#039;s a SafeParams</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">protected</span>
+                <span class="phpdocumentor-signature__name">LogData</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$minlog</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$data</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$minlog</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$data</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">void</span>
+            &mdash;
+        
+    
+</article>
+            </section>
+
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+        <pre style="max-height: 500px; overflow-y: scroll" data-src="files/core/ioformat/SafeParams.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">X</button>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
+
+    </article>
+                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+            </div>
+        </div>
+        <a href="classes/Andromeda-Core-IOFormat-SafeParams.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+</body>
+</html>

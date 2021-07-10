@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Accounts\FieldCrypt | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Apps_Accounts_FieldCrypt" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Accounts.html">Accounts</a></li><li class="backslash">\</li><li>FieldCrypt</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>FieldCrypt    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>FieldCrypt</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Trait allowing objects to store fields encrypted with an account's crypto</p></p>            <p><p>The encryption uses the owner account's secret-key crypto (only accessible by them)</p></p>        </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getEncryptedFields">getEncryptedFields</a>()
+        
+                                            <p><p>Returns the list of fields encrypted in this object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAccount">GetAccount</a>()
+        
+                                            <p><p>Returns the account that owns this object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_LoadByAccount">LoadByAccount</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        
+                                            <p><p>Returns all objects owned by the given account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFieldTemplate">GetFieldTemplate</a>()
+        
+                                            <p><p>Gets the extra DB fields required for this trait</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isFieldEncrypted">isFieldEncrypted</a>($field)
+        
+                                            <p><p>Returns true if the given DB field is encrypted</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetEncryptedScalar">GetEncryptedScalar</a>(string $field)
+        
+                                            <p><p>Decrypts and returns the value of the given field</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RequireCrypto">RequireCrypto</a>()
+        
+                                            <p><p>Unlocks account crypto for usage and returns it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetEncryptedScalar">TryGetEncryptedScalar</a>(string $field)
+        
+                                            <p><p>Decrypts and returns the value of the given field</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetEncryptedScalar">SetEncryptedScalar</a>(string $field, string|null $value, bool|null $fieldcrypt = null)
+        
+                                            <p><p>Sets the value of the given field</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetEncrypted">SetEncrypted</a>(bool $crypt)
+        
+                                            <p><p>Sets the crypto state of all stored fields</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DecryptAccount">DecryptAccount</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        
+                                            <p><p>Loads any objects for the given account and decrypts their fields</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getEncryptedFields">
+        <div class="location">at line 24</div>
+        <code>    abstract    static    protected        array
+    <strong>getEncryptedFields</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the list of fields encrypted in this object</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAccount">
+        <div class="location">at line 27</div>
+        <code>    abstract        protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+    <strong>GetAccount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the account that owns this object</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_LoadByAccount">
+        <div class="location">at line 30</div>
+        <code>    abstract    static            array
+    <strong>LoadByAccount</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns all objects owned by the given account</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+                <td>$account</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetFieldTemplate">
+        <div class="location">at line 33</div>
+        <code>        static            array
+    <strong>GetFieldTemplate</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the extra DB fields required for this trait</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isFieldEncrypted">
+        <div class="location">at line 42</div>
+        <code>            protected        bool
+    <strong>isFieldEncrypted</strong>($field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the given DB field is encrypted</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetEncryptedScalar">
+        <div class="location">at line 55</div>
+        <code>            protected        string
+    <strong>GetEncryptedScalar</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Decrypts and returns the value of the given field</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>field name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>decrypted value</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\KeyNotFoundException">KeyNotFoundException</abbr></td>
+                <td><p>if the value is null</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_TryGetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr>::TryGetEncryptedScalar</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RequireCrypto">
+        <div class="location">at line 63</div>
+        <code>            protected        <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
+    <strong>RequireCrypto</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unlocks account crypto for usage and returns it</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetEncryptedScalar">
+        <div class="location">at line 83</div>
+        <code>            protected        string|null
+    <strong>TryGetEncryptedScalar</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Decrypts and returns the value of the given field</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>field name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>decrypted value</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/CrptoNotUnlockedException.html"><abbr title="Andromeda\Apps\Accounts\CrptoNotUnlockedException">CrptoNotUnlockedException</abbr></a></td>
+                <td><p>if account crypto is not unlocked</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetEncryptedScalar">
+        <div class="location">at line 109</div>
+        <code>            protected        <a href="../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+    <strong>SetEncryptedScalar</strong>(string $field, string|null $value, bool|null $fieldcrypt = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the value of the given field</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>field to set</p></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$value</td>
+                <td><p>value to set</p></td>
+            </tr>
+                    <tr>
+                <td>bool|null</td>
+                <td>$fieldcrypt</td>
+                <td><p>if true, encrypt - default current state</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/CryptoNotAvailableException.html"><abbr title="Andromeda\Apps\Accounts\CryptoNotAvailableException">CryptoNotAvailableException</abbr></a></td>
+                <td><p>if account crypto is not unlocked</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetEncrypted">
+        <div class="location">at line 135</div>
+        <code>            protected        <a href="../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+    <strong>SetEncrypted</strong>(bool $crypt)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the crypto state of all stored fields</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$crypt</td>
+                <td><p>true to encrypted, false if not</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DecryptAccount">
+        <div class="location">at line 151</div>
+        <code>        static            void
+    <strong>DecryptAccount</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads any objects for the given account and decrypts their fields</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td><p>database reference</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+                <td>$account</td>
+                <td><p>account to load by</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

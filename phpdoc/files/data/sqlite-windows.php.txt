@@ -1,0 +1,4 @@
+<?php if (!defined('Andromeda')) die(); return array (
+  'DRIVER' => 'sqlite',
+  'CONNECT' => 'data/windata.s3db',
+);

@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\IOFormat\Input | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_IOFormat_Input" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/IOFormat.html">IOFormat</a></li><li class="backslash">\</li><li>Input</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>Input    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>Input</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>An abstracted Input object gathered from an interface</p></p>            <p><p>An Input object describes the app and action to be run, as well
+as any input parameters or files, or basic authentication</p></p>        </div>
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        LoggerKey
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetApp">GetApp</a>()
+        
+                                            <p><p>The app to be run</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAction">GetAction</a>()
+        
+                                            <p><p>The app action to be run</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAuth">GetAuth</a>()
+        
+                                            <p><p>The basic authentication to be used</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetLogger">SetLogger</a>(<abbr title="Andromeda\Core\IOFormat\Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>|null $logger)
+        
+                                            <p><p>Sets the optional param logger to the given BaseAppLog</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetParams">GetParams</a>()
+        
+                                            <p><p>The inner collection of parameters to be used</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_HasParam">HasParam</a>(string $key)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AddParam">AddParam</a>(string $key, $value)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetParam">GetParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetOptParam">GetOptParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetNullParam">GetNullParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetOptNullParam">GetOptNullParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_HasFile">HasFile</a>(string $key)
+        
+                                            <p><p>Determines whether or not the given key exists as an input file</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AddFile">AddFile</a>(string $key, <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a> $file)
+        
+                                            <p><p>Adds the given InputFile to the file array</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFile">GetFile</a>(string $key)
+        
+                                            <p><p>Gets the file mapped to the parameter name</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputFile">InputFile</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetFile">TryGetFile</a>(string $key)
+        
+                                            <p><p>Same as GetFile() but returns null rather than throwing an exception</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $app, string $action, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>|null $params = null, array|null $files = null, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null $auth = null)
+        
+                                            <p><p>Constructs an input object using the data gathered from the interface, and sanitizes the app/action strings</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_GetApp">
+        <div class="location">at line 41</div>
+        <code>                    string
+    <strong>GetApp</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The app to be run</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAction">
+        <div class="location">at line 47</div>
+        <code>                    string
+    <strong>GetAction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The app action to be run</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAuth">
+        <div class="location">at line 53</div>
+        <code>                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null
+    <strong>GetAuth</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The basic authentication to be used</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetLogger">
+        <div class="location">at line 58</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+    <strong>SetLogger</strong>(<abbr title="Andromeda\Core\IOFormat\Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>|null $logger)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the optional param logger to the given BaseAppLog</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Core\IOFormat\Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>|null</td>
+                <td>$logger</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetParams">
+        <div class="location">at line 76</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+    <strong>GetParams</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The inner collection of parameters to be used</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_HasParam">
+        <div class="location">at line 79</div>
+        <code>                    bool
+    <strong>HasParam</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/SafeParams.html#method_HasParam">
+<abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::HasParam</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AddParam">
+        <div class="location">at line 83</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+    <strong>AddParam</strong>(string $key, $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/SafeParams.html#method_AddParam">
+<abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::AddParam</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetParam">
+        <div class="location">at line 87</div>
+        <code>                    
+    <strong>GetParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/SafeParams.html#method_GetParam">
+<abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::GetParam</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetOptParam">
+        <div class="location">at line 91</div>
+        <code>                    
+    <strong>GetOptParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/SafeParams.html#method_GetOptParam">
+<abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::GetOptParam</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetNullParam">
+        <div class="location">at line 95</div>
+        <code>                    
+    <strong>GetNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/SafeParams.html#method_GetNullParam">
+<abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::GetNullParam</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetOptNullParam">
+        <div class="location">at line 99</div>
+        <code>                    
+    <strong>GetOptNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/SafeParams.html#method_GetOptNullParam">
+<abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::GetOptNullParam</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_HasFile">
+        <div class="location">at line 110</div>
+        <code>                    bool
+    <strong>HasFile</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Determines whether or not the given key exists as an input file</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>the parameter name to check for</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true if the param exists as an input file</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AddFile">
+        <div class="location">at line 119</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+    <strong>AddFile</strong>(string $key, <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a> $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds the given InputFile to the file array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>param name for file</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a></td>
+                <td>$file</td>
+                <td><p>file name/path</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetFile">
+        <div class="location">at line 128</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a>
+    <strong>GetFile</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the file mapped to the parameter name</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>the parameter key name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a></td>
+            <td><p>the temporary uploaded file</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/SafeParamKeyMissingException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamKeyMissingException">SafeParamKeyMissingException</abbr></a></td>
+                <td><p>if the key does not exist</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetFile">
+        <div class="location">at line 139</div>
+        <code>                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputFile">InputFile</abbr>|null
+    <strong>TryGetFile</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Same as GetFile() but returns null rather than throwing an exception</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputFile">InputFile</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/Input.html#method_GetFile">
+<abbr title="Andromeda\Core\IOFormat\Input">Input</abbr>::GetFile</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 146</div>
+        <code>                    
+    <strong>__construct</strong>(string $app, string $action, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>|null $params = null, array|null $files = null, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null $auth = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Constructs an input object using the data gathered from the interface, and sanitizes the app/action strings</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$action</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>|null</td>
+                <td>$params</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null</td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

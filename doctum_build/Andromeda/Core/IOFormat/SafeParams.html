@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\IOFormat\SafeParams | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_IOFormat_SafeParams" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/IOFormat.html">IOFormat</a></li><li class="backslash">\</li><li>SafeParams</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>SafeParams    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>SafeParams</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>A thin class that manages a collection of SafeParam objects</p></p>            <p><p>This class exists rather than having $params directly in Input
+because a param can itself contain a collection of other params
+(see SafeParam::TYPE_OBJECT) represented by another SafeParams</p></p>        </div>
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                                                                                        PARAMLOG_NEVER
+                                    </td>
+                <td class="last">
+                    <p><em><p>Never log this input parameter (always used for RAW)</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        PARAMLOG_ONLYFULL
+                                    </td>
+                <td class="last">
+                    <p><em><p>Log the parameter only if details is full</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        PARAMLOG_ALWAYS
+                                    </td>
+                <td class="last">
+                    <p><em><p>Log the parameter if log details are enabled</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_HasParam">HasParam</a>(string $key)
+        
+                                            <p><p>Returns true if the named parameter exists</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AddParam">AddParam</a>(string $key, $value)
+        
+                                            <p><p>Adds the parameter to this object with the given name and value</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetLogRef">SetLogRef</a>(array|null $logref, int $loglevel)
+        
+                                            <p><p>Takes an array reference for logging fetched parameters</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_LogData">LogData</a>(int|null $minlog, int $type, string $key, $data)
+        
+                                            <p><p>Logs the given $data as $key or sets a sub-log reference if it's a SafeParams</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetParam">GetParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p><p>Gets the requested parameter (present and not null)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetOptParam">GetOptParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p><p>Same as GetParam() but returns null if the param is not present</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetNullParam">GetNullParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p><p>Same as GetParam() but returns null if the param is present and null</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetOptNullParam">GetOptNullParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        
+                                            <p><p>Same as GetParam() but returns null if the param is not present, or is present and null</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetClientObject">GetClientObject</a>()
+        
+                                            <p><p>Returns a plain associative array of each parameter's name mapped to its raw value</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_HasParam">
+        <div class="location">at line 27</div>
+        <code>                    bool
+    <strong>HasParam</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the named parameter exists</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AddParam">
+        <div class="location">at line 33</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+    <strong>AddParam</strong>(string $key, $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds the parameter to this object with the given name and value</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetLogRef">
+        <div class="location">at line 43</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
+    <strong>SetLogRef</strong>(array|null $logref, int $loglevel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Takes an array reference for logging fetched parameters</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array|null</td>
+                <td>$logref</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$loglevel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_LogData">
+        <div class="location">at line 47</div>
+        <code>            protected        void
+    <strong>LogData</strong>(int|null $minlog, int $type, string $key, $data)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Logs the given $data as $key or sets a sub-log reference if it's a SafeParams</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int|null</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$data</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetParam">
+        <div class="location">at line 81</div>
+        <code>                    
+    <strong>GetParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the requested parameter (present and not null)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>the name of the parameter</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td><p>the type of the parameter</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td><p>minimum log level for logging (0 for never) - RAW is never logged!</p></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/SafeParamKeyMissingException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamKeyMissingException">SafeParamKeyMissingException</abbr></a></td>
+                <td><p>if the parameter is not present</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/SafeParamNullValueException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamNullValueException">SafeParamNullValueException</abbr></a></td>
+                <td><p>if the parameter is null</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/IOFormat/SafeParam.html#method_GetValue">
+<abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr>::GetValue</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetOptParam">
+        <div class="location">at line 92</div>
+        <code>                    
+    <strong>GetOptParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Same as GetParam() but returns null if the param is not present</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetNullParam">
+        <div class="location">at line 103</div>
+        <code>                    
+    <strong>GetNullParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Same as GetParam() but returns null if the param is present and null</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetOptNullParam">
+        <div class="location">at line 113</div>
+        <code>                    
+    <strong>GetOptNullParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Same as GetParam() but returns null if the param is not present, or is present and null</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$minlog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable</td>
+                <td>...$valfuncs</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetClientObject">
+        <div class="location">at line 123</div>
+        <code>                    array
+    <strong>GetClientObject</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a plain associative array of each parameter's name mapped to its raw value</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

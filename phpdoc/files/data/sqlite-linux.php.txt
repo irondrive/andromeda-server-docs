@@ -1,0 +1,4 @@
+<?php if (!defined('Andromeda')) die(); return array (
+  'DRIVER' => 'sqlite',
+  'CONNECT' => '/var/www/data/andromeda.s3db',
+);

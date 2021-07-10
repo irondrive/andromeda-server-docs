@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Files\ItemAccess | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Apps_Files_ItemAccess" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Files.html">Files</a></li><li class="backslash">\</li><li>ItemAccess</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ItemAccess    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ItemAccess</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Authenticator class that implements item access rules</p></p>            <p><p>Andromeda's access model goes as follows -
+1) if you own an item (created it), you can access it and anything under it
+2) users and groups can be granted access to an item (and its contents) via a Share
+2b) Shares can control granular permissions like read/write/reshare, etc.</p></p>        </div>
+            
+        
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetItem">GetItem</a>()
+        
+                                            <p><p>Returns the item that is being accessed</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Share">Share</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetShare">GetShare</a>()
+        
+                                            <p><p>Returns the share object that grants access, or null if the item is owned</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Authenticate">Authenticate</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null $item = null)
+        
+                                            <p><p>Primary authentication routine for granting access to an item</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ItemOwnerAccess">ItemOwnerAccess</a>(<a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        
+                                            <p><p>Returns whether the given account can access the given item without a share.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryAuthenticate">TryAuthenticate</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null $item = null)
+        
+                                            <p><p>Same as ItemAccess::Authenticate() but returns null rather than client exceptions</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_GetItem">
+        <div class="location">at line 28</div>
+        <code>                    <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a>
+    <strong>GetItem</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the item that is being accessed</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetShare">
+        <div class="location">at line 31</div>
+        <code>                    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Share">Share</abbr>|null
+    <strong>GetShare</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the share object that grants access, or null if the item is owned</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Share">Share</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Authenticate">
+        <div class="location">at line 50</div>
+        <code>        static            <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+    <strong>Authenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null $item = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Primary authentication routine for granting access to an item</p></p>                <p><p>First option is the item is given and the account owns either the item or one of its parents.
+Second option is a share ID is given. Either the account must have access via a share, or
+a share key must be provided.  The shared object will be used if one is not given.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td><p>database reference</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>user input possibly containing share info</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td><p>current account auth</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null</td>
+                <td>$item</td>
+                <td><p>the item being requested access to (or null if implicit via the share)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+            <td><p>new ItemAccess object</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/InvalidSharePasswordException.html"><abbr title="Andromeda\Apps\Files\InvalidSharePasswordException">InvalidSharePasswordException</abbr></a></td>
+                <td><p>if the input share password is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if a specific item is requested and auth is null</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            \Andromeda\Apps\Files\ItemAccess::OwnerInChain()
+                                    </td>
+                <td>possible method of access</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Share.html#method_Authenticate">
+<abbr title="Andromeda\Apps\Files\Share">Share</abbr>::Authenticate</a>
+                                    </td>
+                <td>access via account</td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Share.html#method_AuthenticateByLink">
+<abbr title="Andromeda\Apps\Files\Share">Share</abbr>::AuthenticateByLink</a>
+                                    </td>
+                <td>access via link</td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ItemOwnerAccess">
+        <div class="location">at line 105</div>
+        <code>        static    protected        bool
+    <strong>ItemOwnerAccess</strong>(<a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns whether the given account can access the given item without a share.</p></p>                <p><p>The account must own either the item or one of its parents</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td><p>item to access</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+                <td>$account</td>
+                <td><p>account accessing</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td><p>true if access is allowed</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryAuthenticate">
+        <div class="location">at line 122</div>
+        <code>        static            <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>|null
+    <strong>TryAuthenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null $item = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Same as ItemAccess::Authenticate() but returns null rather than client exceptions</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null</td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/ItemAccess.html#method_Authenticate">
+<abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>::Authenticate</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

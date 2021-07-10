@@ -1,0 +1,7 @@
+<?php if (!defined('Andromeda')) die(); return array (
+  'DRIVER' => 'mysql',
+  'CONNECT' => 'dbname=andromeda;unix_socket=/run/mysqld/mysqld.sock;charset=utf8mb4',
+  'USERNAME' => 'root',
+  'PASSWORD' => 'password',
+  'PERSISTENT' => true
+);

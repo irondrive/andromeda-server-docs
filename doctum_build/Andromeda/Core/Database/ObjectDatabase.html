@@ -1,0 +1,1967 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Core\Database\ObjectDatabase | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Core_Database_ObjectDatabase" data-root-path="../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/Database.html">Database</a></li><li class="backslash">\</li><li>ObjectDatabase</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>ObjectDatabase    
+            </h1>
+    </div>
+
+    
+    <p>        class
+    <strong>ObjectDatabase</strong>        extends <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Provides the basic interfaces between BaseObject and the underlying PDO database</p></p>            <p><p>Basic functions include loading (caching), updating, creating, and deleting objects.
+This class should only be used internally for BaseObjects.</p></p>        </div>
+            
+        
+            <h2>Constants</h2>    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                                            private
+                                                                                CONFIG_PATHS
+                                    </td>
+                <td class="last">
+                    <p><em><p>the default path for storing the config file</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        DRIVER_MYSQL
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        DRIVER_SQLITE
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        DRIVER_POSTGRESQL
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                            private
+                                                                                DRIVERS
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        QUERY_READ
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        QUERY_WRITE
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+            </table>
+
+    
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        <abbr title="Andromeda\Core\Database\array&lt;string,mixed&gt;">array&lt;string,mixed&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#property_config">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_driver">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$driver</td>
+                <td class="last"><p>The enum value of the driver being used</p></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#property_driver">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></td>
+            </tr>
+            </table>
+
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getDriver">getDriver</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_getDriver">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string|null $config = null)
+        
+                                            <p><p>Constructs the database and initializes the PDO connection</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method___construct">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetInstallUsage">GetInstallUsage</a>()
+        
+                                            <p><p>Returns a string with the primary CLI usage for Install()</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_GetInstallUsage">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetInstallUsages">GetInstallUsages</a>()
+        
+                                            <p><p>Returns the CLI usages specific to each driver</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_GetInstallUsages">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Install">Install</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Creates and tests a new database config from the given user input</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_Install">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetClientObject">GetClientObject</a>()
+        
+                                            <p><p>returns the array of config that was loaded from the config file</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_GetClientObject">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInfo">getInfo</a>()
+        
+                                            <p><p>returns an array with some PDO attributes for debugging</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_getInfo">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_setReadOnly">setReadOnly</a>(bool $ro = true)
+        
+                                            <p><p>Sets the database as writeable or readonly</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_setReadOnly">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isReadOnly">isReadOnly</a>()
+        
+                                            <p><p>Returns true if the database is read-only</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_isReadOnly">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_importTemplate">importTemplate</a>(string $path)
+        
+                                            <p><p>Imports the appropriate SQL template file for an app</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_importTemplate">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_importFile">importFile</a>(string $path)
+        
+                                            <p><p>Parses and imports an SQL file into the database</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_importFile">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SupportsRETURNING">SupportsRETURNING</a>()
+        
+                                            <p><p>Whether or not the DB supports the RETURNING keyword</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_SupportsRETURNING">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RequiresSAVEPOINT">RequiresSAVEPOINT</a>()
+        
+                                            <p><p>Whether or not the DB aborts transactions after an error and requires use of SAVEPOINTs</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_RequiresSAVEPOINT">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_BinaryAsStreams">BinaryAsStreams</a>()
+        
+                                            <p><p>Whether or not the DB fetches binary/blob fields as streams rather than scalars</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_BinaryAsStreams">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_BinaryEscapeInput">BinaryEscapeInput</a>()
+        
+                                            <p><p>Whether or not the DB requires binary input to be escaped</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_BinaryEscapeInput">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_UsePublicSchema">UsePublicSchema</a>()
+        
+                                            <p><p>Whether or not the DB expects using public. as a prefix for table names</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_UsePublicSchema">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SQLConcat">SQLConcat</a>(string ...$args)
+        
+                                            <p><p>Returns the given arguments concatenated in SQL</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_SQLConcat">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_inTransaction">inTransaction</a>()
+        
+                                            <p><p>Returns true if the DB is currently in a transaction</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_inTransaction">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    mixed
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_query">query</a>(string $sql, int $type, array|null $data = null)
+        
+                                            <p><p>Sends an SQL query down to the database, possibly beginning a transaction</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_query">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_beginTransaction">beginTransaction</a>()
+        
+                                            <p><p>Begins a new database transaction</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_beginTransaction">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_rollback">rollback</a>()
+        
+                                            <p><p>Rolls back the current database transaction</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_rollback">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_commit">commit</a>()
+        
+                                            <p><p>Commits the current database transaction</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_commit">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_pushStatsContext">pushStatsContext</a>()
+        
+                                            <p><p>Add a new performance metrics context on to the stack</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_pushStatsContext">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\DBStats">DBStats</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_popStatsContext">popStatsContext</a>()
+        
+                                            <p><p>Pop the current performance metrics context off of the stack</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_popStatsContext">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getAllQueries">getAllQueries</a>()
+        
+                                            <p><p>Returns the array of query history</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_getAllQueries">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getLoadedObjectIDs">getLoadedObjectIDs</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_saveObjects">saveObjects</a>(bool $onlyMandatory = false)
+        
+                                            <p><p>Loops through every objects and saves them to the DB</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetClassTableName">GetClassTableName</a>(string $class)
+        
+                                            <p><p>Return the database table name for a class</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryLoadObjectByUniqueKey">TryLoadObjectByUniqueKey</a>(string $class, string $field, string $value)
+        
+                                            <p><p>Attempt to load a unique object by the value of a field</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CountObjectsByQuery">CountObjectsByQuery</a>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
+        
+                                            <p><p>Counts objects using the given query</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_LoadObjectsByQuery">LoadObjectsByQuery</a>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
+        
+                                            <p><p>Loads an array of objects using the given query</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    int
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteObjectsByQuery">DeleteObjectsByQuery</a>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
+        
+                                            <p><p>Delete objects matching the given query</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteObject">DeleteObject</a>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object)
+        
+                                            <p><p>Deletes a single object from the database (only to be called by the object itself)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SaveObject">SaveObject</a>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, array $values, array $counters)
+        
+                                            <p><p>UPDATEs an object in the database with the given data</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateObject">CreateObject</a>(string $class)
+        
+                                            <p><p>Creates a new object of the given class</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_getDriver">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_getDriver">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 73</div>
+        <code>                    int
+    <strong>getDriver</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <abbr title="Andromeda\Core\Database\Database::$driver">Database::$driver</abbr>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method___construct">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 81</div>
+        <code>                    
+    <strong>__construct</strong>(string|null $config = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Constructs the database and initializes the PDO connection</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$config</td>
+                <td><p>the path to the config file to use, generated by Install()</p></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/DatabaseConfigException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigException">DatabaseConfigException</abbr></a></td>
+                <td><p>if the given path does not exist</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/InvalidDriverException.html"><abbr title="Andromeda\Core\Database\InvalidDriverException">InvalidDriverException</abbr></a></td>
+                <td><p>if the driver in the config is invalid</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetInstallUsage">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_GetInstallUsage">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 121</div>
+        <code>        static            string
+    <strong>GetInstallUsage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a string with the primary CLI usage for Install()</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetInstallUsages">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_GetInstallUsages">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 127</div>
+        <code>        static            array
+    <strong>GetInstallUsages</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the CLI usages specific to each driver</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_Install">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_Install">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 142</div>
+        <code>        static            void
+    <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates and tests a new database config from the given user input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>input parameters</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td><p>if the database config is not valid and PDO fails</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/Database/Database.html#method_GetInstallUsage">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>::GetInstallUsage</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetClientObject">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_GetClientObject">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 199</div>
+        <code>                    array
+    <strong>GetClientObject</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>returns the array of config that was loaded from the config file</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>{driver:string, connect:string, ?username:string, ?password:true, ?persistent:bool}</code></p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInfo">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_getInfo">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 212</div>
+        <code>                    array
+    <strong>getInfo</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>returns an array with some PDO attributes for debugging</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>{driver:string, cversion:string, sversion:string, info:string}</code></p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_setReadOnly">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_setReadOnly">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 227</div>
+        <code>                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
+    <strong>setReadOnly</strong>(bool $ro = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the database as writeable or readonly</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$ro</td>
+                <td><p>if true, set as readonly</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isReadOnly">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_isReadOnly">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 230</div>
+        <code>                    bool
+    <strong>isReadOnly</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the database is read-only</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importTemplate">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_importTemplate">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 236</div>
+        <code>                    void
+    <strong>importTemplate</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Imports the appropriate SQL template file for an app</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td><p>the base path containing the templates</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_importFile">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_importFile">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 242</div>
+        <code>                    void
+    <strong>importFile</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Parses and imports an SQL file into the database</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td><p>the path of the SQL file</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SupportsRETURNING">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_SupportsRETURNING">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 250</div>
+        <code>            protected        bool
+    <strong>SupportsRETURNING</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Whether or not the DB supports the RETURNING keyword</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RequiresSAVEPOINT">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_RequiresSAVEPOINT">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 253</div>
+        <code>            protected        bool
+    <strong>RequiresSAVEPOINT</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Whether or not the DB aborts transactions after an error and requires use of SAVEPOINTs</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_BinaryAsStreams">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_BinaryAsStreams">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 256</div>
+        <code>            protected        bool
+    <strong>BinaryAsStreams</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Whether or not the DB fetches binary/blob fields as streams rather than scalars</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_BinaryEscapeInput">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_BinaryEscapeInput">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 259</div>
+        <code>            protected        bool
+    <strong>BinaryEscapeInput</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Whether or not the DB requires binary input to be escaped</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UsePublicSchema">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_UsePublicSchema">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 262</div>
+        <code>            protected        bool
+    <strong>UsePublicSchema</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Whether or not the DB expects using public. as a prefix for table names</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SQLConcat">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_SQLConcat">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 265</div>
+        <code>                    string
+    <strong>SQLConcat</strong>(string ...$args)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the given arguments concatenated in SQL</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>...$args</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_inTransaction">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_inTransaction">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 275</div>
+        <code>                    bool
+    <strong>inTransaction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the DB is currently in a transaction</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_query">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_query">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 287</div>
+        <code>                    mixed
+    <strong>query</strong>(string $sql, int $type, array|null $data = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sends an SQL query down to the database, possibly beginning a transaction</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$sql</td>
+                <td><p>the SQL query string, with placeholder data values</p></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$type</td>
+                <td><p>whether the query is a read, a write, or both (bitset)</p></td>
+            </tr>
+                    <tr>
+                <td>array|null</td>
+                <td>$data</td>
+                <td><p>associative array of data replacements for the prepared statement</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>mixed</td>
+            <td><p>if the query is a read, an associative array of the result, else count of affected rows</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/DatabaseReadOnlyException.html"><abbr title="Andromeda\Core\Database\DatabaseReadOnlyException">DatabaseReadOnlyException</abbr></a></td>
+                <td><p>if the query is a write and the DB is read-only</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_beginTransaction">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_beginTransaction">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 391</div>
+        <code>                    void
+    <strong>beginTransaction</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Begins a new database transaction</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_rollback">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_rollback">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 404</div>
+        <code>                    
+    <strong>rollback</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Rolls back the current database transaction</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_commit">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_commit">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 417</div>
+        <code>                    
+    <strong>commit</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Commits the current database transaction</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_pushStatsContext">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_pushStatsContext">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 444</div>
+        <code>                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
+    <strong>pushStatsContext</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Add a new performance metrics context on to the stack</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_popStatsContext">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_popStatsContext">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 450</div>
+        <code>                    <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\DBStats">DBStats</abbr>|null
+    <strong>popStatsContext</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Pop the current performance metrics context off of the stack</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Core\Database\Andromeda\Core\Database\DBStats">DBStats</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getAllQueries">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_getAllQueries">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 459</div>
+        <code>                    array
+    <strong>getAllQueries</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the array of query history</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>string array</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getLoadedObjectIDs">
+        <div class="location">at line 28</div>
+        <code>                    array
+    <strong>getLoadedObjectIDs</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>list of ID arrays indexed by class</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_saveObjects">
+        <div class="location">at line 39</div>
+        <code>                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+    <strong>saveObjects</strong>(bool $onlyMandatory = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loops through every objects and saves them to the DB</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$onlyMandatory</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetClassTableName">
+        <div class="location">at line 48</div>
+        <code>                    string
+    <strong>GetClassTableName</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the database table name for a class</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryLoadObjectByUniqueKey">
+        <div class="location">at line 123</div>
+        <code>                    <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+    <strong>TryLoadObjectByUniqueKey</strong>(string $class, string $field, string $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Attempt to load a unique object by the value of a field</p></p>                <p><p>Will try to fetch the object from the cache if loading by ID</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>the desired class of the object</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>the field to check</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$value</td>
+                <td><p>the value of the field to match</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Core\Database\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td><p>the object returned by the database</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/DuplicateUniqueKeyException.html"><abbr title="Andromeda\Core\Database\DuplicateUniqueKeyException">DuplicateUniqueKeyException</abbr></a></td>
+                <td><p>if this returns &gt; 1 object</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CountObjectsByQuery">
+        <div class="location">at line 143</div>
+        <code>                    int
+    <strong>CountObjectsByQuery</strong>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Counts objects using the given query</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>the class of the objects</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$query</td>
+                <td><p>the query used to match objects</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>count of objects</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_LoadObjectsByQuery">
+        <div class="location">at line 158</div>
+        <code>                    array
+    <strong>LoadObjectsByQuery</strong>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads an array of objects using the given query</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>the class of the objects</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$query</td>
+                <td><p>the query used to match objects</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>array of objects indexed by their IDs</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteObjectsByQuery">
+        <div class="location">at line 179</div>
+        <code>                    int
+    <strong>DeleteObjectsByQuery</strong>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Delete objects matching the given query</p></p>                <p><p>The objects will be loaded when deleted and their Delete() will run</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>the class of the objects to delete</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></td>
+                <td>$query</td>
+                <td><p>the query used to match objects</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>int</td>
+            <td><p>number of deleted objects</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DeleteObject">
+        <div class="location">at line 211</div>
+        <code>                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+    <strong>DeleteObject</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes a single object from the database (only to be called by the object itself)</p></p>                <p><p>The delete query happens immediately, not waiting for the object to be saved.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+                <td>$object</td>
+                <td><p>the object to delete</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SaveObject">
+        <div class="location">at line 231</div>
+        <code>                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+    <strong>SaveObject</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, array $values, array $counters)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>UPDATEs an object in the database with the given data</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+                <td>$object</td>
+                <td><p>the object to update</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$values</td>
+                <td><p>columns to be overwritten using =</p></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$counters</td>
+                <td><p>columns to be incremented using +=</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateObject">
+        <div class="location">at line 295</div>
+        <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+    <strong>CreateObject</strong>(string $class)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates a new object of the given class</p></p>                <p><p>The object will not actually exist in the DB until Save() is called,
+and its fields will have only the defaults given in its field template</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>the desired class of the new object</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td><p>the newly created object</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

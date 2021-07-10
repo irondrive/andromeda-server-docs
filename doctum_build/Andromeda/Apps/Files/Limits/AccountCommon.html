@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow, all" />
+    <title>Andromeda\Apps\Files\Limits\AccountCommon | Andromeda Server API</title>
+
+            <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../../fonts/doctum-font.css">
+        <script src="../../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../../js/bootstrap.min.js"></script>
+        <script src="../../../../js/typeahead.min.js"></script>
+        <script src="../../../../doctum.js"></script>
+        <meta name="MobileOptimized" content="width">
+        <meta name="HandheldFriendly" content="true">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+
+    </head>
+
+    <body id="class" data-name="class:Andromeda_Apps_Files_Limits_AccountCommon" data-root-path="../../../../">
+            <div id="content">
+        <div id="left-column">
+                <div id="control-panel">
+                <form id="search-form" action="../../../../search.html">
+            <span class="icon icon-search"></span>
+            <input name="search"
+                   class="typeahead form-control"
+                   type="search"
+                   placeholder="Search">
+        </form>
+    </div>
+
+                <div id="api-tree"></div>
+
+        </div>
+        <div id="right-column">
+                <nav id="site-nav" class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-elements">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="../../../../index.html">Andromeda Server API</a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-elements">
+                <ul class="nav navbar-nav">
+                    <li><a href="../../../../classes.html">Classes</a></li>
+                    <li><a href="../../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../../traits.html">Traits</a></li>
+                    <li><a href="../../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../../search.html">Search</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+                        <div class="namespace-breadcrumbs">
+            <ol class="breadcrumb">
+                <li><span class="label label-default">trait</span></li>
+                        <li><a href="../../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Apps/Files.html">Files</a></li><li class="backslash">\</li><li><a href="../../../../Andromeda/Apps/Files/Limits.html">Limits</a></li><li class="backslash">\</li><li>AccountCommon</li>
+            </ol>
+        </div>
+                <div id="page-content">
+    <div class="page-header">
+        <h1>AccountCommon    
+            </h1>
+    </div>
+
+    
+    <p>        trait
+    <strong>AccountCommon</strong>
+</p>
+
+        
+    
+        
+
+            <div class="description">
+            <p><p>Account limits common between total and timed</p></p>            <p><p>Most of the extra complexity with accounts comes from the fact that accounts can
+inherit properties from groups. Also, functions are provided that load both an
+account's limits and the limits of all groups that apply to it.</p>
+<p>Account limit objects are automatically created if a group
+that the account is part of has a limit object.</p></p>        </div>
+            
+                <h2>Traits</h2>
+
+        
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html"><abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait that overrides some BaseObject functions to allow inheriting properties from Groups</p></div>
+            </div>
+            </div>
+    
+    
+    
+            <h2>Methods</h2>
+
+            <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetScalar">GetScalar</a>(string $field, bool $allowTemp = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetScalar">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetScalar">TryGetScalar</a>(string $field, bool $allowTemp = true)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetScalar">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetObject">GetObject</a>(string $field)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetObject">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetObject">TryGetObject</a>(string $field)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetObject">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetInheritsScalarFrom">TryGetInheritsScalarFrom</a>(string $field)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetInheritsObjectFrom">TryGetInheritsObjectFrom</a>(string $field)
+        
+                                            <p><p>Returns the object that the value of the given field is inherited from</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritsObjectFrom">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetInheritable">TryGetInheritable</a>(string $field, bool $useobj = false)
+        
+                                            <p><p>Returns an inherited property value and source pair</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritable">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ToInheritsScalarFrom">ToInheritsScalarFrom</a>(callable $getdata)
+        
+                                            <p><p>Runs the given function with a function that maps a property onto its inherit-source</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_ToInheritsScalarFrom">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ToInheritsScalarFromClient">ToInheritsScalarFromClient</a>(callable $getdata)
+        
+                                            <p><p>Runs the given function through ToInheritsScalarFrom() and then maps to its ID and class name</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_ToInheritsScalarFromClient">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetObjectClass">GetObjectClass</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAccountID">GetAccountID</a>()
+        
+                                            <p><p>Returns the ID of the limited account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetAccount">GetAccount</a>()
+        
+                                            <p><p>Returns the limited account</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetsMaxStatsAgeFrom">GetsMaxStatsAgeFrom</a>()
+        
+                                            <p><p>Returns the object from which this account limit inherits its max stats age</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetClientObject">GetClientObject</a>(bool $isadmin = false)
+        
+                                            <p><p>Returns a printable client object that includes property inherit sources</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetBaseUsage">GetBaseUsage</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetBaseLimits">SetBaseLimits</a>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../../Andromeda/Apps/Files/Limits/AccountCommon.html"><abbr title="Andromeda\Apps\Files\Limits\AccountCommon">AccountCommon</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ConfigLimits">ConfigLimits</a>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Configures limits for the given account with the given input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ProcessGroupRemove">ProcessGroupRemove</a>(<a href="../../../../Andromeda/Apps/Files/Limits/IGroupLimit.html"><abbr title="Andromeda\Apps\Files\Limits\IGroupLimit">IGroupLimit</abbr></a> $grlim)
+        
+                                            <p><p>Processes a group membership removal, possibly deleting this account limit</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+            </div>
+
+
+        <h2>Details</h2>
+
+            <div id="method-details">
+                    <div class="method-item">
+                    <h3 id="method_GetScalar">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetScalar">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 791</div>
+        <code>            protected        
+    <strong>GetScalar</strong>(string $field, bool $allowTemp = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetScalar">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetScalar">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 799</div>
+        <code>            protected        
+    <strong>TryGetScalar</strong>(string $field, bool $allowTemp = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetObject">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetObject">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 806</div>
+        <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+    <strong>GetObject</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetObject">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetObject">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 814</div>
+        <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+    <strong>TryGetObject</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetInheritsScalarFrom">
+        <div class="location">at line 46</div>
+        <code>            protected        <abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+    <strong>TryGetInheritsScalarFrom</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetInheritsObjectFrom">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritsObjectFrom">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 828</div>
+        <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+    <strong>TryGetInheritsObjectFrom</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the object that the value of the given field is inherited from</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetInheritable">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritable">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 842</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a>
+    <strong>TryGetInheritable</strong>(string $field, bool $useobj = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an inherited property value and source pair</p></p>                <p><p>Values can be inherited from this account, from any group it is
+a member of, or if using a default value, null</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>the inherited property to find</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$useobj</td>
+                <td><p>true if this is an object reference, not a scalar</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a></td>
+            <td><p>value/source pair</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ToInheritsScalarFrom">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_ToInheritsScalarFrom">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 871</div>
+        <code>            protected        array
+    <strong>ToInheritsScalarFrom</strong>(callable $getdata)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Runs the given function with a function that maps a property onto its inherit-source</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$getdata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ToInheritsScalarFromClient">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_ToInheritsScalarFromClient">
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 877</div>
+        <code>            protected        array
+    <strong>ToInheritsScalarFromClient</strong>(callable $getdata)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Runs the given function through ToInheritsScalarFrom() and then maps to its ID and class name</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$getdata</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetObjectClass">
+        <div class="location">at line 37</div>
+        <code>        static    protected        string
+    <strong>GetObjectClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAccountID">
+        <div class="location">at line 40</div>
+        <code>            protected        string
+    <strong>GetAccountID</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the ID of the limited account</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetAccount">
+        <div class="location">at line 43</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
+    <strong>GetAccount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the limited account</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetsMaxStatsAgeFrom">
+        <div class="location">at line 53</div>
+        <code>                    <abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+    <strong>GetsMaxStatsAgeFrom</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the object from which this account limit inherits its max stats age</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetClientObject">
+        <div class="location">at line 65</div>
+        <code>                    array
+    <strong>GetClientObject</strong>(bool $isadmin = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns a printable client object that includes property inherit sources</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$isadmin</td>
+                <td><p>if true, show property inherit sources</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>{features_from:[id:class], limits_from:[id:class]}</code></p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../../Andromeda/Apps/Files/Limits/Total.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Limits\Total">Total</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>
+                                            <a href="../../../../Andromeda/Apps/Files/Limits/Timed.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Limits\Timed">Timed</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetBaseUsage">
+        <div class="location">at line 78</div>
+        <code>        static            string
+    <strong>GetBaseUsage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetBaseLimits">
+        <div class="location">at line 80</div>
+        <code>            protected        void
+    <strong>SetBaseLimits</strong>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ConfigLimits">
+        <div class="location">at line 100</div>
+        <code>        static            <a href="../../../../Andromeda/Apps/Files/Limits/AccountCommon.html"><abbr title="Andromeda\Apps\Files\Limits\AccountCommon">AccountCommon</abbr></a>
+    <strong>ConfigLimits</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Configures limits for the given account with the given input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+                <td>$account</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Limits/AccountCommon.html"><abbr title="Andromeda\Apps\Files\Limits\AccountCommon">AccountCommon</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ProcessGroupRemove">
+        <div class="location">at line 112</div>
+        <code>                    void
+    <strong>ProcessGroupRemove</strong>(<a href="../../../../Andromeda/Apps/Files/Limits/IGroupLimit.html"><abbr title="Andromeda\Apps\Files\Limits\IGroupLimit">IGroupLimit</abbr></a> $grlim)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Processes a group membership removal, possibly deleting this account limit</p></p>                <p><p>The account limit will be deleted if it does not have any properties that
+were set specifically for it, and no other group limits applicable to it exist</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/Limits/IGroupLimit.html"><abbr title="Andromeda\Apps\Files\Limits\IGroupLimit">IGroupLimit</abbr></a></td>
+                <td>$grlim</td>
+                <td><p>group to remove</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+            </div>
+
+    
+</div><div id="footer">
+        Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
+    </div>
+    </body>
+
+</html>

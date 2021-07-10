@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Documentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="../">
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base.css">
+            <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/template.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0/css/all.min.css" integrity="sha256-ybRkN9dBjhcS2qrW1z+hfCxq+1aBdwyQM5wlQoQVt/0=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/themes/prism-okaidia.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.css">
+                <script src="https://cdn.jsdelivr.net/npm/fuse.js@3.4.6"></script>
+        <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+        <script src="js/search.js"></script>
+        <script defer src="js/searchIndex.js"></script>
+    </head>
+<body id="top">
+    <header class="phpdocumentor-header phpdocumentor-section">
+    <h1 class="phpdocumentor-title"><a href="" class="phpdocumentor-title__link">Documentation</a></h1>
+    <input class="phpdocumentor-header__menu-button" type="checkbox" id="menu-button" name="menu-button" />
+    <label class="phpdocumentor-header__menu-icon" for="menu-button">
+        <i class="fas fa-bars"></i>
+    </label>
+    <section data-search-form class="phpdocumentor-search">
+    <label>
+        <span class="visually-hidden">Search for</span>
+        <svg class="phpdocumentor-search__icon" width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="7.5" cy="7.5" r="6.5" stroke="currentColor" stroke-width="2"/>
+            <line x1="12.4892" y1="12.2727" x2="19.1559" y2="18.9393" stroke="currentColor" stroke-width="3"/>
+        </svg>
+        <input type="search" class="phpdocumentor-field phpdocumentor-search__field" placeholder="Loading .." disabled />
+    </label>
+</section>
+
+    <nav class="phpdocumentor-topnav">
+    <ul class="phpdocumentor-topnav__menu">
+        </ul>
+</nav>
+</header>
+
+    <main class="phpdocumentor">
+        <div class="phpdocumentor-section">
+            <input class="phpdocumentor-sidebar__menu-button" type="checkbox" id="sidebar-button" name="sidebar-button" />
+<label class="phpdocumentor-sidebar__menu-icon" for="sidebar-button">
+    Menu
+</label>
+<aside class="phpdocumentor-column -four phpdocumentor-sidebar">
+        
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Namespaces</h2>
+                                <h3 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/default.html"><abbr title="\">Global</abbr></a></h3>
+                                        <h4 class="phpdocumentor-sidebar__root-namespace"><a href="namespaces/andromeda.html"><abbr title="\Andromeda">Andromeda</abbr></a></h4>
+                <ul class="phpdocumentor-list">
+                                            <li><a href="namespaces/andromeda-apps.html"><abbr title="\Andromeda\Apps">Apps</abbr></a></li>
+                                            <li><a href="namespaces/andromeda-core.html"><abbr title="\Andromeda\Core">Core</abbr></a></li>
+                                    </ul>
+                        </section>
+
+        <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Packages</h2>
+                    <h3 class="phpdocumentor-sidebar__root-package"><a href="packages/Application.html"><abbr title="\Application">Application</abbr></a></h3>
+                        </section>
+    
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Reports</h2>
+                <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/deprecated.html">Deprecated</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/errors.html">Errors</a></h3>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="reports/markers.html">Markers</a></h3>
+    </section>
+
+    <section class="phpdocumentor-sidebar__category">
+        <h2 class="phpdocumentor-sidebar__category-header">Indices</h2>
+        <h3 class="phpdocumentor-sidebar__root-package"><a href="indices/files.html">Files</a></h3>
+    </section>
+</aside>
+
+            <div class="phpdocumentor-column -eight phpdocumentor-content">
+                    <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/andromeda.html">Andromeda</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/andromeda-core.html">Core</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/andromeda-core-ioformat.html">IOFormat</a></li>
+    </ul>
+
+    <article class="phpdocumentor-element -class">
+        <h2 class="phpdocumentor-content__title">
+    SafeParam
+
+    
+            <div class="phpdocumentor-element__package">
+            in package
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li class="phpdocumentor-breadcrumb"><a href="packages/Application.html">Application</a></li>
+                            </ul>
+        </div>
+    
+    
+    </h2>
+
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">36</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.36"  class="phpdocumentor-element-found-in__source" data-line="36" data-modal="source-view"></a>
+    </aside>
+
+            <p class="phpdocumentor-summary">Class representing a client input parameter</p>
+
+    <section class="phpdocumentor-description"><p>Provides a consistent interface for sanitizing and validating input values
+A value is considered null if it is an empty string or the string &quot;null&quot;</p>
+</section>
+
+
+
+
+
+
+
+
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_ALPHANUM">TYPE_ALPHANUM</a>
+    <span>
+        &nbsp;= 6                    </span>
+</dt>
+<dd>An alphanumeric (and -_.) value</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_ARRAY">TYPE_ARRAY</a>
+    <span>
+        &nbsp;= 128                    </span>
+</dt>
+<dd>can be combined with any type to indicate an array of that type</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_BOOL">TYPE_BOOL</a>
+    <span>
+        &nbsp;= 1                    </span>
+</dt>
+<dd>A boolean value, see FILTER_VALIDATE_BOOLEAN</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_EMAIL">TYPE_EMAIL</a>
+    <span>
+        &nbsp;= 8                    </span>
+</dt>
+<dd>An email address value, see FILTER_VALIDATE_EMAIL</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_FLOAT">TYPE_FLOAT</a>
+    <span>
+        &nbsp;= 4                    </span>
+</dt>
+<dd>A float value, see FILTER_VALIDATE_FLOAT</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_FSNAME">TYPE_FSNAME</a>
+    <span>
+        &nbsp;= 9                    </span>
+</dt>
+<dd>A file name value, see details</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_FSPATH">TYPE_FSPATH</a>
+    <span>
+        &nbsp;= 10                    </span>
+</dt>
+<dd>A filesystem path, see details</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_HOSTNAME">TYPE_HOSTNAME</a>
+    <span>
+        &nbsp;= 11                    </span>
+</dt>
+<dd>A value containing a hostname, see FILTER_FLAG_STRIP_LOW, FILTER_VALIDATE_DOMAIN and FILTER_FLAG_HOSTNAME</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_INT">TYPE_INT</a>
+    <span>
+        &nbsp;= 2                    </span>
+</dt>
+<dd>An integer value, see FILTER_VALIDATE_INT</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_NAME">TYPE_NAME</a>
+    <span>
+        &nbsp;= 7                    </span>
+</dt>
+<dd>A value representing a name, allows alphanumerics and -_&#039;(). and space, max length 255</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_OBJECT">TYPE_OBJECT</a>
+    <span>
+        &nbsp;= 14                    </span>
+</dt>
+<dd>A value that itself is a collection of SafeParams (an associative array)</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_RANDSTR">TYPE_RANDSTR</a>
+    <span>
+        &nbsp;= 5                    </span>
+</dt>
+<dd>A value matching the format randomly generated by Andromeda</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_RAW">TYPE_RAW</a>
+    <span>
+        &nbsp;= 0                    </span>
+</dt>
+<dd>A raw value that does no sanitizing or validating</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_STRINGS">TYPE_STRINGS</a>
+    <span>
+        &nbsp;= array(null =&gt; &#039;custom&#039;, self::TYPE_RAW =&gt; &#039;raw&#039;, self::TYPE_BOOL =&gt; &#039;bool&#039;, self::TYPE_INT =&gt; &#039;int&#039;, self::TYPE_UINT =&gt; &#039;uint&#039;, self::TYPE_FLOAT =&gt; &#039;float&#039;, self::TYPE_RANDSTR =&gt; &#039;randstr&#039;, self::TYPE_ALPHANUM =&gt; &#039;alphanum&#039;, self::TYPE_NAME =&gt; &#039;name&#039;, self::TYPE_EMAIL =&gt; &#039;email&#039;, self::TYPE_FSNAME =&gt; &#039;fsname&#039;, self::TYPE_FSPATH =&gt; &#039;fspath&#039;, self::TYPE_HOSTNAME =&gt; &#039;hostname&#039;, self::TYPE_URL =&gt; &#039;url&#039;, self::TYPE_TEXT =&gt; &#039;text&#039;, self::TYPE_OBJECT =&gt; &#039;object&#039;, self::TYPE_ARRAY =&gt; &#039;array&#039;)                    </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_TEXT">TYPE_TEXT</a>
+    <span>
+        &nbsp;= 13                    </span>
+</dt>
+<dd>A string value with a max length of 65535, HTML-escapes special characters, see FILTER_SANITIZE_SPECIAL_CHARS</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_UINT">TYPE_UINT</a>
+    <span>
+        &nbsp;= 3                    </span>
+</dt>
+<dd>An integer value, see FILTER_VALIDATE_UINT</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -constant -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_URL">TYPE_URL</a>
+    <span>
+        &nbsp;= 12                    </span>
+</dt>
+<dd>A value containing a full URL, see FILTER_VALIDATE_URL</dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#property_key">$key</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd></dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -property -private">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#property_value">$value</a>
+    <span>
+                &nbsp;: mixed            </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method___construct">__construct()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Construct a new SafeParam with the given key and value</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetKey">GetKey()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Returns the key name of the SafeParam</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetRawValue">GetRawValue()</a>
+    <span>
+                        &nbsp;: mixed    </span>
+</dt>
+<dd>Returns the raw value of the SafeParam</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetTypeString">GetTypeString()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Returns the string representing the given param type for printing</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetValue">GetValue()</a>
+    <span>
+                        &nbsp;: null|mixed|array&lt;string|int, <a href="classes/Andromeda-Core-IOFormat-SafeParam.html"><abbr title="\Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>&gt;|<a href="classes/Andromeda-Core-IOFormat-SafeParams.html"><abbr title="\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>    </span>
+</dt>
+<dd>Gets the value of the parameter, doing filtering/validation, and JSON decoding for objects/arrays</dd>
+
+            <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_MaxLength">MaxLength()</a>
+    <span>
+                        &nbsp;: callable    </span>
+</dt>
+<dd>Returns a function that checks the max length of the value, for use with GetValue</dd>
+
+        </dl>
+
+
+
+        
+    <section class="phpdocumentor-constants">
+        <h3 class="phpdocumentor-elements__header" id="constants">
+            Constants
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constants" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_ALPHANUM">
+        TYPE_ALPHANUM
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_ALPHANUM" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">62</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.62"  class="phpdocumentor-element-found-in__source" data-line="62" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">An alphanumeric (and -_.) value</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_ALPHANUM</span>
+    = <span class="phpdocumentor-signature__default-value">6</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_ARRAY">
+        TYPE_ARRAY
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_ARRAY" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">97</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.97"  class="phpdocumentor-element-found-in__source" data-line="97" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">can be combined with any type to indicate an array of that type</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_ARRAY</span>
+    = <span class="phpdocumentor-signature__default-value">128</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_BOOL">
+        TYPE_BOOL
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_BOOL" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">44</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.44"  class="phpdocumentor-element-found-in__source" data-line="44" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A boolean value, see FILTER_VALIDATE_BOOLEAN</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_BOOL</span>
+    = <span class="phpdocumentor-signature__default-value">1</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_EMAIL">
+        TYPE_EMAIL
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_EMAIL" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">68</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.68"  class="phpdocumentor-element-found-in__source" data-line="68" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">An email address value, see FILTER_VALIDATE_EMAIL</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_EMAIL</span>
+    = <span class="phpdocumentor-signature__default-value">8</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_FLOAT">
+        TYPE_FLOAT
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_FLOAT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">53</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.53"  class="phpdocumentor-element-found-in__source" data-line="53" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A float value, see FILTER_VALIDATE_FLOAT</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_FLOAT</span>
+    = <span class="phpdocumentor-signature__default-value">4</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_FSNAME">
+        TYPE_FSNAME
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_FSNAME" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">75</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.75"  class="phpdocumentor-element-found-in__source" data-line="75" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A file name value, see details</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_FSNAME</span>
+    = <span class="phpdocumentor-signature__default-value">9</span>
+</code>
+
+
+        <section class="phpdocumentor-description"><p>FILTER_FLAG_STRIP_LOW, max length 255, checks for directory traversal, forbids invalid characters /?*:;}</p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_FSPATH">
+        TYPE_FSPATH
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_FSPATH" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">82</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.82"  class="phpdocumentor-element-found-in__source" data-line="82" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A filesystem path, see details</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_FSPATH</span>
+    = <span class="phpdocumentor-signature__default-value">10</span>
+</code>
+
+
+        <section class="phpdocumentor-description"><p>FILTER_FLAG_STRIP_LOW, max length 65535, forbids invalid characters ?*:;}</p>
+</section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_HOSTNAME">
+        TYPE_HOSTNAME
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_HOSTNAME" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">85</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.85"  class="phpdocumentor-element-found-in__source" data-line="85" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A value containing a hostname, see FILTER_FLAG_STRIP_LOW, FILTER_VALIDATE_DOMAIN and FILTER_FLAG_HOSTNAME</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_HOSTNAME</span>
+    = <span class="phpdocumentor-signature__default-value">11</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_INT">
+        TYPE_INT
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_INT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">47</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.47"  class="phpdocumentor-element-found-in__source" data-line="47" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">An integer value, see FILTER_VALIDATE_INT</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_INT</span>
+    = <span class="phpdocumentor-signature__default-value">2</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_NAME">
+        TYPE_NAME
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_NAME" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">65</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.65"  class="phpdocumentor-element-found-in__source" data-line="65" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A value representing a name, allows alphanumerics and -_&#039;(). and space, max length 255</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_NAME</span>
+    = <span class="phpdocumentor-signature__default-value">7</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_OBJECT">
+        TYPE_OBJECT
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_OBJECT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">94</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.94"  class="phpdocumentor-element-found-in__source" data-line="94" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A value that itself is a collection of SafeParams (an associative array)</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_OBJECT</span>
+    = <span class="phpdocumentor-signature__default-value">14</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_RANDSTR">
+        TYPE_RANDSTR
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_RANDSTR" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">59</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.59"  class="phpdocumentor-element-found-in__source" data-line="59" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A value matching the format randomly generated by Andromeda</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_RANDSTR</span>
+    = <span class="phpdocumentor-signature__default-value">5</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">see</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                                    <span class="phpdocumentor-tag-link"><a href="classes/Andromeda-Core-Utilities.html#method_Random"><abbr title="\Andromeda\Core\Utilities::Random()">Utilities::Random()</abbr></a></span>
+                                        
+                                             
+                                    </dd>
+                        </dl>
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_RAW">
+        TYPE_RAW
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_RAW" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">41</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.41"  class="phpdocumentor-element-found-in__source" data-line="41" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A raw value that does no sanitizing or validating</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_RAW</span>
+    = <span class="phpdocumentor-signature__default-value">0</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_STRINGS">
+        TYPE_STRINGS
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_STRINGS" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">99</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.99"  class="phpdocumentor-element-found-in__source" data-line="99" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_STRINGS</span>
+    = <span class="phpdocumentor-signature__default-value">array(null =&gt; &#039;custom&#039;, self::TYPE_RAW =&gt; &#039;raw&#039;, self::TYPE_BOOL =&gt; &#039;bool&#039;, self::TYPE_INT =&gt; &#039;int&#039;, self::TYPE_UINT =&gt; &#039;uint&#039;, self::TYPE_FLOAT =&gt; &#039;float&#039;, self::TYPE_RANDSTR =&gt; &#039;randstr&#039;, self::TYPE_ALPHANUM =&gt; &#039;alphanum&#039;, self::TYPE_NAME =&gt; &#039;name&#039;, self::TYPE_EMAIL =&gt; &#039;email&#039;, self::TYPE_FSNAME =&gt; &#039;fsname&#039;, self::TYPE_FSPATH =&gt; &#039;fspath&#039;, self::TYPE_HOSTNAME =&gt; &#039;hostname&#039;, self::TYPE_URL =&gt; &#039;url&#039;, self::TYPE_TEXT =&gt; &#039;text&#039;, self::TYPE_OBJECT =&gt; &#039;object&#039;, self::TYPE_ARRAY =&gt; &#039;array&#039;)</span>
+</code>
+
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_TEXT">
+        TYPE_TEXT
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_TEXT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">91</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.91"  class="phpdocumentor-element-found-in__source" data-line="91" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A string value with a max length of 65535, HTML-escapes special characters, see FILTER_SANITIZE_SPECIAL_CHARS</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_TEXT</span>
+    = <span class="phpdocumentor-signature__default-value">13</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_UINT">
+        TYPE_UINT
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_UINT" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">50</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.50"  class="phpdocumentor-element-found-in__source" data-line="50" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">An integer value, see FILTER_VALIDATE_UINT</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_UINT</span>
+    = <span class="phpdocumentor-signature__default-value">3</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article class="phpdocumentor-element -constant -public ">
+    <h4 class="phpdocumentor-element__name" id="constant_TYPE_URL">
+        TYPE_URL
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#constant_TYPE_URL" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">88</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.88"  class="phpdocumentor-element-found-in__source" data-line="88" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">A value containing a full URL, see FILTER_VALIDATE_URL</p>
+
+    <code class="phpdocumentor-signature phpdocumentor-code ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+    <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">TYPE_URL</span>
+    = <span class="phpdocumentor-signature__default-value">12</span>
+</code>
+
+
+    
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+        
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_key">
+        $key
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#property_key" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.38"  class="phpdocumentor-element-found-in__source" data-line="38" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$key</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -private
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_value">
+        $value
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#property_value" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">38</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.38"  class="phpdocumentor-element-found-in__source" data-line="38" data-modal="source-view"></a>
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">private</span>
+        <span class="phpdocumentor-signature__type">mixed</span>
+    <span class="phpdocumentor-signature__name">$value</span>
+    </code>
+
+        <section class="phpdocumentor-description"></section>
+
+        <section class="phpdocumentor-description"></section>
+
+    
+
+</article>
+            </section>
+
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method___construct">
+        __construct()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">134</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.134"  class="phpdocumentor-element-found-in__source" data-line="134" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Construct a new SafeParam with the given key and value</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$key</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$key</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetKey">
+        GetKey()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetKey" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">147</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.147"  class="phpdocumentor-element-found-in__source" data-line="147" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the key name of the SafeParam</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetKey</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetRawValue">
+        GetRawValue()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetRawValue" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">154</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.154"  class="phpdocumentor-element-found-in__source" data-line="154" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the raw value of the SafeParam</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetRawValue</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+
+    
+    
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetTypeString">
+        GetTypeString()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetTypeString" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">120</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.120"  class="phpdocumentor-element-found-in__source" data-line="120" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns the string representing the given param type for printing</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">GetTypeString</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int|null</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_GetValue">
+        GetValue()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_GetValue" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">167</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.167"  class="phpdocumentor-element-found-in__source" data-line="167" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Gets the value of the parameter, doing filtering/validation, and JSON decoding for objects/arrays</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">GetValue</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$type</span></span><span class="phpdocumentor-signature__argument"><span>, </span><span class="phpdocumentor-signature__argument__return-type">callable&nbsp;</span><span class="phpdocumentor-signature__argument__variadic-operator">...</span><span class="phpdocumentor-signature__argument__name">$valfuncs</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">null|mixed|array&lt;string|int, <a href="classes/Andromeda-Core-IOFormat-SafeParam.html"><abbr title="\Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>&gt;|<a href="classes/Andromeda-Core-IOFormat-SafeParams.html"><abbr title="\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></span></code>
+
+        <section class="phpdocumentor-description"><p>If the parameter is an object type, a SafeParams object will be returned
+If the parameter is an array type, returns an array of SafeParams</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$type</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>the requested type of the parameter</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$valfuncs</span>
+                : <span class="phpdocumentor-signature__argument__return-type">callable</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Andromeda-Core-IOFormat-SafeParamInvalidException.html"><abbr title="\Andromeda\Core\IOFormat\SafeParamInvalidException">SafeParamInvalidException</abbr></a></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if the value fails validation</p>
+</section>
+
+                                    </dd>
+                            <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Andromeda-Core-IOFormat-SafeParamUnknownTypeException.html"><abbr title="\Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr></a></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>if an unknown type was requested</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">null|mixed|array&lt;string|int, <a href="classes/Andromeda-Core-IOFormat-SafeParam.html"><abbr title="\Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>&gt;|<a href="classes/Andromeda-Core-IOFormat-SafeParams.html"><abbr title="\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>the value of the SafeParam</p>
+</section>
+
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                    -static                    "
+>
+    <h4 class="phpdocumentor-element__name" id="method_MaxLength">
+        MaxLength()
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#method_MaxLength" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="core/ioformat/SafeParam.php"><a href="files/core-ioformat-safeparam.html"><abbr title="core/ioformat/SafeParam.php">SafeParam.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">150</span>
+
+            <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#source-view.150"  class="phpdocumentor-element-found-in__source" data-line="150" data-modal="source-view"></a>
+    </aside>
+
+        <p class="phpdocumentor-summary">Returns a function that checks the max length of the value, for use with GetValue</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+            <span class="phpdocumentor-signature__static">static</span>    <span class="phpdocumentor-signature__name">MaxLength</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$len</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">callable</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$len</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"></section>
+
+            </dd>
+            </dl>
+
+    
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">callable</span>
+            &mdash;
+        
+    
+</article>
+            </section>
+
+        <div class="phpdocumentor-modal" id="source-view">
+    <div class="phpdocumentor-modal-bg" data-exit-button></div>
+    <div class="phpdocumentor-modal-container">
+        <div class="phpdocumentor-modal-content">
+        <pre style="max-height: 500px; overflow-y: scroll" data-src="files/core/ioformat/SafeParam.php.txt" class="language-php line-numbers linkable-line-numbers"></pre>
+        </div>
+        <button data-exit-button class="phpdocumentor-modal__close">X</button>
+    </div>
+</div>
+
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
+
+    </article>
+                <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
+    <section class="phpdocumentor-search-results__dialog">
+        <header class="phpdocumentor-search-results__header">
+            <h2 class="phpdocumentor-search-results__title">Search results</h2>
+            <button class="phpdocumentor-search-results__close"><i class="fas fa-times"></i></button>
+        </header>
+        <section class="phpdocumentor-search-results__body">
+            <ul class="phpdocumentor-search-results__entries"></ul>
+        </section>
+    </section>
+</section>
+            </div>
+        </div>
+        <a href="classes/Andromeda-Core-IOFormat-SafeParam.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+
+    </main>
+
+    <script>
+        cssVars({});
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/autoloader/prism-autoloader.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-numbers/prism-line-numbers.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.23.0/plugins/line-highlight/prism-line-highlight.min.js"></script>
+</body>
+</html>
