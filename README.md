@@ -1,2 +1,1 @@
-# andromeda-server-docs
-Auto-generated API documentation for andromeda-server
+These files are auto-generated. See tools/mkdocs in andromeda-server.
