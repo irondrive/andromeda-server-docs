@@ -107,7 +107,7 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+                    <a href="#method___construct">__construct</a>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface, <a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a> $errorman)
         
                                             <p><p>Initializes the Main API</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -312,9 +312,9 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 153</div>
+        <div class="location">at line 154</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+    <strong>__construct</strong>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface, <a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a> $errorman)
         </code>
     </h3>
     <div class="details">    
@@ -333,6 +333,11 @@ database, loads global config, loads and constructs registered apps</p></p>
                 <td><a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></td>
                 <td>$interface</td>
                 <td><p>the interface that began the request</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a></td>
+                <td>$errorman</td>
+                <td><p>the error manager instance</p></td>
             </tr>
             </table>
 
@@ -583,7 +588,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadApp">
-        <div class="location">at line 205</div>
+        <div class="location">at line 206</div>
         <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
     <strong>LoadApp</strong>(string $app)
         </code>
@@ -625,7 +630,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 237</div>
+        <div class="location">at line 238</div>
         <code>                    
     <strong>Run</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -669,7 +674,7 @@ other apps but should always do so via the API, not directly to the app</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RunRemote">
-        <div class="location">at line 282</div>
+        <div class="location">at line 283</div>
         <code>                    
     <strong>RunRemote</strong>(string $url, <a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -720,7 +725,7 @@ commit before we get the response to this remote call.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">at line 295</div>
+        <div class="location">at line 296</div>
         <code>                    void
     <strong>rollback</strong>(<abbr title="Andromeda\Core\Throwable">Throwable</abbr>|null $e = null)
         </code>
@@ -762,7 +767,7 @@ commit before we get the response to this remote call.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">at line 329</div>
+        <div class="location">at line 330</div>
         <code>                    void
     <strong>commit</strong>()
         </code>
@@ -795,7 +800,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_requireDisabled">
-        <div class="location">at line 384</div>
+        <div class="location">at line 385</div>
         <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
     <strong>requireDisabled</strong>()
         </code>
@@ -836,7 +841,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDebugLevel">
-        <div class="location">at line 393</div>
+        <div class="location">at line 394</div>
         <code>                    int
     <strong>GetDebugLevel</strong>()
         </code>
@@ -868,7 +873,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_FinalizeOutput">
-        <div class="location">at line 412</div>
+        <div class="location">at line 413</div>
         <code>                    void
     <strong>FinalizeOutput</strong>(<a href="../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> $output, bool $isError = false)
         </code>

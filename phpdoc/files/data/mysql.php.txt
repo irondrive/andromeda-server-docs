@@ -1,6 +1,0 @@
-<?php if (!defined('Andromeda')) die(); return array (
-  'DRIVER' => 'mysql',
-  'CONNECT' => 'host=ubuntudev; dbname=andromeda',
-  'USERNAME' => 'root',
-  'PASSWORD' => 'password'
-);

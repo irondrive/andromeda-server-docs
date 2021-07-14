@@ -1,7 +1,0 @@
-<?php if (!defined('Andromeda')) die(); return array (
-  'DRIVER' => 'pgsql',
-  'CONNECT' => 'host=ubuntudev; dbname=andromeda',
-  'USERNAME' => 'postgres',
-  'PASSWORD' => 'password',
-  'PERSISTENT' => true
-);

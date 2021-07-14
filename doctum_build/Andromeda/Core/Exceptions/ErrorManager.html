@@ -107,7 +107,7 @@ Application code can use LogException() when an exception is caught but still ne
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
         
                                             <p><p>Registers PHP error and exception handlers</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -118,6 +118,17 @@ Application code can use LogException() when an exception is caught but still ne
                 </div>
                 <div class="col-md-8">
                     <a href="#method___destruct">__destruct</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetAPI">SetAPI</a>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -215,7 +226,7 @@ Application code can use LogException() when an exception is caught but still ne
                     <h3 id="method___construct">
         <div class="location">at line 58</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+    <strong>__construct</strong>(<a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
         </code>
     </h3>
     <div class="details">    
@@ -229,11 +240,6 @@ Application code can use LogException() when an exception is caught but still ne
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
-                <td>$api</td>
-                <td></td>
-            </tr>
                     <tr>
                 <td><a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></td>
                 <td>$interface</td>
@@ -274,8 +280,51 @@ Application code can use LogException() when an exception is caught but still ne
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_SetAPI">
+        <div class="location">at line 83</div>
+        <code>                    <a href="../../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a>
+    <strong>SetAPI</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
+                <td>$api</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_LogException">
-        <div class="location">at line 97</div>
+        <div class="location">at line 99</div>
         <code>                    array|null
     <strong>LogException</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e, bool $mainlog = true)
         </code>
@@ -322,7 +371,7 @@ Application code can use LogException() when an exception is caught but still ne
             </div>
                     <div class="method-item">
                     <h3 id="method_LogDebug">
-        <div class="location">at line 148</div>
+        <div class="location">at line 150</div>
         <code>                    <a href="../../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a>
     <strong>LogDebug</strong>($data)
         </code>
@@ -364,7 +413,7 @@ Application code can use LogException() when an exception is caught but still ne
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDebugLog">
-        <div class="location">at line 151</div>
+        <div class="location">at line 153</div>
         <code>                    array|null
     <strong>GetDebugLog</strong>()
         </code>
@@ -396,7 +445,7 @@ Application code can use LogException() when an exception is caught but still ne
             </div>
                     <div class="method-item">
                     <h3 id="method_LogBreakpoint">
-        <div class="location">at line 154</div>
+        <div class="location">at line 156</div>
         <code>                    <a href="../../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a>
     <strong>LogBreakpoint</strong>()
         </code>
