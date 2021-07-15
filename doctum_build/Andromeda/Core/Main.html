@@ -87,6 +87,146 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_construct_stats">
+                                                            private                    <abbr title="Andromeda\Core\DBStats">DBStats</abbr>
+                                                                                
+                                    </td>
+                <td>$construct_stats</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_action_stats">
+                                                            private                    <a href="../../Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a>[]
+                                                                                
+                                    </td>
+                <td>$action_stats</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_commit_stats">
+                                                            private                    <abbr title="Andromeda\Core\DBStats">DBStats</abbr>[]
+                                                                                
+                                    </td>
+                <td>$commit_stats</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_total_stats">
+                                                            private                    <abbr title="Andromeda\Core\DBStats">DBStats</abbr>
+                                                                                
+                                    </td>
+                <td>$total_stats</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_reqlog">
+                                                            private                    <abbr title="Andromeda\Core\RequestLog">RequestLog</abbr>
+                                                                                
+                                    </td>
+                <td>$reqlog</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_time">
+                                                            private                    float
+                                                                                
+                                    </td>
+                <td>$time</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_apps">
+                                                            private                    <abbr title="Andromeda\Core\array&lt;string,\Andromeda\Core\AppBase&gt;">AppBase&gt;</abbr>
+                                                                                
+                                    </td>
+                <td>$apps</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_stack">
+                                                            private                    <a href="../../Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a>[]
+                                                                                
+                                    </td>
+                <td>$stack</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                                            private                    <abbr title="Andromeda\Core\?\Andromeda\Core\Config">Config</abbr>
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_database">
+                                                            private                    <abbr title="Andromeda\Core\?\Andromeda\Core\ObjectDatabase">ObjectDatabase</abbr>
+                                                                                
+                                    </td>
+                <td>$database</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_error_manager">
+                                                            private                    <abbr title="Andromeda\Core\ErrorManager">ErrorManager</abbr>
+                                                                                
+                                    </td>
+                <td>$error_manager</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_interface">
+                                                            private                    <abbr title="Andromeda\Core\IOInterface">IOInterface</abbr>
+                                                                                
+                                    </td>
+                <td>$interface</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dirty">
+                                                            private                    bool
+                                                                                
+                                    </td>
+                <td>$dirty</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_serverApp">
+                    static                                        private                    
+                                                                                
+                                    </td>
+                <td>$serverApp</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_requireUpgrade">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$requireUpgrade</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -230,6 +370,26 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
                     <a href="#method_commit">commit</a>()
         
                                             <p><p>Commits the current transaction. Internal only, do not call via apps.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_innerCommit">innerCommit</a>(bool $apps = false)
+        
+                                            <p><p>Commits the database or does a rollback if readOnly/dryrun</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_isEnabled">isEnabled</a>()
+        
+                                            <p><p>if false, requests are not allowed (always true for privileged interfaces)</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -767,7 +927,7 @@ commit before we get the response to this remote call.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">at line 330</div>
+        <div class="location">at line 331</div>
         <code>                    void
     <strong>commit</strong>()
         </code>
@@ -792,6 +952,89 @@ instead if the request was specified as a dry run.</p></p>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/CommitAfterRollbackException.html"><abbr title="Andromeda\Core\CommitAfterRollbackException">CommitAfterRollbackException</abbr></a></td>
+                <td><p>if a rollback was previously performed</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_innerCommit">
+        <div class="location">at line 365</div>
+        <code>                private    void
+    <strong>innerCommit</strong>(bool $apps = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Commits the database or does a rollback if readOnly/dryrun</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$apps</td>
+                <td><p>if true, commit/rollback apps also</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isEnabled">
+        <div class="location">at line 375</div>
+        <code>                private    bool
+    <strong>isEnabled</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>if false, requests are not allowed (always true for privileged interfaces)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
             
             
                     </div>
@@ -800,7 +1043,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_requireDisabled">
-        <div class="location">at line 385</div>
+        <div class="location">at line 386</div>
         <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
     <strong>requireDisabled</strong>()
         </code>
@@ -841,7 +1084,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDebugLevel">
-        <div class="location">at line 394</div>
+        <div class="location">at line 395</div>
         <code>                    int
     <strong>GetDebugLevel</strong>()
         </code>
@@ -873,7 +1116,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_FinalizeOutput">
-        <div class="location">at line 413</div>
+        <div class="location">at line 414</div>
         <code>                    void
     <strong>FinalizeOutput</strong>(<a href="../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> $output, bool $isError = false)
         </code>

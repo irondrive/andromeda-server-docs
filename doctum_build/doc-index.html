@@ -243,6 +243,12 @@
                     <dd><p>Log entry representing an app action in a request</p></dd><dt><a href="Andromeda/Core/Logging/ActionMetrics.html"><abbr title="Andromeda\Core\Logging\ActionMetrics">ActionMetrics</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Logging.html">Andromeda\Core\Logging</a></em></dt>
                     <dd><p>Log entry representing metrics for an app action</p></dd><dt>$<a href="Andromeda/Core/Logging/BaseAppLog.html#property_actionlog">
 <abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>#actionlog</a> &mdash; <em>Property in class <a href="Andromeda/Core/Logging/BaseAppLog.html"><abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_action_stats">
+<abbr title="Andromeda\Core\Main">Main</abbr>#action_stats</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_apps">
+<abbr title="Andromeda\Core\Main">Main</abbr>#apps</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/RunContext.html#property_actionlog">
+<abbr title="Andromeda\Core\RunContext">RunContext</abbr>#actionlog</a> &mdash; <em>Property in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Utilities.html#method_array_last">
 <abbr title="Andromeda\Core\Utilities">Utilities</abbr>::array_last</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a></em></dt>
                     <dd><p>Returns the last element of an array of null if it's empty</p></dd>        </dl><h2 id="letterB">B</h2>
@@ -677,7 +683,13 @@
 <abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/RequestLog.html"><abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr></a></em></dt>
                     <dd><p>Creates a new request log entry from the main API</p></dd><dt><a href="Andromeda/Core/Logging/RequestMetrics.html#method_Create">
 <abbr title="Andromeda\Core\Logging\RequestMetrics">RequestMetrics</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/RequestMetrics.html"><abbr title="Andromeda\Core\Logging\RequestMetrics">RequestMetrics</abbr></a></em></dt>
-                    <dd><p>Logs metrics and returns a metrics object</p></dd><dt><a href="Andromeda/Core/Main.html#method_commit">
+                    <dd><p>Logs metrics and returns a metrics object</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_construct_stats">
+<abbr title="Andromeda\Core\Main">Main</abbr>#construct_stats</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_commit_stats">
+<abbr title="Andromeda\Core\Main">Main</abbr>#commit_stats</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_config">
+<abbr title="Andromeda\Core\Main">Main</abbr>#config</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Main.html#method_commit">
 <abbr title="Andromeda\Core\Main">Main</abbr>::commit</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd><p>Commits the current transaction. Internal only, do not call via apps.</p></dd><dt><a href="Andromeda/Core/Transactions.html#method_commit">
 <abbr title="Andromeda\Core\Transactions">Transactions</abbr>::commit</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Transactions.html"><abbr title="Andromeda\Core\Transactions">Transactions</abbr></a></em></dt>
@@ -867,7 +879,11 @@
 <abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr>::DoOutput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a></em></dt>
                     <dd><p>Do the actual output routine</p></dd><dt>$<a href="Andromeda/Core/Logging/BaseAppLog.html#property_details">
 <abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>#details</a> &mdash; <em>Property in class <a href="Andromeda/Core/Logging/BaseAppLog.html"><abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr></a></em></dt>
-                    <dd><p>cached array of details log so we can set it once only in Save()</p></dd>        </dl><h2 id="letterE">E</h2>
+                    <dd><p>cached array of details log so we can set it once only in Save()</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_database">
+<abbr title="Andromeda\Core\Main">Main</abbr>#database</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_dirty">
+<abbr title="Andromeda\Core\Main">Main</abbr>#dirty</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd>        </dl><h2 id="letterE">E</h2>
         <dl id="indexE"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_EncryptSecret">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::EncryptSecret</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Encrypts a value using the account's crypto</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_EmailRecovery">
@@ -949,7 +965,9 @@
                     <dd><p>Exception indicating that no recipients were given</p></dd><dt><a href="Andromeda/Core/EncryptionFailedException.html"><abbr title="Andromeda\Core\EncryptionFailedException">EncryptionFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that encryption failed</p></dd><dt><a href="Andromeda/Core/Exceptions/ErrorLog.html"><abbr title="Andromeda\Core\Exceptions\ErrorLog">ErrorLog</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
                     <dd><p>Represents an error log entry in the database</p></dd><dt><a href="Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
-                    <dd><p>The main error handler/manager</p></dd><dt>$<a href="Andromeda/Core/VersionInfo.html#property_extra">
+                    <dd><p>The main error handler/manager</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_error_manager">
+<abbr title="Andromeda\Core\Main">Main</abbr>#error_manager</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/VersionInfo.html#property_extra">
 <abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr>#extra</a> &mdash; <em>Property in class <a href="Andromeda/Core/VersionInfo.html"><abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr></a></em></dt>
                     <dd></dd>        </dl><h2 id="letterF">F</h2>
         <dl id="indexF"><dt><a href="Andromeda/Apps/Accounts/Auth/FTP.html"><abbr title="Andromeda\Apps\Accounts\Auth\FTP">FTP</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts/Auth.html">Andromeda\Apps\Accounts\Auth</a></em></dt>
@@ -2535,7 +2553,15 @@
                     <dd><p>Exception indicating that the configured data directory is invalid</p></dd><dt><a href="Andromeda/Core/InvalidMailTypeException.html"><abbr title="Andromeda\Core\InvalidMailTypeException">InvalidMailTypeException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that the configured mailer driver is invalid</p></dd><dt><a href="Andromeda/Core/Logging/BaseAppLog.html#method_isFullDetails">
 <abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>::isFullDetails</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/BaseAppLog.html"><abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr></a></em></dt>
-                    <dd><p>Returns true if the configured details log detail level is &gt;= full</p></dd>        </dl><h2 id="letterJ">J</h2>
+                    <dd><p>Returns true if the configured details log detail level is &gt;= full</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_interface">
+<abbr title="Andromeda\Core\Main">Main</abbr>#interface</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Main.html#method_innerCommit">
+<abbr title="Andromeda\Core\Main">Main</abbr>::innerCommit</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd><p>Commits the database or does a rollback if readOnly/dryrun</p></dd><dt><a href="Andromeda/Core/Main.html#method_isEnabled">
+<abbr title="Andromeda\Core\Main">Main</abbr>::isEnabled</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd><p>if false, requests are not allowed (always true for privileged interfaces)</p></dd><dt>$<a href="Andromeda/Core/RunContext.html#property_input">
+<abbr title="Andromeda\Core\RunContext">RunContext</abbr>#input</a> &mdash; <em>Property in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
+                    <dd></dd>        </dl><h2 id="letterJ">J</h2>
         <dl id="indexJ"><dt><a href="Andromeda/Core/Database/FieldTypes/JSON.html"><abbr title="Andromeda\Core\Database\FieldTypes\JSON">JSON</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database/FieldTypes.html">Andromeda\Core\Database\FieldTypes</a></em></dt>
                     <dd><p>Stores a value that is automatically JSON-encoded</p></dd><dt>$<a href="Andromeda/Core/Database/FieldTypes/ObjectJoin.html#property_joinclass">
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectJoin">ObjectJoin</abbr>#joinclass</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/FieldTypes/ObjectJoin.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectJoin">ObjectJoin</abbr></a></em></dt>
@@ -3098,6 +3124,8 @@
                     <dd></dd><dt><a href="Andromeda/Core/MissingSingletonException.html"><abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that GetInstance() was called on a singleton that has not been constructed</p></dd><dt>$<a href="Andromeda/Core/MissingSingletonException.html#property_message">
 <abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/MissingSingletonException.html"><abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/RunContext.html#property_metrics">
+<abbr title="Andromeda\Core\RunContext">RunContext</abbr>#metrics</a> &mdash; <em>Property in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/UnknownActionException.html#property_message">
 <abbr title="Andromeda\Core\UnknownActionException">UnknownActionException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/UnknownActionException.html"><abbr title="Andromeda\Core\UnknownActionException">UnknownActionException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/UnknownAppException.html#property_message">
@@ -3407,7 +3435,11 @@
                     <dd><p>Send a request to a remote Andromeda API</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/RemoteInvalidException.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\RemoteInvalidException">RemoteInvalidException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat/Interfaces.html">Andromeda\Core\IOFormat\Interfaces</a></em></dt>
                     <dd><p>Exception indicating that the remote response is invalid</p></dd><dt><a href="Andromeda/Core/Logging/RequestLog.html"><abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Logging.html">Andromeda\Core\Logging</a></em></dt>
                     <dd><p>Log entry representing an API request</p></dd><dt><a href="Andromeda/Core/Logging/RequestMetrics.html"><abbr title="Andromeda\Core\Logging\RequestMetrics">RequestMetrics</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Logging.html">Andromeda\Core\Logging</a></em></dt>
-                    <dd><p>Log entry representing an metrics for a request</p></dd><dt><a href="Andromeda/Core/Main.html#method_Run">
+                    <dd><p>Log entry representing an metrics for a request</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_reqlog">
+<abbr title="Andromeda\Core\Main">Main</abbr>#reqlog</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_requireUpgrade">
+<abbr title="Andromeda\Core\Main">Main</abbr>#requireUpgrade</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Main.html#method_Run">
 <abbr title="Andromeda\Core\Main">Main</abbr>::Run</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd><p>Calls into an app to run the given Input command</p></dd><dt><a href="Andromeda/Core/Main.html#method_RunRemote">
 <abbr title="Andromeda\Core\Main">Main</abbr>::RunRemote</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
@@ -3896,7 +3928,11 @@
 {@inheritDoc}</p></dd><dt><a href="Andromeda/Core/Logging/RequestMetrics.html#method_Save">
 <abbr title="Andromeda\Core\Logging\RequestMetrics">RequestMetrics</abbr>::Save</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/RequestMetrics.html"><abbr title="Andromeda\Core\Logging\RequestMetrics">RequestMetrics</abbr></a></em></dt>
                     <dd><p>Saves this metrics log, either to DB or file (or both)
-{@inheritDoc}</p></dd><dt><a href="Andromeda/Core/RunContext.html#method_SetMetrics">
+{@inheritDoc}</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_stack">
+<abbr title="Andromeda\Core\Main">Main</abbr>#stack</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_serverApp">
+<abbr title="Andromeda\Core\Main">Main</abbr>#serverApp</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/RunContext.html#method_SetMetrics">
 <abbr title="Andromeda\Core\RunContext">RunContext</abbr>::SetMetrics</a>() &mdash; <em>Method in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Abstract class implementing a singleton</p></dd><dt><a href="Andromeda/Core/Utilities.html#method_ShortClassName">
@@ -4066,7 +4102,11 @@
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>::TryGet</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
                     <dd><p>Constructs and returns a singleton of the appropriate interface type</p></dd><dt><a href="Andromeda/Core/IOFormat/Input.html#method_TryGetFile">
 <abbr title="Andromeda\Core\IOFormat\Input">Input</abbr>::TryGetFile</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></em></dt>
-                    <dd><p>Same as GetFile() but returns null rather than throwing an exception</p></dd><dt><a href="Andromeda/Core/Transactions.html"><abbr title="Andromeda\Core\Transactions">Transactions</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
+                    <dd><p>Same as GetFile() but returns null rather than throwing an exception</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_total_stats">
+<abbr title="Andromeda\Core\Main">Main</abbr>#total_stats</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_time">
+<abbr title="Andromeda\Core\Main">Main</abbr>#time</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Transactions.html"><abbr title="Andromeda\Core\Transactions">Transactions</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Simple interface with rollback() and commit()</p></dd>        </dl><h2 id="letterU">U</h2>
         <dl id="indexU"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_UnlockCryptoFromPassword">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::UnlockCryptoFromPassword</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
