@@ -87,6 +87,65 @@ The response body can be anything that is JSON encodable.</p></p>        </div>
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_ok">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$ok</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_code">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$code</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_message">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$message</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_appdata">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$appdata</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_metrics">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$metrics</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_debug">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$debug</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -133,7 +192,7 @@ The response body can be anything that is JSON encodable.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_SetMetrics">SetMetrics</a>(array|null $metrics)
@@ -159,6 +218,17 @@ The response body can be anything that is JSON encodable.</p></p>        </div>
                     <a href="#method_GetAsString">GetAsString</a>()
         
                                             <p><p>Returns the appdata as a single string (or null if not possible)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(bool $ok, int $code)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -329,7 +399,7 @@ The response body can be anything that is JSON encodable.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_SetMetrics">
         <div class="location">at line 37</div>
-        <code>                    void
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
     <strong>SetMetrics</strong>(array|null $metrics)
         </code>
     </h3>
@@ -356,7 +426,7 @@ The response body can be anything that is JSON encodable.</p></p>        </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td><a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
             <td></td>
         </tr>
     </table>
@@ -426,6 +496,45 @@ if failure: <code>{ok:false, code:int, message:string}</code></p></td>
         </tr>
     </table>
 
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 70</div>
+        <code>                private    
+    <strong>__construct</strong>(bool $ok, int $code)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$ok</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>int</td>
+                <td>$code</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
             
             
             

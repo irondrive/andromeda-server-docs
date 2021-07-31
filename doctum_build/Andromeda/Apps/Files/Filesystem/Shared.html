@@ -166,7 +166,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true)
+                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>|null $itemCreator = null)
         
                                             <p><p>Updates the given DB folder (and contents) from disk</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -513,7 +513,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFile">
-        <div class="location">at line 52</div>
+        <div class="location">at line 69</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RefreshFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -555,9 +555,9 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFolder">
-        <div class="location">at line 77</div>
+        <div class="location">at line 93</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
-    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true)
+    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>|null $itemCreator = null)
         </code>
     </h3>
     <div class="details">    
@@ -565,10 +565,8 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             
 
         <div class="method-description">
-                            <p><p>Updates the given DB folder (and contents) from disk</p></p>                <p><p>Checks that it exists, then updates stat metadata
-For contents, the folder listing will be compared to the DB.
-New items not in the DB will be added, and existing things in the
-DB that no longer exist on disk will be removed.</p></p>        
+                            <p><p>Updates the given DB folder (and contents) from disk</p></p>                <p><p>Checks that it exists, then updates stat metadata.
+Also scans for new items and creates objects for them.</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -583,6 +581,11 @@ DB that no longer exist on disk will be removed.</p></p>
                 <td>bool</td>
                 <td>$doContents</td>
                 <td><p>if true, recurse, else just this folder</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>|null</td>
+                <td>$itemCreator</td>
+                <td><p>MUST BE NULL (unit testing only)</p></td>
             </tr>
             </table>
 
@@ -605,7 +608,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
-        <div class="location">at line 134</div>
+        <div class="location">at line 144</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CreateFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -647,7 +650,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
-        <div class="location">at line 141</div>
+        <div class="location">at line 151</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -690,7 +693,7 @@ DB that no longer exist on disk will be removed.</p></p>
                     <div class="method-item">
                     <h3 id="method_ImportFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ImportFile">
-<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 18</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 17</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>ImportFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $path)
         </code>
@@ -738,7 +741,7 @@ DB that no longer exist on disk will be removed.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_DeleteFile">
-<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 43</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 42</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -781,7 +784,7 @@ DB that no longer exist on disk will be removed.</p></p>
                     <div class="method-item">
                     <h3 id="method_ReadBytes">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ReadBytes">
-<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 23</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 22</div>
         <code>                    string
     <strong>ReadBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, int $length)
         </code>
@@ -834,7 +837,7 @@ DB that no longer exist on disk will be removed.</p></p>
                     <div class="method-item">
                     <h3 id="method_WriteBytes">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_WriteBytes">
-<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 28</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 27</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>WriteBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, string $data)
         </code>
@@ -887,7 +890,7 @@ DB that no longer exist on disk will be removed.</p></p>
                     <div class="method-item">
                     <h3 id="method_Truncate">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_Truncate">
-<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 33</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 32</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>Truncate</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $length)
         </code>
@@ -934,7 +937,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFile">
-        <div class="location">at line 148</div>
+        <div class="location">at line 158</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $name)
         </code>
@@ -981,7 +984,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
-        <div class="location">at line 156</div>
+        <div class="location">at line 166</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, string $name)
         </code>
@@ -1028,7 +1031,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFile">
-        <div class="location">at line 164</div>
+        <div class="location">at line 174</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1075,7 +1078,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
-        <div class="location">at line 172</div>
+        <div class="location">at line 182</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1123,7 +1126,7 @@ DB that no longer exist on disk will be removed.</p></p>
                     <div class="method-item">
                     <h3 id="method_CopyFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_CopyFile">
-<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 38</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 37</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $dest)
         </code>
@@ -1170,7 +1173,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CopyFolder">
-        <div class="location">at line 180</div>
+        <div class="location">at line 190</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
         </code>
@@ -1217,8 +1220,8 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilePath">
-        <div class="location">at line 45</div>
-        <code>                    string
+        <div class="location">at line 62</div>
+        <code>            protected        string
     <strong>GetFilePath</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
     </h3>
@@ -1260,7 +1263,7 @@ DB that no longer exist on disk will be removed.</p></p>
                     <div class="method-item">
                     <h3 id="method_ManualCopyFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ManualCopyFolder">
-<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 54</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a> at line 53</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a>
     <strong>ManualCopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
         </code>
@@ -1307,7 +1310,7 @@ DB that no longer exist on disk will be removed.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItemPath">
-        <div class="location">at line 36</div>
+        <div class="location">at line 53</div>
         <code>            protected        string
     <strong>GetItemPath</strong>(<a href="../../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, string|null $child = null)
         </code>

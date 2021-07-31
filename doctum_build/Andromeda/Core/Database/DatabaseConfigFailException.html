@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Andromeda\Apps\Files\UserStorageDisabledException | Andromeda Server API</title>
+    <title>Andromeda\Core\Database\DatabaseConfigFailException | Andromeda Server API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
 
     </head>
 
-    <body id="class" data-name="class:Andromeda_Apps_Files_UserStorageDisabledException" data-root-path="../../../">
+    <body id="class" data-name="class:Andromeda_Core_Database_DatabaseConfigFailException" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -63,18 +63,18 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Files.html">Files</a></li><li class="backslash">\</li><li>UserStorageDisabledException</li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/Database.html">Database</a></li><li class="backslash">\</li><li>DatabaseConfigFailException</li>
             </ol>
         </div>
                 <div id="page-content">
     <div class="page-header">
-        <h1>UserStorageDisabledException    
+        <h1>DatabaseConfigFailException    
             </h1>
     </div>
 
     
     <p>        class
-    <strong>UserStorageDisabledException</strong>        extends <a href="../../../Andromeda/Core/Exceptions/ClientDeniedException.html"><abbr title="Andromeda\Core\Exceptions\ClientDeniedException">ClientDeniedException</abbr></a>
+    <strong>DatabaseConfigFailException</strong>        extends <a href="../../../Andromeda/Core/Exceptions/ClientErrorException.html"><abbr title="Andromeda\Core\Exceptions\ClientErrorException">ClientErrorException</abbr></a>
 </p>
 
         
@@ -82,7 +82,7 @@
         
 
             <div class="description">
-            <p><p>Exception indicating that user-added filesystems are not allowed</p></p>                    </div>
+            <p><p>Exception indicating that database config failed</p></p>                    </div>
             
         
     
@@ -96,8 +96,8 @@
                                     </td>
                 <td>$code</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/ClientDeniedException.html#property_code">
-<abbr title="Andromeda\Core\Exceptions\ClientDeniedException">ClientDeniedException</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/ClientErrorException.html#property_code">
+<abbr title="Andromeda\Core\Exceptions\ClientErrorException">ClientErrorException</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_message">
@@ -106,7 +106,8 @@
                                     </td>
                 <td>$message</td>
                 <td class="last"></td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/ClientErrorException.html#property_message">
+<abbr title="Andromeda\Core\Exceptions\ClientErrorException">ClientErrorException</abbr></a></small></td>
             </tr>
             </table>
 

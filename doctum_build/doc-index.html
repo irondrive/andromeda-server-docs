@@ -123,7 +123,9 @@
 <abbr title="Andromeda\Apps\Accounts\Auth\FTP">FTP</abbr>::Activate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/FTP.html"><abbr title="Andromeda\Apps\Accounts\Auth\FTP">FTP</abbr></a></em></dt>
                     <dd><p>Initiates a connection to the FTP server</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/LDAP.html#method_Activate">
 <abbr title="Andromeda\Apps\Accounts\Auth\LDAP">LDAP</abbr>::Activate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/LDAP.html"><abbr title="Andromeda\Apps\Accounts\Auth\LDAP">LDAP</abbr></a></em></dt>
-                    <dd><p>Initiates a connection to the LDAP server</p></dd><dt><a href="Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
+                    <dd><p>Initiates a connection to the LDAP server</p></dd><dt>$<a href="Andromeda/Apps/Accounts/Auth/Manager.html#property_auth_types">
+<abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>#auth_types</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Accounts/AuthenticationFailedException.html"><abbr title="Andromeda\Apps\Accounts\AuthenticationFailedException">AuthenticationFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that the request is not allowed with the given authentication</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>The class used to authenticate requests</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_Authenticate">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::Authenticate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
@@ -134,9 +136,19 @@
                     <dd><p>Adds a new account to this group</p></dd><dt><a href="Andromeda/Apps/Files/AccessLog.html"><abbr title="Andromeda\Apps\Files\AccessLog">AccessLog</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>Access log for the files app</p></dd><dt><a href="Andromeda/Apps/Files/File.html#method_AddStatsToLimit">
 <abbr title="Andromeda\Apps\Files\File">File</abbr>::AddStatsToLimit</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></em></dt>
-                    <dd><p>Adds this item's stats to the given limit, substracting if not $add</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_AddObjectRef">
+                    <dd><p>Adds this item's stats to the given limit, substracting if not $add</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_AuthenticateFileAccess">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::AuthenticateFileAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns an ItemAccess authenticating the given file ID (or null to get from input), throws exceptions on failure</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_AuthenticateFolderAccess">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::AuthenticateFolderAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns an ItemAccess authenticating the given folder ID (or null to get from input), throws exceptions on failure</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_AuthenticateItemAccess">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::AuthenticateItemAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns an ItemAccess authenticating the given item class/ID, throws exceptions on failure</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_AuthenticateItemObjAccess">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::AuthenticateItemObjAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns an ItemAccess authenticating the given already-loaded object</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_AddItemCounts">
+<abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::AddItemCounts</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
+                    <dd><p>Adds the statistics from the given item to this folder</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_AddObjectRef">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::AddObjectRef</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
-                    <dd><p>Adds an object reference, checking for a limit on the number of references</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_AddStatsToLimit">
+                    <dd><p>Adds the given object to a collection of referenced objects</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_AddStatsToLimit">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::AddStatsToLimit</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd><p>Adds this item's stats to the given limit, substracting if not $add</p></dd><dt><a href="Andromeda/Apps/Files/Item.html#method_AddStatsToOwner">
 <abbr title="Andromeda\Apps\Files\Item">Item</abbr>::AddStatsToOwner</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></em></dt>
@@ -208,7 +220,9 @@
                     <dd><p>Exception indicating that an app dependency was not met</p></dd><dt><a href="Andromeda/Core/AppVersionException.html"><abbr title="Andromeda\Core\AppVersionException">AppVersionException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that the app is not compatible with this framework version</p></dd><dt><a href="Andromeda/Core/Database/BaseObject.html#method_AddObjectRef">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::AddObjectRef</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
-                    <dd><p>Adds the given object to a collection of referenced objects</p></dd><dt><a href="Andromeda/Core/Database/DBStats.html#method_Add">
+                    <dd><p>Adds the given object to a collection of referenced objects</p></dd><dt><a href="Andromeda/Core/Database/BaseObject.html#method_AddField">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::AddField</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
+                    <dd><p>Adds the given field object to the correct internal array</p></dd><dt><a href="Andromeda/Core/Database/DBStats.html#method_Add">
 <abbr title="Andromeda\Core\Database\DBStats">DBStats</abbr>::Add</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/DBStats.html"><abbr title="Andromeda\Core\Database\DBStats">DBStats</abbr></a></em></dt>
                     <dd><p>Adds another DBStats' stats to this one</p></dd><dt><a href="Andromeda/Core/Database/FieldTypes/ObjectJoin.html#method_AddObject">
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectJoin">ObjectJoin</abbr>::AddObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/FieldTypes/ObjectJoin.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectJoin">ObjectJoin</abbr></a></em></dt>
@@ -224,20 +238,22 @@
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectRefs">ObjectRefs</abbr>::AddObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/FieldTypes/ObjectRefs.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectRefs">ObjectRefs</abbr></a></em></dt>
                     <dd><p>Add the given object to this field's object array</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_AddData">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::AddData</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
-                    <dd><p>Adds the given value to the internal data array</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_AndArr">
-<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::AndArr</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
-                    <dd><p>Returns a query string that combines the given array of arguments using AND</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_And">
+                    <dd><p>Adds the given value to the internal data array</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_And">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::And</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
                     <dd><p>Returns a query string that combines the given arguments using AND</p></dd><dt><a href="Andromeda/Core/Database/StandardObject.html#method_AddObjectRef">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr>::AddObjectRef</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></em></dt>
-                    <dd><p>Adds an object reference, checking for a limit on the number of references</p></dd><dt><a href="Andromeda/Core/Emailer.html#method_Activate">
+                    <dd><p>Adds the given object to a collection of referenced objects</p></dd><dt><a href="Andromeda/Core/Emailer.html#method_Activate">
 <abbr title="Andromeda\Core\Emailer">Emailer</abbr>::Activate</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Emailer.html"><abbr title="Andromeda\Core\Emailer">Emailer</abbr></a></em></dt>
-                    <dd><p>Initializes the PHPMailer instance</p></dd><dt><a href="Andromeda/Core/IOFormat/Input.html#method_AddParam">
+                    <dd><p>Initializes the PHPMailer instance</p></dd><dt><a href="Andromeda/Core/Exceptions/ErrorLog.html#method_arrayStrings">
+<abbr title="Andromeda\Core\Exceptions\ErrorLog">ErrorLog</abbr>::arrayStrings</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/ErrorLog.html"><abbr title="Andromeda\Core\Exceptions\ErrorLog">ErrorLog</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Input.html#method_AddParam">
 <abbr title="Andromeda\Core\IOFormat\Input">Input</abbr>::AddParam</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/Input.html#method_AddFile">
 <abbr title="Andromeda\Core\IOFormat\Input">Input</abbr>::AddFile</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></em></dt>
                     <dd><p>Adds the given InputFile to the file array</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat/Interfaces.html">Andromeda\Core\IOFormat\Interfaces</a></em></dt>
-                    <dd><p>The interface for using Andromeda over a web server</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParams.html#method_AddParam">
+                    <dd><p>The interface for using Andromeda over a web server</p></dd><dt>$<a href="Andromeda/Core/IOFormat/Output.html#property_appdata">
+<abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>#appdata</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParams.html#method_AddParam">
 <abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::AddParam</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></em></dt>
                     <dd><p>Adds the parameter to this object with the given name and value</p></dd><dt><a href="Andromeda/Core/Logging/ActionLog.html"><abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Logging.html">Andromeda\Core\Logging</a></em></dt>
                     <dd><p>Log entry representing an app action in a request</p></dd><dt><a href="Andromeda/Core/Logging/ActionMetrics.html"><abbr title="Andromeda\Core\Logging\ActionMetrics">ActionMetrics</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Logging.html">Andromeda\Core\Logging</a></em></dt>
@@ -251,7 +267,7 @@
 <abbr title="Andromeda\Core\RunContext">RunContext</abbr>#actionlog</a> &mdash; <em>Property in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Utilities.html#method_array_last">
 <abbr title="Andromeda\Core\Utilities">Utilities</abbr>::array_last</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a></em></dt>
-                    <dd><p>Returns the last element of an array of null if it's empty</p></dd>        </dl><h2 id="letterB">B</h2>
+                    <dd><p>Returns the last element of an array or null if it's empty</p></dd>        </dl><h2 id="letterB">B</h2>
         <dl id="indexB"><dt><a href="Andromeda/Apps/Accounts/AuthAccessLog.html#method_BaseAuthCreate">
 <abbr title="Andromeda\Apps\Accounts\AuthAccessLog">AuthAccessLog</abbr>::BaseAuthCreate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AuthAccessLog.html"><abbr title="Andromeda\Apps\Accounts\AuthAccessLog">AuthAccessLog</abbr></a></em></dt>
                     <dd><p>Returns a new self object with the given auth info logged</p></dd><dt><a href="Andromeda/Apps/Accounts/AuthObject.html#method_BaseCreate">
@@ -288,11 +304,13 @@
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::beginTransaction</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd><p>Begins a new database transaction</p></dd><dt>$<a href="Andromeda/Core/Database/FieldTypes/ObjectPoly.html#property_baseclass">
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectPoly">ObjectPoly</abbr>#baseclass</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/FieldTypes/ObjectPoly.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectPoly">ObjectPoly</abbr></a></em></dt>
-                    <dd><p>The base class that the referenced object must inherit</p></dd><dt><a href="Andromeda/Core/Database/SingletonObject.html#method_BaseCreate">
+                    <dd><p>The base class that the referenced object must inherit</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_BaseCompare">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::BaseCompare</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd><p>Base function for safely comparing columns to values</p></dd><dt><a href="Andromeda/Core/Database/SingletonObject.html#method_BaseCreate">
 <abbr title="Andromeda\Core\Database\SingletonObject">SingletonObject</abbr>::BaseCreate</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/SingletonObject.html"><abbr title="Andromeda\Core\Database\SingletonObject">SingletonObject</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Database/StandardObject.html#method_BaseCreate">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr>::BaseCreate</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></em></dt>
-                    <dd><p>Create the object by setting its created date</p></dd><dt><a href="Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
+                    <dd><p>Creates a new object of this type in the database and returns it</p></dd><dt><a href="Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
                     <dd><p>The base class for Andromeda exceptions</p></dd><dt><a href="Andromeda/Core/Exceptions/BreakpointException.html"><abbr title="Andromeda\Core\Exceptions\BreakpointException">BreakpointException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
                     <dd><p>Internal-only exception used for getting a backtrace</p></dd><dt><a href="Andromeda/Core/IOFormat/BatchNotAllowedException.html"><abbr title="Andromeda\Core\IOFormat\BatchNotAllowedException">BatchNotAllowedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd><p>Exception indicating that an app action does not allow batches</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/BatchFileParseException.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\BatchFileParseException">BatchFileParseException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat/Interfaces.html">Andromeda\Core\IOFormat\Interfaces</a></em></dt>
@@ -315,9 +333,13 @@
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::CryptoAvailable</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Returns true if crypto has been unlocked in this request and is available for operations</p></dd><dt><a href="Andromeda/Apps/Accounts/Account.html#method_ChangePassword">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::ChangePassword</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
-                    <dd><p>Re-keys the account's crypto if it exists, and re-hashes its password (if using local auth)</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_ChangePassword">
+                    <dd><p>Re-keys the account's crypto if it exists, and re-hashes its password (if using local auth)</p></dd><dt>$<a href="Andromeda/Apps/Accounts/AccountsApp.html#property_config">
+<abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>#config</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_ChangePassword">
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::ChangePassword</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
-                    <dd><p>Changes the password for an account</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_CreateAccount">
+                    <dd><p>Changes the password for an account</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_capitalizeWords">
+<abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::capitalizeWords</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
+                    <dd><p>Returns the given string with each character after a space capitalized</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_CreateAccount">
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::CreateAccount</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
                     <dd><p>Creates a new user account</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_CreateSession">
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::CreateSession</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
@@ -345,7 +367,9 @@
 <abbr title="Andromeda\Apps\Accounts\Auth\LDAP">LDAP</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/LDAP.html"><abbr title="Andromeda\Apps\Accounts\Auth\LDAP">LDAP</abbr></a></em></dt>
                     <dd><p>Creates a new external auth source</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Manager.html#method_Create">
 <abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
-                    <dd><p>Creates and tests a new external authentication backend, creating a manager and optionally, a default group for it</p></dd><dt><a href="Andromeda/Apps/Accounts/ChangeExternalPasswordException.html"><abbr title="Andromeda\Apps\Accounts\ChangeExternalPasswordException">ChangeExternalPasswordException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
+                    <dd><p>Creates and tests a new external authentication backend, creating a manager and optionally, a default group for it</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Manager.html#method_CreateDefaultGroup">
+<abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::CreateDefaultGroup</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
+                    <dd><p>Creates a new default group whose implicit members are all accounts of this auth source</p></dd><dt><a href="Andromeda/Apps/Accounts/ChangeExternalPasswordException.html"><abbr title="Andromeda\Apps\Accounts\ChangeExternalPasswordException">ChangeExternalPasswordException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that the password for an account using external authentication cannot be changed</p></dd><dt><a href="Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>A client registered for authenticating as an account</p></dd><dt><a href="Andromeda/Apps/Accounts/Client.html#method_Create">
 <abbr title="Andromeda\Apps\Accounts\Client">Client</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a></em></dt>
@@ -417,7 +441,9 @@
 <abbr title="Andromeda\Apps\Files\File">File</abbr>::CopyToName</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></em></dt>
                     <dd><p>Copies the item to a new name.  If $overwrite, deletes an object if the target already exists.</p></dd><dt><a href="Andromeda/Apps/Files/File.html#method_CopyToParent">
 <abbr title="Andromeda\Apps\Files\File">File</abbr>::CopyToParent</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></em></dt>
-                    <dd><p>Copies the item to a new parent.  If $overwrite, deletes an object if the target already exists.</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_commit">
+                    <dd><p>Copies the item to a new parent.  If $overwrite, deletes an object if the target already exists.</p></dd><dt>$<a href="Andromeda/Apps/Files/FilesApp.html#property_config">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>#config</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>files app config</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_commit">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::commit</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Tells the app to commit any changes made outside the database</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_CreateFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::CreateFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
@@ -425,7 +451,9 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::CommentFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Adds a comment to a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_CommentFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::CommentFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Adds a comment to a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_CreateFilesystem">
+                    <dd><p>Adds a comment to a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_CommentItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::CommentItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Adds a comment to an item</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_CreateFilesystem">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::CreateFilesystem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Creates a new filesystem</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ConfigLimits">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ConfigLimits</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
@@ -441,7 +469,9 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::CopyFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
                     <dd><p>Copies a folder</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_Create">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
-                    <dd><p>Creates and tests a new filesystem</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Native.html#method_CreateFolder">
+                    <dd><p>Creates and tests a new filesystem</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ItemCreator.html#method_createItem">
+<abbr title="Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>::createItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ItemCreator.html"><abbr title="Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Native.html#method_CreateFolder">
 <abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr>::CreateFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></em></dt>
                     <dd><p>no-op</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Native.html#method_CopyFolder">
 <abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr>::CopyFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></em></dt>
@@ -527,7 +557,7 @@
 <abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr>::CopyToParent</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/RootFolder.html"><abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr></a></em></dt>
                     <dd><p>Copies the item to a new parent.  If $overwrite, deletes an object if the target already exists.</p></dd><dt><a href="Andromeda/Apps/Files/RootFolder.html#method_CanRefreshDelete">
 <abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr>::CanRefreshDelete</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/RootFolder.html"><abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr></a></em></dt>
-                    <dd><p>Don't let a root folder be deleted if it's missing in storage</p></dd><dt><a href="Andromeda/Apps/Files/Share.html#method_CanRead">
+                    <dd><p>Returns true if this folder can be deleted if it no longer exists on storage</p></dd><dt><a href="Andromeda/Apps/Files/Share.html#method_CanRead">
 <abbr title="Andromeda\Apps\Files\Share">Share</abbr>::CanRead</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Share.html"><abbr title="Andromeda\Apps\Files\Share">Share</abbr></a></em></dt>
                     <dd><p>Returns true if the share grants read access to the item</p></dd><dt><a href="Andromeda/Apps/Files/Share.html#method_CanUpload">
 <abbr title="Andromeda\Apps\Files\Share">Share</abbr>::CanUpload</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Share.html"><abbr title="Andromeda\Apps\Files\Share">Share</abbr></a></em></dt>
@@ -632,7 +662,9 @@
                     <dd><p>Counts objects in the DB matching the given query</p></dd><dt><a href="Andromeda/Core/Database/BaseObject.html#method_CountObjectRefs">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::CountObjectRefs</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
                     <dd><p>Gets the counter of objects referencing this object</p></dd><dt><a href="Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>Exception indicating that the counter exceeded its limit</p></dd><dt>$<a href="Andromeda/Core/Database/Database.html#property_config">
+                    <dd><p>Exception indicating that the counter exceeded its limit</p></dd><dt>$<a href="Andromeda/Core/Database/Database.html#property_connection">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>#connection</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd><p>the PDO database connection</p></dd><dt>$<a href="Andromeda/Core/Database/Database.html#property_config">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>#config</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Database/Database.html#method_commit">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::commit</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
@@ -656,11 +688,12 @@
                     <dd><p>Base class for generally invalid client requests (HTTP 400)</p></dd><dt>$<a href="Andromeda/Core/Exceptions/ClientErrorException.html#property_code">
 <abbr title="Andromeda\Core\Exceptions\ClientErrorException">ClientErrorException</abbr>#code</a> &mdash; <em>Property in class <a href="Andromeda/Core/Exceptions/ClientErrorException.html"><abbr title="Andromeda\Core\Exceptions\ClientErrorException">ClientErrorException</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Exceptions/ClientException.html"><abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
-                    <dd><p>Base class for errors caused by the client's request</p></dd><dt><a href="Andromeda/Core/Exceptions/ClientException.html#method_Create">
-<abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/ClientException.html"><abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Andromeda/Core/Exceptions/ClientNotFoundException.html"><abbr title="Andromeda\Core\Exceptions\ClientNotFoundException">ClientNotFoundException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
+                    <dd><p>Base class for errors caused by the client's request</p></dd><dt><a href="Andromeda/Core/Exceptions/ClientNotFoundException.html"><abbr title="Andromeda\Core\Exceptions\ClientNotFoundException">ClientNotFoundException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
                     <dd><p>Base class for client requests referencing something that was not found (HTTP 404)</p></dd><dt>$<a href="Andromeda/Core/Exceptions/ClientNotFoundException.html#property_code">
 <abbr title="Andromeda\Core\Exceptions\ClientNotFoundException">ClientNotFoundException</abbr>#code</a> &mdash; <em>Property in class <a href="Andromeda/Core/Exceptions/ClientNotFoundException.html"><abbr title="Andromeda\Core\Exceptions\ClientNotFoundException">ClientNotFoundException</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Exceptions/CustomClientException.html"><abbr title="Andromeda\Core\Exceptions\CustomClientException">CustomClientException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
+                    <dd><p>Class for errors caused by the client's request (custom)</p></dd><dt><a href="Andromeda/Core/Exceptions/CustomClientException.html#method_Create">
+<abbr title="Andromeda\Core\Exceptions\CustomClientException">CustomClientException</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/CustomClientException.html"><abbr title="Andromeda\Core\Exceptions\CustomClientException">CustomClientException</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Exceptions/ErrorLog.html#method_CountByInput">
 <abbr title="Andromeda\Core\Exceptions\ErrorLog">ErrorLog</abbr>::CountByInput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/ErrorLog.html"><abbr title="Andromeda\Core\Exceptions\ErrorLog">ErrorLog</abbr></a></em></dt>
                     <dd><p>Counts error log entries matching the given input</p></dd><dt>$<a href="Andromeda/Core/Exceptions/NotImplementedException.html#property_code">
@@ -668,7 +701,9 @@
                     <dd></dd><dt>$<a href="Andromeda/Core/Exceptions/ServerException.html#property_code">
 <abbr title="Andromeda\Core\Exceptions\ServerException">ServerException</abbr>#code</a> &mdash; <em>Property in class <a href="Andromeda/Core/Exceptions/ServerException.html"><abbr title="Andromeda\Core\Exceptions\ServerException">ServerException</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat/Interfaces.html">Andromeda\Core\IOFormat\Interfaces</a></em></dt>
-                    <dd><p>The interface for using Andromeda via local console</p></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_ClientException">
+                    <dd><p>The interface for using Andromeda via local console</p></dd><dt>$<a href="Andromeda/Core/IOFormat/Output.html#property_code">
+<abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>#code</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_ClientException">
 <abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::ClientException</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
                     <dd><p>Constructs an Output object representing a client error, showing the exception and possibly extra debug</p></dd><dt><a href="Andromeda/Core/Logging/ActionLog.html#method_Create">
 <abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr>::Create</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/ActionLog.html"><abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr></a></em></dt>
@@ -695,7 +730,11 @@
 <abbr title="Andromeda\Core\Transactions">Transactions</abbr>::commit</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Transactions.html"><abbr title="Andromeda\Core\Transactions">Transactions</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
 <abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr>::CheckUpgrade</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></em></dt>
-                    <dd><p>Complements Run() with checking if upgrade is required and running it</p></dd>        </dl><h2 id="letterD">D</h2>
+                    <dd><p>Complements Run() with checking if upgrade is required and running it</p></dd><dt>$<a href="Andromeda/Core/Utilities.html#property_chars">
+<abbr title="Andromeda\Core\Utilities">Utilities</abbr>#chars</a> &mdash; <em>Property in class <a href="Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Utilities.html#method_CaptureOutput">
+<abbr title="Andromeda\Core\Utilities">Utilities</abbr>::CaptureOutput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a></em></dt>
+                    <dd><p>Captures and returns any echoes or prints in the given function</p></dd>        </dl><h2 id="letterD">D</h2>
         <dl id="indexD"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_DeleteClients">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::DeleteClients</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Deletes all clients registered to the account</p></dd><dt><a href="Andromeda/Apps/Accounts/Account.html#method_DeleteByAuthSource">
@@ -706,7 +745,9 @@
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::DecryptSecret</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Decrypts a value using the account's crypto</p></dd><dt><a href="Andromeda/Apps/Accounts/Account.html#method_DestroyCrypto">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::DestroyCrypto</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
-                    <dd><p>Disables crypto on the account, stripping all keys</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_DisableCrypto">
+                    <dd><p>Disables crypto on the account, stripping all keys</p></dd><dt>$<a href="Andromeda/Apps/Accounts/AccountsApp.html#property_database">
+<abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>#database</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_DisableCrypto">
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::DisableCrypto</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
                     <dd><p>Disables server side crypto for an account</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_DeleteAccount">
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::DeleteAccount</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
@@ -747,13 +788,17 @@
                     <dd><p>Exception indicating that the item was deleted when refreshed from storage</p></dd><dt><a href="Andromeda/Apps/Files/DuplicateItemException.html"><abbr title="Andromeda\Apps\Files\DuplicateItemException">DuplicateItemException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>Exception indicating that the item target name already exists</p></dd><dt><a href="Andromeda/Apps/Files/File.html#method_Delete">
 <abbr title="Andromeda\Apps\Files\File">File</abbr>::Delete</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></em></dt>
-                    <dd><p>Deletes the file from both the DB and disk</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DownloadFile">
+                    <dd><p>Deletes the file from both the DB and disk</p></dd><dt>$<a href="Andromeda/Apps/Files/FilesApp.html#property_database">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>#database</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>database reference</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DownloadFile">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DownloadFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Downloads a file or part of a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DeleteFile">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DeleteFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Deletes a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DeleteFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DeleteFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Deletes a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DeleteTag">
+                    <dd><p>Deletes a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DeleteItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DeleteItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Deletes an item.</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DeleteTag">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DeleteTag</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Deletes an item tag</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_DeleteComment">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DeleteComment</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
@@ -797,7 +842,7 @@
 <abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr>::DeleteRootsByAccount</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/RootFolder.html"><abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr></a></em></dt>
                     <dd><p>Deletes all root folders for the given owner - if the FS is shared, only remove DB objects</p></dd><dt><a href="Andromeda/Apps/Files/RootFolder.html#method_Delete">
 <abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr>::Delete</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/RootFolder.html"><abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr></a></em></dt>
-                    <dd><p>Deletes the folder and its contents from DB and disk</p></dd><dt><a href="Andromeda/Apps/Files/Share.html#method_Delete">
+                    <dd><p>Deleting an item also deletes all of its component objects (likes, tags, comments, shares)</p></dd><dt><a href="Andromeda/Apps/Files/Share.html#method_Delete">
 <abbr title="Andromeda\Apps\Files\Share">Share</abbr>::Delete</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Share.html"><abbr title="Andromeda\Apps\Files\Share">Share</abbr></a></em></dt>
                     <dd><p>Deletes the share</p></dd><dt><a href="Andromeda/Apps/Files/Storage/Storage.html#method_DeleteFile">
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::DeleteFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></em></dt>
@@ -805,8 +850,10 @@
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::DeleteFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></em></dt>
                     <dd><p>Deletes the folder with the given path - NO ROLLBACK</p></dd><dt><a href="Andromeda/Apps/Files/SubFolder.html#method_Delete">
 <abbr title="Andromeda\Apps\Files\SubFolder">SubFolder</abbr>::Delete</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/SubFolder.html"><abbr title="Andromeda\Apps\Files\SubFolder">SubFolder</abbr></a></em></dt>
-                    <dd><p>Deletes the folder and its contents from DB and disk</p></dd><dt><a href="Andromeda/Apps/Server/DatabaseFailException.html"><abbr title="Andromeda\Apps\Server\DatabaseFailException">DatabaseFailException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Server.html">Andromeda\Apps\Server</a></em></dt>
-                    <dd><p>Client error indicating that the database config failed</p></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_DisableApp">
+                    <dd><p>Deleting an item also deletes all of its component objects (likes, tags, comments, shares)</p></dd><dt><a href="Andromeda/Apps/Server/DatabaseFailException.html"><abbr title="Andromeda\Apps\Server\DatabaseFailException">DatabaseFailException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Server.html">Andromeda\Apps\Server</a></em></dt>
+                    <dd><p>Client error indicating that the database config failed</p></dd><dt>$<a href="Andromeda/Apps/Server/ServerApp.html#property_database">
+<abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>#database</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_DisableApp">
 <abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>::DisableApp</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
                     <dd><p>Unregisters (disables) an app</p></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_DeleteMailer">
 <abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>::DeleteMailer</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
@@ -847,7 +894,8 @@
                     <dd><p>This class implements the PDO database abstraction.</p></dd><dt>$<a href="Andromeda/Core/Database/Database.html#property_driver">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>#driver</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd><p>The enum value of the driver being used</p></dd><dt><a href="Andromeda/Core/Database/DatabaseConfigException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigException">DatabaseConfigException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>Exception indicating that the database is not configured</p></dd><dt><a href="Andromeda/Core/Database/DatabaseErrorException.html"><abbr title="Andromeda\Core\Database\DatabaseErrorException">DatabaseErrorException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
+                    <dd><p>Exception indicating that the database is not configured</p></dd><dt><a href="Andromeda/Core/Database/DatabaseConfigFailException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigFailException">DatabaseConfigFailException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
+                    <dd><p>Exception indicating that database config failed</p></dd><dt><a href="Andromeda/Core/Database/DatabaseErrorException.html"><abbr title="Andromeda\Core\Database\DatabaseErrorException">DatabaseErrorException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
                     <dd><p>Exception indicating that PDO failed to execute the given query</p></dd><dt><a href="Andromeda/Core/Database/DatabaseException.html"><abbr title="Andromeda\Core\Database\DatabaseException">DatabaseException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
                     <dd><p>Base class representing a database exception</p></dd><dt><a href="Andromeda/Core/Database/DatabaseReadOnlyException.html"><abbr title="Andromeda\Core\Database\DatabaseReadOnlyException">DatabaseReadOnlyException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
                     <dd><p>Exception indicating that the a write was requested to a read-only database</p></dd><dt><a href="Andromeda/Core/Database/DuplicateSingletonException.html"><abbr title="Andromeda\Core\Database\DuplicateSingletonException">DuplicateSingletonException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
@@ -868,14 +916,22 @@
 <abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>::DeleteObjectsByQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></em></dt>
                     <dd><p>Delete objects matching the given query</p></dd><dt><a href="Andromeda/Core/Database/ObjectDatabase.html#method_DeleteObject">
 <abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>::DeleteObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></em></dt>
-                    <dd><p>Deletes a single object from the database (only to be called by the object itself)</p></dd><dt><a href="Andromeda/Core/Database/StandardObject.html#method_DeltaCounter">
+                    <dd><p>Deletes a single object from the database (only to be called by the object itself)</p></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_data">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#data</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/StandardObject.html#method_DeltaCounter">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr>::DeltaCounter</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></em></dt>
-                    <dd><p>Increment a counter by the given value</p></dd><dt><a href="Andromeda/Core/DecryptionFailedException.html"><abbr title="Andromeda\Core\DecryptionFailedException">DecryptionFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
+                    <dd><p>Increments a counter field by the given delta (thread safe)</p></dd><dt><a href="Andromeda/Core/DecryptionFailedException.html"><abbr title="Andromeda\Core\DecryptionFailedException">DecryptionFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that decryption failed</p></dd><dt><a href="Andromeda/Core/DisableRequiredException.html"><abbr title="Andromeda\Core\DisableRequiredException">DisableRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that the server must be disabled for this request</p></dd><dt><a href="Andromeda/Core/DuplicateSingletonException.html"><abbr title="Andromeda\Core\DuplicateSingletonException">DuplicateSingletonException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that a duplicate singleton was constructed</p></dd><dt><a href="Andromeda/Core/IOFormat/IOInterface.html#method_DisallowBatch">
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>::DisallowBatch</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
-                    <dd><p>Asserts that only one output was given</p></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html#method_DoOutput">
+                    <dd><p>Asserts that only one output was given</p></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#property_debug">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>#debug</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#property_dbconf">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>#dbconf</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Output.html#property_debug">
+<abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>#debug</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html#method_DoOutput">
 <abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr>::DoOutput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a></em></dt>
                     <dd><p>Do the actual output routine</p></dd><dt>$<a href="Andromeda/Core/Logging/BaseAppLog.html#property_details">
 <abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>#details</a> &mdash; <em>Property in class <a href="Andromeda/Core/Logging/BaseAppLog.html"><abbr title="Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr></a></em></dt>
@@ -883,7 +939,9 @@
 <abbr title="Andromeda\Core\Main">Main</abbr>#database</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_dirty">
 <abbr title="Andromeda\Core\Main">Main</abbr>#dirty</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
-                    <dd></dd>        </dl><h2 id="letterE">E</h2>
+                    <dd></dd><dt><a href="Andromeda/Core/Utilities.html#method_delete_value">
+<abbr title="Andromeda\Core\Utilities">Utilities</abbr>::delete_value</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a></em></dt>
+                    <dd><p>Deletes any of the given value from the given array reference</p></dd>        </dl><h2 id="letterE">E</h2>
         <dl id="indexE"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_EncryptSecret">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::EncryptSecret</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Encrypts a value using the account's crypto</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_EmailRecovery">
@@ -914,7 +972,9 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditFileMeta</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Edits file metadata</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_EditFolderMeta">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditFolderMeta</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Edits folder metadata</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_EditComment">
+                    <dd><p>Edits folder metadata</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_EditItemMeta">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditItemMeta</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Edits item metadata</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_EditComment">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditComment</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Edits an existing comment properties</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_EditShare">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditShare</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
@@ -1015,7 +1075,11 @@
                     <dd><p>Exception indicating that reading folder contents failed</p></dd><dt><a href="Andromeda/Apps/Files/Storage/FolderRenameFailedException.html"><abbr title="Andromeda\Apps\Files\Storage\FolderRenameFailedException">FolderRenameFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Storage.html">Andromeda\Apps\Files\Storage</a></em></dt>
                     <dd><p>Exception indicating that renaming the folder failed</p></dd><dt><a href="Andromeda/Apps/Files/Storage/FoldersUnsupportedException.html"><abbr title="Andromeda\Apps\Files\Storage\FoldersUnsupportedException">FoldersUnsupportedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Storage.html">Andromeda\Apps\Files\Storage</a></em></dt>
                     <dd><p>Exception indicating that this storage does not support folder functions</p></dd><dt><a href="Andromeda/Apps/Files/Storage/FreeSpaceFailedException.html"><abbr title="Andromeda\Apps\Files\Storage\FreeSpaceFailedException">FreeSpaceFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Storage.html">Andromeda\Apps\Files\Storage</a></em></dt>
-                    <dd><p>Exception indicating that finding free space failed</p></dd><dt><a href="Andromeda/Core/FailedAppLoadException.html"><abbr title="Andromeda\Core\FailedAppLoadException">FailedAppLoadException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
+                    <dd><p>Exception indicating that finding free space failed</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_fetchStreams">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>::fetchStreams</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd><p>Loops through an array of row results and replaces streams with their values</p></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_fromalias">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#fromalias</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/FailedAppLoadException.html"><abbr title="Andromeda\Core\FailedAppLoadException">FailedAppLoadException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that the server failed to load a configured app</p></dd><dt><a href="Andromeda/Core/FinalizeTransactionException.html"><abbr title="Andromeda\Core\FinalizeTransactionException">FinalizeTransactionException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>FinalizeOutput requires the database to not already be undergoing a transaction</p></dd><dt><a href="Andromeda/Core/IOFormat/IOInterface.html#method_formatSize">
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>::formatSize</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
@@ -1160,7 +1224,9 @@
 <abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetAuthSource</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
                     <dd><p>Returns the actual auth source interface for this manager</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Manager.html#method_GetAuthSourceType">
 <abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetAuthSourceType</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
-                    <dd><p>Returns the type of auth source for this manager, without actually loading it</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Manager.html#method_GetDescription">
+                    <dd><p>Returns the type of auth source for this manager, without actually loading it</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Manager.html#method_GetShortSourceType">
+<abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetShortSourceType</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
+                    <dd><p>Returns the class-only (no namespace) of the auth source</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Manager.html#method_GetDescription">
 <abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetDescription</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
                     <dd><p>Returns the description set for this auth source, or the class name if none is set</p></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Manager.html#method_GetClientObject">
 <abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetClientObject</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
@@ -1392,15 +1458,21 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetFileComments</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Returns comments on a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetFolderComments">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetFolderComments</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Returns comments on a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetFileLikes">
+                    <dd><p>Returns comments on a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetItemComments">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetItemComments</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns comments on an item</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetFileLikes">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetFileLikes</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Returns likes on a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetFolderLikes">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetFolderLikes</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Returns likes on a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetFilesystem">
+                    <dd><p>Returns likes on a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetItemLikes">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetItemLikes</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns likes on an item</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetFilesystem">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetFilesystem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Returns filesystem metadata (default if none specified)</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetFilesystems">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetFilesystems</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Returns a list of all filesystems available</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetLimits">
+                    <dd><p>Returns a list of all filesystems available</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetLimitObject">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetLimitObject</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Common function for loading and authenticating the limited object and limit class referred to by input</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetLimits">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetLimits</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Loads the total limit object or objects for the given objects</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_GetTimedLimits">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetTimedLimits</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
@@ -1426,7 +1498,9 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::GetOwner</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Returns the owner of this filesystem (or null)</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_GetOwnerID">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::GetOwnerID</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
-                    <dd><p>Returns the owner ID of this filesystem (or null)</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_GetStorage">
+                    <dd><p>Returns the owner ID of this filesystem (or null)</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_GetType">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::GetType</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
+                    <dd><p>Returns the filesystem impl enum type</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_GetStorage">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::GetStorage</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Activates and returns the underlying storage</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_GetStorageType">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::GetStorageType</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
@@ -1446,9 +1520,11 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::GetClientObject</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Gets a printable client object of this filesystem</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Native.html#method_GetFilePath">
 <abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr>::GetFilePath</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></em></dt>
-                    <dd><p>The path to a file is simply its ID, broken into prefixes</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_GetChunkSize">
+                    <dd><p>The path to a file is simply its ID, broken into a prefix</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_GetChunkSize">
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::GetChunkSize</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
-                    <dd><p>Returns the preferred byte alignment of the filesystem.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_GetChunkIndex">
+                    <dd><p>Returns the preferred byte alignment of the filesystem.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_GetAuthString">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::GetAuthString</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
+                    <dd><p>Chunk swapping is prevented by signing each with the file ID and chunk index</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_GetChunkIndex">
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::GetChunkIndex</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
                     <dd><p>Returns the chunk index storing the given byte offset</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_GetNumChunks">
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::GetNumChunks</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
@@ -2155,7 +2231,7 @@
 <abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr>::getUserAgent</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a></em></dt>
                     <dd><p>Returns the user agent string on the interface</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html#method_GetDefaultOutmode">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr>::GetDefaultOutmode</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html#method_GetRemoteURL">
+                    <dd><p>Gets the default output mode for the interface</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html#method_GetRemoteURL">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr>::GetRemoteURL</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a></em></dt>
                     <dd><p>Build a remote Andromeda request URL</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_getAddress">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::getAddress</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
@@ -2169,7 +2245,13 @@
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::GetDBConfigFile</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
                     <dd><p>Returns the path to the DB config file requested by the interface</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_GetDefaultOutmode">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::GetDefaultOutmode</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_GetHTTPCode">
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_GetBatch">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::GetBatch</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
+                    <dd><p>Reads an array of Input objects from a batch file</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_getKey">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::getKey</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
+                    <dd><p>Strips -- off the given string and returns (or false if not found)</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_GetInput">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::GetInput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
+                    <dd><p>Fetches an Input object by reading it from the command line</p></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_GetHTTPCode">
 <abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::GetHTTPCode</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
                     <dd><p>Returns the HTTP response code for the request</p></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_GetMessage">
 <abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::GetMessage</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
@@ -2179,7 +2261,9 @@
 <abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::GetAsArray</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
                     <dd><p>Returns the Output object as a client array</p></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_GetAsString">
 <abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::GetAsString</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
-                    <dd><p>Returns the appdata as a single string (or null if not possible)</p></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html#method_GetBytes">
+                    <dd><p>Returns the appdata as a single string (or null if not possible)</p></dd><dt>$<a href="Andromeda/Core/IOFormat/OutputHandler.html#property_getbytes">
+<abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr>#getbytes</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html#method_GetBytes">
 <abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr>::GetBytes</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a></em></dt>
                     <dd><p>Return the number of bytes that will be output</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParam.html#method_GetTypeString">
 <abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr>::GetTypeString</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a></em></dt>
@@ -2368,7 +2452,9 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr>::ImportFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></em></dt>
                     <dd><p>Creates a new file and imports its content</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_ImportFile">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::ImportFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
-                    <dd><p>Creates a new file and imports its content</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_isShared">
+                    <dd><p>Creates a new file and imports its content</p></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/FSManager.html#property_interface">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>#interface</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_isShared">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::isShared</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Returns true if the data in this filesystem is shared with the filesystem itself, false if Andromeda owns it</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_isEncrypted">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::isEncrypted</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
@@ -2380,7 +2466,8 @@
                     <dd><p>Exception indicating that the stored filesystem type is not valid</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/InvalidNameException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidNameException">InvalidNameException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
                     <dd><p>Exception indicating that the given filesystem name is invalid</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/InvalidScannedItemException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidScannedItemException">InvalidScannedItemException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
                     <dd><p>Exception indicating that the scanned folder item is not a file or folder (not readable)</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/InvalidStorageException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidStorageException">InvalidStorageException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
-                    <dd><p>Exception indicating that the underlying storage connection failed</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_ImportFile">
+                    <dd><p>Exception indicating that the underlying storage connection failed</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ItemCreator.html"><abbr title="Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
+                    <dd><p>Wrapper around $itemclass::NotifyCreate() for unit testing</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_ImportFile">
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::ImportFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
                     <dd><p>Creates a new file and imports its content</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_isNotifyDeleted">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::isNotifyDeleted</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
@@ -2457,7 +2544,9 @@
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::isFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></em></dt>
                     <dd><p>Returns true if the given path is a file</p></dd><dt><a href="Andromeda/Apps/Files/Storage/Storage.html#method_ImportFile">
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::ImportFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></em></dt>
-                    <dd><p>Imports a file into the storage</p></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_Install">
+                    <dd><p>Imports a file into the storage</p></dd><dt>$<a href="Andromeda/Apps/Server/ServerApp.html#property_isAdmin">
+<abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>#isAdmin</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
+                    <dd><p>if true, the user has admin access (via the accounts app or if not installed, a privileged interface)</p></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_Install">
 <abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>::Install</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
                     <dd><p>Installs the server by importing its SQL template and creating config</p></dd><dt><a href="Andromeda/Core/Config.html#method_isEnabled">
 <abbr title="Andromeda\Core\Config">Config</abbr>::isEnabled</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Config.html"><abbr title="Andromeda\Core\Config">Config</abbr></a></em></dt>
@@ -2535,7 +2624,7 @@
 <abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr>::isApplicable</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a></em></dt>
                     <dd><p>Returns whether or not the interface is in use for this request</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html#method_isPrivileged">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr>::isPrivileged</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_isApplicable">
+                    <dd><p>Returns whether or not the interface grants privileged access</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_isApplicable">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::isApplicable</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
                     <dd><p>Returns whether or not the interface is in use for this request</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_isPrivileged">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::isPrivileged</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
@@ -2561,6 +2650,8 @@
 <abbr title="Andromeda\Core\Main">Main</abbr>::isEnabled</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd><p>if false, requests are not allowed (always true for privileged interfaces)</p></dd><dt>$<a href="Andromeda/Core/RunContext.html#property_input">
 <abbr title="Andromeda\Core\RunContext">RunContext</abbr>#input</a> &mdash; <em>Property in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Singleton.html#property_instances">
+<abbr title="Andromeda\Core\Singleton">Singleton</abbr>#instances</a> &mdash; <em>Property in class <a href="Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a></em></dt>
                     <dd></dd>        </dl><h2 id="letterJ">J</h2>
         <dl id="indexJ"><dt><a href="Andromeda/Core/Database/FieldTypes/JSON.html"><abbr title="Andromeda\Core\Database\FieldTypes\JSON">JSON</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database/FieldTypes.html">Andromeda\Core\Database\FieldTypes</a></em></dt>
                     <dd><p>Stores a value that is automatically JSON-encoded</p></dd><dt>$<a href="Andromeda/Core/Database/FieldTypes/ObjectJoin.html#property_joinclass">
@@ -2568,7 +2659,11 @@
                     <dd><p>The name of the class that we are joined to</p></dd><dt>$<a href="Andromeda/Core/Database/FieldTypes/ObjectJoin.html#property_joinobjs">
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectJoin">ObjectJoin</abbr>#joinobjs</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/FieldTypes/ObjectJoin.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectJoin">ObjectJoin</abbr></a></em></dt>
                     <dd><p>array cache of join objects</p></dd><dt><a href="Andromeda/Core/Database/JoinObject.html"><abbr title="Andromeda\Core\Database\JoinObject">JoinObject</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>The base class for join objects managed by an ObjectJoin field type.</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Join">
+                    <dd><p>The base class for join objects managed by an ObjectJoin field type.</p></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_joins">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#joins</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_join">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#join</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Join">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::Join</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
                     <dd><p>Adds a JOIN clause to the query (can have &gt; 1)</p></dd><dt><a href="Andromeda/Core/JSONDecodingException.html"><abbr title="Andromeda\Core\JSONDecodingException">JSONDecodingException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that JSON decoding failed</p></dd><dt><a href="Andromeda/Core/JSONEncodingException.html"><abbr title="Andromeda\Core\JSONEncodingException">JSONEncodingException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
@@ -2586,7 +2681,9 @@
                     <dd><p>Returns the length of a key for use with this class</p></dd><dt><a href="Andromeda/Core/CryptoSecret.html#method_KeyLength">
 <abbr title="Andromeda\Core\CryptoSecret">CryptoSecret</abbr>::KeyLength</a>() &mdash; <em>Method in class <a href="Andromeda/Core/CryptoSecret.html"><abbr title="Andromeda\Core\CryptoSecret">CryptoSecret</abbr></a></em></dt>
                     <dd><p>Returns the length of a key for use with this class</p></dd><dt><a href="Andromeda/Core/Database/KeyNotFoundException.html"><abbr title="Andromeda\Core\Database\KeyNotFoundException">KeyNotFoundException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>Exception indicating the specified field name is invalid</p></dd>        </dl><h2 id="letterL">L</h2>
+                    <dd><p>Exception indicating the specified field name is invalid</p></dd><dt>$<a href="Andromeda/Core/IOFormat/SafeParam.html#property_key">
+<abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr>#key</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a></em></dt>
+                    <dd></dd>        </dl><h2 id="letterL">L</h2>
         <dl id="indexL"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_LoadAllMatchingInfo">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::LoadAllMatchingInfo</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Returns all accounts whose username, fullname or contacts match the given info</p></dd><dt><a href="Andromeda/Apps/Accounts/Account.html#method_LoadByAuthSource">
@@ -2614,7 +2711,9 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::LikeFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Likes or dislikes a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_LikeFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::LikeFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Likes or dislikes a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ListShares">
+                    <dd><p>Likes or dislikes a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_LikeItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::LikeItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Likes or dislikes an item</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ListShares">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ListShares</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Returns a list of shares</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ListAdopted">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ListAdopted</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
@@ -2688,11 +2787,15 @@
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::LoadByObjectID</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
                     <dd><p>Loads objects from the database with the given object ID as the value of the given field</p></dd><dt><a href="Andromeda/Core/Database/BaseObject.html#method_LoadByObject">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::LoadByObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
-                    <dd><p>Loads objects from the database with the given object referenced by the given field</p></dd><dt><a href="Andromeda/Core/Database/FieldTypes/ObjectRefs.html#method_LoadObjects">
+                    <dd><p>Loads objects from the database with the given object referenced by the given field</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_logQuery">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>::logQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd><p>Logs a query to the internal query history, logging the actual data values if debug allows</p></dd><dt><a href="Andromeda/Core/Database/FieldTypes/ObjectRefs.html#method_LoadObjects">
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectRefs">ObjectRefs</abbr>::LoadObjects</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/FieldTypes/ObjectRefs.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectRefs">ObjectRefs</abbr></a></em></dt>
                     <dd><p>Populate the objects array, merging with changes</p></dd><dt><a href="Andromeda/Core/Database/ObjectDatabase.html#method_LoadObjectsByQuery">
 <abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>::LoadObjectsByQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></em></dt>
-                    <dd><p>Loads an array of objects using the given query</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Like">
+                    <dd><p>Loads an array of objects using the given query</p></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_limit">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#limit</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Like">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::Like</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
                     <dd><p>Returns a string comparing the given column to a value using LIKE</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_LessThan">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::LessThan</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
@@ -2833,7 +2936,9 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::MoveFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Moves (or copies) a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_MoveFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::MoveFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Moves (or copies) a folder</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ManualCopyFolder">
+                    <dd><p>Moves (or copies) a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_MoveItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::MoveItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Moves or copies an item.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ManualCopyFolder">
 <abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr>::ManualCopyFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></em></dt>
                     <dd><p>Helper function to emulate copying a folder by copying its contents manually</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_MoveFile">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::MoveFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
@@ -3001,6 +3106,8 @@
 <abbr title="Andromeda\Apps\Server\MailSendFailException">MailSendFailException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Server/MailSendFailException.html"><abbr title="Andromeda\Apps\Server\MailSendFailException">MailSendFailException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Server/UnknownMailerException.html#property_message">
 <abbr title="Andromeda\Apps\Server\UnknownMailerException">UnknownMailerException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Server/UnknownMailerException.html"><abbr title="Andromeda\Apps\Server\UnknownMailerException">UnknownMailerException</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/AppBase.html#property_metadata">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr>#metadata</a> &mdash; <em>Property in class <a href="Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/AppDependencyException.html#property_message">
 <abbr title="Andromeda\Core\AppDependencyException">AppDependencyException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/AppDependencyException.html"><abbr title="Andromeda\Core\AppDependencyException">AppDependencyException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/AppVersionException.html#property_message">
@@ -3079,6 +3186,8 @@
 <abbr title="Andromeda\Core\IOFormat\BatchNotAllowedException">BatchNotAllowedException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/BatchNotAllowedException.html"><abbr title="Andromeda\Core\IOFormat\BatchNotAllowedException">BatchNotAllowedException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/BatchFileParseException.html#property_message">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\BatchFileParseException">BatchFileParseException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/BatchFileParseException.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\BatchFileParseException">BatchFileParseException</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#property_metrics">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>#metrics</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/IllegalGetFieldException.html#property_message">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\IllegalGetFieldException">IllegalGetFieldException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/IllegalGetFieldException.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\IllegalGetFieldException">IllegalGetFieldException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/IncorrectCLIUsageException.html#property_message">
@@ -3095,6 +3204,10 @@
 <abbr title="Andromeda\Core\IOFormat\Interfaces\UnknownBatchFileException">UnknownBatchFileException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/UnknownBatchFileException.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\UnknownBatchFileException">UnknownBatchFileException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/InvalidParseException.html#property_message">
 <abbr title="Andromeda\Core\IOFormat\InvalidParseException">InvalidParseException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/InvalidParseException.html"><abbr title="Andromeda\Core\IOFormat\InvalidParseException">InvalidParseException</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Output.html#property_message">
+<abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Output.html#property_metrics">
+<abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>#metrics</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParam.html#method_MaxLength">
 <abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr>::MaxLength</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a></em></dt>
                     <dd><p>Returns a function that checks the max length of the value, for use with GetValue</p></dd><dt>$<a href="Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html#property_message">
@@ -3163,7 +3276,7 @@
                     <dd><p>Returns true if this share requires a password to access</p></dd><dt><a href="Andromeda/Apps/Files/Storage/NoFolders.html"><abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Storage.html">Andromeda\Apps\Files\Storage</a></em></dt>
                     <dd><p>A storage that does not support subfolders</p></dd><dt><a href="Andromeda/Apps/Files/SubFolder.html#method_NotifyCreate">
 <abbr title="Andromeda\Apps\Files\SubFolder">SubFolder</abbr>::NotifyCreate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/SubFolder.html"><abbr title="Andromeda\Apps\Files\SubFolder">SubFolder</abbr></a></em></dt>
-                    <dd><p>Creates a new non-root folder in DB only</p></dd><dt><a href="Andromeda/Core/CryptoAuth.html#method_NonceLength">
+                    <dd><p>Creates a new object in the database only (no filesystem call)</p></dd><dt><a href="Andromeda/Core/CryptoAuth.html#method_NonceLength">
 <abbr title="Andromeda\Core\CryptoAuth">CryptoAuth</abbr>::NonceLength</a>() &mdash; <em>Method in class <a href="Andromeda/Core/CryptoAuth.html"><abbr title="Andromeda\Core\CryptoAuth">CryptoAuth</abbr></a></em></dt>
                     <dd><p>Returns the length of a nonce for use with this class</p></dd><dt><a href="Andromeda/Core/CryptoSecret.html#method_NonceLength">
 <abbr title="Andromeda\Core\CryptoSecret">CryptoSecret</abbr>::NonceLength</a>() &mdash; <em>Method in class <a href="Andromeda/Core/CryptoSecret.html"><abbr title="Andromeda\Core\CryptoSecret">CryptoSecret</abbr></a></em></dt>
@@ -3176,7 +3289,9 @@
                     <dd><p>Returns a query string asserting the given column is not equal to the given value</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Not">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::Not</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
                     <dd><p>Returns a query string that inverts the logic of the given query</p></dd><dt><a href="Andromeda/Core/Exceptions/NotImplementedException.html"><abbr title="Andromeda\Core\Exceptions\NotImplementedException">NotImplementedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Exceptions.html">Andromeda\Core\Exceptions</a></em></dt>
-                    <dd><p>Exception indicating something is not implemented - these are not unexpected server errors (HTTP 501)</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/NoAppActionException.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\NoAppActionException">NoAppActionException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat/Interfaces.html">Andromeda\Core\IOFormat\Interfaces</a></em></dt>
+                    <dd><p>Exception indicating something is not implemented - these are not unexpected server errors (HTTP 501)</p></dd><dt>$<a href="Andromeda/Core/IOFormat/IOInterface.html#property_numretfuncs">
+<abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>#numretfuncs</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/NoAppActionException.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\NoAppActionException">NoAppActionException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat/Interfaces.html">Andromeda\Core\IOFormat\Interfaces</a></em></dt>
                     <dd><p>Exception indicating that the app or action parameters are missing</p></dd>        </dl><h2 id="letterO">O</h2>
         <dl id="indexO"><dt><a href="Andromeda/Apps/Accounts/OldPasswordRequiredException.html"><abbr title="Andromeda\Apps\Accounts\OldPasswordRequiredException">OldPasswordRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that the old password must be provided</p></dd><dt><a href="Andromeda/Apps/Files/File.html#method_onOwnerFS">
@@ -3233,9 +3348,13 @@
                     <dd><p>array of objects that reference this field</p></dd><dt><a href="Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
                     <dd><p>Provides the basic interfaces between BaseObject and the underlying PDO database</p></dd><dt><a href="Andromeda/Core/Database/ObjectNotFoundException.html"><abbr title="Andromeda\Core\Database\ObjectNotFoundException">ObjectNotFoundException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
                     <dd><p>Exception indicating that the requested object is null</p></dd><dt><a href="Andromeda/Core/Database/ObjectTypeException.html"><abbr title="Andromeda\Core\Database\ObjectTypeException">ObjectTypeException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>Exception indicating that the requested class does not match the loaded object</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_OrArr">
-<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::OrArr</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
-                    <dd><p>Returns a query string that combines the given array of arguments using OR</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Or">
+                    <dd><p>Exception indicating that the requested class does not match the loaded object</p></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_orderby">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#orderby</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_orderdesc">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#orderdesc</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_offset">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#offset</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Or">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::Or</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
                     <dd><p>Returns a query string that combines the given arguments using OR</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_OrderBy">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::OrderBy</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
@@ -3243,9 +3362,15 @@
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::Offset</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
                     <dd><p>Assigns an OFFSET clause to the query (use with LIMIT)</p></dd><dt>$<a href="Andromeda/Core/IOFormat/IOInterface.html#property_outmode">
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>#outmode</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#property_output_json">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>#output_json</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
-                    <dd><p>Represents the output to be shown to the user</p></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
-                    <dd><p>Class for custom app output routines</p></dd>        </dl><h2 id="letterP">P</h2>
+                    <dd><p>Represents the output to be shown to the user</p></dd><dt>$<a href="Andromeda/Core/IOFormat/Output.html#property_ok">
+<abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>#ok</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
+                    <dd><p>Class for custom app output routines</p></dd><dt>$<a href="Andromeda/Core/IOFormat/OutputHandler.html#property_output">
+<abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr>#output</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a></em></dt>
+                    <dd></dd>        </dl><h2 id="letterP">P</h2>
         <dl id="indexP"><dt><a href="Andromeda/Apps/Accounts/PasswordRequiredException.html"><abbr title="Andromeda\Apps\Accounts\PasswordRequiredException">PasswordRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that a password for authentication was required but not given</p></dd><dt><a href="Andromeda/Apps/Accounts/UsedToken.html#method_PruneOldCodes">
 <abbr title="Andromeda\Apps\Accounts\UsedToken">UsedToken</abbr>::PruneOldCodes</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/UsedToken.html"><abbr title="Andromeda\Apps\Accounts\UsedToken">UsedToken</abbr></a></em></dt>
@@ -3275,10 +3400,12 @@
                     <dd><p>Parses a response from a remote Andromeda API request into an Output object</p></dd><dt>$<a href="Andromeda/Core/VersionInfo.html#property_patch">
 <abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr>#patch</a> &mdash; <em>Property in class <a href="Andromeda/Core/VersionInfo.html"><abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr></a></em></dt>
                     <dd></dd>        </dl><h2 id="letterQ">Q</h2>
-        <dl id="indexQ"><dt><a href="Andromeda/Core/Database/Database.html#method_query">
+        <dl id="indexQ"><dt>$<a href="Andromeda/Core/Database/Database.html#property_queries">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>#queries</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/Database.html#method_query">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::query</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd><p>Sends an SQL query down to the database, possibly beginning a transaction</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>Minimalistic class for building prepared SQL query strings</p></dd>        </dl><h2 id="letterR">R</h2>
+                    <dd><p>Minimalistic class for building prepared post-FROM SQL query strings</p></dd>        </dl><h2 id="letterR">R</h2>
         <dl id="indexR"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_RemoveGroup">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::RemoveGroup</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Removes the account from the given group</p></dd><dt><a href="Andromeda/Apps/Accounts/Account.html#method_RegisterGroupChangeHandler">
@@ -3330,7 +3457,9 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::RenameFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Renames (or copies) a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_RenameFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::RenameFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Renames (or copies) a folder</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ReadBytes">
+                    <dd><p>Renames (or copies) a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_RenameItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::RenameItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Renames or copies an item</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_ReadBytes">
 <abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr>::ReadBytes</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></em></dt>
                     <dd><p>Reads the exact number of desired bytes from the given file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_RefreshFile">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::RefreshFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
@@ -3370,13 +3499,15 @@
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::RemoveObjectRef</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd><p>Removes the given object from a collection of referenced objects</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_Refresh">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::Refresh</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
-                    <dd><p>Refreshes the folder's metadata from disk</p></dd><dt><a href="Andromeda/Apps/Files/Item.html#method_Refresh">
+                    <dd><p>Refreshes the folder's metadata from disk</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_RecursiveItems">
+<abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::RecursiveItems</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
+                    <dd><p>Recursively lists subitems in this folder</p></dd><dt><a href="Andromeda/Apps/Files/Item.html#method_Refresh">
 <abbr title="Andromeda\Apps\Files\Item">Item</abbr>::Refresh</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></em></dt>
                     <dd><p>Updates the metadata of this item by scanning the object in the filesystem</p></dd><dt><a href="Andromeda/Apps/Files/RandomWriteDisabledException.html"><abbr title="Andromeda\Apps\Files\RandomWriteDisabledException">RandomWriteDisabledException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>Exception indicating that random write access is not allowed</p></dd><dt><a href="Andromeda/Apps/Files/RootFolder.html"><abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>A root folder has no parent or name</p></dd><dt><a href="Andromeda/Apps/Files/RootFolder.html#method_Refresh">
 <abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr>::Refresh</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/RootFolder.html"><abbr title="Andromeda\Apps\Files\RootFolder">RootFolder</abbr></a></em></dt>
-                    <dd><p>Don't let a storage exception fail refreshing a root folder</p></dd><dt><a href="Andromeda/Apps/Files/Storage/ReadOnlyException.html"><abbr title="Andromeda\Apps\Files\Storage\ReadOnlyException">ReadOnlyException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Storage.html">Andromeda\Apps\Files\Storage</a></em></dt>
+                    <dd><p>Refreshes the folder's metadata from disk</p></dd><dt><a href="Andromeda/Apps/Files/Storage/ReadOnlyException.html"><abbr title="Andromeda\Apps\Files\Storage\ReadOnlyException">ReadOnlyException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Storage.html">Andromeda\Apps\Files\Storage</a></em></dt>
                     <dd><p>Client exception indicating that a write was attempted to a read-only storage</p></dd><dt><a href="Andromeda/Apps/Files/Storage/Storage.html#method_ReadFolder">
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::ReadFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></em></dt>
                     <dd><p>Lists the contents of a folder</p></dd><dt><a href="Andromeda/Apps/Files/Storage/Storage.html#method_ReadBytes">
@@ -3393,15 +3524,15 @@
 <abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>::Run</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
                     <dd><p>The main entry point into the app</p></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_Random">
 <abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>::Random</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
-                    <dd><p>Generates a random value, usually for dev sanity checking</p></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_RunTests">
-<abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>::RunTests</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
-                    <dd><p>Runs unit tests on every installed app</p></dd><dt><a href="Andromeda/Core/AppBase.html#method_Run">
+                    <dd><p>Generates a random value, usually for dev sanity checking</p></dd><dt><a href="Andromeda/Core/AppBase.html#method_Run">
 <abbr title="Andromeda\Core\AppBase">AppBase</abbr>::Run</a>() &mdash; <em>Method in class <a href="Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></em></dt>
                     <dd><p>The main entry point into the app</p></dd><dt><a href="Andromeda/Core/AppBase.html#method_rollback">
 <abbr title="Andromeda\Core\AppBase">AppBase</abbr>::rollback</a>() &mdash; <em>Method in class <a href="Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></em></dt>
                     <dd><p>Tells the app to rollback any changes made outside the database</p></dd><dt><a href="Andromeda/Core/Database/BaseObject.html#method_RemoveObjectRef">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::RemoveObjectRef</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
-                    <dd><p>Removes the given object from a collection of referenced objects</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_RequiresSAVEPOINT">
+                    <dd><p>Removes the given object from a collection of referenced objects</p></dd><dt>$<a href="Andromeda/Core/Database/Database.html#property_read_only">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>#read_only</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd><p>if true, don't allow writes</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_RequiresSAVEPOINT">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::RequiresSAVEPOINT</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd><p>Whether or not the DB aborts transactions after an error and requires use of SAVEPOINTs</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_rollback">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::rollback</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
@@ -3428,7 +3559,9 @@
                     <dd><p>The actual value of this field that will exist in the DB</p></dd><dt><a href="Andromeda/Core/Database/FieldTypes/Scalar.html#method_ResetDelta">
 <abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr>::ResetDelta</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></em></dt>
                     <dd><p>Resets the delta of this field to 0</p></dd><dt><a href="Andromeda/Core/Database/RowWriteFailedException.html"><abbr title="Andromeda\Core\Database\RowWriteFailedException">RowWriteFailedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>Exception indicating that the desired row was not written to</p></dd><dt><a href="Andromeda/Core/IOFormat/IOInterface.html#method_RegisterOutputHandler">
+                    <dd><p>Exception indicating that the desired row was not written to</p></dd><dt>$<a href="Andromeda/Core/IOFormat/IOInterface.html#property_retfuncs">
+<abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>#retfuncs</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/IOInterface.html#method_RegisterOutputHandler">
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>::RegisterOutputHandler</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
                     <dd><p>Registers a user output handler function to run after the initial commit</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html#method_RemoteRequest">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr>::RemoteRequest</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a></em></dt>
@@ -3569,13 +3702,23 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ShareFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Creates shares for a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ShareFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ShareFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Creates shares for a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ShareInfo">
+                    <dd><p>Creates shares for a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ShareItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ShareItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Creates shares for an item</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_ShareInfo">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ShareInfo</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Retrieves metadata on a share object (from a link)</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_SetReadOnly">
+                    <dd><p>Retrieves metadata on a share object (from a link)</p></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/FSManager.html#property_storage_types">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>#storage_types</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_SetReadOnly">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::SetReadOnly</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Sets whether this filesystem is read-only</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_SetName">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::SetName</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
-                    <dd><p>Sets the name of this filesystem, checks uniqueness</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Shared.html"><abbr title="Andromeda\Apps\Files\Filesystem\Shared">Shared</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
+                    <dd><p>Sets the name of this filesystem, checks uniqueness</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_SetOwner">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::SetOwner</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
+                    <dd><p>Sets the owner of this filesystem to the given account</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_SetType">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::SetType</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
+                    <dd><p>Changes the filesystem impl enum type to the given value</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_SetStorage">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::SetStorage</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
+                    <dd><p>Sets the underlying storage object for the filesystem</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Shared.html"><abbr title="Andromeda\Apps\Files\Filesystem\Shared">Shared</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
                     <dd><p>A shared Andromeda filesystem is &quot;shared&quot; outside Andromeda</p></dd><dt>$<a href="Andromeda/Apps/Files/Folder.html#property_subrefreshed">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>#subrefreshed</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Files/Folder.html#property_skiprefresh">
@@ -3853,13 +3996,19 @@
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::setDeleted</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
                     <dd><p>marks this object as deleted from the DB - internal only!</p></dd><dt><a href="Andromeda/Core/Database/DBStats.html#method_startQuery">
 <abbr title="Andromeda\Core\Database\DBStats">DBStats</abbr>::startQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/DBStats.html"><abbr title="Andromeda\Core\Database\DBStats">DBStats</abbr></a></em></dt>
-                    <dd><p>Begins tracking a query by logging the current time</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_setReadOnly">
+                    <dd><p>Begins tracking a query by logging the current time</p></dd><dt>$<a href="Andromeda/Core/Database/Database.html#property_stats_stack">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>#stats_stack</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/Database.html#method_setReadOnly">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::setReadOnly</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd><p>Sets the database as writeable or readonly</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_SupportsRETURNING">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::SupportsRETURNING</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd><p>Whether or not the DB supports the RETURNING keyword</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_SQLConcat">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::SQLConcat</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
-                    <dd><p>Returns the given arguments concatenated in SQL</p></dd><dt><a href="Andromeda/Core/Database/FieldTypes/ObjectPoly.html#method_SetObject">
+                    <dd><p>Returns the given arguments concatenated in SQL</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_startTimingQuery">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>::startTimingQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd><p>Begins timing a query (performance metrics)</p></dd><dt><a href="Andromeda/Core/Database/Database.html#method_stopTimingQuery">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr>::stopTimingQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
+                    <dd><p>Ends timing a query (performance metrics)</p></dd><dt><a href="Andromeda/Core/Database/FieldTypes/ObjectPoly.html#method_SetObject">
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectPoly">ObjectPoly</abbr>::SetObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/FieldTypes/ObjectPoly.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectPoly">ObjectPoly</abbr></a></em></dt>
                     <dd><p>Also updates the class name of the object</p></dd><dt><a href="Andromeda/Core/Database/FieldTypes/ObjectRef.html#method_SetObject">
 <abbr title="Andromeda\Core\Database\FieldTypes\ObjectRef">ObjectRef</abbr>::SetObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/FieldTypes/ObjectRef.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectRef">ObjectRef</abbr></a></em></dt>
@@ -3893,7 +4042,7 @@
 <abbr title="Andromeda\Core\IOFormat\Input">Input</abbr>::SetLogger</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></em></dt>
                     <dd><p>Sets the optional param logger to the given BaseAppLog</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html#method_subGetInputs">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr>::subGetInputs</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/AJAX.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\AJAX">AJAX</abbr></a></em></dt>
-                    <dd><p>Retrieves an array of input objects from the request to run</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_subGetInputs">
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method_subGetInputs">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::subGetInputs</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_SetMetrics">
 <abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::SetMetrics</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
@@ -3924,8 +4073,7 @@
 <abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr>::SetError</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/RequestLog.html"><abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr></a></em></dt>
                     <dd><p>Sets the given exception as the request result</p></dd><dt><a href="Andromeda/Core/Logging/RequestLog.html#method_Save">
 <abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr>::Save</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/RequestLog.html"><abbr title="Andromeda\Core\Logging\RequestLog">RequestLog</abbr></a></em></dt>
-                    <dd><p>Saves this request log, either to DB or file (or both)
-{@inheritDoc}</p></dd><dt><a href="Andromeda/Core/Logging/RequestMetrics.html#method_Save">
+                    <dd><p>Collects fields that have changed and saves them to the database</p></dd><dt><a href="Andromeda/Core/Logging/RequestMetrics.html#method_Save">
 <abbr title="Andromeda\Core\Logging\RequestMetrics">RequestMetrics</abbr>::Save</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/RequestMetrics.html"><abbr title="Andromeda\Core\Logging\RequestMetrics">RequestMetrics</abbr></a></em></dt>
                     <dd><p>Saves this metrics log, either to DB or file (or both)
 {@inheritDoc}</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_stack">
@@ -3944,9 +4092,7 @@
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::TryLoadByContactInfo</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Attempts to load an account with the given contact info</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_TestAuthSource">
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::TestAuthSource</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
-                    <dd><p>Tests an auth source by running an auth query on it</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_Test">
-<abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::Test</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Andromeda/Apps/Accounts/AuthObject.html#method_TryLoadByAccountAndID">
+                    <dd><p>Tests an auth source by running an auth query on it</p></dd><dt><a href="Andromeda/Apps/Accounts/AuthObject.html#method_TryLoadByAccountAndID">
 <abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr>::TryLoadByAccountAndID</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></em></dt>
                     <dd><p>Attemps to load the object with the given account and ID</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryAuthenticate">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryAuthenticate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
@@ -3990,13 +4136,19 @@
 <abbr title="Andromeda\Apps\Files\Comment">Comment</abbr>::TryLoadByAccountAndID</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Comment.html"><abbr title="Andromeda\Apps\Files\Comment">Comment</abbr></a></em></dt>
                     <dd><p>Tries to load a comment object by the given account and comment ID</p></dd><dt><a href="Andromeda/Apps/Files/File.html#method_TryGetClientObject">
 <abbr title="Andromeda\Apps\Files\File">File</abbr>::TryGetClientObject</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></em></dt>
-                    <dd><p>Returns a printable client object of the file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TruncateFile">
+                    <dd><p>Returns a printable client object of the file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TryAuthenticateFolderAccess">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TryAuthenticateFolderAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns an ItemAccess authenticating the given folder ID (or null to get from input), returns null on failure</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TryAuthenticateItemAccess">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TryAuthenticateItemAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Returns an ItemAccess authenticating the given item class/ID, returns null on failure</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TruncateFile">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TruncateFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Truncates (resizes a file)</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TagFile">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TagFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Adds a tag to a file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TagFolder">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TagFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Adds a tag to a folder</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_Truncate">
+                    <dd><p>Adds a tag to a folder</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TagItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TagItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Adds a tag to an item</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_Truncate">
 <abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr>::Truncate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></em></dt>
                     <dd><p>Truncates (changes size of) a file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_Truncate">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::Truncate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
@@ -4052,9 +4204,7 @@
                     <dd><p>Returns the decrypted password</p></dd><dt><a href="Andromeda/Apps/Files/Tag.html"><abbr title="Andromeda\Apps\Files\Tag">Tag</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>A category tag placed on an item</p></dd><dt><a href="Andromeda/Apps/Server/ServerApp.html#method_TestMail">
 <abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr>::TestMail</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a></em></dt>
-                    <dd><p>Sends a test email via a given mailer</p></dd><dt><a href="Andromeda/Core/AppBase.html#method_Test">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr>::Test</a>() &mdash; <em>Method in class <a href="Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></em></dt>
-                    <dd></dd><dt><a href="Andromeda/Core/CryptoAuth.html#method_TryCheckAuthCode">
+                    <dd><p>Sends a test email via a given mailer</p></dd><dt><a href="Andromeda/Core/CryptoAuth.html#method_TryCheckAuthCode">
 <abbr title="Andromeda\Core\CryptoAuth">CryptoAuth</abbr>::TryCheckAuthCode</a>() &mdash; <em>Method in class <a href="Andromeda/Core/CryptoAuth.html"><abbr title="Andromeda\Core\CryptoAuth">CryptoAuth</abbr></a></em></dt>
                     <dd><p>Tries to authenticate a message using a secret key</p></dd><dt><a href="Andromeda/Core/Database/BaseObject.html#method_TryLoadUniqueByQuery">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::TryLoadUniqueByQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></em></dt>
@@ -4102,7 +4252,9 @@
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>::TryGet</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
                     <dd><p>Constructs and returns a singleton of the appropriate interface type</p></dd><dt><a href="Andromeda/Core/IOFormat/Input.html#method_TryGetFile">
 <abbr title="Andromeda\Core\IOFormat\Input">Input</abbr>::TryGetFile</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></em></dt>
-                    <dd><p>Same as GetFile() but returns null rather than throwing an exception</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_total_stats">
+                    <dd><p>Same as GetFile() but returns null rather than throwing an exception</p></dd><dt>$<a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#property_tmpfiles">
+<abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>#tmpfiles</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_total_stats">
 <abbr title="Andromeda\Core\Main">Main</abbr>#total_stats</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_time">
 <abbr title="Andromeda\Core\Main">Main</abbr>#time</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
@@ -4123,7 +4275,9 @@
                     <dd><p>Exception indicating that the group membership does not exist</p></dd><dt><a href="Andromeda/Apps/Accounts/UnknownSessionException.html"><abbr title="Andromeda\Apps\Accounts\UnknownSessionException">UnknownSessionException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that an unknown session was given</p></dd><dt><a href="Andromeda/Apps/Accounts/UnknownTwoFactorException.html"><abbr title="Andromeda\Apps\Accounts\UnknownTwoFactorException">UnknownTwoFactorException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that an unknown twofactor was given</p></dd><dt><a href="Andromeda/Apps/Accounts/UsedToken.html"><abbr title="Andromeda\Apps\Accounts\UsedToken">UsedToken</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
-                    <dd><p>Object for tracking used two factor codes, to prevent replay attacks</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_UploadFile">
+                    <dd><p>Object for tracking used two factor codes, to prevent replay attacks</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_UnknownItemException">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::UnknownItemException</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
+                    <dd><p>Throws an unknown file/folder exception if given, else item exception</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_UploadFile">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::UploadFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Uploads a new file to the given folder. Bandwidth is counted.</p></dd><dt><a href="Andromeda/Apps/Files/Storage/FWrapper.html#method_UseChunks">
 <abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr>::UseChunks</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Storage/FWrapper.html"><abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a></em></dt>
@@ -4184,7 +4338,9 @@ sequentially until the DB is up to date with the code</p></dd><dt><a href="Andro
 <abbr title="Andromeda\Apps\Accounts\Auth\LDAP">LDAP</abbr>::VerifyUsernamePassword</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/LDAP.html"><abbr title="Andromeda\Apps\Accounts\Auth\LDAP">LDAP</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Apps/Accounts/Auth/Local.html#method_VerifyAccountPassword">
 <abbr title="Andromeda\Apps\Accounts\Auth\Local">Local</abbr>::VerifyAccountPassword</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Local.html"><abbr title="Andromeda\Apps\Accounts\Auth\Local">Local</abbr></a></em></dt>
-                    <dd><p>Verify the password given</p></dd><dt><a href="Andromeda/Core/VersionInfo.html"><abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
+                    <dd><p>Verify the password given</p></dd><dt>$<a href="Andromeda/Core/IOFormat/SafeParam.html#property_value">
+<abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr>#value</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/VersionInfo.html"><abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Class for parsing a version string into components</p></dd><dt>$<a href="Andromeda/Core/VersionInfo.html#property_version">
 <abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr>#version</a> &mdash; <em>Property in class <a href="Andromeda/Core/VersionInfo.html"><abbr title="Andromeda\Core\VersionInfo">VersionInfo</abbr></a></em></dt>
                     <dd></dd>        </dl><h2 id="letterW">W</h2>
@@ -4203,7 +4359,9 @@ sequentially until the DB is up to date with the code</p></dd><dt><a href="Andro
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::WriteChunk</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
                     <dd><p>Encrypts and writes the given data to the given chunk</p></dd><dt><a href="Andromeda/Apps/Files/Storage/Storage.html#method_WriteBytes">
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::WriteBytes</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></em></dt>
-                    <dd><p>Writes data to a file - NO ROLLBACK within existing bounds</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Where">
+                    <dd><p>Writes data to a file - NO ROLLBACK within existing bounds</p></dd><dt>$<a href="Andromeda/Core/Database/QueryBuilder.html#property_where">
+<abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>#where</a> &mdash; <em>Property in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html#method_Where">
 <abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr>::Where</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a></em></dt>
                     <dd><p>Assigns a WHERE clause to the query</p></dd><dt><a href="Andromeda/Core/IOFormat/IOInterface.html#method_WriteOutput">
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>::WriteOutput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
@@ -4224,6 +4382,8 @@ sequentially until the DB is up to date with the code</p></dd><dt><a href="Andro
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>All apps are constructed when Andromeda runs</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method___construct">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ItemCreator.html#method___construct">
+<abbr title="Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ItemCreator.html"><abbr title="Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method___construct">
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Apps/Files/Limits/AccountTotalDefault.html#method___construct">
@@ -4266,7 +4426,7 @@ sequentially until the DB is up to date with the code</p></dd><dt><a href="Andro
 <abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/ClientException.html"><abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Exceptions/ErrorManager.html#method___construct">
 <abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a></em></dt>
-                    <dd><p>Registers PHP error and exception handlers</p></dd><dt><a href="Andromeda/Core/Exceptions/ErrorManager.html#method___destruct">
+                    <dd><p>Construct the singleton for use.</p></dd><dt><a href="Andromeda/Core/Exceptions/ErrorManager.html#method___destruct">
 <abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr>::__destruct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Exceptions/PHPError.html#method___construct">
 <abbr title="Andromeda\Core\Exceptions\PHPError">PHPError</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Exceptions/PHPError.html"><abbr title="Andromeda\Core\Exceptions\PHPError">PHPError</abbr></a></em></dt>
@@ -4286,6 +4446,8 @@ sequentially until the DB is up to date with the code</p></dd><dt><a href="Andro
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
                     <dd><p>Construct the singleton for use.</p></dd><dt><a href="Andromeda/Core/IOFormat/Interfaces/CLI.html#method___destruct">
 <abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr>::__destruct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Interfaces/CLI.html"><abbr title="Andromeda\Core\IOFormat\Interfaces\CLI">CLI</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method___construct">
+<abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html#method___construct">
 <abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr>::__construct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParam.html#method___construct">

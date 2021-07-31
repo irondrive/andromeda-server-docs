@@ -105,6 +105,34 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
                 <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_API">
 <abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_metadata">
+                    static                                        private                    
+                                                                                
+                                    </td>
+                <td>$metadata</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_metadata">
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"><p>files app config</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_database">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$database</td>
+                <td class="last"><p>database reference</p></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -130,18 +158,6 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
         
                                             <p><p>The main entry point into the app</p></p>                </div>
                 <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_Test">Test</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_Test">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -289,6 +305,76 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AuthenticateFileAccess">AuthenticateFileAccess</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null)
+        
+                                            <p><p>Returns an ItemAccess authenticating the given file ID (or null to get from input), throws exceptions on failure</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AuthenticateFolderAccess">AuthenticateFolderAccess</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null, bool $isParent = false)
+        
+                                            <p><p>Returns an ItemAccess authenticating the given folder ID (or null to get from input), throws exceptions on failure</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryAuthenticateFolderAccess">TryAuthenticateFolderAccess</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null, bool $isParent = false)
+        
+                                            <p><p>Returns an ItemAccess authenticating the given folder ID (or null to get from input), returns null on failure</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_UnknownItemException">UnknownItemException</a>(string|null $class = null)
+        
+                                            <p><p>Throws an unknown file/folder exception if given, else item exception</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AuthenticateItemAccess">AuthenticateItemAccess</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string $class, string|null $id, bool $isParent = false)
+        
+                                            <p><p>Returns an ItemAccess authenticating the given item class/ID, throws exceptions on failure</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryAuthenticateItemAccess">TryAuthenticateItemAccess</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string $class, string|null $id, bool $isParent = false)
+        
+                                            <p><p>Returns an ItemAccess authenticating the given item class/ID, returns null on failure</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AuthenticateItemObjAccess">AuthenticateItemObjAccess</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, bool $isParent = false)
+        
+                                            <p><p>Returns an ItemAccess authenticating the given already-loaded object</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     void
                 </div>
                 <div class="col-md-8">
@@ -409,6 +495,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_EditItemMeta">EditItemMeta</a>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Edits item metadata</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
                 </div>
                 <div class="col-md-8">
@@ -459,6 +555,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteItem">DeleteItem</a>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Deletes an item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
                 </div>
                 <div class="col-md-8">
@@ -475,6 +581,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <a href="#method_RenameFolder">RenameFolder</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Renames (or copies) a folder</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RenameItem">RenameItem</a>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Renames or copies an item</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -502,6 +618,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     array
                 </div>
                 <div class="col-md-8">
+                    <a href="#method_MoveItem">MoveItem</a>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Moves or copies an item.</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
                     <a href="#method_LikeFile">LikeFile</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Likes or dislikes a file</p></p>                </div>
@@ -515,6 +641,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <a href="#method_LikeFolder">LikeFolder</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Likes or dislikes a folder</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_LikeItem">LikeItem</a>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Likes or dislikes an item</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -535,6 +671,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <a href="#method_TagFolder">TagFolder</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Adds a tag to a folder</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TagItem">TagItem</a>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Adds a tag to an item</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -565,6 +711,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <a href="#method_CommentFolder">CommentFolder</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Adds a comment to a folder</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CommentItem">CommentItem</a>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Adds a comment to an item</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -612,6 +768,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     array
                 </div>
                 <div class="col-md-8">
+                    <a href="#method_GetItemComments">GetItemComments</a>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Returns comments on an item</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
                     <a href="#method_GetFileLikes">GetFileLikes</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Returns likes on a file</p></p>                </div>
@@ -632,6 +798,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     array
                 </div>
                 <div class="col-md-8">
+                    <a href="#method_GetItemLikes">GetItemLikes</a>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Returns likes on an item</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
                     <a href="#method_ShareFile">ShareFile</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Creates shares for a file</p></p>                </div>
@@ -645,6 +821,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <a href="#method_ShareFolder">ShareFolder</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Creates shares for a folder</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_ShareItem">ShareItem</a>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        
+                                            <p><p>Creates shares for an item</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -749,6 +935,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetLimitObject">GetLimitObject</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, bool $allowAuto, bool $allowMany, bool $timed)
+        
+                                            <p><p>Common function for loading and authenticating the limited object and limit class referred to by input</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array|null
                 </div>
                 <div class="col-md-8">
@@ -835,7 +1031,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 194</div>
+        <div class="location">at line 191</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
         </code>
@@ -868,7 +1064,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 212</div>
+        <div class="location">at line 209</div>
         <code>                    mixed
     <strong>Run</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -920,43 +1116,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_Test">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_Test">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 36</div>
-        <code>                    
-    <strong>Test</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
-                <td>$input</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_getUsage">
-        <div class="location">at line 121</div>
+        <div class="location">at line 118</div>
         <code>        static            array
     <strong>getUsage</strong>()
         </code>
@@ -988,7 +1149,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getName">
-        <div class="location">at line 115</div>
+        <div class="location">at line 112</div>
         <code>        static            string
     <strong>getName</strong>()
         </code>
@@ -1021,7 +1182,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogClass">
-        <div class="location">at line 117</div>
+        <div class="location">at line 114</div>
         <code>        static    protected        string|null
     <strong>getLogClass</strong>()
         </code>
@@ -1054,7 +1215,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <div class="method-item">
                     <h3 id="method_getMetadata">
         <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 57</div>
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 55</div>
         <code>        static    protected        
     <strong>getMetadata</strong>(string $app, string $key)
         </code>
@@ -1093,7 +1254,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <div class="method-item">
                     <h3 id="method_getAppRequires">
         <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 72</div>
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 70</div>
         <code>        static            array
     <strong>getAppRequires</strong>(string $app)
         </code>
@@ -1137,7 +1298,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <div class="method-item">
                     <h3 id="method_getAppReqVersion">
         <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 78</div>
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 76</div>
         <code>        static            int
     <strong>getAppReqVersion</strong>(string $app)
         </code>
@@ -1181,7 +1342,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <div class="method-item">
                     <h3 id="method_getVersion">
         <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 84</div>
+<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 82</div>
         <code>        static            string
     <strong>getVersion</strong>()
         </code>
@@ -1214,7 +1375,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">at line 203</div>
+        <div class="location">at line 200</div>
         <code>                    
     <strong>commit</strong>()
         </code>
@@ -1237,7 +1398,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">at line 204</div>
+        <div class="location">at line 201</div>
         <code>                    
     <strong>rollback</strong>()
         </code>
@@ -1260,7 +1421,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getDBVersion">
-        <div class="location">at line 119</div>
+        <div class="location">at line 116</div>
         <code>            protected        <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
     <strong>getDBVersion</strong>()
         </code>
@@ -1294,7 +1455,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <div class="method-item">
                     <h3 id="method_getUpgradeScripts">
         <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_getUpgradeScripts">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 108</div>
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 106</div>
         <code>        static    protected        array
     <strong>getUpgradeScripts</strong>()
         </code>
@@ -1328,7 +1489,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <div class="method-item">
                     <h3 id="method_Upgrade">
         <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_Upgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 117</div>
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 115</div>
         <code>                    void
     <strong>Upgrade</strong>()
         </code>
@@ -1362,7 +1523,7 @@ sequentially until the DB is up to date with the code</p></p>
                     <div class="method-item">
                     <h3 id="method_CheckUpgrade">
         <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 139</div>
+<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 137</div>
         <code>            protected        bool
     <strong>CheckUpgrade</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1412,8 +1573,427 @@ sequentially until the DB is up to date with the code</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_AuthenticateFileAccess">
+        <div class="location">at line 295</div>
+        <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+    <strong>AuthenticateFileAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an ItemAccess authenticating the given file ID (or null to get from input), throws exceptions on failure</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AuthenticateFolderAccess">
+        <div class="location">at line 302</div>
+        <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+    <strong>AuthenticateFolderAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null, bool $isParent = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an ItemAccess authenticating the given folder ID (or null to get from input), throws exceptions on failure</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isParent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryAuthenticateFolderAccess">
+        <div class="location">at line 309</div>
+        <code>                private    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null
+    <strong>TryAuthenticateFolderAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null, bool $isParent = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an ItemAccess authenticating the given folder ID (or null to get from input), returns null on failure</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isParent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_UnknownItemException">
+        <div class="location">at line 316</div>
+        <code>        static        private    void
+    <strong>UnknownItemException</strong>(string|null $class = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Throws an unknown file/folder exception if given, else item exception</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string|null</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AuthenticateItemAccess">
+        <div class="location">at line 327</div>
+        <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+    <strong>AuthenticateItemAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string $class, string|null $id, bool $isParent = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an ItemAccess authenticating the given item class/ID, throws exceptions on failure</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isParent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryAuthenticateItemAccess">
+        <div class="location">at line 346</div>
+        <code>                private    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null
+    <strong>TryAuthenticateItemAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string $class, string|null $id, bool $isParent = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an ItemAccess authenticating the given item class/ID, returns null on failure</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$id</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isParent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_AuthenticateItemObjAccess">
+        <div class="location">at line 366</div>
+        <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
+    <strong>AuthenticateItemObjAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, bool $isParent = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns an ItemAccess authenticating the given already-loaded object</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$auth</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></td>
+                <td>$item</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isParent</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_Install">
-        <div class="location">at line 382</div>
+        <div class="location">at line 379</div>
         <code>                    void
     <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1464,7 +2044,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetConfig">
-        <div class="location">at line 396</div>
+        <div class="location">at line 393</div>
         <code>            protected        array
     <strong>GetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1523,7 +2103,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetConfig">
-        <div class="location">at line 409</div>
+        <div class="location">at line 406</div>
         <code>            protected        array
     <strong>SetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1591,7 +2171,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_UploadFile">
-        <div class="location">at line 425</div>
+        <div class="location">at line 422</div>
         <code>            protected        array
     <strong>UploadFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1668,7 +2248,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DownloadFile">
-        <div class="location">at line 461</div>
+        <div class="location">at line 458</div>
         <code>            protected        void
     <strong>DownloadFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1733,7 +2313,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_WriteToFile">
-        <div class="location">at line 576</div>
+        <div class="location">at line 573</div>
         <code>            protected        array
     <strong>WriteToFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1823,7 +2403,7 @@ The FS will restore the original size of the file but writes within the original
             </div>
                     <div class="method-item">
                     <h3 id="method_TruncateFile">
-        <div class="location">at line 659</div>
+        <div class="location">at line 656</div>
         <code>            protected        array
     <strong>TruncateFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1905,7 +2485,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFileInfo">
-        <div class="location">at line 687</div>
+        <div class="location">at line 684</div>
         <code>            protected        array|null
     <strong>GetFileInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1978,7 +2558,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFolder">
-        <div class="location">at line 708</div>
+        <div class="location">at line 705</div>
         <code>            protected        array|null
     <strong>GetFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2063,7 +2643,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItemByPath">
-        <div class="location">at line 765</div>
+        <div class="location">at line 762</div>
         <code>            protected        array
     <strong>GetItemByPath</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2160,7 +2740,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_EditFileMeta">
-        <div class="location">at line 837</div>
+        <div class="location">at line 834</div>
         <code>            protected        array|null
     <strong>EditFileMeta</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2210,7 +2790,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::EditItemMeta()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_EditItemMeta">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditItemMeta</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2223,7 +2804,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_EditFolderMeta">
-        <div class="location">at line 846</div>
+        <div class="location">at line 843</div>
         <code>            protected        array|null
     <strong>EditFolderMeta</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2273,7 +2854,76 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::EditItemMeta()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_EditItemMeta">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditItemMeta</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_EditItemMeta">
+        <div class="location">at line 855</div>
+        <code>                private    array|null
+    <strong>EditItemMeta</strong>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Edits item metadata</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+                <td>$access</td>
+                <td><p>access object for item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td><p>Item</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if accessing via share and can't modify</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Item.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Item">Item</abbr>::GetClientObject</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2286,7 +2936,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_OwnFile">
-        <div class="location">at line 874</div>
+        <div class="location">at line 871</div>
         <code>            protected        array
     <strong>OwnFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2350,7 +3000,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_OwnFolder">
-        <div class="location">at line 897</div>
+        <div class="location">at line 894</div>
         <code>            protected        array
     <strong>OwnFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2414,7 +3064,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
-        <div class="location">at line 931</div>
+        <div class="location">at line 928</div>
         <code>            protected        array
     <strong>CreateFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2491,7 +3141,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFile">
-        <div class="location">at line 959</div>
+        <div class="location">at line 956</div>
         <code>            protected        void
     <strong>DeleteFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2541,7 +3191,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::DeleteItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_DeleteItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DeleteItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2554,7 +3205,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
-        <div class="location">at line 968</div>
+        <div class="location">at line 965</div>
         <code>            protected        void
     <strong>DeleteFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2604,7 +3255,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::DeleteItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_DeleteItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::DeleteItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2616,8 +3268,85 @@ component of the path (if not using a root folder) is the filesystem name</p></p
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_DeleteItem">
+        <div class="location">at line 981</div>
+        <code>                private    void
+    <strong>DeleteItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes an item.</p></p>                <p><p>DO NOT use this in a multi-action transaction as the underlying FS cannot rollback deletes.
+If you delete an item and then do another action that results in an error, the content
+will still be deleted on disk though the database objects will remain.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>item class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>input param for a single item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if public access and public modify is not allowed</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share and share modify is not allowed</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_RenameFile">
-        <div class="location">at line 1010</div>
+        <div class="location">at line 1007</div>
         <code>            protected        array
     <strong>RenameFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2667,7 +3396,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::RenameItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_RenameItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::RenameItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2687,7 +3417,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
-        <div class="location">at line 1021</div>
+        <div class="location">at line 1018</div>
         <code>            protected        array
     <strong>RenameFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2737,7 +3467,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::RenameItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_RenameItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::RenameItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2756,8 +3487,83 @@ component of the path (if not using a root folder) is the filesystem name</p></p
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_RenameItem">
+        <div class="location">at line 1031</div>
+        <code>                private    array
+    <strong>RenameItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Renames or copies an item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>item class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>input param for a single item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share and share upload/modify is not allowed</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if public access and public upload/modify is not allowed</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_MoveFile">
-        <div class="location">at line 1083</div>
+        <div class="location">at line 1080</div>
         <code>            protected        array
     <strong>MoveFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2807,7 +3613,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::MoveItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_MoveItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::MoveItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2827,7 +3634,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
-        <div class="location">at line 1094</div>
+        <div class="location">at line 1091</div>
         <code>            protected        array
     <strong>MoveFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2877,7 +3684,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::MoveItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_MoveItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::MoveItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2896,8 +3704,83 @@ component of the path (if not using a root folder) is the filesystem name</p></p
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_MoveItem">
+        <div class="location">at line 1103</div>
+        <code>                private    array
+    <strong>MoveItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Moves or copies an item.</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>item class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>input param for a single item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if public access and public modify/upload not allowed</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share and share modify/upload not allowed</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_LikeFile">
-        <div class="location">at line 1142</div>
+        <div class="location">at line 1139</div>
         <code>            protected        array
     <strong>LikeFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2947,7 +3830,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::LikeItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_LikeItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::LikeItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -2960,7 +3844,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_LikeFolder">
-        <div class="location">at line 1151</div>
+        <div class="location">at line 1148</div>
         <code>            protected        array
     <strong>LikeFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3010,7 +3894,95 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::LikeItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_LikeItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::LikeItem</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_LikeItem">
+        <div class="location">at line 1162</div>
+        <code>                private    array|null
+    <strong>LikeItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Likes or dislikes an item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>item class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>input param for a single item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array|null</td>
+            <td><p>?Like</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share if social is not allowed</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Like.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Like">Like</abbr>::GetClientObject</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3023,7 +3995,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_TagFile">
-        <div class="location">at line 1187</div>
+        <div class="location">at line 1184</div>
         <code>            protected        array
     <strong>TagFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3073,7 +4045,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::TagItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_TagItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TagItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3086,7 +4059,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_TagFolder">
-        <div class="location">at line 1196</div>
+        <div class="location">at line 1193</div>
         <code>            protected        array
     <strong>TagFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3136,7 +4109,95 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::TagItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_TagItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TagItem</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TagItem">
+        <div class="location">at line 1207</div>
+        <code>                private    array
+    <strong>TagItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds a tag to an item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>item class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>input param for a single item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Tag</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share and share modify is not allowed</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Tag.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Tag">Tag</abbr>::GetClientObject</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3149,7 +4210,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteTag">
-        <div class="location">at line 1237</div>
+        <div class="location">at line 1234</div>
         <code>            protected        void
     <strong>DeleteTag</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3218,7 +4279,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_CommentFile">
-        <div class="location">at line 1261</div>
+        <div class="location">at line 1258</div>
         <code>            protected        array
     <strong>CommentFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3268,7 +4329,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::CommentItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_CommentItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::CommentItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3281,7 +4343,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_CommentFolder">
-        <div class="location">at line 1270</div>
+        <div class="location">at line 1267</div>
         <code>            protected        array
     <strong>CommentFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3344,8 +4406,95 @@ component of the path (if not using a root folder) is the filesystem name</p></p
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_CommentItem">
+        <div class="location">at line 1281</div>
+        <code>                private    array
+    <strong>CommentItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds a comment to an item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>item class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>input param for a single item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Comment</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if not signed in</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share and share social is not allowed</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Comment.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Comment">Comment</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_EditComment">
-        <div class="location">at line 1310</div>
+        <div class="location">at line 1307</div>
         <code>            protected        array
     <strong>EditComment</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3417,7 +4566,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteComment">
-        <div class="location">at line 1331</div>
+        <div class="location">at line 1328</div>
         <code>            protected        void
     <strong>DeleteComment</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3482,7 +4631,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFileComments">
-        <div class="location">at line 1351</div>
+        <div class="location">at line 1348</div>
         <code>            protected        array
     <strong>GetFileComments</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3532,7 +4681,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::GetItemComments()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_GetItemComments">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetItemComments</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3545,7 +4695,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFolderComments">
-        <div class="location">at line 1360</div>
+        <div class="location">at line 1357</div>
         <code>            protected        array
     <strong>GetFolderComments</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3595,7 +4745,76 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::GetItemComments()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_GetItemComments">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetItemComments</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetItemComments">
+        <div class="location">at line 1369</div>
+        <code>                private    array
+    <strong>GetItemComments</strong>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns comments on an item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+                <td>$access</td>
+                <td><p>file or folder access object</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Comment</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share and can't read</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Comment.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Comment">Comment</abbr>::GetClientObject</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3608,7 +4827,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFileLikes">
-        <div class="location">at line 1390</div>
+        <div class="location">at line 1387</div>
         <code>            protected        array
     <strong>GetFileLikes</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3658,7 +4877,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::GetItemLikes()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_GetItemLikes">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetItemLikes</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3671,7 +4891,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFolderLikes">
-        <div class="location">at line 1399</div>
+        <div class="location">at line 1396</div>
         <code>            protected        array
     <strong>GetFolderLikes</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3721,7 +4941,76 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::GetItemLikes()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_GetItemLikes">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::GetItemLikes</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetItemLikes">
+        <div class="location">at line 1408</div>
+        <code>                private    array
+    <strong>GetItemLikes</strong>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns likes on an item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a></td>
+                <td>$access</td>
+                <td><p>file or folder access object</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Like</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ItemAccessDeniedException.html"><abbr title="Andromeda\Apps\Files\ItemAccessDeniedException">ItemAccessDeniedException</abbr></a></td>
+                <td><p>if access via share and can't read</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Like.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Like">Like</abbr>::GetClientObject</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3734,7 +5023,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_ShareFile">
-        <div class="location">at line 1429</div>
+        <div class="location">at line 1426</div>
         <code>            protected        array
     <strong>ShareFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3784,7 +5073,8 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::ShareItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_ShareItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ShareItem</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3797,7 +5087,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_ShareFolder">
-        <div class="location">at line 1438</div>
+        <div class="location">at line 1435</div>
         <code>            protected        array
     <strong>ShareFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3847,7 +5137,107 @@ component of the path (if not using a root folder) is the filesystem name</p></p
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\FilesApp::ShareItem()
+                                            <a href="../../../Andromeda/Apps/Files/FilesApp.html#method_ShareItem">
+<abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::ShareItem</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ShareItem">
+        <div class="location">at line 1452</div>
+        <code>                private    array
+    <strong>ShareItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates shares for an item</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$class</td>
+                <td><p>item class</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>input param for a single item</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null</td>
+                <td>$accesslog</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Share</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\AuthenticationFailedException">AuthenticationFailedException</abbr></td>
+                <td><p>if public access and public modify/upload not allowed</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/UnknownDestinationException.html"><abbr title="Andromeda\Apps\Files\UnknownDestinationException">UnknownDestinationException</abbr></a></td>
+                <td><p>if the given share target is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/UnknownItemException.html"><abbr title="Andromeda\Apps\Files\UnknownItemException">UnknownItemException</abbr></a></td>
+                <td><p>if the given item to share is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/EmailShareDisabledException.html"><abbr title="Andromeda\Apps\Files\EmailShareDisabledException">EmailShareDisabledException</abbr></a></td>
+                <td><p>if emailing shares is not enabled</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/ShareURLGenerateException.html"><abbr title="Andromeda\Apps\Files\ShareURLGenerateException">ShareURLGenerateException</abbr></a></td>
+                <td><p>if the URL to email could be not determined</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Apps/Files/Share.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Share">Share</abbr>::GetClientObject</a>
                                     </td>
                 <td></td>
             </tr>
@@ -3860,7 +5250,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_EditShare">
-        <div class="location">at line 1534</div>
+        <div class="location">at line 1531</div>
         <code>            protected        array
     <strong>EditShare</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3941,7 +5331,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteShare">
-        <div class="location">at line 1557</div>
+        <div class="location">at line 1554</div>
         <code>            protected        void
     <strong>DeleteShare</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4010,7 +5400,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_ShareInfo">
-        <div class="location">at line 1586</div>
+        <div class="location">at line 1583</div>
         <code>            protected        array
     <strong>ShareInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4074,7 +5464,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_ListShares">
-        <div class="location">at line 1603</div>
+        <div class="location">at line 1600</div>
         <code>            protected        array
     <strong>ListShares</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4142,7 +5532,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_ListAdopted">
-        <div class="location">at line 1625</div>
+        <div class="location">at line 1622</div>
         <code>            protected        array
     <strong>ListAdopted</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4217,7 +5607,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilesystem">
-        <div class="location">at line 1646</div>
+        <div class="location">at line 1643</div>
         <code>            protected        array
     <strong>GetFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4294,7 +5684,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilesystems">
-        <div class="location">at line 1672</div>
+        <div class="location">at line 1669</div>
         <code>            protected        array
     <strong>GetFilesystems</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4362,7 +5752,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFilesystem">
-        <div class="location">at line 1696</div>
+        <div class="location">at line 1693</div>
         <code>            protected        array
     <strong>CreateFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4439,7 +5829,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_EditFilesystem">
-        <div class="location">at line 1721</div>
+        <div class="location">at line 1718</div>
         <code>            protected        array
     <strong>EditFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4511,7 +5901,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFilesystem">
-        <div class="location">at line 1742</div>
+        <div class="location">at line 1739</div>
         <code>            protected        void
     <strong>DeleteFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4575,8 +5965,91 @@ component of the path (if not using a root folder) is the filesystem name</p></p
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_GetLimitObject">
+        <div class="location">at line 1773</div>
+        <code>                private    array
+    <strong>GetLimitObject</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, bool $allowAuto, bool $allowMany, bool $timed)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Common function for loading and authenticating the limited object and limit class referred to by input</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null</td>
+                <td>$authenticator</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowAuto</td>
+                <td><p>if true, return the current account if no object is specified</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowMany</td>
+                <td><p>if true, allow selecting all of the given type</p></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$timed</td>
+                <td><p>if true, return a timed limit class (not total)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p><code>{class:string, obj:object}</code></p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownGroupException.html"><abbr title="Andromeda\Apps\Accounts\UnknownGroupException">UnknownGroupException</abbr></a></td>
+                <td><p>if the given group is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the given account is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/UnknownFilesystemException.html"><abbr title="Andromeda\Apps\Files\UnknownFilesystemException">UnknownFilesystemException</abbr></a></td>
+                <td><p>if the given filesystem is not found</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Files/UnknownObjectException.html"><abbr title="Andromeda\Apps\Files\UnknownObjectException">UnknownObjectException</abbr></a></td>
+                <td><p>if nothing valid was specified</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_GetLimits">
-        <div class="location">at line 1837</div>
+        <div class="location">at line 1834</div>
         <code>            protected        array|null
     <strong>GetLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4644,7 +6117,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTimedLimits">
-        <div class="location">at line 1866</div>
+        <div class="location">at line 1863</div>
         <code>            protected        array
     <strong>GetTimedLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4712,7 +6185,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTimedStatsFor">
-        <div class="location">at line 1895</div>
+        <div class="location">at line 1892</div>
         <code>            protected        array|null
     <strong>GetTimedStatsFor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4780,7 +6253,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTimedStatsAt">
-        <div class="location">at line 1920</div>
+        <div class="location">at line 1917</div>
         <code>            protected        array|null
     <strong>GetTimedStatsAt</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4848,7 +6321,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_ConfigLimits">
-        <div class="location">at line 1961</div>
+        <div class="location">at line 1958</div>
         <code>            protected        array
     <strong>ConfigLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4916,7 +6389,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_ConfigTimedLimits">
-        <div class="location">at line 1979</div>
+        <div class="location">at line 1976</div>
         <code>            protected        array
     <strong>ConfigTimedLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4984,7 +6457,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_PurgeLimits">
-        <div class="location">at line 1995</div>
+        <div class="location">at line 1992</div>
         <code>            protected        void
     <strong>PurgeLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -5040,7 +6513,7 @@ component of the path (if not using a root folder) is the filesystem name</p></p
             </div>
                     <div class="method-item">
                     <h3 id="method_PurgeTimedLimits">
-        <div class="location">at line 2011</div>
+        <div class="location">at line 2008</div>
         <code>            protected        void
     <strong>PurgeTimedLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>

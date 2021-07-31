@@ -86,6 +86,20 @@
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_chars">
+                    static                                        private                    
+                                                                                
+                                    </td>
+                <td>$chars</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -147,7 +161,17 @@
                 <div class="col-md-8">
                     <a href="#method_array_last">array_last</a>(array|null $arr)
         
-                                            <p><p>Returns the last element of an array of null if it's empty</p></p>                </div>
+                                            <p><p>Returns the last element of an array or null if it's empty</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_delete_value">delete_value</a>(array $arr, $value)
+        
+                                            <p><p>Deletes any of the given value from the given array reference</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -178,6 +202,16 @@
                     <a href="#method_replace_first">replace_first</a>(string $search, string $replace, string $subject)
         
                                             <p><p>Equivalent to str_replace but only does one replacement</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CaptureOutput">CaptureOutput</a>(callable $func)
+        
+                                            <p><p>Captures and returns any echoes or prints in the given function</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -388,7 +422,7 @@
             
 
         <div class="method-description">
-                            <p><p>Returns the last element of an array of null if it's empty</p></p>                        
+                            <p><p>Returns the last element of an array or null if it's empty</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -410,8 +444,55 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_ShortClassName">
+                    <h3 id="method_delete_value">
         <div class="location">at line 148</div>
+        <code>        static            array
+    <strong>delete_value</strong>(array $arr, $value)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes any of the given value from the given array reference</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$arr</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_ShortClassName">
+        <div class="location">at line 154</div>
         <code>        static            string|null
     <strong>ShortClassName</strong>(string|null $class)
         </code>
@@ -453,7 +534,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_return_bytes">
-        <div class="location">at line 156</div>
+        <div class="location">at line 162</div>
         <code>        static            int
     <strong>return_bytes</strong>(string $val)
         </code>
@@ -495,7 +576,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_replace_first">
-        <div class="location">at line 171</div>
+        <div class="location">at line 177</div>
         <code>        static            string
     <strong>replace_first</strong>(string $search, string $replace, string $subject)
         </code>
@@ -524,6 +605,48 @@
                     <tr>
                 <td>string</td>
                 <td>$subject</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CaptureOutput">
+        <div class="location">at line 188</div>
+        <code>        static            string
+    <strong>CaptureOutput</strong>(callable $func)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Captures and returns any echoes or prints in the given function</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$func</td>
                 <td></td>
             </tr>
             </table>
