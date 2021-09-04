@@ -707,12 +707,12 @@ to be ignored in favor of more domain-specific alternatives provided by classes 
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_setDeleted">setDeleted</a>()
+                    <a href="#method_NotifyDeleted">NotifyDeleted</a>()
         
-                                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                </div>
+                                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -3333,10 +3333,10 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setDeleted">
+                    <h3 id="method_NotifyDeleted">
         <div class="location">at line 782</div>
-        <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
-    <strong>setDeleted</strong>()
+        <code>                    void
+    <strong>NotifyDeleted</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -3344,7 +3344,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                        
+                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                        
         </div>
         <div class="tags">
             
@@ -3352,7 +3352,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>

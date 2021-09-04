@@ -99,6 +99,56 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </table>
 
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_app">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$app</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_action">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$action</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_auth">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$auth</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_params">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$params</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_files">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$files</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -221,6 +271,16 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFiles">GetFiles</a>()
+        
+                                            <p><p>Returns the array of input files</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8">
@@ -234,14 +294,14 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                     <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_AddFile">AddFile</a>(string $key, <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a> $file)
+                    <a href="#method_AddFile">AddFile</a>(string $key, <a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a> $file)
         
-                                            <p><p>Adds the given InputFile to the file array</p></p>                </div>
+                                            <p><p>Adds the given InputStream to the file array</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a>
+                    <a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_GetFile">GetFile</a>(string $key)
@@ -251,7 +311,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputFile">InputFile</abbr>|null
+                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputStream">InputStream</abbr>|null
                 </div>
                 <div class="col-md-8">
                     <a href="#method_TryGetFile">TryGetFile</a>(string $key)
@@ -277,7 +337,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_GetApp">
-        <div class="location">at line 41</div>
+        <div class="location">at line 33</div>
         <code>                    string
     <strong>GetApp</strong>()
         </code>
@@ -309,7 +369,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAction">
-        <div class="location">at line 47</div>
+        <div class="location">at line 39</div>
         <code>                    string
     <strong>GetAction</strong>()
         </code>
@@ -341,7 +401,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuth">
-        <div class="location">at line 53</div>
+        <div class="location">at line 45</div>
         <code>                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null
     <strong>GetAuth</strong>()
         </code>
@@ -373,7 +433,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetLogger">
-        <div class="location">at line 58</div>
+        <div class="location">at line 50</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
     <strong>SetLogger</strong>(<abbr title="Andromeda\Core\IOFormat\Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>|null $logger)
         </code>
@@ -415,7 +475,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetParams">
-        <div class="location">at line 76</div>
+        <div class="location">at line 68</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
     <strong>GetParams</strong>()
         </code>
@@ -447,7 +507,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_HasParam">
-        <div class="location">at line 79</div>
+        <div class="location">at line 71</div>
         <code>                    bool
     <strong>HasParam</strong>(string $key)
         </code>
@@ -502,7 +562,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddParam">
-        <div class="location">at line 83</div>
+        <div class="location">at line 75</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
     <strong>AddParam</strong>(string $key, $value)
         </code>
@@ -562,7 +622,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetParam">
-        <div class="location">at line 87</div>
+        <div class="location">at line 79</div>
         <code>                    
     <strong>GetParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
         </code>
@@ -623,7 +683,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetOptParam">
-        <div class="location">at line 91</div>
+        <div class="location">at line 83</div>
         <code>                    
     <strong>GetOptParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
         </code>
@@ -684,7 +744,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetNullParam">
-        <div class="location">at line 95</div>
+        <div class="location">at line 87</div>
         <code>                    
     <strong>GetNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
         </code>
@@ -745,7 +805,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetOptNullParam">
-        <div class="location">at line 99</div>
+        <div class="location">at line 91</div>
         <code>                    
     <strong>GetOptNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
         </code>
@@ -805,8 +865,40 @@ as any input parameters or files, or basic authentication</p></p>        </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_GetFiles">
+        <div class="location">at line 98</div>
+        <code>                    array
+    <strong>GetFiles</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the array of input files</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_HasFile">
-        <div class="location">at line 110</div>
+        <div class="location">at line 105</div>
         <code>                    bool
     <strong>HasFile</strong>(string $key)
         </code>
@@ -848,9 +940,9 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddFile">
-        <div class="location">at line 119</div>
+        <div class="location">at line 114</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
-    <strong>AddFile</strong>(string $key, <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a> $file)
+    <strong>AddFile</strong>(string $key, <a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a> $file)
         </code>
     </h3>
     <div class="details">    
@@ -858,7 +950,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             
 
         <div class="method-description">
-                            <p><p>Adds the given InputFile to the file array</p></p>                        
+                            <p><p>Adds the given InputStream to the file array</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -870,9 +962,9 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                 <td><p>param name for file</p></td>
             </tr>
                     <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a></td>
+                <td><a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a></td>
                 <td>$file</td>
-                <td><p>file name/path</p></td>
+                <td><p>input file stream</p></td>
             </tr>
             </table>
 
@@ -895,8 +987,8 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFile">
-        <div class="location">at line 128</div>
-        <code>                    <a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a>
+        <div class="location">at line 123</div>
+        <code>                    <a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a>
     <strong>GetFile</strong>(string $key)
         </code>
     </h3>
@@ -923,8 +1015,8 @@ as any input parameters or files, or basic authentication</p></p>        </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a></td>
-            <td><p>the temporary uploaded file</p></td>
+            <td><a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a></td>
+            <td><p>the uploaded file</p></td>
         </tr>
     </table>
 
@@ -946,8 +1038,8 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetFile">
-        <div class="location">at line 139</div>
-        <code>                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputFile">InputFile</abbr>|null
+        <div class="location">at line 134</div>
+        <code>                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputStream">InputStream</abbr>|null
     <strong>TryGetFile</strong>(string $key)
         </code>
     </h3>
@@ -974,7 +1066,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputFile">InputFile</abbr>|null</td>
+            <td><abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputStream">InputStream</abbr>|null</td>
             <td></td>
         </tr>
     </table>
@@ -1000,7 +1092,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 146</div>
+        <div class="location">at line 141</div>
         <code>                    
     <strong>__construct</strong>(string $app, string $action, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>|null $params = null, array|null $files = null, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null $auth = null)
         </code>

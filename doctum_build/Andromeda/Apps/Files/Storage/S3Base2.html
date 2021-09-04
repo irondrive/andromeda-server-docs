@@ -88,8 +88,8 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html"><abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a>    </div>
-                <div class="col-md-6"><p>A storage with no specific ImportFile function, using CreateFile/WriteBytes instead</p></div>
+                    <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>    </div>
+                <div class="col-md-6"><p>Trait allowing objects to store fields encrypted with an account's crypto</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -185,13 +185,23 @@
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
             </tr>
                     <tr>
-                <td class="type" id="property_onCommit">
+                <td class="type" id="property_instances">
+                    static                                        private                    
+                                                                                
+                                    </td>
+                <td>$instances</td>
+                <td class="last"><p>array of all instantiated storages</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#property_instances">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_createdItems">
                                         protected                                        
                                                                                 
                                     </td>
-                <td>$onCommit</td>
-                <td class="last"><p>array of functions to run for commit</p></td>
-                <td><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#property_onCommit">
+                <td>$createdItems</td>
+                <td class="last"><p>array of paths that were newly created</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#property_createdItems">
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></td>
             </tr>
                     <tr>
@@ -203,6 +213,16 @@
                 <td class="last"><p>array of functions to run for rollback</p></td>
                 <td><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#property_onRollback">
 <abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_contexts">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$contexts</td>
+                <td class="last"><p>array&lt;path, FileContext&gt; map for all file handles</p></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#property_contexts">
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a></small></td>
             </tr>
             </table>
 
@@ -218,8 +238,8 @@
                     <a href="#method_GetFieldTemplate">GetFieldTemplate</a>()
         
                                             <p><p>Gets the extra DB fields required for this trait</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetFieldTemplate">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetFieldTemplate">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -670,7 +690,7 @@
                 <div class="col-md-8">
                     <a href="#method_DeltaCounter">DeltaCounter</a>(string $name, int $delta = 1, bool $ignoreLimit = false)
         
-                                            <p><p>Increment a counter by the given value</p></p>                </div>
+                                            <p><p>Increments a counter field by the given delta (thread safe)</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_DeltaCounter">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
@@ -703,7 +723,7 @@
                 <div class="col-md-8">
                     <a href="#method_AddObjectRef">AddObjectRef</a>(string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         
-                                            <p><p>Adds an object reference, checking for a limit on the number of references</p></p>                </div>
+                                            <p><p>Adds the given object to a collection of referenced objects</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_AddObjectRef">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
@@ -727,6 +747,17 @@
         
                                             <p><p>Constructs the object by initializing its field template with values from the database</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method___construct">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_AddField">AddField</a>(string $key, $field)
+        
+                                            <p><p>Adds the given field object to the correct internal array</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_AddField">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -786,13 +817,13 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_setDeleted">setDeleted</a>()
+                    <a href="#method_NotifyDeleted">NotifyDeleted</a>()
         
-                                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
+                                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -824,7 +855,7 @@
                 <div class="col-md-8">
                     <a href="#method_BaseCreate">BaseCreate</a>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database)
         
-                                            <p><p>Create the object by setting its created date</p></p>                </div>
+                                            <p><p>Creates a new object of this type in the database and returns it</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_BaseCreate">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
@@ -1039,14 +1070,14 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Andromeda\Apps\Files\Storage\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
                 </div>
                 <div class="col-md-8">
                     <a href="#method_GetAccount">GetAccount</a>()
         
-                                            <p><p>Returns the account that owns this storage (or null)</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetAccount">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
+                                            <p><p>Returns the account that owns this object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetAccount">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1066,9 +1097,9 @@
                 <div class="col-md-8">
                     <a href="#method_LoadByAccount">LoadByAccount</a>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         
-                                            <p><p>Loads all storages for the given account (join with FSManager)</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_LoadByAccount">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
+                                            <p><p>Returns all objects owned by the given account</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_LoadByAccount">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1077,9 +1108,9 @@
                 <div class="col-md-8">
                     <a href="#method_GetClientObject">GetClientObject</a>()
         
-                                            <p><p>Returns the printable client object of this trait</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetClientObject">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                                            <p><p>Returns a printable client object of this storage</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1089,8 +1120,8 @@
                     <a href="#method_GetCreateUsage">GetCreateUsage</a>()
         
                                             <p><p>Returns the command usage for Create()</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetCreateUsage">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetCreateUsage">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1099,9 +1130,9 @@
                 <div class="col-md-8">
                     <a href="#method_Create">Create</a>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $filesystem)
         
-                                            <p><p>Performs cred-crypt level initialization on a new storage</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_Create">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                                            <p><p>Creates a new storage with the given input and the given FS manager</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_Create">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1111,8 +1142,8 @@
                     <a href="#method_GetEditUsage">GetEditUsage</a>()
         
                                             <p><p>Returns the command usage for Edit()</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetEditUsage">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetEditUsage">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1121,9 +1152,9 @@
                 <div class="col-md-8">
                     <a href="#method_Edit">Edit</a>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
-                                            <p><p>Performs cred-crypt level edit on an existing storage</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_Edit">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                                            <p><p>Edits an existing storage with the given input</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_Edit">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1364,7 +1395,7 @@
                     <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_ImportFile">ImportFile</a>(string $src, string $dest)
+                    <a href="#method_ImportFile">ImportFile</a>(string $src, string $dest, bool $istemp)
         
                                             <p><p>Imports a file into the storage</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_ImportFile">
@@ -1375,12 +1406,11 @@
                     <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_SubImportFile">SubImportFile</a>(string $src, string $dest)
+                    <a href="#method_SubImportFile">SubImportFile</a>(string $src, string $dest, bool $istemp)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_SubImportFile">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                                            <p><p>The storage-specific ImportFile</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubImportFile">
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -1642,6 +1672,28 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_renameRollbacks">renameRollbacks</a>(string $old, string $new)
+        
+                                            <p><p>Moves all pending rollback actions from $old to $new for delete tracking</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_renameRollbacks">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_deleteRollbacks">deleteRollbacks</a>(string $path)
+        
+                                            <p><p>Deletes all pending rollback actions for the given path</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_deleteRollbacks">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8">
@@ -1695,17 +1747,6 @@
         
                                             <p><p>Returns the full fwrapper URL for the given path</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_GetFullURL">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_UseChunks">UseChunks</a>()
-        
-                                            <p><p>Returns true if fread() and fwrite() may need to be in chunks (network)</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_UseChunks">
 <abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -1787,25 +1828,91 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetImportChunkSize">GetImportChunkSize</a>()
+                    <a href="#method_getEncryptedFields">getEncryptedFields</a>()
         
-                                            <p><p>Returns the chunk size to use for ImportFile()</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetImportChunkSize">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                                            <p><p>Returns the list of fields encrypted in this object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_getEncryptedFields">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;bool
+                    bool
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_isValidSize">isValidSize</a>(int $v)
+                    <a href="#method_isFieldEncrypted">isFieldEncrypted</a>($field)
         
-                                            <p><p>Returns true if the given size is &gt;= 4K and &lt;= 64M</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_isValidSize">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a></small></div>
+                                            <p><p>Returns true if the given DB field is encrypted</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_isFieldEncrypted">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetEncryptedScalar">GetEncryptedScalar</a>(string $field)
+        
+                                            <p><p>Decrypts and returns the value of the given field</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_RequireCrypto">RequireCrypto</a>()
+        
+                                            <p><p>Unlocks account crypto for usage and returns it</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_RequireCrypto">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetEncryptedScalar">TryGetEncryptedScalar</a>(string $field)
+        
+                                            <p><p>Decrypts and returns the value of the given field</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_TryGetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetEncryptedScalar">SetEncryptedScalar</a>(string $field, string|null $value, bool|null $fieldcrypt = null)
+        
+                                            <p><p>Sets the value of the given field</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetEncrypted">SetEncrypted</a>(bool $crypt)
+        
+                                            <p><p>Sets the crypto state of all stored fields</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncrypted">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DecryptAccount">DecryptAccount</a>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        
+                                            <p><p>Loads any objects for the given account and decrypts their fields</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_DecryptAccount">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></small></div>
             </div>
             </div>
 
@@ -1815,8 +1922,8 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_GetFieldTemplate">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetFieldTemplate">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 209</div>
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetFieldTemplate">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 33</div>
         <code>        static            array
     <strong>GetFieldTemplate</strong>()
         </code>
@@ -1849,7 +1956,7 @@
                     <div class="method-item">
                     <h3 id="method_GetDBClass">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetDBClass">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 51</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 52</div>
         <code>        static            string
     <strong>GetDBClass</strong>()
         </code>
@@ -1882,7 +1989,7 @@
                     <div class="method-item">
                     <h3 id="method_GetObjClass">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetObjClass">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 58</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 59</div>
         <code>        static            string
     <strong>GetObjClass</strong>(array $row)
         </code>
@@ -1925,7 +2032,7 @@
                     <div class="method-item">
                     <h3 id="method_CountByQuery">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_CountByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 66</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 67</div>
         <code>        static            int
     <strong>CountByQuery</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -1973,7 +2080,7 @@
                     <div class="method-item">
                     <h3 id="method_LoadByQuery">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_LoadByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 77</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 78</div>
         <code>        static            array
     <strong>LoadByQuery</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -2021,7 +2128,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteByQuery">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 90</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 91</div>
         <code>        static            int
     <strong>DeleteByQuery</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -2069,7 +2176,7 @@
                     <div class="method-item">
                     <h3 id="method_TryLoadUniqueByQuery">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadUniqueByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 101</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 102</div>
         <code>        static            <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadUniqueByQuery</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -2117,7 +2224,7 @@
                     <div class="method-item">
                     <h3 id="method_NotNull">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotNull">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 112</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 113</div>
         <code>        static            <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>NotNull</strong>(<a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $obj)
         </code>
@@ -2170,7 +2277,7 @@
                     <div class="method-item">
                     <h3 id="method_TryLoadByID">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadByID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 123</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 124</div>
         <code>        static            <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadByID</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $id)
         </code>
@@ -2218,7 +2325,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteByID">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 133</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 134</div>
         <code>        static            void
     <strong>DeleteByID</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $id)
         </code>
@@ -2266,7 +2373,7 @@
                     <div class="method-item">
                     <h3 id="method_LoadAll">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_LoadAll">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 146</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 147</div>
         <code>        static            array
     <strong>LoadAll</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, int|null $limit = null, int|null $offset = null)
         </code>
@@ -2319,7 +2426,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteAll">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteAll">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 156</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 157</div>
         <code>        static            int
     <strong>DeleteAll</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database)
         </code>
@@ -2362,7 +2469,7 @@
                     <div class="method-item">
                     <h3 id="method_LoadByObjectID">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_LoadByObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 171</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 172</div>
         <code>        static            array
     <strong>LoadByObjectID</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $id, string|null $class = null)
         </code>
@@ -2420,7 +2527,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteByObjectID">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 187</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 188</div>
         <code>        static            int
     <strong>DeleteByObjectID</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $id, string|null $class = null)
         </code>
@@ -2478,7 +2585,7 @@
                     <div class="method-item">
                     <h3 id="method_TryLoadUniqueByKey">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadUniqueByKey">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 200</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 201</div>
         <code>        static    protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadUniqueByKey</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $key)
         </code>
@@ -2531,7 +2638,7 @@
                     <div class="method-item">
                     <h3 id="method_TryDeleteByUniqueKey">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryDeleteByUniqueKey">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 212</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 213</div>
         <code>        static    protected        bool
     <strong>TryDeleteByUniqueKey</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $key)
         </code>
@@ -2584,7 +2691,7 @@
                     <div class="method-item">
                     <h3 id="method_LoadByObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_LoadByObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 227</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 228</div>
         <code>        static            array
     <strong>LoadByObject</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -2642,7 +2749,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteByObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 241</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 242</div>
         <code>        static            int
     <strong>DeleteByObject</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -2700,7 +2807,7 @@
                     <div class="method-item">
                     <h3 id="method_TryLoadUniqueByObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadUniqueByObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 255</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 256</div>
         <code>        static            <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadUniqueByObject</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -2758,7 +2865,7 @@
                     <div class="method-item">
                     <h3 id="method_TryDeleteByUniqueObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryDeleteByUniqueObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 269</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 270</div>
         <code>        static            bool
     <strong>TryDeleteByUniqueObject</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -2816,7 +2923,7 @@
                     <div class="method-item">
                     <h3 id="method_ID">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_ID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 278</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 279</div>
         <code>                    string
     <strong>ID</strong>()
         </code>
@@ -2849,7 +2956,7 @@
                     <div class="method-item">
                     <h3 id="method_getIDType">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_getIDType">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 284</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 285</div>
         <code>                    array
     <strong>getIDType</strong>()
         </code>
@@ -2882,7 +2989,7 @@
                     <div class="method-item">
                     <h3 id="method___toString">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method___toString">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 285</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 286</div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -2916,7 +3023,7 @@
                     <div class="method-item">
                     <h3 id="method_toIDType">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_toIDType">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 291</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 292</div>
         <code>        static            array|null
     <strong>toIDType</strong>(<a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $obj)
         </code>
@@ -2959,7 +3066,7 @@
                     <div class="method-item">
                     <h3 id="method_GetScalar">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetScalar">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 310</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 311</div>
         <code>            protected        mixed
     <strong>GetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -3020,7 +3127,7 @@
                     <div class="method-item">
                     <h3 id="method_TryGetScalar">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryGetScalar">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 322</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 323</div>
         <code>            protected        
     <strong>TryGetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -3071,7 +3178,7 @@
                     <div class="method-item">
                     <h3 id="method_GetScalarDelta">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetScalarDelta">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 335</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 336</div>
         <code>            protected        int
     <strong>GetScalarDelta</strong>(string $field)
         </code>
@@ -3123,7 +3230,7 @@
                     <div class="method-item">
                     <h3 id="method_GetObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 349</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 350</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>GetObject</strong>(string $field)
         </code>
@@ -3179,7 +3286,7 @@
                     <div class="method-item">
                     <h3 id="method_TryGetObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryGetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 361</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 362</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryGetObject</strong>(string $field)
         </code>
@@ -3234,7 +3341,7 @@
                     <div class="method-item">
                     <h3 id="method_HasObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_HasObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 374</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 375</div>
         <code>            protected        bool
     <strong>HasObject</strong>(string $field)
         </code>
@@ -3286,7 +3393,7 @@
                     <div class="method-item">
                     <h3 id="method_GetObjectID">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 388</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 389</div>
         <code>            protected        string
     <strong>GetObjectID</strong>(string $field)
         </code>
@@ -3342,7 +3449,7 @@
                     <div class="method-item">
                     <h3 id="method_TryGetObjectID">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryGetObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 400</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 401</div>
         <code>            protected        string|null
     <strong>TryGetObjectID</strong>(string $field)
         </code>
@@ -3397,7 +3504,7 @@
                     <div class="method-item">
                     <h3 id="method_GetObjectType">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetObjectType">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 413</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 414</div>
         <code>            protected        string
     <strong>GetObjectType</strong>(string $field)
         </code>
@@ -3449,7 +3556,7 @@
                     <div class="method-item">
                     <h3 id="method_TryGetObjectType">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryGetObjectType">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 427</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 428</div>
         <code>            protected        string|null
     <strong>TryGetObjectType</strong>(string $field)
         </code>
@@ -3501,7 +3608,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 439</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 440</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>DeleteObject</strong>(string $field)
         </code>
@@ -3544,7 +3651,7 @@
                     <div class="method-item">
                     <h3 id="method_GetObjectRefs">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetObjectRefs">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 454</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 455</div>
         <code>            protected        array
     <strong>GetObjectRefs</strong>(string $field, int|null $limit = null, int|null $offset = null)
         </code>
@@ -3606,7 +3713,7 @@
                     <div class="method-item">
                     <h3 id="method_CountObjectRefs">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_CountObjectRefs">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 467</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 468</div>
         <code>            protected        int
     <strong>CountObjectRefs</strong>(string $field)
         </code>
@@ -3658,7 +3765,7 @@
                     <div class="method-item">
                     <h3 id="method_GetJoinObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_GetJoinObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 482</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 483</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
     <strong>GetJoinObject</strong>(string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $obj)
         </code>
@@ -3719,7 +3826,7 @@
                     <div class="method-item">
                     <h3 id="method_TryGetJoinObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_TryGetJoinObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 494</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 495</div>
         <code>            protected        <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\StandardObject">StandardObject</abbr>|null
     <strong>TryGetJoinObject</strong>(string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $obj)
         </code>
@@ -3779,7 +3886,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteObjectRefs">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteObjectRefs">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 506</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 507</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>DeleteObjectRefs</strong>(string $field)
         </code>
@@ -3822,7 +3929,7 @@
                     <div class="method-item">
                     <h3 id="method_SetScalar">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_SetScalar">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 521</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 522</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>SetScalar</strong>(string $field, mixed $value, bool $temp = false)
         </code>
@@ -3894,7 +4001,7 @@
             
 
         <div class="method-description">
-                            <p><p>Increment a counter by the given value</p></p>                        
+                            <p><p>Increments a counter field by the given delta (thread safe)</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -3932,8 +4039,12 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a></td>
-                <td><p>if the counter's limit exists and is exceeded</p></td>
+                <td><a href="../../../../Andromeda/Core/Database/KeyNotFoundException.html"><abbr title="Andromeda\Core\Database\KeyNotFoundException">KeyNotFoundException</abbr></a></td>
+                <td><p>if the property name is invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Core/Database/NotCounterException.html"><abbr title="Andromeda\Core\Database\NotCounterException">NotCounterException</abbr></a></td>
+                <td><p>if the field is not a counter</p></td>
             </tr>
             </table>
 
@@ -3957,7 +4068,7 @@
                     <div class="method-item">
                     <h3 id="method_BoolSetObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_BoolSetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 570</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 571</div>
         <code>            protected        bool
     <strong>BoolSetObject</strong>(string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $object, bool $notification = false)
         </code>
@@ -4019,7 +4130,7 @@
                     <div class="method-item">
                     <h3 id="method_SetObject">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_SetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 619</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 620</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>SetObject</strong>(string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $object, bool $notification = false)
         </code>
@@ -4094,7 +4205,7 @@
             
 
         <div class="method-description">
-                            <p><p>Adds an object reference, checking for a limit on the number of references</p></p>                        
+                            <p><p>Adds the given object to a collection of referenced objects</p></p>                <p><p>Will also call SetObject on the given object to actually create the reference</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -4132,8 +4243,8 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a></td>
-                <td><p>if the limit exists and is exceeded</p></td>
+                <td><a href="../../../../Andromeda/Core/Database/KeyNotFoundException.html"><abbr title="Andromeda\Core\Database\KeyNotFoundException">KeyNotFoundException</abbr></a></td>
+                <td><p>if the property name is invalid</p></td>
             </tr>
             </table>
 
@@ -4158,7 +4269,7 @@
                     <div class="method-item">
                     <h3 id="method_RemoveObjectRef">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_RemoveObjectRef">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 664</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 665</div>
         <code>            protected        bool
     <strong>RemoveObjectRef</strong>(string $field, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         </code>
@@ -4220,7 +4331,7 @@
                     <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method___construct">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 693</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 694</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, array $data)
         </code>
@@ -4257,9 +4368,48 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_AddField">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_AddField">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 717</div>
+        <code>                private    
+    <strong>AddField</strong>(string $key, $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Adds the given field object to the correct internal array</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td></td>
+                <td>$field</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_SubConstruct">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_SubConstruct">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 551</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 529</div>
         <code>                    void
     <strong>SubConstruct</strong>()
         </code>
@@ -4292,7 +4442,7 @@
                     <div class="method-item">
                     <h3 id="method_SubSave">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubSave">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 324</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 277</div>
         <code>            protected        void
     <strong>SubSave</strong>()
         </code>
@@ -4325,7 +4475,7 @@
                     <div class="method-item">
                     <h3 id="method_Save">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Save">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 738</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 739</div>
         <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>Save</strong>(bool $onlyMandatory = false)
         </code>
@@ -4368,7 +4518,7 @@
                     <div class="method-item">
                     <h3 id="method_isModified">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isModified">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 768</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 769</div>
         <code>                    bool
     <strong>isModified</strong>()
         </code>
@@ -4401,7 +4551,7 @@
                     <div class="method-item">
                     <h3 id="method_isDeleted">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 778</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 779</div>
         <code>                    bool
     <strong>isDeleted</strong>()
         </code>
@@ -4432,11 +4582,11 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setDeleted">
-        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 781</div>
-        <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
-    <strong>setDeleted</strong>()
+                    <h3 id="method_NotifyDeleted">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 782</div>
+        <code>                    void
+    <strong>NotifyDeleted</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -4444,7 +4594,7 @@
             
 
         <div class="method-description">
-                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                        
+                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                        
         </div>
         <div class="tags">
             
@@ -4452,7 +4602,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -4467,7 +4617,7 @@
                     <div class="method-item">
                     <h3 id="method_Delete">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 784</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 785</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -4500,7 +4650,7 @@
                     <div class="method-item">
                     <h3 id="method_isCreated">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isCreated">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 810</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 811</div>
         <code>                    bool
     <strong>isCreated</strong>()
         </code>
@@ -4543,7 +4693,7 @@
             
 
         <div class="method-description">
-                            <p><p>Create the object by setting its created date</p></p>                        
+                            <p><p>Creates a new object of this type in the database and returns it</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -5630,9 +5780,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAccount">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetAccount">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 100</div>
-        <code>                    <abbr title="Andromeda\Apps\Files\Storage\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetAccount">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 27</div>
+        <code>    abstract        protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
     <strong>GetAccount</strong>()
         </code>
     </h3>
@@ -5641,7 +5791,7 @@
             
 
         <div class="method-description">
-                            <p><p>Returns the account that owns this storage (or null)</p></p>                        
+                            <p><p>Returns the account that owns this object</p></p>                        
         </div>
         <div class="tags">
             
@@ -5649,7 +5799,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Andromeda\Apps\Files\Storage\Andromeda\Apps\Accounts\Account">Account</abbr>|null</td>
+            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null</td>
             <td></td>
         </tr>
     </table>
@@ -5664,7 +5814,7 @@
                     <div class="method-item">
                     <h3 id="method_GetFilesystem">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetFilesystem">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 103</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 52</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>
     <strong>GetFilesystem</strong>()
         </code>
@@ -5696,9 +5846,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadByAccount">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_LoadByAccount">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 106</div>
-        <code>        static            array
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_LoadByAccount">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 30</div>
+        <code>    abstract    static            array
     <strong>LoadByAccount</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
     </h3>
@@ -5707,7 +5857,7 @@
             
 
         <div class="method-description">
-                            <p><p>Loads all storages for the given account (join with FSManager)</p></p>                        
+                            <p><p>Returns all objects owned by the given account</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -5744,8 +5894,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetClientObject">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 220</div>
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 76</div>
         <code>                    array
     <strong>GetClientObject</strong>()
         </code>
@@ -5755,7 +5905,7 @@
             
 
         <div class="method-description">
-                            <p><p>Returns the printable client object of this trait</p></p>                        
+                            <p><p>Returns a printable client object of this storage</p></p>                        
         </div>
         <div class="tags">
             
@@ -5764,7 +5914,7 @@
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td><p><code>{import_chunksize:?int}</code></p></td>
+            <td><p><code>{id:id, filesystem:id}</code></p></td>
         </tr>
     </table>
 
@@ -5777,8 +5927,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetCreateUsage">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetCreateUsage">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 238</div>
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetCreateUsage">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 90</div>
         <code>        static            string
     <strong>GetCreateUsage</strong>()
         </code>
@@ -5810,8 +5960,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Create">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_Create">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 241</div>
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_Create">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 93</div>
         <code>        static            <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Create</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $filesystem)
         </code>
@@ -5821,7 +5971,7 @@
             
 
         <div class="method-description">
-                            <p><p>Performs cred-crypt level initialization on a new storage</p></p>                        
+                            <p><p>Creates a new storage with the given input and the given FS manager</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -5863,8 +6013,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetEditUsage">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetEditUsage">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 249</div>
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetEditUsage">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 99</div>
         <code>        static            string
     <strong>GetEditUsage</strong>()
         </code>
@@ -5896,8 +6046,8 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Edit">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_Edit">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 252</div>
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_Edit">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 102</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Edit</strong>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -5907,7 +6057,7 @@
             
 
         <div class="method-description">
-                            <p><p>Performs cred-crypt level edit on an existing storage</p></p>                        
+                            <p><p>Edits an existing storage with the given input</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -5940,7 +6090,7 @@
                     <div class="method-item">
                     <h3 id="method_Test">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_Test">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 156</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 105</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Test</strong>()
         </code>
@@ -5973,7 +6123,7 @@
                     <div class="method-item">
                     <h3 id="method_supportsFolders">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_supportsFolders">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 140</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 144</div>
         <code>                    bool
     <strong>supportsFolders</strong>()
         </code>
@@ -6007,7 +6157,7 @@
                     <div class="method-item">
                     <h3 id="method_usesBandwidth">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_usesBandwidth">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 173</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 122</div>
         <code>                    bool
     <strong>usesBandwidth</strong>()
         </code>
@@ -6040,7 +6190,7 @@
                     <div class="method-item">
                     <h3 id="method_canGetFreeSpace">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_canGetFreeSpace">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 176</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 125</div>
         <code>                    bool
     <strong>canGetFreeSpace</strong>()
         </code>
@@ -6073,7 +6223,7 @@
                     <div class="method-item">
                     <h3 id="method_GetFreeSpace">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetFreeSpace">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 179</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 128</div>
         <code>                    int
     <strong>GetFreeSpace</strong>()
         </code>
@@ -6106,7 +6256,7 @@
                     <div class="method-item">
                     <h3 id="method_Activate">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_Activate">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 182</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 131</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Activate</strong>()
         </code>
@@ -6205,7 +6355,7 @@
                     <div class="method-item">
                     <h3 id="method_TestWriteable">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_TestWriteable">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 195</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 144</div>
         <code>            protected        void
     <strong>TestWriteable</strong>()
         </code>
@@ -6238,7 +6388,7 @@
                     <div class="method-item">
                     <h3 id="method_AssertNotReadOnly">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_AssertNotReadOnly">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 209</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 158</div>
         <code>            protected        void
     <strong>AssertNotReadOnly</strong>()
         </code>
@@ -6280,7 +6430,7 @@
                     <div class="method-item">
                     <h3 id="method_isDryRun">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_isDryRun">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 219</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 168</div>
         <code>            protected        bool
     <strong>isDryRun</strong>()
         </code>
@@ -6356,7 +6506,7 @@
                     <div class="method-item">
                     <h3 id="method_getSize">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_getSize">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 228</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 177</div>
         <code>                    int
     <strong>getSize</strong>(string $path)
         </code>
@@ -6399,7 +6549,7 @@
                     <div class="method-item">
                     <h3 id="method_isFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_isFolder">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 142</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 146</div>
         <code>                    bool
     <strong>isFolder</strong>(string $path)
         </code>
@@ -6486,7 +6636,7 @@
                     <div class="method-item">
                     <h3 id="method_ReadFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_ReadFolder">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 241</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 190</div>
         <code>                    array
     <strong>ReadFolder</strong>(string $path)
         </code>
@@ -6572,7 +6722,7 @@
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_CreateFolder">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 253</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 202</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>CreateFolder</strong>(string $path)
         </code>
@@ -6615,7 +6765,7 @@
                     <div class="method-item">
                     <h3 id="method_SubCreateFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_SubCreateFolder">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 147</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 151</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubCreateFolder</strong>(string $path)
         </code>
@@ -6659,7 +6809,7 @@
                     <div class="method-item">
                     <h3 id="method_CreateFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_CreateFile">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 272</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 223</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>CreateFile</strong>(string $path)
         </code>
@@ -6745,9 +6895,9 @@
                     <div class="method-item">
                     <h3 id="method_ImportFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_ImportFile">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 298</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 252</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
-    <strong>ImportFile</strong>(string $src, string $dest)
+    <strong>ImportFile</strong>(string $src, string $dest, bool $istemp)
         </code>
     </h3>
     <div class="details">    
@@ -6771,6 +6921,11 @@
                 <td>$dest</td>
                 <td><p>path of new file</p></td>
             </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$istemp</td>
+                <td><p>true if we can move the src</p></td>
+            </tr>
             </table>
 
             
@@ -6792,10 +6947,10 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_SubImportFile">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_SubImportFile">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 261</div>
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubImportFile">
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 88</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
-    <strong>SubImportFile</strong>(string $src, string $dest)
+    <strong>SubImportFile</strong>(string $src, string $dest, bool $istemp)
         </code>
     </h3>
     <div class="details">    
@@ -6803,8 +6958,7 @@
             
 
         <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
+                            <p><p>The storage-specific ImportFile</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -6818,6 +6972,11 @@
                     <tr>
                 <td>string</td>
                 <td>$dest</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$istemp</td>
                 <td></td>
             </tr>
             </table>
@@ -6842,7 +7001,7 @@
                     <div class="method-item">
                     <h3 id="method_ReadBytes">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_ReadBytes">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 323</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 279</div>
         <code>                    string
     <strong>ReadBytes</strong>(string $path, int $start, int $length)
         </code>
@@ -6895,7 +7054,7 @@
                     <div class="method-item">
                     <h3 id="method_SubReadBytes">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubReadBytes">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 172</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 169</div>
         <code>            protected        string
     <strong>SubReadBytes</strong>(string $path, int $start, int $length)
         </code>
@@ -6948,7 +7107,7 @@
                     <div class="method-item">
                     <h3 id="method_WriteBytes">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_WriteBytes">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 341</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 297</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>WriteBytes</strong>(string $path, int $start, string $data)
         </code>
@@ -7001,7 +7160,7 @@
                     <div class="method-item">
                     <h3 id="method_SubWriteBytes">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubWriteBytes">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 206</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 180</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubWriteBytes</strong>(string $path, int $start, string $data)
         </code>
@@ -7054,7 +7213,7 @@
                     <div class="method-item">
                     <h3 id="method_Truncate">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_Truncate">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 370</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 329</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Truncate</strong>(string $path, int $length)
         </code>
@@ -7150,7 +7309,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_DeleteFile">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 393</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 355</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>DeleteFile</strong>(string $path)
         </code>
@@ -7236,7 +7395,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_DeleteFolder">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 411</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 373</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>DeleteFolder</strong>(string $path)
         </code>
@@ -7279,7 +7438,7 @@
                     <div class="method-item">
                     <h3 id="method_SubDeleteFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_SubDeleteFolder">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 149</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 153</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubDeleteFolder</strong>(string $path)
         </code>
@@ -7323,7 +7482,7 @@
                     <div class="method-item">
                     <h3 id="method_RenameFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_RenameFile">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 429</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 391</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>RenameFile</strong>(string $old, string $new)
         </code>
@@ -7419,7 +7578,7 @@
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_RenameFolder">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 448</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 413</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>RenameFolder</strong>(string $old, string $new)
         </code>
@@ -7467,7 +7626,7 @@
                     <div class="method-item">
                     <h3 id="method_SubRenameFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_SubRenameFolder">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 151</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 155</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubRenameFolder</strong>(string $old, string $new)
         </code>
@@ -7516,7 +7675,7 @@
                     <div class="method-item">
                     <h3 id="method_MoveFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_MoveFile">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 467</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 435</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>MoveFile</strong>(string $old, string $new)
         </code>
@@ -7564,7 +7723,7 @@
                     <div class="method-item">
                     <h3 id="method_SubMoveFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_SubMoveFile">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 153</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 157</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubMoveFile</strong>(string $old, string $new)
         </code>
@@ -7613,7 +7772,7 @@
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_MoveFolder">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 486</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 457</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>MoveFolder</strong>(string $old, string $new)
         </code>
@@ -7661,7 +7820,7 @@
                     <div class="method-item">
                     <h3 id="method_SubMoveFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_SubMoveFolder">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 155</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 159</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubMoveFolder</strong>(string $old, string $new)
         </code>
@@ -7710,7 +7869,7 @@
                     <div class="method-item">
                     <h3 id="method_CopyFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_CopyFile">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 505</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 479</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>CopyFile</strong>(string $old, string $new)
         </code>
@@ -7806,7 +7965,7 @@
                     <div class="method-item">
                     <h3 id="method_CopyFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_CopyFolder">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 524</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 500</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>CopyFolder</strong>(string $old, string $new)
         </code>
@@ -7854,7 +8013,7 @@
                     <div class="method-item">
                     <h3 id="method_SubCopyFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/NoFolders.html#method_SubCopyFolder">
-<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 157</div>
+<abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a> at line 161</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubCopyFolder</strong>(string $old, string $new)
         </code>
@@ -7903,7 +8062,7 @@
                     <div class="method-item">
                     <h3 id="method_canCopyFolders">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_canCopyFolders">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 546</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 524</div>
         <code>                    bool
     <strong>canCopyFolders</strong>()
         </code>
@@ -7934,9 +8093,100 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_renameRollbacks">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_renameRollbacks">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 540</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
+    <strong>renameRollbacks</strong>(string $old, string $new)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Moves all pending rollback actions from $old to $new for delete tracking</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$old</td>
+                <td><p>old path of item</p></td>
+            </tr>
+                    <tr>
+                <td>string</td>
+                <td>$new</td>
+                <td><p>new path of item</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_deleteRollbacks">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_deleteRollbacks">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 558</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
+    <strong>deleteRollbacks</strong>(string $path)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Deletes all pending rollback actions for the given path</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$path</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_commit">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_commit">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 556</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 569</div>
         <code>                    
     <strong>commit</strong>()
         </code>
@@ -7961,7 +8211,7 @@
                     <div class="method-item">
                     <h3 id="method_rollback">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_rollback">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 567</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 578</div>
         <code>                    
     <strong>rollback</strong>()
         </code>
@@ -7986,7 +8236,7 @@
                     <div class="method-item">
                     <h3 id="method_commitAll">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_commitAll">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 577</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 588</div>
         <code>        static            
     <strong>commitAll</strong>()
         </code>
@@ -8010,7 +8260,7 @@
                     <div class="method-item">
                     <h3 id="method_rollbackAll">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_rollbackAll">
-<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 580</div>
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a> at line 592</div>
         <code>        static            
     <strong>rollbackAll</strong>()
         </code>
@@ -8075,42 +8325,9 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_UseChunks">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_UseChunks">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 170</div>
-        <code>            protected        bool
-    <strong>UseChunks</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns true if fread() and fwrite() may need to be in chunks (network)</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_supportsReadWrite">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_supportsReadWrite">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 242</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 195</div>
         <code>        static    protected        bool
     <strong>supportsReadWrite</strong>()
         </code>
@@ -8143,7 +8360,7 @@
                     <div class="method-item">
                     <h3 id="method_supportsSeekReuse">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_supportsSeekReuse">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 245</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 198</div>
         <code>        static    protected        bool
     <strong>supportsSeekReuse</strong>()
         </code>
@@ -8176,7 +8393,7 @@
                     <div class="method-item">
                     <h3 id="method_OpenReadHandle">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_OpenReadHandle">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 248</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 201</div>
         <code>            protected        
     <strong>OpenReadHandle</strong>(string $path)
         </code>
@@ -8210,7 +8427,7 @@
                     <div class="method-item">
                     <h3 id="method_OpenWriteHandle">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_OpenWriteHandle">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 251</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 204</div>
         <code>            protected        
     <strong>OpenWriteHandle</strong>(string $path)
         </code>
@@ -8244,7 +8461,7 @@
                     <div class="method-item">
                     <h3 id="method_OpenContext">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_OpenContext">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 262</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 215</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/FileContext.html"><abbr title="Andromeda\Apps\Files\Storage\FileContext">FileContext</abbr></a>
     <strong>OpenContext</strong>(string $path, int $offset, bool $isWrite)
         </code>
@@ -8310,7 +8527,7 @@
                     <div class="method-item">
                     <h3 id="method_GetContext">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_GetContext">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 280</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 233</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/FileContext.html"><abbr title="Andromeda\Apps\Files\Storage\FileContext">FileContext</abbr></a>
     <strong>GetContext</strong>(string $path, int $offset, bool $isWrite)
         </code>
@@ -8363,7 +8580,7 @@
                     <div class="method-item">
                     <h3 id="method_ClosePath">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_ClosePath">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 312</div>
+<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 265</div>
         <code>            protected        void
     <strong>ClosePath</strong>(string $path)
         </code>
@@ -8404,11 +8621,11 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GetImportChunkSize">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_GetImportChunkSize">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 228</div>
-        <code>            protected        int
-    <strong>GetImportChunkSize</strong>()
+                    <h3 id="method_getEncryptedFields">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_getEncryptedFields">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 24</div>
+        <code>    abstract    static    protected        array
+    <strong>getEncryptedFields</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -8416,7 +8633,7 @@
             
 
         <div class="method-description">
-                            <p><p>Returns the chunk size to use for ImportFile()</p></p>                        
+                            <p><p>Returns the list of fields encrypted in this object</p></p>                        
         </div>
         <div class="tags">
             
@@ -8424,7 +8641,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -8437,11 +8654,11 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_isValidSize">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/ManualImport.html#method_isValidSize">
-<abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a> at line 235</div>
-        <code>        static            bool
-    <strong>isValidSize</strong>(int $v)
+                    <h3 id="method_isFieldEncrypted">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_isFieldEncrypted">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 42</div>
+        <code>            protected        bool
+    <strong>isFieldEncrypted</strong>($field)
         </code>
     </h3>
     <div class="details">    
@@ -8449,15 +8666,15 @@
             
 
         <div class="method-description">
-                            <p><p>Returns true if the given size is &gt;= 4K and &lt;= 64M</p></p>                        
+                            <p><p>Returns true if the given DB field is encrypted</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int</td>
-                <td>$v</td>
+                <td></td>
+                <td>$field</td>
                 <td></td>
             </tr>
             </table>
@@ -8468,6 +8685,308 @@
                     <table class="table table-condensed">
         <tr>
             <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetEncryptedScalar">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 55</div>
+        <code>            protected        string
+    <strong>GetEncryptedScalar</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Decrypts and returns the value of the given field</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>field name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>decrypted value</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\KeyNotFoundException">KeyNotFoundException</abbr></td>
+                <td><p>if the value is null</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_TryGetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr>::TryGetEncryptedScalar</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RequireCrypto">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_RequireCrypto">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 63</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
+    <strong>RequireCrypto</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Unlocks account crypto for usage and returns it</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetEncryptedScalar">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_TryGetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 83</div>
+        <code>            protected        string|null
+    <strong>TryGetEncryptedScalar</strong>(string $field)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Decrypts and returns the value of the given field</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>field name</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string|null</td>
+            <td><p>decrypted value</p></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Accounts/CrptoNotUnlockedException.html"><abbr title="Andromeda\Apps\Accounts\CrptoNotUnlockedException">CrptoNotUnlockedException</abbr></a></td>
+                <td><p>if account crypto is not unlocked</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetEncryptedScalar">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncryptedScalar">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 109</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+    <strong>SetEncryptedScalar</strong>(string $field, string|null $value, bool|null $fieldcrypt = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the value of the given field</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$field</td>
+                <td><p>field to set</p></td>
+            </tr>
+                    <tr>
+                <td>string|null</td>
+                <td>$value</td>
+                <td><p>value to set</p></td>
+            </tr>
+                    <tr>
+                <td>bool|null</td>
+                <td>$fieldcrypt</td>
+                <td><p>if true, encrypt - default current state</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Accounts/CryptoNotAvailableException.html"><abbr title="Andromeda\Apps\Accounts\CryptoNotAvailableException">CryptoNotAvailableException</abbr></a></td>
+                <td><p>if account crypto is not unlocked</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_SetEncrypted">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncrypted">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 135</div>
+        <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
+    <strong>SetEncrypted</strong>(bool $crypt)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the crypto state of all stored fields</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$crypt</td>
+                <td><p>true to encrypted, false if not</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_DecryptAccount">
+        <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_DecryptAccount">
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 151</div>
+        <code>        static            void
+    <strong>DecryptAccount</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads any objects for the given account and decrypts their fields</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td><p>database reference</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></td>
+                <td>$account</td>
+                <td><p>account to load by</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
             <td></td>
         </tr>
     </table>

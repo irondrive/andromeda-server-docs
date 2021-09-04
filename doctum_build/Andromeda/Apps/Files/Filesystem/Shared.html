@@ -166,7 +166,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>|null $itemCreator = null)
+                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $fileSw = null, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $folderSw = null)
         
                                             <p><p>Updates the given DB folder (and contents) from disk</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -513,7 +513,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFile">
-        <div class="location">at line 69</div>
+        <div class="location">at line 47</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RefreshFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -555,9 +555,9 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFolder">
-        <div class="location">at line 93</div>
+        <div class="location">at line 72</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
-    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>|null $itemCreator = null)
+    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $fileSw = null, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $folderSw = null)
         </code>
     </h3>
     <div class="details">    
@@ -583,8 +583,13 @@ Also scans for new items and creates objects for them.</p></p>
                 <td><p>if true, recurse, else just this folder</p></td>
             </tr>
                     <tr>
-                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr>|null</td>
-                <td>$itemCreator</td>
+                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null</td>
+                <td>$fileSw</td>
+                <td><p>MUST BE NULL (unit testing only)</p></td>
+            </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null</td>
+                <td>$folderSw</td>
                 <td><p>MUST BE NULL (unit testing only)</p></td>
             </tr>
             </table>
@@ -608,7 +613,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
-        <div class="location">at line 144</div>
+        <div class="location">at line 132</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CreateFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -650,7 +655,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
-        <div class="location">at line 151</div>
+        <div class="location">at line 139</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -937,7 +942,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFile">
-        <div class="location">at line 158</div>
+        <div class="location">at line 146</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $name)
         </code>
@@ -984,7 +989,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
-        <div class="location">at line 166</div>
+        <div class="location">at line 154</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, string $name)
         </code>
@@ -1031,7 +1036,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFile">
-        <div class="location">at line 174</div>
+        <div class="location">at line 162</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1078,7 +1083,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
-        <div class="location">at line 182</div>
+        <div class="location">at line 170</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1173,7 +1178,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CopyFolder">
-        <div class="location">at line 190</div>
+        <div class="location">at line 178</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
         </code>
@@ -1220,7 +1225,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilePath">
-        <div class="location">at line 62</div>
+        <div class="location">at line 40</div>
         <code>            protected        string
     <strong>GetFilePath</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -1310,7 +1315,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItemPath">
-        <div class="location">at line 53</div>
+        <div class="location">at line 31</div>
         <code>            protected        string
     <strong>GetItemPath</strong>(<a href="../../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, string|null $child = null)
         </code>

@@ -797,13 +797,13 @@ of subfiles, total folder size, etc., so retrieving these values is fast.</p>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_setDeleted">setDeleted</a>()
+                    <a href="#method_NotifyDeleted">NotifyDeleted</a>()
         
-                                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
+                                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -1065,7 +1065,7 @@ of subfiles, total folder size, etc., so retrieving these values is fast.</p>
                 <div class="col-md-8">
                     <a href="#method_GetOwner">GetOwner</a>()
         
-                                            <p><p>Returns the owner of this item, or null if it's on a shared FS</p></p>                </div>
+                                            <p><p>Returns the owner of this item, or null if it's on an external FS</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Apps/Files/Item.html#method_GetOwner">
 <abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></small></div>
             </div>
@@ -4086,7 +4086,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddObjectRef">
-        <div class="location">at line 155</div>
+        <div class="location">at line 156</div>
         <code>            protected        bool
     <strong>AddObjectRef</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         </code>
@@ -4147,7 +4147,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveObjectRef">
-        <div class="location">at line 164</div>
+        <div class="location">at line 165</div>
         <code>            protected        bool
     <strong>RemoveObjectRef</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         </code>
@@ -4460,11 +4460,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setDeleted">
-        <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
+                    <h3 id="method_NotifyDeleted">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 782</div>
-        <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
-    <strong>setDeleted</strong>()
+        <code>                    void
+    <strong>NotifyDeleted</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -4472,7 +4472,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                        
+                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                        
         </div>
         <div class="tags">
             
@@ -4480,7 +4480,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -5658,7 +5658,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Refresh">
-        <div class="location">at line 184</div>
+        <div class="location">at line 185</div>
         <code>                    <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a>
     <strong>Refresh</strong>(bool $doContents = false)
         </code>
@@ -5711,7 +5711,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Returns the owner of this item, or null if it's on a shared FS</p></p>                        
+                            <p><p>Returns the owner of this item, or null if it's on an external FS</p></p>                        
         </div>
         <div class="tags">
             
@@ -7360,7 +7360,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddStatsToLimit">
-        <div class="location">at line 173</div>
+        <div class="location">at line 174</div>
         <code>            protected        void
     <strong>AddStatsToLimit</strong>(<a href="../../../Andromeda/Apps/Files/Limits/Base.html"><abbr title="Andromeda\Apps\Files\Limits\Base">Base</abbr></a> $limit, bool $add = true)
         </code>
@@ -7650,7 +7650,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_NotifyDelete">
-        <div class="location">at line 210</div>
+        <div class="location">at line 212</div>
         <code>                    void
     <strong>NotifyDelete</strong>()
         </code>
@@ -7783,7 +7783,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadAdoptedByOwner">
-        <div class="location">at line 225</div>
+        <div class="location">at line 227</div>
         <code>        static            array
     <strong>LoadAdoptedByOwner</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
@@ -7893,7 +7893,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 271</div>
+        <div class="location">at line 273</div>
         <code>                    array
     <strong>GetClientObject</strong>(bool $files = false, bool $folders = false, bool $recursive = false, int|null $limit = null, int|null $offset = null, bool $details = false)
         </code>
@@ -7981,7 +7981,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetClientObject">
-        <div class="location">at line 290</div>
+        <div class="location">at line 292</div>
         <code>                    array|null
     <strong>TryGetClientObject</strong>(bool $files = false, bool $folders = false, bool $recursive = false, int|null $limit = null, int|null $offset = null, bool $details = false)
         </code>
@@ -8186,7 +8186,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetNumFiles">
-        <div class="location">at line 73</div>
+        <div class="location">at line 74</div>
         <code>                    int
     <strong>GetNumFiles</strong>()
         </code>
@@ -8218,7 +8218,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetNumFolders">
-        <div class="location">at line 76</div>
+        <div class="location">at line 77</div>
         <code>                    int
     <strong>GetNumFolders</strong>()
         </code>
@@ -8250,7 +8250,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetNumItems">
-        <div class="location">at line 79</div>
+        <div class="location">at line 80</div>
         <code>                    int
     <strong>GetNumItems</strong>()
         </code>
@@ -8282,7 +8282,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTotalShares">
-        <div class="location">at line 82</div>
+        <div class="location">at line 83</div>
         <code>                    int
     <strong>GetTotalShares</strong>()
         </code>
@@ -8314,7 +8314,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CountPublicVisit">
-        <div class="location">at line 85</div>
+        <div class="location">at line 86</div>
         <code>                    <a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a>
     <strong>CountPublicVisit</strong>()
         </code>
@@ -8346,7 +8346,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeltaSize">
-        <div class="location">at line 93</div>
+        <div class="location">at line 94</div>
         <code>                    <a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a>
     <strong>DeltaSize</strong>(int $size)
         </code>
@@ -8388,7 +8388,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetOwnerRecursive">
-        <div class="location">at line 101</div>
+        <div class="location">at line 102</div>
         <code>                    <a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a>
     <strong>SetOwnerRecursive</strong>(<a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
@@ -8430,7 +8430,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CheckIsNotChildOrSelf">
-        <div class="location">at line 111</div>
+        <div class="location">at line 112</div>
         <code>            protected        void
     <strong>CheckIsNotChildOrSelf</strong>(<a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -8472,7 +8472,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddItemCounts">
-        <div class="location">at line 123</div>
+        <div class="location">at line 124</div>
         <code>                private    void
     <strong>AddItemCounts</strong>(<a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, bool $add = true)
         </code>
@@ -8519,7 +8519,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CountSubShare">
-        <div class="location">at line 150</div>
+        <div class="location">at line 151</div>
         <code>            protected        <a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a>
     <strong>CountSubShare</strong>(bool $count = true)
         </code>
@@ -8561,7 +8561,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_isNotifyDeleted">
-        <div class="location">at line 197</div>
+        <div class="location">at line 199</div>
         <code>                    bool
     <strong>isNotifyDeleted</strong>()
         </code>
@@ -8594,7 +8594,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteChildren">
-        <div class="location">at line 200</div>
+        <div class="location">at line 202</div>
         <code>                    void
     <strong>DeleteChildren</strong>(bool $isNotify)
         </code>
@@ -8636,7 +8636,7 @@ if details, add: <code>{tags:[id:Tag], shares:[id:Share]}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_RecursiveItems">
-        <div class="location">at line 246</div>
+        <div class="location">at line 248</div>
         <code>                private    array
     <strong>RecursiveItems</strong>(bool|null $files = true, bool|null $folders = true, int|null $limit = null, int|null $offset = null)
         </code>

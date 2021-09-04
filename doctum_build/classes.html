@@ -514,6 +514,11 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                    <a href="Andromeda/Apps/Files/FileUtils.html"><abbr title="Andromeda\Apps\Files\FileUtils">FileUtils</abbr></a>    </div>
+                <div class="col-md-6"><p>Helper class for reading/writing streams and files via chunks</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a>    </div>
                 <div class="col-md-6"><p>App that provides user-facing filesystem services.</p></div>
             </div>
@@ -521,6 +526,11 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a>    </div>
                 <div class="col-md-6"><p>A basic filesystem type that stores files as files (revolutionary)</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Apps/Files/Filesystem/External.html"><abbr title="Andromeda\Apps\Files\Filesystem\External">External</abbr></a>    </div>
+                <div class="col-md-6"><p>An External Andromeda filesystem is accessible outside Andromeda</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -544,18 +554,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Filesystem/InvalidScannedItemException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidScannedItemException">InvalidScannedItemException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the scanned folder item is not a file or folder (not readable)</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Filesystem/InvalidStorageException.html"><abbr title="Andromeda\Apps\Files\Filesystem\InvalidStorageException">InvalidStorageException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that the underlying storage connection failed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Filesystem/ItemCreator.html"><abbr title="Andromeda\Apps\Files\Filesystem\ItemCreator">ItemCreator</abbr></a>    </div>
-                <div class="col-md-6"><p>Wrapper around $itemclass::NotifyCreate() for unit testing</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -566,11 +566,6 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a>    </div>
                 <div class="col-md-6"><p>Implements an encryption layer on top of the native filesystem.</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Filesystem/Shared.html"><abbr title="Andromeda\Apps\Files\Filesystem\Shared">Shared</abbr></a>    </div>
-                <div class="col-md-6"><p>A shared Andromeda filesystem is &quot;shared&quot; outside Andromeda</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -586,16 +581,6 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/InvalidDestinationException.html"><abbr title="Andromeda\Apps\Files\InvalidDestinationException">InvalidDestinationException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that the folder destination is invalid</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/InvalidFileRangeException.html"><abbr title="Andromeda\Apps\Files\InvalidFileRangeException">InvalidFileRangeException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the requested byte range for file writing is invalid</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/InvalidFileWriteException.html"><abbr title="Andromeda\Apps\Files\InvalidFileWriteException">InvalidFileWriteException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the input file parameter format is incorrect</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -946,11 +931,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Storage/ManualImport.html"><abbr title="Andromeda\Apps\Files\Storage\ManualImport">ManualImport</abbr></a>    </div>
-                <div class="col-md-6"><p>A storage with no specific ImportFile function, using CreateFile/WriteBytes instead</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Storage/NoFolders.html"><abbr title="Andromeda\Apps\Files\Storage\NoFolders">NoFolders</abbr></a>    </div>
                 <div class="col-md-6"><p>A storage that does not support subfolders</p></div>
             </div>
@@ -958,6 +938,11 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Storage/OptFieldCrypt.html"><abbr title="Andromeda\Apps\Files\Storage\OptFieldCrypt">OptFieldCrypt</abbr></a>    </div>
                 <div class="col-md-6"><p>Trait for storage classes that store a optionally-encrypted credential fields</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Apps/Files/Storage/PathRollback.html"><abbr title="Andromeda\Apps\Files\Storage\PathRollback">PathRollback</abbr></a>    </div>
+                <div class="col-md-6"><p>Class representing a path and rollback action</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -972,7 +957,7 @@
                     <div class="row">
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Storage/S3AwsSdkException.html"><abbr title="Andromeda\Apps\Files\Storage\S3AwsSdkException">S3AwsSdkException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the libsmbclient extension is missing</p></div>
+                <div class="col-md-6"><p>Exception indicating that the S3 SDK is missing</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -991,8 +976,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Storage/S3Base4.html"><abbr title="Andromeda\Apps\Files\Storage\S3Base4">S3Base4</abbr></a>    </div>
-                <div class="col-md-6"></div>
+                    <a href="Andromeda/Apps/Files/Storage/S3ConnectException.html"><abbr title="Andromeda\Apps\Files\Storage\S3ConnectException">S3ConnectException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that S3 failed to connect or read the base path</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1003,11 +988,6 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Storage/S3ModifyException.html"><abbr title="Andromeda\Apps\Files\Storage\S3ModifyException">S3ModifyException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that objects cannot be modified</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Storage/S3WriteSeekException.html"><abbr title="Andromeda\Apps\Files\Storage\S3WriteSeekException">S3WriteSeekException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that writes cannot seek (append only)</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1142,7 +1122,7 @@
                     <div class="row">
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Server/AccessLog.html"><abbr title="Andromeda\Apps\Server\AccessLog">AccessLog</abbr></a>    </div>
-                <div class="col-md-6"><p>Server app access log for use with the accounts app installed</p></div>
+                <div class="col-md-6"><p>Server app access log for use without the accounts app installed</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1247,7 +1227,7 @@
                     <div class="row">
                 <div class="col-md-6">
                     <a href="Andromeda/Core/Database/DatabaseConfigException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigException">DatabaseConfigException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the database is not configured</p></div>
+                <div class="col-md-6"><p>Exception indicating that the database connection is not configured</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1506,13 +1486,18 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/IOFormat/InputFile.html"><abbr title="Andromeda\Core\IOFormat\InputFile">InputFile</abbr></a>    </div>
-                <div class="col-md-6"><p>A file path and name combination</p></div>
+                    <a href="Andromeda/Core/IOFormat/InputFileMissingException.html"><abbr title="Andromeda\Core\IOFormat\InputFileMissingException">InputFileMissingException</abbr></a>    </div>
+                <div class="col-md-6"></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/IOFormat/InputFileMissingException.html"><abbr title="Andromeda\Core\IOFormat\InputFileMissingException">InputFileMissingException</abbr></a>    </div>
-                <div class="col-md-6"></div>
+                    <a href="Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a>    </div>
+                <div class="col-md-6"><p>A file given as a path to an actual file</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a>    </div>
+                <div class="col-md-6"><p>An input file stream</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1718,6 +1703,11 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a>    </div>
                 <div class="col-md-6"><p>Abstract class implementing a singleton</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/StaticWrapper.html"><abbr title="Andromeda\Core\StaticWrapper">StaticWrapper</abbr></a>    </div>
+                <div class="col-md-6"><p>A class for overriding static methods for unit testing</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">

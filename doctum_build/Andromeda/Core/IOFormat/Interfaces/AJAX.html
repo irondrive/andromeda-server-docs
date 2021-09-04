@@ -120,6 +120,16 @@
 
             <table class="table table-condensed">
                     <tr>
+                <td class="type" id="property_instances">
+                    static                                        private                    
+                                                                                
+                                    </td>
+                <td>$instances</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Singleton.html#property_instances">
+<abbr title="Andromeda\Core\Singleton">Singleton</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_inputs">
                                         protected                                        <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>[]
                                                                                 
@@ -137,6 +147,26 @@
                 <td>$outmode</td>
                 <td class="last"></td>
                 <td><small>from&nbsp;<a href="../../../../Andromeda/Core/IOFormat/IOInterface.html#property_outmode">
+<abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_retfuncs">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$retfuncs</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/IOFormat/IOInterface.html#property_retfuncs">
+<abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_numretfuncs">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$numretfuncs</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/IOFormat/IOInterface.html#property_numretfuncs">
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></small></td>
             </tr>
             </table>
@@ -368,6 +398,16 @@
                     <a href="#method_WriteOutput">WriteOutput</a>(<a href="../../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> $output)
         
                                             <p><p>Tells the interface to print its final output</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetInput">GetInput</a>(array $get, array $files, array $request)
+        
+                                            <p><p>Fetches an input object from the HTTP request</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -983,8 +1023,8 @@ transaction by using the batch paramter as an array</p></p>
             
 
         <div class="method-description">
-                            <p><p>Registers a user output handler function to run after the initial commit</p></p>                <p><p>Sets the output mode to null if bytes &gt; 0 and will cause &quot;multi-output&quot; mode
-to be used if &gt; 1 functions that return &gt; 0 bytes are defined</p></p>        
+                            <p><p>Registers a user output handler function to run after the initial commit</p></p>                <p><p>Sets the output mode to null if bytes !== null and will cause &quot;multi-output&quot;
+mode to be used if &gt; 1 functions that return &gt; 0 bytes are defined</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1087,7 +1127,7 @@ is always finished with JSON output (also with the # of bytes prefixed)</p></p>
             
 
         <div class="method-description">
-                            <p><p>Returns the binary-packed version of the given integer size</p></p>                <p><p>unsigned long long (always 64 bit, little endian byte order)</p></p>        
+                            <p><p>Returns the binary-packed version of the given integer size</p></p>                <p><p>unsigned long long (always 64 bit, big-endian byte order)</p></p>        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1185,6 +1225,60 @@ is always finished with JSON output (also with the # of bytes prefixed)</p></p>
             </table>
 
             
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetInput">
+        <div class="location">at line 92</div>
+        <code>                private    <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
+    <strong>GetInput</strong>(array $get, array $files, array $request)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Fetches an input object from the HTTP request</p></p>                <p><p>App and Action must be part of $_GET, everything else
+can be interchangeably in $_GET or $<em>POST - except
+'password' and 'auth</em>' which cannot be in $_GET</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>array</td>
+                <td>$get</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$files</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>array</td>
+                <td>$request</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             

@@ -188,9 +188,19 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
                     <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_ImportFile">ImportFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $path)
+                    <a href="#method_ImportFile">ImportFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a> $infile)
         
                                             <p><p>Creates a new file and imports its content</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateFile">CreateFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        
+                                            <p><p>Creates an empty file on storage</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -301,7 +311,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 23</div>
+        <div class="location">at line 24</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $fsmanager)
         </code>
@@ -335,7 +345,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_GetChunkSize">
-        <div class="location">at line 34</div>
+        <div class="location">at line 35</div>
         <code>                    int|null
     <strong>GetChunkSize</strong>()
         </code>
@@ -367,7 +377,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFSManager">
-        <div class="location">at line 37</div>
+        <div class="location">at line 38</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>
     <strong>GetFSManager</strong>()
         </code>
@@ -399,7 +409,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_GetStorage">
-        <div class="location">at line 40</div>
+        <div class="location">at line 41</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>GetStorage</strong>()
         </code>
@@ -431,7 +441,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDatabase">
-        <div class="location">at line 43</div>
+        <div class="location">at line 44</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
     <strong>GetDatabase</strong>()
         </code>
@@ -463,7 +473,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFile">
-        <div class="location">at line 46</div>
+        <div class="location">at line 47</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RefreshFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -505,7 +515,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFolder">
-        <div class="location">at line 49</div>
+        <div class="location">at line 50</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -547,7 +557,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
-        <div class="location">at line 52</div>
+        <div class="location">at line 53</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CreateFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -589,7 +599,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
-        <div class="location">at line 55</div>
+        <div class="location">at line 56</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -631,9 +641,9 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_ImportFile">
-        <div class="location">at line 63</div>
+        <div class="location">at line 64</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
-    <strong>ImportFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $path)
+    <strong>ImportFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a> $infile)
         </code>
     </h3>
     <div class="details">    
@@ -653,9 +663,51 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
                 <td><p>the database object</p></td>
             </tr>
                     <tr>
-                <td>string</td>
-                <td>$path</td>
-                <td><p>path to the file content</p></td>
+                <td><a href="../../../../Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a></td>
+                <td>$infile</td>
+                <td><p>the file to import</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateFile">
+        <div class="location">at line 67</div>
+        <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>CreateFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates an empty file on storage</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td></td>
             </tr>
             </table>
 
@@ -678,7 +730,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFile">
-        <div class="location">at line 66</div>
+        <div class="location">at line 70</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -720,7 +772,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_ReadBytes">
-        <div class="location">at line 77</div>
+        <div class="location">at line 81</div>
         <code>    abstract                string
     <strong>ReadBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, int $length)
         </code>
@@ -772,7 +824,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_WriteBytes">
-        <div class="location">at line 86</div>
+        <div class="location">at line 90</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>WriteBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, string $data)
         </code>
@@ -824,7 +876,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_Truncate">
-        <div class="location">at line 94</div>
+        <div class="location">at line 98</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>Truncate</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $length)
         </code>
@@ -871,7 +923,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFile">
-        <div class="location">at line 97</div>
+        <div class="location">at line 101</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $name)
         </code>
@@ -918,7 +970,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
-        <div class="location">at line 100</div>
+        <div class="location">at line 104</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, string $name)
         </code>
@@ -965,7 +1017,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFile">
-        <div class="location">at line 108</div>
+        <div class="location">at line 112</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1012,7 +1064,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
-        <div class="location">at line 116</div>
+        <div class="location">at line 120</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1059,7 +1111,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_CopyFile">
-        <div class="location">at line 124</div>
+        <div class="location">at line 128</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $dest)
         </code>
@@ -1106,7 +1158,7 @@ storage. The FSImpl class's info is managed by the FSManager and is not a DB obj
             </div>
                     <div class="method-item">
                     <h3 id="method_CopyFolder">
-        <div class="location">at line 132</div>
+        <div class="location">at line 136</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
         </code>

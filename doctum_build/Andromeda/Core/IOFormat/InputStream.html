@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Andromeda\Apps\Files\DeletedByStorageException | Andromeda Server API</title>
+    <title>Andromeda\Core\IOFormat\InputStream | Andromeda Server API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
 
     </head>
 
-    <body id="class" data-name="class:Andromeda_Apps_Files_DeletedByStorageException" data-root-path="../../../">
+    <body id="class" data-name="class:Andromeda_Core_IOFormat_InputStream" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -63,18 +63,18 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Files.html">Files</a></li><li class="backslash">\</li><li>DeletedByStorageException</li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/IOFormat.html">IOFormat</a></li><li class="backslash">\</li><li>InputStream</li>
             </ol>
         </div>
                 <div id="page-content">
     <div class="page-header">
-        <h1>DeletedByStorageException    
+        <h1>InputStream    
             </h1>
     </div>
 
     
     <p>        class
-    <strong>DeletedByStorageException</strong>        extends <a href="../../../Andromeda/Core/Exceptions/ClientNotFoundException.html"><abbr title="Andromeda\Core\Exceptions\ClientNotFoundException">ClientNotFoundException</abbr></a>
+    <strong>InputStream</strong>
 </p>
 
         
@@ -82,7 +82,7 @@
         
 
             <div class="description">
-            <p><p>Exception indicating that the item was deleted when refreshed from storage</p></p>                    </div>
+            <p><p>An input file stream</p></p>                    </div>
             
         
     
@@ -90,21 +90,11 @@
 
             <table class="table table-condensed">
                     <tr>
-                <td class="type" id="property_code">
-                                                                                
-                                                                                
-                                    </td>
-                <td>$code</td>
-                <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/ClientNotFoundException.html#property_code">
-<abbr title="Andromeda\Core\Exceptions\ClientNotFoundException">ClientNotFoundException</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_message">
-                                                                                
+                <td class="type" id="property_handle">
+                                                            private                    
                                                                                 
                                     </td>
-                <td>$message</td>
+                <td>$handle</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -116,26 +106,34 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
+                    
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_Copy">Copy</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
+                    <a href="#method___construct">__construct</a>($handle)
         
-                                            <p><p>Copy another exception, converting its type</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/BaseException.html#method_Copy">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></small></div>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(string $details = null)
+                    <a href="#method_GetHandle">GetHandle</a>()
         
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/ClientException.html#method___construct">
-<abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a></small></div>
+                                            <p><p>Returns the file's stream resource</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetData">GetData</a>()
+        
+                                            <p><p>Returns the entire stream contents</p></p>                </div>
+                <div class="col-md-2"></div>
             </div>
             </div>
 
@@ -144,54 +142,10 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_Copy">
-        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/BaseException.html#method_Copy">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 9</div>
-        <code>        static            <a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
-    <strong>Copy</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Copy another exception, converting its type</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
-                <td>$e</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/ClientException.html#method___construct">
-<abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a> at line 18</div>
+        <div class="location">at line 8</div>
         <code>                    
-    <strong>__construct</strong>(string $details = null)
+    <strong>__construct</strong>($handle)
         </code>
     </h3>
     <div class="details">    
@@ -207,13 +161,68 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$details</td>
+                <td></td>
+                <td>$handle</td>
                 <td></td>
             </tr>
             </table>
 
             
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetHandle">
+        <div class="location">at line 12</div>
+        <code>                    
+    <strong>GetHandle</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the file's stream resource</p></p>                        
+        </div>
+        <div class="tags">
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetData">
+        <div class="location">at line 15</div>
+        <code>                    string
+    <strong>GetData</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the entire stream contents</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             

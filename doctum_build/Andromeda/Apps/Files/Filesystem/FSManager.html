@@ -122,7 +122,7 @@ level how the functions are actually mapped into the underlying storage.</p></p>
             </tr>
                     <tr>
                 <td>
-                                                                                                                        TYPE_SHARED
+                                                                                                                        TYPE_EXTERNAL
                                     </td>
                 <td class="last">
                     <p><em></em></p>
@@ -824,13 +824,13 @@ level how the functions are actually mapped into the underlying storage.</p></p>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_setDeleted">setDeleted</a>()
+                    <a href="#method_NotifyDeleted">NotifyDeleted</a>()
         
-                                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
+                                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -1079,9 +1079,9 @@ level how the functions are actually mapped into the underlying storage.</p></p>
                     bool
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_isShared">isShared</a>()
+                    <a href="#method_isExternal">isExternal</a>()
         
-                                            <p><p>Returns true if the data in this filesystem is shared with the filesystem itself, false if Andromeda owns it</p></p>                </div>
+                                            <p><p>Returns true if the data in this filesystem is external, false if Andromeda owns it</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -4053,11 +4053,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setDeleted">
-        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
+                    <h3 id="method_NotifyDeleted">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 782</div>
-        <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
-    <strong>setDeleted</strong>()
+        <code>                    void
+    <strong>NotifyDeleted</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -4065,7 +4065,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                        
+                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                        
         </div>
         <div class="tags">
             
@@ -4073,7 +4073,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -5259,10 +5259,10 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_isShared">
+                    <h3 id="method_isExternal">
         <div class="location">at line 73</div>
         <code>                    bool
-    <strong>isShared</strong>()
+    <strong>isExternal</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -5270,7 +5270,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Returns true if the data in this filesystem is shared with the filesystem itself, false if Andromeda owns it</p></p>                        
+                            <p><p>Returns true if the data in this filesystem is external, false if Andromeda owns it</p></p>                        
         </div>
         <div class="tags">
             
@@ -6449,7 +6449,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td><p><code>{id:id, name:?string, owner:?id, shared:bool, encrypted:bool, readonly:bool, sttype:string}</code> \
+            <td><p><code>{id:id, name:?string, owner:?id, external:bool, encrypted:bool, readonly:bool, sttype:string}</code> \
 if priv, add <code>{storage:Storage}</code> - if isEncrypted, add <code>{chunksize:int}</code></p></td>
         </tr>
     </table>
@@ -6461,7 +6461,8 @@ if priv, add <code>{storage:Storage}</code> - if isEncrypted, add <code>{chunksi
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\Filesystem\Storage::GetClientObject()
+                                            <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::GetClientObject</a>
                                     </td>
                 <td></td>
             </tr>

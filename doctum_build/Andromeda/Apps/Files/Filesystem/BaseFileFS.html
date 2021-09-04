@@ -195,9 +195,19 @@
                     <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_ImportFile">ImportFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $path)
+                    <a href="#method_ImportFile">ImportFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a> $infile)
         
                                             <p><p>Creates a new file and imports its content</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_CreateFile">CreateFile</a>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        
+                                            <p><p>Creates an empty file on storage</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -335,7 +345,7 @@
                     <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method___construct">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 23</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 24</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $fsmanager)
         </code>
@@ -370,7 +380,7 @@
                     <div class="method-item">
                     <h3 id="method_GetChunkSize">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetChunkSize">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 34</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 35</div>
         <code>                    int|null
     <strong>GetChunkSize</strong>()
         </code>
@@ -403,7 +413,7 @@
                     <div class="method-item">
                     <h3 id="method_GetFSManager">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetFSManager">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 37</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 38</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>
     <strong>GetFSManager</strong>()
         </code>
@@ -436,7 +446,7 @@
                     <div class="method-item">
                     <h3 id="method_GetStorage">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetStorage">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 40</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 41</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>GetStorage</strong>()
         </code>
@@ -469,7 +479,7 @@
                     <div class="method-item">
                     <h3 id="method_GetDatabase">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetDatabase">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 43</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 44</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
     <strong>GetDatabase</strong>()
         </code>
@@ -502,7 +512,7 @@
                     <div class="method-item">
                     <h3 id="method_RefreshFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_RefreshFile">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 46</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 47</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RefreshFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -545,7 +555,7 @@
                     <div class="method-item">
                     <h3 id="method_RefreshFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_RefreshFolder">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 49</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 50</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -588,7 +598,7 @@
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_CreateFolder">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 52</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 53</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CreateFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -631,7 +641,7 @@
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_DeleteFolder">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 55</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 56</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -673,9 +683,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_ImportFile">
-        <div class="location">at line 17</div>
+        <div class="location">at line 24</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
-    <strong>ImportFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $path)
+    <strong>ImportFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a> $infile)
         </code>
     </h3>
     <div class="details">    
@@ -695,9 +705,51 @@
                 <td><p>the database object</p></td>
             </tr>
                     <tr>
-                <td>string</td>
-                <td>$path</td>
-                <td><p>path to the file content</p></td>
+                <td><a href="../../../../Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a></td>
+                <td>$infile</td>
+                <td><p>the file to import</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_CreateFile">
+        <div class="location">at line 19</div>
+        <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
+    <strong>CreateFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Creates an empty file on storage</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+                <td>$file</td>
+                <td></td>
             </tr>
             </table>
 
@@ -720,7 +772,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFile">
-        <div class="location">at line 42</div>
+        <div class="location">at line 49</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -762,7 +814,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_ReadBytes">
-        <div class="location">at line 22</div>
+        <div class="location">at line 29</div>
         <code>                    string
     <strong>ReadBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, int $length)
         </code>
@@ -814,7 +866,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_WriteBytes">
-        <div class="location">at line 27</div>
+        <div class="location">at line 34</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>WriteBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, string $data)
         </code>
@@ -866,7 +918,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Truncate">
-        <div class="location">at line 32</div>
+        <div class="location">at line 39</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>Truncate</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $length)
         </code>
@@ -914,7 +966,7 @@
                     <div class="method-item">
                     <h3 id="method_RenameFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_RenameFile">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 97</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 101</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $name)
         </code>
@@ -962,7 +1014,7 @@
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_RenameFolder">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 100</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 104</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, string $name)
         </code>
@@ -1010,7 +1062,7 @@
                     <div class="method-item">
                     <h3 id="method_MoveFile">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_MoveFile">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 108</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 112</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1058,7 +1110,7 @@
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_MoveFolder">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 116</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 120</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1105,7 +1157,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_CopyFile">
-        <div class="location">at line 37</div>
+        <div class="location">at line 44</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $dest)
         </code>
@@ -1153,7 +1205,7 @@
                     <div class="method-item">
                     <h3 id="method_CopyFolder">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_CopyFolder">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 132</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 136</div>
         <code>    abstract                <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
         </code>
@@ -1200,7 +1252,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilePath">
-        <div class="location">at line 15</div>
+        <div class="location">at line 17</div>
         <code>    abstract        protected        string
     <strong>GetFilePath</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -1243,7 +1295,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_ManualCopyFolder">
-        <div class="location">at line 53</div>
+        <div class="location">at line 60</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a>
     <strong>ManualCopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
         </code>
