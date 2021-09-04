@@ -676,7 +676,7 @@
                 <div class="col-md-8">
                     <a href="#method_DeltaCounter">DeltaCounter</a>(string $name, int $delta = 1, bool $ignoreLimit = false)
         
-                                            <p><p>Increments a counter field by the given delta (thread safe)</p></p>                </div>
+                                            <p><p>Increment a counter by the given value</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_DeltaCounter">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
@@ -709,7 +709,7 @@
                 <div class="col-md-8">
                     <a href="#method_AddObjectRef">AddObjectRef</a>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         
-                                            <p><p>Adds the given object to a collection of referenced objects</p></p>                </div>
+                                            <p><p>Adds an object reference, checking for a limit on the number of references</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Apps/Files/Folder.html#method_AddObjectRef">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></small></div>
             </div>
@@ -840,7 +840,7 @@
                 <div class="col-md-8">
                     <a href="#method_BaseCreate">BaseCreate</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database)
         
-                                            <p><p>Creates a new object of this type in the database and returns it</p></p>                </div>
+                                            <p><p>Create the object by setting its created date</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_BaseCreate">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
@@ -3973,7 +3973,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Increments a counter field by the given delta (thread safe)</p></p>                        
+                            <p><p>Increment a counter by the given value</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -4011,12 +4011,8 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../Andromeda/Core/Database/KeyNotFoundException.html"><abbr title="Andromeda\Core\Database\KeyNotFoundException">KeyNotFoundException</abbr></a></td>
-                <td><p>if the property name is invalid</p></td>
-            </tr>
-                    <tr>
-                <td><a href="../../../Andromeda/Core/Database/NotCounterException.html"><abbr title="Andromeda\Core\Database\NotCounterException">NotCounterException</abbr></a></td>
-                <td><p>if the field is not a counter</p></td>
+                <td><a href="../../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a></td>
+                <td><p>if the counter's limit exists and is exceeded</p></td>
             </tr>
             </table>
 
@@ -4177,7 +4173,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Adds the given object to a collection of referenced objects</p></p>                <p><p>Will also call SetObject on the given object to actually create the reference</p></p>        
+                            <p><p>Adds an object reference, checking for a limit on the number of references</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -4215,8 +4211,8 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../Andromeda/Core/Database/KeyNotFoundException.html"><abbr title="Andromeda\Core\Database\KeyNotFoundException">KeyNotFoundException</abbr></a></td>
-                <td><p>if the property name is invalid</p></td>
+                <td><a href="../../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a></td>
+                <td><p>if the limit exists and is exceeded</p></td>
             </tr>
             </table>
 
@@ -4652,7 +4648,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Creates a new object of this type in the database and returns it</p></p>                        
+                            <p><p>Create the object by setting its created date</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>

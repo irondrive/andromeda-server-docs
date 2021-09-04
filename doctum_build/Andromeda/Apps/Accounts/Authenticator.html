@@ -87,6 +87,83 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_account">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$account</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_session">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$session</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_client">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$client</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_input">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$input</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_database">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$database</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_instances">
+                    static                                        private                    
+                                                                                
+                                    </td>
+                <td>$instances</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_issudouser">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$issudouser</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_realaccount">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$realaccount</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -139,6 +216,16 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
                     <a href="#method_GetRealAccount">GetRealAccount</a>()
         
                                             <p><p>Returns the actual account used for the request, not the masqueraded one</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+        
+                                            <p><p>The primary authentication routine</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -440,6 +527,67 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
 
             </div>
                     <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">at line 88</div>
+        <code>                private    
+    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>The primary authentication routine</p></p>                <p><p>Loads the specified session, checks validity, updates dates, checks sudouser.
+Note that only a session must be provided, not the client that owns it.</p></p>        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td><p>database reference</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>the input containing auth details</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></td>
+                <td>$interface</td>
+                <td><p>the interface used for the request</p></td>
+            </tr>
+            </table>
+
+            
+            
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/InvalidSessionException.html"><abbr title="Andromeda\Apps\Accounts\InvalidSessionException">InvalidSessionException</abbr></a></td>
+                <td><p>if the given session details are invalid</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/AccountDisabledException.html"><abbr title="Andromeda\Apps\Accounts\AccountDisabledException">AccountDisabledException</abbr></a></td>
+                <td><p>if the given account is disabled</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Apps/Accounts/UnknownAccountException.html"><abbr title="Andromeda\Apps\Accounts\UnknownAccountException">UnknownAccountException</abbr></a></td>
+                <td><p>if the given sudo account is not valid</p></td>
+            </tr>
+            </table>
+
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_Authenticate">
         <div class="location">at line 137</div>
         <code>        static            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
@@ -491,7 +639,8 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Accounts\Authenticator::__construct()
+                                            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html#method___construct">
+<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::__construct</a>
                                     </td>
                 <td></td>
             </tr>
@@ -554,7 +703,8 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Accounts\Authenticator::__construct()
+                                            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html#method___construct">
+<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::__construct</a>
                                     </td>
                 <td></td>
             </tr>

@@ -84,11 +84,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the counter exceeded its limit</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="../../Andromeda/Core/Database/DBStats.html"><abbr title="Andromeda\Core\Database\DBStats">DBStats</abbr></a>    </div>
                 <div class="col-md-6"><p>This class keeps track of performance metrics for the database.</p></div>
             </div>
@@ -99,38 +94,8 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="../../Andromeda/Core/Database/DatabaseConfigException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigException">DatabaseConfigException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the database is not configured</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../../Andromeda/Core/Database/DatabaseErrorException.html"><abbr title="Andromeda\Core\Database\DatabaseErrorException">DatabaseErrorException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that PDO failed to execute the given query</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../../Andromeda/Core/Database/DatabaseException.html"><abbr title="Andromeda\Core\Database\DatabaseException">DatabaseException</abbr></a>    </div>
-                <div class="col-md-6"><p>Base class representing a database exception</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../../Andromeda/Core/Database/DatabaseReadOnlyException.html"><abbr title="Andromeda\Core\Database\DatabaseReadOnlyException">DatabaseReadOnlyException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the a write was requested to a read-only database</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../../Andromeda/Core/Database/DuplicateSingletonException.html"><abbr title="Andromeda\Core\Database\DuplicateSingletonException">DuplicateSingletonException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the singleton was duplicated</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="../../Andromeda/Core/Database/DuplicateUniqueKeyException.html"><abbr title="Andromeda\Core\Database\DuplicateUniqueKeyException">DuplicateUniqueKeyException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that multiple objects were loaded for by unique query</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../../Andromeda/Core/Database/InvalidDriverException.html"><abbr title="Andromeda\Core\Database\InvalidDriverException">InvalidDriverException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the database was requested to use an unknkown driver</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -170,7 +135,7 @@
                     <div class="row">
                 <div class="col-md-6">
                     <a href="../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a>    </div>
-                <div class="col-md-6"><p>Minimalistic class for building prepared SQL query strings</p></div>
+                <div class="col-md-6"><p>Minimalistic class for building prepared post-FROM SQL query strings</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -190,7 +155,49 @@
             </div>
     
     
-    
+            <h2>Exceptions</h2>
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the counter exceeded its limit</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/DatabaseConfigException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigException">DatabaseConfigException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the database connection is not configured</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/DatabaseConfigFailException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigFailException">DatabaseConfigFailException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that database config failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/DatabaseErrorException.html"><abbr title="Andromeda\Core\Database\DatabaseErrorException">DatabaseErrorException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that PDO failed to execute the given query</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/DatabaseException.html"><abbr title="Andromeda\Core\Database\DatabaseException">DatabaseException</abbr></a>    </div>
+                <div class="col-md-6"><p>Base class representing a database exception</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/DatabaseReadOnlyException.html"><abbr title="Andromeda\Core\Database\DatabaseReadOnlyException">DatabaseReadOnlyException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the a write was requested to a read-only database</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/DuplicateSingletonException.html"><abbr title="Andromeda\Core\Database\DuplicateSingletonException">DuplicateSingletonException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the singleton was duplicated</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../Andromeda/Core/Database/InvalidDriverException.html"><abbr title="Andromeda\Core\Database\InvalidDriverException">InvalidDriverException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the database was requested to use an unknkown driver</p></div>
+            </div>
+            </div>
 </div><div id="footer">
         Generated by <a href="https://github.com/code-lts/doctum">Doctum, a API Documentation generator and fork of Sami</a>.</div></div>
     </div>

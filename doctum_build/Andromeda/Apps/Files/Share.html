@@ -194,6 +194,16 @@ Folder shares also share all content under them.</p></p>        </div>
                 <td><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#property_created">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_haveKey">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$haveKey</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Apps/Accounts/AuthObject.html#property_haveKey">
+<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></small></td>
+            </tr>
             </table>
 
     
@@ -659,7 +669,7 @@ Folder shares also share all content under them.</p></p>        </div>
                 <div class="col-md-8">
                     <a href="#method_DeltaCounter">DeltaCounter</a>(string $name, int $delta = 1, bool $ignoreLimit = false)
         
-                                            <p><p>Increments a counter field by the given delta (thread safe)</p></p>                </div>
+                                            <p><p>Increment a counter by the given value</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_DeltaCounter">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
@@ -692,7 +702,7 @@ Folder shares also share all content under them.</p></p>        </div>
                 <div class="col-md-8">
                     <a href="#method_AddObjectRef">AddObjectRef</a>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         
-                                            <p><p>Adds the given object to a collection of referenced objects</p></p>                </div>
+                                            <p><p>Adds an object reference, checking for a limit on the number of references</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_AddObjectRef">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
@@ -786,13 +796,13 @@ Folder shares also share all content under them.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_setDeleted">setDeleted</a>()
+                    <a href="#method_NotifyDeleted">NotifyDeleted</a>()
         
-                                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
+                                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -1089,6 +1099,17 @@ Folder shares also share all content under them.</p></p>        </div>
         
                                             <p><p>Sets the auth key to the given value and hashes it</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_ChangeAuthKey">
+<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_InformUnlockedKey">InformUnlockedKey</a>(string $key)
+        
+                                            <p><p>Sets the unlocked key in memory to the given value, possibly rehashing if required</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_InformUnlockedKey">
 <abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -3438,7 +3459,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Increments a counter field by the given delta (thread safe)</p></p>                        
+                            <p><p>Increment a counter by the given value</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -3476,12 +3497,8 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../Andromeda/Core/Database/KeyNotFoundException.html"><abbr title="Andromeda\Core\Database\KeyNotFoundException">KeyNotFoundException</abbr></a></td>
-                <td><p>if the property name is invalid</p></td>
-            </tr>
-                    <tr>
-                <td><a href="../../../Andromeda/Core/Database/NotCounterException.html"><abbr title="Andromeda\Core\Database\NotCounterException">NotCounterException</abbr></a></td>
-                <td><p>if the field is not a counter</p></td>
+                <td><a href="../../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a></td>
+                <td><p>if the counter's limit exists and is exceeded</p></td>
             </tr>
             </table>
 
@@ -3642,7 +3659,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Adds the given object to a collection of referenced objects</p></p>                <p><p>Will also call SetObject on the given object to actually create the reference</p></p>        
+                            <p><p>Adds an object reference, checking for a limit on the number of references</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -3680,8 +3697,8 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../Andromeda/Core/Database/KeyNotFoundException.html"><abbr title="Andromeda\Core\Database\KeyNotFoundException">KeyNotFoundException</abbr></a></td>
-                <td><p>if the property name is invalid</p></td>
+                <td><a href="../../../Andromeda/Core/Database/CounterOverLimitException.html"><abbr title="Andromeda\Core\Database\CounterOverLimitException">CounterOverLimitException</abbr></a></td>
+                <td><p>if the limit exists and is exceeded</p></td>
             </tr>
             </table>
 
@@ -4019,11 +4036,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_setDeleted">
-        <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_setDeleted">
+                    <h3 id="method_NotifyDeleted">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDeleted">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 782</div>
-        <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
-    <strong>setDeleted</strong>()
+        <code>                    void
+    <strong>NotifyDeleted</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -4031,7 +4048,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>marks this object as deleted from the DB - internal only!</p></p>                        
+                            <p><p>Unsets all object links but does not actually call DELETE on the DB object</p></p>                        
         </div>
         <div class="tags">
             
@@ -4039,7 +4056,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -5411,6 +5428,49 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                 <td>string|null</td>
                 <td>$key</td>
                 <td><p>new auth key</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_InformUnlockedKey">
+        <div class="location">in <a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_InformUnlockedKey">
+<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 109</div>
+        <code>                private    <a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a>
+    <strong>InformUnlockedKey</strong>(string $key)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the unlocked key in memory to the given value, possibly rehashing if required</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$key</td>
+                <td><p>unlocked key</p></td>
             </tr>
             </table>
 

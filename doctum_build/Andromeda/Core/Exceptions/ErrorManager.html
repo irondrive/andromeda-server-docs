@@ -87,6 +87,66 @@ Application code can use LogException() when an exception is caught but still ne
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_instances">
+                    static                                        private                    
+                                                                                
+                                    </td>
+                <td>$instances</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Singleton.html#property_instances">
+<abbr title="Andromeda\Core\Singleton">Singleton</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_API">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$API</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_interface">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$interface</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_filelogok">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$filelogok</td>
+                <td class="last"><p>if false, the file-based log encountered an error on the last entry</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_dblogok">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$dblogok</td>
+                <td class="last"><p>if false, the DB-based log encountered an error on the last entry</p></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_debuglog">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$debuglog</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -110,6 +170,36 @@ Application code can use LogException() when an exception is caught but still ne
                     <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
         
                                             <p><p>Registers PHP error and exception handlers</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetDebugState">GetDebugState</a>(int $minlevel)
+        
+                                            <p><p>Returns true if the configured debug state is &gt;= the requested level</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_HandleClientException">HandleClientException</a>(<a href="../../../Andromeda/Core/Exceptions/ClientException.html"><abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a> $e)
+        
+                                            <p><p>Handles a client exception, rolling back the DB, displaying debug data and returning an Output</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_HandleThrowable">HandleThrowable</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
+        
+                                            <p><p>Handles a non-client exception, rolling back the DB, logging debug data and returning an Output</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -248,6 +338,132 @@ Application code can use LogException() when an exception is caught but still ne
             </table>
 
             
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDebugState">
+        <div class="location">at line 28</div>
+        <code>                private    bool
+    <strong>GetDebugState</strong>(int $minlevel)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the configured debug state is &gt;= the requested level</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>int</td>
+                <td>$minlevel</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_HandleClientException">
+        <div class="location">at line 36</div>
+        <code>                private    <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+    <strong>HandleClientException</strong>(<a href="../../../Andromeda/Core/Exceptions/ClientException.html"><abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a> $e)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handles a client exception, rolling back the DB, displaying debug data and returning an Output</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Exceptions/ClientException.html"><abbr title="Andromeda\Core\Exceptions\ClientException">ClientException</abbr></a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_HandleThrowable">
+        <div class="location">at line 47</div>
+        <code>                private    <a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a>
+    <strong>HandleThrowable</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Handles a non-client exception, rolling back the DB, logging debug data and returning an Output</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$e</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             
