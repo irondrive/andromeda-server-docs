@@ -116,7 +116,7 @@
                     array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetClientObject">GetClientObject</a>()
+                    <a href="#method_GetClientObject">GetClientObject</a>(bool $activate = false)
         
                                             <p><p>Returns the printable client object of this trait</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -209,7 +209,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_getEncryptedFields">
-        <div class="location">at line 72</div>
+        <div class="location">at line 70</div>
         <code>        static    protected        array
     <strong>getEncryptedFields</strong>()
         </code>
@@ -242,7 +242,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFieldTemplate">
-        <div class="location">at line 75</div>
+        <div class="location">at line 73</div>
         <code>        static            array
     <strong>GetFieldTemplate</strong>()
         </code>
@@ -274,9 +274,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 87</div>
+        <div class="location">at line 86</div>
         <code>                    array
-    <strong>GetClientObject</strong>()
+    <strong>GetClientObject</strong>(bool $activate = false)
         </code>
     </h3>
     <div class="details">    
@@ -287,6 +287,16 @@
                             <p><p>Returns the printable client object of this trait</p></p>                        
         </div>
         <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>bool</td>
+                <td>$activate</td>
+                <td></td>
+            </tr>
+            </table>
+
             
                             <h4>Return Value</h4>
 
@@ -299,6 +309,18 @@
 
             
             
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html#method_GetClientObject">
+<abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr>::GetClientObject</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
@@ -306,7 +328,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetCreateUsage">
-        <div class="location">at line 96</div>
+        <div class="location">at line 95</div>
         <code>        static            string
     <strong>GetCreateUsage</strong>()
         </code>
@@ -338,7 +360,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Create">
-        <div class="location">at line 99</div>
+        <div class="location">at line 98</div>
         <code>        static            <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Create</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $filesystem)
         </code>
@@ -390,7 +412,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetEditUsage">
-        <div class="location">at line 107</div>
+        <div class="location">at line 106</div>
         <code>        static            string
     <strong>GetEditUsage</strong>()
         </code>
@@ -422,7 +444,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Edit">
-        <div class="location">at line 110</div>
+        <div class="location">at line 109</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Edit</strong>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -464,7 +486,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetUsername">
-        <div class="location">at line 119</div>
+        <div class="location">at line 118</div>
         <code>            protected        string|null
     <strong>TryGetUsername</strong>()
         </code>
@@ -496,7 +518,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetPassword">
-        <div class="location">at line 122</div>
+        <div class="location">at line 121</div>
         <code>            protected        string|null
     <strong>TryGetPassword</strong>()
         </code>
@@ -528,7 +550,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_SetUsername">
-        <div class="location">at line 129</div>
+        <div class="location">at line 128</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/UserPass.html"><abbr title="Andromeda\Apps\Files\Storage\UserPass">UserPass</abbr></a>
     <strong>SetUsername</strong>(string|null $username)
         </code>
@@ -570,7 +592,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_SetPassword">
-        <div class="location">at line 137</div>
+        <div class="location">at line 136</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/UserPass.html"><abbr title="Andromeda\Apps\Files\Storage\UserPass">UserPass</abbr></a>
     <strong>SetPassword</strong>(string|null $password)
         </code>

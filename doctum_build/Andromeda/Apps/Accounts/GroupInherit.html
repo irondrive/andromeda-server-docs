@@ -164,26 +164,6 @@
                                             <p><p>Returns an inherited property value and source pair</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    array
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_ToInheritsScalarFrom">ToInheritsScalarFrom</a>(callable $getdata)
-        
-                                            <p><p>Runs the given function with a function that maps a property onto its inherit-source</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    array
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_ToInheritsScalarFromClient">ToInheritsScalarFromClient</a>(callable $getdata)
-        
-                                            <p><p>Runs the given function through ToInheritsScalarFrom() and then maps to its ID and class name</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
             </div>
 
 
@@ -192,7 +172,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_GetScalar">
-        <div class="location">at line 791</div>
+        <div class="location">at line 804</div>
         <code>            protected        
     <strong>GetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -231,7 +211,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetScalar">
-        <div class="location">at line 799</div>
+        <div class="location">at line 812</div>
         <code>            protected        
     <strong>TryGetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -270,7 +250,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetObject">
-        <div class="location">at line 806</div>
+        <div class="location">at line 819</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>GetObject</strong>(string $field)
         </code>
@@ -313,7 +293,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetObject">
-        <div class="location">at line 814</div>
+        <div class="location">at line 827</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetObject</strong>(string $field)
         </code>
@@ -356,7 +336,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritsScalarFrom">
-        <div class="location">at line 822</div>
+        <div class="location">at line 835</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetInheritsScalarFrom</strong>(string $field)
         </code>
@@ -398,7 +378,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritsObjectFrom">
-        <div class="location">at line 828</div>
+        <div class="location">at line 841</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetInheritsObjectFrom</strong>(string $field)
         </code>
@@ -440,7 +420,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritable">
-        <div class="location">at line 842</div>
+        <div class="location">at line 855</div>
         <code>            protected        <a href="../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a>
     <strong>TryGetInheritable</strong>(string $field, bool $useobj = false)
         </code>
@@ -476,90 +456,6 @@ a member of, or if using a default value, null</p></p>
         <tr>
             <td><a href="../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a></td>
             <td><p>value/source pair</p></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_ToInheritsScalarFrom">
-        <div class="location">at line 871</div>
-        <code>            protected        array
-    <strong>ToInheritsScalarFrom</strong>(callable $getdata)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Runs the given function with a function that maps a property onto its inherit-source</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>callable</td>
-                <td>$getdata</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_ToInheritsScalarFromClient">
-        <div class="location">at line 877</div>
-        <code>            protected        array
-    <strong>ToInheritsScalarFromClient</strong>(callable $getdata)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Runs the given function through ToInheritsScalarFrom() and then maps to its ID and class name</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>callable</td>
-                <td>$getdata</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array</td>
-            <td></td>
         </tr>
     </table>
 

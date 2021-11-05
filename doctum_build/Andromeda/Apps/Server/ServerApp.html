@@ -402,6 +402,16 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     array
                 </div>
                 <div class="col-md-8">
+                    <a href="#method_GetDBConfig">GetDBConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        
+                                            <p><p>Loads server DB config</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    array
+                </div>
+                <div class="col-md-8">
                     <a href="#method_SetConfig">SetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
         
                                             <p><p>Sets server config</p></p>                </div>
@@ -525,7 +535,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 95</div>
+        <div class="location">at line 96</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
         </code>
@@ -558,7 +568,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 109</div>
+        <div class="location">at line 110</div>
         <code>                    mixed
     <strong>Run</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -835,7 +845,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersion">
-        <div class="location">at line 244</div>
+        <div class="location">at line 246</div>
         <code>        static            string
     <strong>getVersion</strong>()
         </code>
@@ -916,7 +926,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getDBVersion">
-        <div class="location">at line 246</div>
+        <div class="location">at line 248</div>
         <code>            protected        <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
     <strong>getDBVersion</strong>()
         </code>
@@ -949,7 +959,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUpgradeScripts">
-        <div class="location">at line 248</div>
+        <div class="location">at line 250</div>
         <code>        static    protected        array
     <strong>getUpgradeScripts</strong>()
         </code>
@@ -982,7 +992,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Upgrade">
-        <div class="location">at line 253</div>
+        <div class="location">at line 255</div>
         <code>                    void
     <strong>Upgrade</strong>()
         </code>
@@ -1067,7 +1077,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetUsages">
-        <div class="location">at line 194</div>
+        <div class="location">at line 196</div>
         <code>            protected        array
     <strong>GetUsages</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1109,7 +1119,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ConfigDB">
-        <div class="location">at line 212</div>
+        <div class="location">at line 214</div>
         <code>            protected        void
     <strong>ConfigDB</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1160,7 +1170,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Install">
-        <div class="location">at line 227</div>
+        <div class="location">at line 229</div>
         <code>                    array
     <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1211,7 +1221,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListApps">
-        <div class="location">at line 266</div>
+        <div class="location">at line 268</div>
         <code>                    array
     <strong>ListApps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -1270,7 +1280,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_PHPInfo">
-        <div class="location">at line 275</div>
+        <div class="location">at line 277</div>
         <code>            protected        void
     <strong>PHPInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -1326,7 +1336,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ServerInfo">
-        <div class="location">at line 294</div>
+        <div class="location">at line 296</div>
         <code>            protected        array
     <strong>ServerInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -1393,7 +1403,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TestMail">
-        <div class="location">at line 316</div>
+        <div class="location">at line 318</div>
         <code>            protected        void
     <strong>TestMail</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, $authenticator, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1467,7 +1477,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EnableApp">
-        <div class="location">at line 349</div>
+        <div class="location">at line 351</div>
         <code>            protected        array
     <strong>EnableApp</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1528,7 +1538,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DisableApp">
-        <div class="location">at line 367</div>
+        <div class="location">at line 369</div>
         <code>            protected        array
     <strong>DisableApp</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1623,8 +1633,7 @@ sequentially until the DB is up to date with the code</p></p>
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td><p><code>{config:Config}</code> \
-if admin add, <code>{database:Database}</code></p></td>
+            <td><p>Config</p></td>
         </tr>
     </table>
 
@@ -1639,6 +1648,58 @@ if admin add, <code>{database:Database}</code></p></td>
                                     </td>
                 <td></td>
             </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDBConfig">
+        <div class="location">at line 395</div>
+        <code>            protected        array
+    <strong>GetDBConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads server DB config</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$isAdmin</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td><p>Database</p></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
                     <tr>
                 <td>
                                             \Andromeda\Apps\Server\Database::GetClientObject()
@@ -1654,7 +1715,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetConfig">
-        <div class="location">at line 400</div>
+        <div class="location">at line 408</div>
         <code>            protected        array
     <strong>SetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1726,7 +1787,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetMailers">
-        <div class="location">at line 413</div>
+        <div class="location">at line 421</div>
         <code>            protected        array
     <strong>GetMailers</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -1793,7 +1854,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateMailer">
-        <div class="location">at line 427</div>
+        <div class="location">at line 435</div>
         <code>            protected        array
     <strong>CreateMailer</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, $authenticator, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1870,7 +1931,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteMailer">
-        <div class="location">at line 450</div>
+        <div class="location">at line 458</div>
         <code>            protected        void
     <strong>DeleteMailer</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin, <abbr title="Andromeda\Apps\Server\Andromeda\Apps\Server\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -1935,7 +1996,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetErrors">
-        <div class="location">at line 469</div>
+        <div class="location">at line 477</div>
         <code>            protected        array
     <strong>GetErrors</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -1991,7 +2052,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CountErrors">
-        <div class="location">at line 482</div>
+        <div class="location">at line 490</div>
         <code>            protected        int
     <strong>CountErrors</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -2047,7 +2108,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetRequests">
-        <div class="location">at line 495</div>
+        <div class="location">at line 503</div>
         <code>            protected        array
     <strong>GetRequests</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -2115,7 +2176,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CountRequests">
-        <div class="location">at line 517</div>
+        <div class="location">at line 525</div>
         <code>            protected        int
     <strong>CountRequests</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -2171,7 +2232,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAllActions">
-        <div class="location">at line 530</div>
+        <div class="location">at line 538</div>
         <code>            protected        array
     <strong>GetAllActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -2239,7 +2300,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CountAllActions">
-        <div class="location">at line 552</div>
+        <div class="location">at line 560</div>
         <code>            protected        int
     <strong>CountAllActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -2295,7 +2356,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetActions">
-        <div class="location">at line 566</div>
+        <div class="location">at line 574</div>
         <code>            protected        array
     <strong>GetActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
@@ -2367,7 +2428,7 @@ if admin add, <code>{database:Database}</code></p></td>
             </div>
                     <div class="method-item">
                     <h3 id="method_CountActions">
-        <div class="location">at line 596</div>
+        <div class="location">at line 604</div>
         <code>            protected        int
     <strong>CountActions</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, bool $isAdmin)
         </code>
