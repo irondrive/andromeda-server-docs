@@ -127,6 +127,15 @@ can provide secret-key crypto services, provides contact info</p></p>        </d
             </tr>
                     <tr>
                 <td>
+                                                                                                                        DEFAULT_SEARCH_MAX
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
                                                                                                                         OBJECT_FULL
                                     </td>
                 <td class="last">
@@ -2957,7 +2966,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetScalar">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetScalar">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 804</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 806</div>
         <code>            protected        
     <strong>GetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -2997,7 +3006,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetScalar">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetScalar">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 812</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 814</div>
         <code>            protected        
     <strong>TryGetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -3089,7 +3098,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetObject">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetObject">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 819</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 821</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>GetObject</strong>(string $field)
         </code>
@@ -3133,7 +3142,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetObject">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetObject">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 827</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 829</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetObject</strong>(string $field)
         </code>
@@ -4026,7 +4035,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddObjectRef">
-        <div class="location">at line 153</div>
+        <div class="location">at line 155</div>
         <code>            protected        bool
     <strong>AddObjectRef</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         </code>
@@ -4087,7 +4096,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveObjectRef">
-        <div class="location">at line 162</div>
+        <div class="location">at line 164</div>
         <code>            protected        bool
     <strong>RemoveObjectRef</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         </code>
@@ -4401,7 +4410,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Delete">
-        <div class="location">at line 440</div>
+        <div class="location">at line 442</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -5342,7 +5351,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDisplayName">
-        <div class="location">at line 97</div>
+        <div class="location">at line 99</div>
         <code>                    string
     <strong>GetDisplayName</strong>()
         </code>
@@ -5374,7 +5383,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetContacts">
-        <div class="location">at line 362</div>
+        <div class="location">at line 364</div>
         <code>                    array
     <strong>GetContacts</strong>(bool $valid = true)
         </code>
@@ -5416,7 +5425,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SendMessage">
-        <div class="location">at line 398</div>
+        <div class="location">at line 400</div>
         <code>                    void
     <strong>SendMessage</strong>(string $subject, string|null $html, string $plain, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null $from = null)
         </code>
@@ -5562,7 +5571,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritsScalarFrom">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritsScalarFrom">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 835</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 837</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetInheritsScalarFrom</strong>(string $field)
         </code>
@@ -5605,7 +5614,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritsObjectFrom">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritsObjectFrom">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 841</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 843</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetInheritsObjectFrom</strong>(string $field)
         </code>
@@ -5648,7 +5657,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritable">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritable">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 855</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 857</div>
         <code>            protected        <a href="../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a>
     <strong>TryGetInheritable</strong>(string $field, bool $useobj = false)
         </code>
@@ -5696,7 +5705,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetInheritedFields">
-        <div class="location">at line 77</div>
+        <div class="location">at line 79</div>
         <code>        static    protected        array
     <strong>GetInheritedFields</strong>()
         </code>
@@ -5728,7 +5737,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetUsername">
-        <div class="location">at line 94</div>
+        <div class="location">at line 96</div>
         <code>                    string
     <strong>GetUsername</strong>()
         </code>
@@ -5760,7 +5769,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetFullName">
-        <div class="location">at line 100</div>
+        <div class="location">at line 102</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>SetFullName</strong>(string $data)
         </code>
@@ -5802,7 +5811,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDefaultGroups">
-        <div class="location">at line 106</div>
+        <div class="location">at line 108</div>
         <code>                    array
     <strong>GetDefaultGroups</strong>()
         </code>
@@ -5834,7 +5843,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetGroups">
-        <div class="location">at line 127</div>
+        <div class="location">at line 129</div>
         <code>                    array
     <strong>GetGroups</strong>()
         </code>
@@ -5866,7 +5875,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetMyGroups">
-        <div class="location">at line 133</div>
+        <div class="location">at line 135</div>
         <code>                    array
     <strong>GetMyGroups</strong>()
         </code>
@@ -5898,7 +5907,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddGroup">
-        <div class="location">at line 136</div>
+        <div class="location">at line 138</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>AddGroup</strong>(<a href="../../../Andromeda/Apps/Accounts/Group.html"><abbr title="Andromeda\Apps\Accounts\Group">Group</abbr></a> $group)
         </code>
@@ -5940,7 +5949,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveGroup">
-        <div class="location">at line 139</div>
+        <div class="location">at line 141</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>RemoveGroup</strong>(<a href="../../../Andromeda/Apps/Accounts/Group.html"><abbr title="Andromeda\Apps\Accounts\Group">Group</abbr></a> $group)
         </code>
@@ -5982,7 +5991,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_HasGroup">
-        <div class="location">at line 142</div>
+        <div class="location">at line 144</div>
         <code>                    bool
     <strong>HasGroup</strong>(<a href="../../../Andromeda/Apps/Accounts/Group.html"><abbr title="Andromeda\Apps\Accounts\Group">Group</abbr></a> $group)
         </code>
@@ -6024,7 +6033,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RegisterGroupChangeHandler">
-        <div class="location">at line 147</div>
+        <div class="location">at line 149</div>
         <code>        static            
     <strong>RegisterGroupChangeHandler</strong>(callable $func)
         </code>
@@ -6057,7 +6066,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RunGroupChangeHandlers">
-        <div class="location">at line 150</div>
+        <div class="location">at line 152</div>
         <code>        static            
     <strong>RunGroupChangeHandlers</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <a href="../../../Andromeda/Apps/Accounts/Group.html"><abbr title="Andromeda\Apps\Accounts\Group">Group</abbr></a> $group, bool $added)
         </code>
@@ -6105,7 +6114,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetGroupJoin">
-        <div class="location">at line 172</div>
+        <div class="location">at line 174</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\GroupJoin">GroupJoin</abbr>|null
     <strong>GetGroupJoin</strong>(<a href="../../../Andromeda/Apps/Accounts/Group.html"><abbr title="Andromeda\Apps\Accounts\Group">Group</abbr></a> $group)
         </code>
@@ -6147,7 +6156,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuthSource">
-        <div class="location">at line 178</div>
+        <div class="location">at line 180</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Auth/ISource.html"><abbr title="Andromeda\Apps\Accounts\Auth\ISource">ISource</abbr></a>
     <strong>GetAuthSource</strong>()
         </code>
@@ -6179,7 +6188,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClients">
-        <div class="location">at line 189</div>
+        <div class="location">at line 191</div>
         <code>                    array
     <strong>GetClients</strong>()
         </code>
@@ -6211,7 +6220,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteClients">
-        <div class="location">at line 192</div>
+        <div class="location">at line 194</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>DeleteClients</strong>()
         </code>
@@ -6243,7 +6252,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetSessions">
-        <div class="location">at line 198</div>
+        <div class="location">at line 200</div>
         <code>                    array
     <strong>GetSessions</strong>()
         </code>
@@ -6275,7 +6284,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetRecoveryKeys">
-        <div class="location">at line 204</div>
+        <div class="location">at line 206</div>
         <code>                private    array
     <strong>GetRecoveryKeys</strong>()
         </code>
@@ -6307,7 +6316,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_HasRecoveryKeys">
-        <div class="location">at line 207</div>
+        <div class="location">at line 209</div>
         <code>                    bool
     <strong>HasRecoveryKeys</strong>()
         </code>
@@ -6339,7 +6348,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTwoFactors">
-        <div class="location">at line 213</div>
+        <div class="location">at line 215</div>
         <code>                private    array
     <strong>GetTwoFactors</strong>()
         </code>
@@ -6371,7 +6380,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_HasTwoFactor">
-        <div class="location">at line 216</div>
+        <div class="location">at line 218</div>
         <code>                    bool
     <strong>HasTwoFactor</strong>()
         </code>
@@ -6403,7 +6412,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetForceUseTwoFactor">
-        <div class="location">at line 219</div>
+        <div class="location">at line 221</div>
         <code>                    bool
     <strong>GetForceUseTwoFactor</strong>()
         </code>
@@ -6435,7 +6444,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAllowCrypto">
-        <div class="location">at line 222</div>
+        <div class="location">at line 224</div>
         <code>                    bool
     <strong>GetAllowCrypto</strong>()
         </code>
@@ -6467,7 +6476,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAllowAccountSearch">
-        <div class="location">at line 225</div>
+        <div class="location">at line 227</div>
         <code>                    int
     <strong>GetAllowAccountSearch</strong>()
         </code>
@@ -6499,7 +6508,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAllowGroupSearch">
-        <div class="location">at line 228</div>
+        <div class="location">at line 230</div>
         <code>                    int
     <strong>GetAllowGroupSearch</strong>()
         </code>
@@ -6531,7 +6540,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAllowUserDelete">
-        <div class="location">at line 231</div>
+        <div class="location">at line 233</div>
         <code>                    bool
     <strong>GetAllowUserDelete</strong>()
         </code>
@@ -6563,7 +6572,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isAdmin">
-        <div class="location">at line 234</div>
+        <div class="location">at line 236</div>
         <code>                    bool
     <strong>isAdmin</strong>()
         </code>
@@ -6595,7 +6604,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isEnabled">
-        <div class="location">at line 237</div>
+        <div class="location">at line 239</div>
         <code>                    bool
     <strong>isEnabled</strong>()
         </code>
@@ -6627,7 +6636,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setAdmin">
-        <div class="location">at line 240</div>
+        <div class="location">at line 242</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>setAdmin</strong>(bool|null $val)
         </code>
@@ -6669,7 +6678,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setDisabled">
-        <div class="location">at line 243</div>
+        <div class="location">at line 245</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>setDisabled</strong>(int|null $val = self::DISABLE_PERMANENT)
         </code>
@@ -6711,7 +6720,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getActiveDate">
-        <div class="location">at line 246</div>
+        <div class="location">at line 248</div>
         <code>                    float|null
     <strong>getActiveDate</strong>()
         </code>
@@ -6743,7 +6752,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setActiveDate">
-        <div class="location">at line 249</div>
+        <div class="location">at line 251</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>setActiveDate</strong>()
         </code>
@@ -6775,7 +6784,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getLoggedonDate">
-        <div class="location">at line 257</div>
+        <div class="location">at line 259</div>
         <code>                    float|null
     <strong>getLoggedonDate</strong>()
         </code>
@@ -6807,7 +6816,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setLoggedonDate">
-        <div class="location">at line 260</div>
+        <div class="location">at line 262</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>setLoggedonDate</strong>()
         </code>
@@ -6839,7 +6848,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_getPasswordDate">
-        <div class="location">at line 262</div>
+        <div class="location">at line 264</div>
         <code>                private    float|null
     <strong>getPasswordDate</strong>()
         </code>
@@ -6872,7 +6881,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_setPasswordDate">
-        <div class="location">at line 263</div>
+        <div class="location">at line 265</div>
         <code>                private    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>setPasswordDate</strong>()
         </code>
@@ -6905,7 +6914,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_resetPasswordDate">
-        <div class="location">at line 266</div>
+        <div class="location">at line 268</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>resetPasswordDate</strong>()
         </code>
@@ -6937,7 +6946,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientTimeout">
-        <div class="location">at line 269</div>
+        <div class="location">at line 271</div>
         <code>                    int|null
     <strong>GetClientTimeout</strong>()
         </code>
@@ -6969,7 +6978,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetSessionTimeout">
-        <div class="location">at line 272</div>
+        <div class="location">at line 274</div>
         <code>                    int|null
     <strong>GetSessionTimeout</strong>()
         </code>
@@ -7001,7 +7010,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetMaxPasswordAge">
-        <div class="location">at line 274</div>
+        <div class="location">at line 276</div>
         <code>                private    int|null
     <strong>GetMaxPasswordAge</strong>()
         </code>
@@ -7034,7 +7043,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SearchByFullName">
-        <div class="location">at line 282</div>
+        <div class="location">at line 284</div>
         <code>        static            array
     <strong>SearchByFullName</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $fullname)
         </code>
@@ -7081,7 +7090,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryLoadByUsername">
-        <div class="location">at line 293</div>
+        <div class="location">at line 295</div>
         <code>        static            <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>|null
     <strong>TryLoadByUsername</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $username)
         </code>
@@ -7128,7 +7137,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryLoadByContactInfo">
-        <div class="location">at line 304</div>
+        <div class="location">at line 306</div>
         <code>        static            <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>|null
     <strong>TryLoadByContactInfo</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/ContactInfo.html"><abbr title="Andromeda\Apps\Accounts\ContactInfo">ContactInfo</abbr></a> $info)
         </code>
@@ -7175,7 +7184,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadAllMatchingInfo">
-        <div class="location">at line 318</div>
+        <div class="location">at line 320</div>
         <code>        static            array
     <strong>LoadAllMatchingInfo</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $info, int $limit)
         </code>
@@ -7239,7 +7248,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadByAuthSource">
-        <div class="location">at line 342</div>
+        <div class="location">at line 344</div>
         <code>        static            array
     <strong>LoadByAuthSource</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a> $authman)
         </code>
@@ -7286,7 +7295,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteByAuthSource">
-        <div class="location">at line 352</div>
+        <div class="location">at line 354</div>
         <code>        static            void
     <strong>DeleteByAuthSource</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a> $authman)
         </code>
@@ -7333,7 +7342,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetContactEmails">
-        <div class="location">at line 376</div>
+        <div class="location">at line 378</div>
         <code>                    array
     <strong>GetContactEmails</strong>()
         </code>
@@ -7365,7 +7374,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetEmailFrom">
-        <div class="location">at line 387</div>
+        <div class="location">at line 389</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\EmailRecipient">EmailRecipient</abbr>|null
     <strong>GetEmailFrom</strong>()
         </code>
@@ -7397,7 +7406,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_NotifyValidContact">
-        <div class="location">at line 404</div>
+        <div class="location">at line 406</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>NotifyValidContact</strong>()
         </code>
@@ -7429,7 +7438,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Create">
-        <div class="location">at line 417</div>
+        <div class="location">at line 419</div>
         <code>        static            <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>Create</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Apps/Accounts/Auth/ISource.html"><abbr title="Andromeda\Apps\Accounts\Auth\ISource">ISource</abbr></a> $source, string $username, string $password = null)
         </code>
@@ -7486,7 +7495,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RegisterDeleteHandler">
-        <div class="location">at line 434</div>
+        <div class="location">at line 436</div>
         <code>        static            
     <strong>RegisterDeleteHandler</strong>(callable $func)
         </code>
@@ -7519,7 +7528,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 467</div>
+        <div class="location">at line 469</div>
         <code>                    array
     <strong>GetClientObject</strong>(int $level = 0)
         </code>
@@ -7594,7 +7603,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_HasValidTwoFactor">
-        <div class="location">at line 540</div>
+        <div class="location">at line 542</div>
         <code>                    bool
     <strong>HasValidTwoFactor</strong>()
         </code>
@@ -7626,7 +7635,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_CheckTwoFactor">
-        <div class="location">at line 555</div>
+        <div class="location">at line 557</div>
         <code>                    bool
     <strong>CheckTwoFactor</strong>(string $code, bool $force = false)
         </code>
@@ -7673,7 +7682,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_CheckRecoveryKey">
-        <div class="location">at line 565</div>
+        <div class="location">at line 567</div>
         <code>                    bool
     <strong>CheckRecoveryKey</strong>(string $key)
         </code>
@@ -7715,7 +7724,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_VerifyPassword">
-        <div class="location">at line 577</div>
+        <div class="location">at line 579</div>
         <code>                    bool
     <strong>VerifyPassword</strong>(string $password)
         </code>
@@ -7757,7 +7766,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_CheckPasswordAge">
-        <div class="location">at line 583</div>
+        <div class="location">at line 585</div>
         <code>                    bool
     <strong>CheckPasswordAge</strong>()
         </code>
@@ -7789,7 +7798,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_hasCrypto">
-        <div class="location">at line 594</div>
+        <div class="location">at line 596</div>
         <code>                    bool
     <strong>hasCrypto</strong>()
         </code>
@@ -7821,7 +7830,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_CryptoAvailable">
-        <div class="location">at line 599</div>
+        <div class="location">at line 601</div>
         <code>                    bool
     <strong>CryptoAvailable</strong>()
         </code>
@@ -7853,7 +7862,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_ChangePassword">
-        <div class="location">at line 602</div>
+        <div class="location">at line 604</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>ChangePassword</strong>(string $new_password)
         </code>
@@ -7895,7 +7904,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_GetPasswordHash">
-        <div class="location">at line 618</div>
+        <div class="location">at line 620</div>
         <code>                    string
     <strong>GetPasswordHash</strong>()
         </code>
@@ -7927,7 +7936,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_SetPasswordHash">
-        <div class="location">at line 621</div>
+        <div class="location">at line 623</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>SetPasswordHash</strong>(string $hash)
         </code>
@@ -7969,7 +7978,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_EncryptSecret">
-        <div class="location">at line 630</div>
+        <div class="location">at line 632</div>
         <code>                    string
     <strong>EncryptSecret</strong>(string $data, string $nonce)
         </code>
@@ -8025,7 +8034,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_DecryptSecret">
-        <div class="location">at line 645</div>
+        <div class="location">at line 647</div>
         <code>                    string
     <strong>DecryptSecret</strong>(string $data, string $nonce)
         </code>
@@ -8081,7 +8090,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_GetEncryptedMasterKey">
-        <div class="location">at line 660</div>
+        <div class="location">at line 662</div>
         <code>                    string
     <strong>GetEncryptedMasterKey</strong>(string $nonce, string $key)
         </code>
@@ -8137,7 +8146,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_UnlockCryptoFromPassword">
-        <div class="location">at line 670</div>
+        <div class="location">at line 672</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>UnlockCryptoFromPassword</strong>(string $password)
         </code>
@@ -8188,7 +8197,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_UnlockCryptoFromKeySource">
-        <div class="location">at line 692</div>
+        <div class="location">at line 694</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>UnlockCryptoFromKeySource</strong>(<a href="../../../Andromeda/Apps/Accounts/KeySource.html"><abbr title="Andromeda\Apps\Accounts\KeySource">KeySource</abbr></a> $source)
         </code>
@@ -8239,7 +8248,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_UnlockCryptoFromRecoveryKey">
-        <div class="location">at line 711</div>
+        <div class="location">at line 713</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>UnlockCryptoFromRecoveryKey</strong>(string $key)
         </code>
@@ -8294,7 +8303,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_RegisterCryptoHandler">
-        <div class="location">at line 728</div>
+        <div class="location">at line 730</div>
         <code>        static            
     <strong>RegisterCryptoHandler</strong>(callable $func)
         </code>
@@ -8327,7 +8336,7 @@ features_from:[string:&quot;id:class&quot;], session_timeout_from:&quot;id:class
             </div>
                     <div class="method-item">
                     <h3 id="method_InitializeCrypto">
-        <div class="location">at line 743</div>
+        <div class="location">at line 745</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>InitializeCrypto</strong>(string $password, bool $rekey = false)
         </code>
@@ -8391,7 +8400,7 @@ done server-side, but the raw keys are only ever available in memory, not in the
             </div>
                     <div class="method-item">
                     <h3 id="method_DestroyCrypto">
-        <div class="location">at line 775</div>
+        <div class="location">at line 777</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>DestroyCrypto</strong>()
         </code>
@@ -8423,7 +8432,7 @@ done server-side, but the raw keys are only ever available in memory, not in the
             </div>
                     <div class="method-item">
                     <h3 id="method___destruct">
-        <div class="location">at line 791</div>
+        <div class="location">at line 793</div>
         <code>                    
     <strong>__destruct</strong>()
         </code>

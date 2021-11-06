@@ -105,7 +105,8 @@
                     <dd><p>Exception indicating that creating accounts is not allowed</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountDeleteDeniedException.html"><abbr title="Andromeda\Apps\Accounts\AccountDeleteDeniedException">AccountDeleteDeniedException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that deleting accounts is not allowed</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountDisabledException.html"><abbr title="Andromeda\Apps\Accounts\AccountDisabledException">AccountDisabledException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that the authenticated account is disabled</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountExistsException.html"><abbr title="Andromeda\Apps\Accounts\AccountExistsException">AccountExistsException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
-                    <dd><p>Exception indicating that an account already exists under this username/email</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountWhitelistException.html"><abbr title="Andromeda\Apps\Accounts\AccountWhitelistException">AccountWhitelistException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
+                    <dd><p>Exception indicating that an account already exists under this username/email</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountRequiredException.html"><abbr title="Andromeda\Apps\Accounts\AccountRequiredException">AccountRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
+                    <dd><p>Exception indicating that the action requires an account to act as</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountWhitelistException.html"><abbr title="Andromeda\Apps\Accounts\AccountWhitelistException">AccountWhitelistException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Exception indicating that the requested username is not whitelisted</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>App for managing accounts and authenticating users.</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_AddGroupMember">
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::AddGroupMember</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
@@ -514,6 +515,8 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr>::CreateFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></em></dt>
                     <dd><p>no-op</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Native.html#method_CopyFolder">
 <abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr>::CopyFolder</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_createFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::createFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_CountPublicVisit">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::CountPublicVisit</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd><p>Increments the folder's visit counter</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_CheckIsNotChildOrSelf">
@@ -1039,7 +1042,8 @@
                     <dd><p>Edits properties of an existing share</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_EditFilesystem">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::EditFilesystem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Edits an existing filesystem</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/External.html"><abbr title="Andromeda\Apps\Files\Filesystem\External">External</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
-                    <dd><p>An External Andromeda filesystem is accessible outside Andromeda</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_EditStorage">
+                    <dd><p>An External Andromeda filesystem is accessible outside Andromeda</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_EditStorage">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::EditStorage</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Edits properites of the underlying storage and runs test</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_Edit">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::Edit</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
@@ -1098,10 +1102,17 @@
                     <dd><p>Trait allowing objects to store fields encrypted with an account's crypto</p></dd><dt><a href="Andromeda/Apps/Accounts/FullAuthKey.html"><abbr title="Andromeda\Apps\Accounts\FullAuthKey">FullAuthKey</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>A trait for getting a serialized user key with both the ID and auth key</p></dd><dt><a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>Defines a user-stored file</p></dd><dt><a href="Andromeda/Apps/Files/FileUtils.html"><abbr title="Andromeda\Apps\Files\FileUtils">FileUtils</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
-                    <dd><p>Helper class for reading/writing streams and files via chunks</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
+                    <dd><p>Helper class for reading/writing streams and files via chunks</p></dd><dt><a href="Andromeda/Apps/Files/FileUtilsTest.html"><abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>App that provides user-facing filesystem services.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
                     <dd><p>Abstract class for a filesystem implementation, with the actual disk functions.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
-                    <dd><p>An object that manages and points to a filesystem manager</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
+                    <dd><p>An object that manages and points to a filesystem manager</p></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#property_files">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>#files</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#property_fsimpl">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>#fsimpl</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#property_filesystem">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>#filesystem</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files.html">Andromeda\Apps\Files</a></em></dt>
                     <dd><p>Defines a user-stored folder which groups other items</p></dd><dt>$<a href="Andromeda/Apps/Files/Folder.html#property_fsDeleted">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>#fsDeleted</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Apps/Files/Limits/AccountTimed.html#method_ForceLoadByAccount">
@@ -1318,13 +1329,13 @@
 <abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr>::GetClientObject</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a></em></dt>
                     <dd><p>Returns a printable client object for this manager and auth source</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_GetAccount">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::GetAccount</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
-                    <dd><p>Returns the authenticated user account</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_GetRealAccount">
+                    <dd><p>Returns the authenticated user account (not null)</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_GetRealAccount">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::GetRealAccount</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
-                    <dd><p>Returns the actual account used for the request, not the masqueraded one</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_GetSession">
+                    <dd><p>Returns the actual account used for the request, not the masqueraded one (not null)</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_GetSession">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::GetSession</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
-                    <dd><p>Returns the session used for the request</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_GetClient">
+                    <dd><p>Returns the session used for the request (not null)</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_GetClient">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::GetClient</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
-                    <dd><p>Returns the client used for the request</p></dd><dt><a href="Andromeda/Apps/Accounts/Client.html#method_GetFieldTemplate">
+                    <dd><p>Returns the client used for the request (not null)</p></dd><dt><a href="Andromeda/Apps/Accounts/Client.html#method_GetFieldTemplate">
 <abbr title="Andromeda\Apps\Accounts\Client">Client</abbr>::GetFieldTemplate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a></em></dt>
                     <dd><p>Gets a template array of the object's properties (columns).</p></dd><dt><a href="Andromeda/Apps/Accounts/Client.html#method_GetLastAddress">
 <abbr title="Andromeda\Apps\Accounts\Client">Client</abbr>::GetLastAddress</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a></em></dt>
@@ -1578,7 +1589,11 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\External">External</abbr>::GetItemPath</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/External.html"><abbr title="Andromeda\Apps\Files\Filesystem\External">External</abbr></a></em></dt>
                     <dd><p>Returns the root-relative path of the given item</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/External.html#method_GetFilePath">
 <abbr title="Andromeda\Apps\Files\Filesystem\External">External</abbr>::GetFilePath</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/External.html"><abbr title="Andromeda\Apps\Files\Filesystem\External">External</abbr></a></em></dt>
-                    <dd><p>Get the root-relative path of the given file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetChunkSize">
+                    <dd><p>Get the root-relative path of the given file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_getMockItem">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::getMockItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_getMockRoot">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::getMockRoot</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetChunkSize">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::GetChunkSize</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
                     <dd><p>Returns the preferred byte alignment of the filesystem.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetFSManager">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::GetFSManager</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
@@ -1624,7 +1639,9 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::GetChunkIndex</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
                     <dd><p>Returns the chunk index storing the given byte offset</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_GetNumChunks">
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::GetNumChunks</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
-                    <dd><p>Returns the number of chunks required to store the given number of bytes</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_GetDBClass">
+                    <dd><p>Returns the number of chunks required to store the given number of bytes</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_getTmpFile">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::getTmpFile</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_GetDBClass">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::GetDBClass</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd><p>Returns the name of the class that should be used in the database for the table name (cast down at save)</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_GetObjClass">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::GetObjClass</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
@@ -2469,9 +2486,7 @@
 <abbr title="Andromeda\Core\Main">Main</abbr>::GetErrorManager</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd><p>Returns a reference to the global error manager</p></dd><dt><a href="Andromeda/Core/Main.html#method_GetContext">
 <abbr title="Andromeda\Core\Main">Main</abbr>::GetContext</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
-                    <dd><p>Returns the RunContext that is currently being executed</p></dd><dt><a href="Andromeda/Core/Main.html#method_getAppMain">
-<abbr title="Andromeda\Core\Main">Main</abbr>::getAppMain</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
-                    <dd><p>Returns the path of the given app's main code</p></dd><dt><a href="Andromeda/Core/Main.html#method_GetDebugLevel">
+                    <dd><p>Returns the RunContext that is currently being executed</p></dd><dt><a href="Andromeda/Core/Main.html#method_GetDebugLevel">
 <abbr title="Andromeda\Core\Main">Main</abbr>::GetDebugLevel</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd><p>Returns the configured debug level, or the interface's default</p></dd><dt><a href="Andromeda/Core/RunContext.html#method_GetInput">
 <abbr title="Andromeda\Core\RunContext">RunContext</abbr>::GetInput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
@@ -2772,7 +2787,9 @@
                     <dd><p>Exception indicating that the given file is not valid</p></dd><dt><a href="Andromeda/Core/IOFormat/InvalidParseException.html"><abbr title="Andromeda\Core\IOFormat\InvalidParseException">InvalidParseException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/Output.html#method_isOK">
 <abbr title="Andromeda\Core\IOFormat\Output">Output</abbr>::isOK</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a></em></dt>
-                    <dd><p>Returns whether or not the request succeeded</p></dd><dt><a href="Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
+                    <dd><p>Returns whether or not the request succeeded</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_isLogged">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::isLogged</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>An exception indicating that the app is not installed and needs to be</p></dd><dt><a href="Andromeda/Core/InvalidAppException.html"><abbr title="Andromeda\Core\InvalidAppException">InvalidAppException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating an invalid app name was given</p></dd><dt><a href="Andromeda/Core/InvalidMailTypeException.html"><abbr title="Andromeda\Core\InvalidMailTypeException">InvalidMailTypeException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that the configured mailer driver is invalid</p></dd><dt><a href="Andromeda/Core/Logging/BaseAppLog.html#method_isFullDetails">
@@ -2974,6 +2991,8 @@
 <abbr title="Andromeda\Apps\Accounts\AccountDisabledException">AccountDisabledException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/AccountDisabledException.html"><abbr title="Andromeda\Apps\Accounts\AccountDisabledException">AccountDisabledException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/AccountExistsException.html#property_message">
 <abbr title="Andromeda\Apps\Accounts\AccountExistsException">AccountExistsException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/AccountExistsException.html"><abbr title="Andromeda\Apps\Accounts\AccountExistsException">AccountExistsException</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/AccountRequiredException.html#property_message">
+<abbr title="Andromeda\Apps\Accounts\AccountRequiredException">AccountRequiredException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/AccountRequiredException.html"><abbr title="Andromeda\Apps\Accounts\AccountRequiredException">AccountRequiredException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/AccountWhitelistException.html#property_message">
 <abbr title="Andromeda\Apps\Accounts\AccountWhitelistException">AccountWhitelistException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/AccountWhitelistException.html"><abbr title="Andromeda\Apps\Accounts\AccountWhitelistException">AccountWhitelistException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/AdminRequiredException.html#property_message">
@@ -3045,6 +3064,8 @@
 <abbr title="Andromeda\Apps\Accounts\RecoveryKeyFailedException">RecoveryKeyFailedException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/RecoveryKeyFailedException.html"><abbr title="Andromeda\Apps\Accounts\RecoveryKeyFailedException">RecoveryKeyFailedException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/SearchDeniedException.html#property_message">
 <abbr title="Andromeda\Apps\Accounts\SearchDeniedException">SearchDeniedException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/SearchDeniedException.html"><abbr title="Andromeda\Apps\Accounts\SearchDeniedException">SearchDeniedException</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/SessionRequiredException.html#property_message">
+<abbr title="Andromeda\Apps\Accounts\SessionRequiredException">SessionRequiredException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/SessionRequiredException.html"><abbr title="Andromeda\Apps\Accounts\SessionRequiredException">SessionRequiredException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/TwoFactorRequiredException.html#property_message">
 <abbr title="Andromeda\Apps\Accounts\TwoFactorRequiredException">TwoFactorRequiredException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Accounts/TwoFactorRequiredException.html"><abbr title="Andromeda\Apps\Accounts\TwoFactorRequiredException">TwoFactorRequiredException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Apps/Accounts/UnknownAccountException.html#property_message">
@@ -3347,6 +3368,8 @@
 <abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr>::MaxLength</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a></em></dt>
                     <dd><p>Returns a function that checks the max length of the value, for use with GetValue</p></dd><dt>$<a href="Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html#property_message">
 <abbr title="Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/IOFormat/TestClientException.html#property_message">
+<abbr title="Andromeda\Core\IOFormat\TestClientException">TestClientException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/TestClientException.html"><abbr title="Andromeda\Core\IOFormat\TestClientException">TestClientException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/InstallRequiredException.html#property_message">
 <abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/InvalidAppException.html#property_message">
@@ -3370,6 +3393,7 @@
                     <dd></dd><dt><a href="Andromeda/Core/MissingSingletonException.html"><abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that GetInstance() was called on a singleton that has not been constructed</p></dd><dt>$<a href="Andromeda/Core/MissingSingletonException.html#property_message">
 <abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr>#message</a> &mdash; <em>Property in class <a href="Andromeda/Core/MissingSingletonException.html"><abbr title="Andromeda\Core\MissingSingletonException">MissingSingletonException</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/MySingleton.html"><abbr title="Andromeda\Core\MySingleton">MySingleton</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/RunContext.html#property_metrics">
 <abbr title="Andromeda\Core\RunContext">RunContext</abbr>#metrics</a> &mdash; <em>Property in class <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/UnknownActionException.html#property_message">
@@ -3394,7 +3418,8 @@
 <abbr title="Andromeda\Apps\Files\File">File</abbr>::NotifyFSDeleted</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></em></dt>
                     <dd><p>Deletes the file from the DB only</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/Native.html"><abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
                     <dd><p>An Andromeda native filesystem stores only file content.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
-                    <dd><p>Implements an encryption layer on top of the native filesystem.</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_NotifyFSDeleted">
+                    <dd><p>Implements an encryption layer on top of the native filesystem.</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Files/Filesystem.html">Andromeda\Apps\Files\Filesystem</a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_NotifyFSDeleted">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::NotifyFSDeleted</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd><p>Deletes this folder and its contents from the DB only</p></dd><dt><a href="Andromeda/Apps/Files/Item.html#method_NotifyCreate">
 <abbr title="Andromeda\Apps\Files\Item">Item</abbr>::NotifyCreate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></em></dt>
@@ -3507,6 +3532,7 @@
                     <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd><p>Class for custom app output routines</p></dd><dt>$<a href="Andromeda/Core/IOFormat/OutputHandler.html#property_output">
 <abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr>#output</a> &mdash; <em>Property in class <a href="Andromeda/Core/IOFormat/OutputHandler.html"><abbr title="Andromeda\Core\IOFormat\OutputHandler">OutputHandler</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/StaticWrapper.html#property_overrides">
 <abbr title="Andromeda\Core\StaticWrapper">StaticWrapper</abbr>#overrides</a> &mdash; <em>Property in class <a href="Andromeda/Core/StaticWrapper.html"><abbr title="Andromeda\Core\StaticWrapper">StaticWrapper</abbr></a></em></dt>
                     <dd></dd>        </dl><h2 id="letterP">P</h2>
@@ -3521,7 +3547,9 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::PurgeLimits</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Deletes all total limits for the given object</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_PurgeTimedLimits">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::PurgeTimedLimits</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
-                    <dd><p>Deletes all timed limits for the given object</p></dd><dt><a href="Andromeda/Apps/Files/Limits/AccountCommon.html#method_ProcessGroupRemove">
+                    <dd><p>Deletes all timed limits for the given object</p></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#property_paths">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>#paths</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd><p>array of temp files</p></dd><dt><a href="Andromeda/Apps/Files/Limits/AccountCommon.html#method_ProcessGroupRemove">
 <abbr title="Andromeda\Apps\Files\Limits\AccountCommon">AccountCommon</abbr>::ProcessGroupRemove</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Limits/AccountCommon.html"><abbr title="Andromeda\Apps\Files\Limits\AccountCommon">AccountCommon</abbr></a></em></dt>
                     <dd><p>Processes a group membership removal, possibly deleting this account limit</p></dd><dt><a href="Andromeda/Apps/Files/Limits/GroupCommon.html#method_ProcessAccountChange">
 <abbr title="Andromeda\Apps\Files\Limits\GroupCommon">GroupCommon</abbr>::ProcessAccountChange</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Limits/GroupCommon.html"><abbr title="Andromeda\Apps\Files\Limits\GroupCommon">GroupCommon</abbr></a></em></dt>
@@ -3559,7 +3587,8 @@
                     <dd></dd><dt><a href="Andromeda/Core/Database/Database.html#method_query">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr>::query</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a></em></dt>
                     <dd><p>Sends an SQL query down to the database, possibly beginning a transaction</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
-                    <dd><p>Minimalistic class for building prepared post-FROM SQL query strings</p></dd>        </dl><h2 id="letterR">R</h2>
+                    <dd><p>Minimalistic class for building prepared post-FROM SQL query strings</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/Database.html">Andromeda\Core\Database</a></em></dt>
+                    <dd></dd>        </dl><h2 id="letterR">R</h2>
         <dl id="indexR"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_RemoveGroup">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::RemoveGroup</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Removes the account from the given group</p></dd><dt><a href="Andromeda/Apps/Accounts/Account.html#method_RegisterGroupChangeHandler">
@@ -3854,7 +3883,8 @@
                     <dd><p>Exception indicating that account/group search is not allowed</p></dd><dt><a href="Andromeda/Apps/Accounts/Session.html"><abbr title="Andromeda\Apps\Accounts\Session">Session</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
                     <dd><p>Implements an account session, the primary implementor of authentication</p></dd><dt><a href="Andromeda/Apps/Accounts/Session.html#method_setActiveDate">
 <abbr title="Andromeda\Apps\Accounts\Session">Session</abbr>::setActiveDate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Session.html"><abbr title="Andromeda\Apps\Accounts\Session">Session</abbr></a></em></dt>
-                    <dd><p>Sets the timestamp this client was active to now</p></dd><dt><a href="Andromeda/Apps/Files/Comment.html#method_SetComment">
+                    <dd><p>Sets the timestamp this client was active to now</p></dd><dt><a href="Andromeda/Apps/Accounts/SessionRequiredException.html"><abbr title="Andromeda\Apps\Accounts\SessionRequiredException">SessionRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Apps/Accounts.html">Andromeda\Apps\Accounts</a></em></dt>
+                    <dd><p>Exception indicating that the action requires a session to use</p></dd><dt><a href="Andromeda/Apps/Files/Comment.html#method_SetComment">
 <abbr title="Andromeda\Apps\Files\Comment">Comment</abbr>::SetComment</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Comment.html"><abbr title="Andromeda\Apps\Files\Comment">Comment</abbr></a></em></dt>
                     <dd><p>Sets the value of this comment and updates the modified date</p></dd><dt><a href="Andromeda/Apps/Files/Config.html#method_SetConfig">
 <abbr title="Andromeda\Apps\Files\Config">Config</abbr>::SetConfig</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Config.html"><abbr title="Andromeda\Apps\Files\Config">Config</abbr></a></em></dt>
@@ -3888,7 +3918,13 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::SetType</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Changes the filesystem impl enum type to the given value</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_SetStorage">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::SetStorage</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
-                    <dd><p>Sets the underlying storage object for the filesystem</p></dd><dt>$<a href="Andromeda/Apps/Files/Folder.html#property_subrefreshed">
+                    <dd><p>Sets the underlying storage object for the filesystem</p></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#property_sizes">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>#sizes</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd><p>array of FS path -&gt; memory buffer</p></dd><dt>$<a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#property_storage">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>#storage</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd><p>array of file ID -&gt; file size</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_setUp">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::setUp</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Apps/Files/Folder.html#property_subrefreshed">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>#subrefreshed</a> &mdash; <em>Property in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_SetOwnerRecursive">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::SetOwnerRecursive</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
@@ -4230,11 +4266,13 @@
                     <dd><p>Base exception indicating a problem with a client parameter</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamInvalidException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamInvalidException">SafeParamInvalidException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd><p>Exception indicating that the parameter failed sanitization or validation</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamKeyMissingException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamKeyMissingException">SafeParamKeyMissingException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd><p>An exception indicating that the requested parameter name does not exist</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamNullValueException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamNullValueException">SafeParamNullValueException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
-                    <dd><p>An exception indicating that the requested parameter has a null value</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
+                    <dd><p>An exception indicating that the requested parameter has a null value</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd><p>Exception indicating that an invalid type was requested</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
                     <dd><p>A thin class that manages a collection of SafeParam objects</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParams.html#method_SetLogRef">
 <abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>::SetLogRef</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a></em></dt>
-                    <dd><p>Takes an array reference for logging fetched parameters</p></dd><dt><a href="Andromeda/Core/Logging/ActionLog.html#method_SetApplog">
+                    <dd><p>Takes an array reference for logging fetched parameters</p></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Logging/ActionLog.html#method_SetApplog">
 <abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr>::SetApplog</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/ActionLog.html"><abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr></a></em></dt>
                     <dd><p>Sets an extended BaseAppLog to accompany this ActionLog</p></dd><dt><a href="Andromeda/Core/Logging/ActionLog.html#method_SetDetails">
 <abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr>::SetDetails</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Logging/ActionLog.html"><abbr title="Andromeda\Core\Logging\ActionLog">ActionLog</abbr></a></em></dt>
@@ -4269,7 +4307,15 @@
 <abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr>::TestAuthSource</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AccountsApp.html"><abbr title="Andromeda\Apps\Accounts\AccountsApp">AccountsApp</abbr></a></em></dt>
                     <dd><p>Tests an auth source by running an auth query on it</p></dd><dt><a href="Andromeda/Apps/Accounts/AuthObject.html#method_TryLoadByAccountAndID">
 <abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr>::TryLoadByAccountAndID</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></em></dt>
-                    <dd><p>Attemps to load the object with the given account and ID</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryAuthenticate">
+                    <dd><p>Attemps to load the object with the given account and ID</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryGetAccount">
+<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryGetAccount</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
+                    <dd><p>Returns the authenticated user account (or null)</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryGetRealAccount">
+<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryGetRealAccount</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
+                    <dd><p>Returns the actual account used for the request, not the masqueraded one (or null)</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryGetSession">
+<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryGetSession</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
+                    <dd><p>Returns the session used for the request (or null)</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryGetClient">
+<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryGetClient</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
+                    <dd><p>Returns the client used for the request or null</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryAuthenticate">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryAuthenticate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
                     <dd><p>Returns a new authenticator object, or null if it fails (instead of exceptions)</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryRequireTwoFactor">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryRequireTwoFactor</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
@@ -4277,7 +4323,7 @@
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryRequireCrypto</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
                     <dd><p>Same as RequireCrypto() but does nothing if the account does not have crypto</p></dd><dt><a href="Andromeda/Apps/Accounts/Authenticator.html#method_TryRequireCryptoFor">
 <abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::TryRequireCryptoFor</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></em></dt>
-                    <dd><p>Runs TryRequireCrypto() on all instantiated authenticators</p></dd><dt><a href="Andromeda/Apps/Accounts/Contact.html#method_TryLoadAccountFromContact">
+                    <dd><p>Runs TryRequireCrypto() on all instantiated authenticators for $account</p></dd><dt><a href="Andromeda/Apps/Accounts/Contact.html#method_TryLoadAccountFromContact">
 <abbr title="Andromeda\Apps\Accounts\Contact">Contact</abbr>::TryLoadAccountFromContact</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Contact.html"><abbr title="Andromeda\Apps\Accounts\Contact">Contact</abbr></a></em></dt>
                     <dd><p>Attemps to load a from contact for the given account</p></dd><dt><a href="Andromeda/Apps/Accounts/Contact.html#method_TryLoadByInfoPair">
 <abbr title="Andromeda\Apps\Accounts\Contact">Contact</abbr>::TryLoadByInfoPair</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Contact.html"><abbr title="Andromeda\Apps\Accounts\Contact">Contact</abbr></a></em></dt>
@@ -4309,7 +4355,17 @@
 <abbr title="Andromeda\Apps\Files\Comment">Comment</abbr>::TryLoadByAccountAndID</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Comment.html"><abbr title="Andromeda\Apps\Files\Comment">Comment</abbr></a></em></dt>
                     <dd><p>Tries to load a comment object by the given account and comment ID</p></dd><dt><a href="Andromeda/Apps/Files/File.html#method_TryGetClientObject">
 <abbr title="Andromeda\Apps\Files\File">File</abbr>::TryGetClientObject</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></em></dt>
-                    <dd><p>Returns a printable client object of the file</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TryAuthenticateFolderAccess">
+                    <dd><p>Returns a printable client object of the file</p></dd><dt><a href="Andromeda/Apps/Files/FileUtilsTest.html#method_testChunkSize">
+<abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr>::testChunkSize</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FileUtilsTest.html"><abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/FileUtilsTest.html#method_tryChunkedRead">
+<abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr>::tryChunkedRead</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FileUtilsTest.html"><abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/FileUtilsTest.html#method_testChunkedRead">
+<abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr>::testChunkedRead</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FileUtilsTest.html"><abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/FileUtilsTest.html#method_tryChunkedWrite">
+<abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr>::tryChunkedWrite</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FileUtilsTest.html"><abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/FileUtilsTest.html#method_testChunkedWrite">
+<abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr>::testChunkedWrite</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FileUtilsTest.html"><abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TryAuthenticateFolderAccess">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TryAuthenticateFolderAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Returns an ItemAccess authenticating the given folder ID (or null to get from input), returns null on failure</p></dd><dt><a href="Andromeda/Apps/Files/FilesApp.html#method_TryAuthenticateItemAccess">
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TryAuthenticateItemAccess</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
@@ -4323,7 +4379,19 @@
 <abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr>::TagItem</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a></em></dt>
                     <dd><p>Adds a tag to an item</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html#method_Truncate">
 <abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr>::Truncate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/BaseFileFS.html"><abbr title="Andromeda\Apps\Files\Filesystem\BaseFileFS">BaseFileFS</abbr></a></em></dt>
-                    <dd><p>Truncates (changes size of) a file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_Truncate">
+                    <dd><p>Truncates (changes size of) a file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_testFolderSync">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::testFolderSync</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_testFolderSyncs">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::testFolderSyncs</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_testFolderSyncs1">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::testFolderSyncs1</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_testFolderSyncs2">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::testFolderSyncs2</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_testFolderSyncs3">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::testFolderSyncs3</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html#method_testFolderSyncs4">
+<abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr>::testFolderSyncs4</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSImpl.html#method_Truncate">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr>::Truncate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></em></dt>
                     <dd><p>Truncates (changes size of) a file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/FSManager.html#method_TryLoadByAccountAndID">
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::TryLoadByAccountAndID</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
@@ -4331,7 +4399,21 @@
 <abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr>::TryLoadByAccountAndName</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a></em></dt>
                     <dd><p>Attempts to load a filesystem with the given owner (or null) and name</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html#method_Truncate">
 <abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr>::Truncate</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a></em></dt>
-                    <dd><p>Truncates (changes size of) a file</p></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_TryGetClientObject">
+                    <dd><p>Truncates (changes size of) a file</p></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_tearDown">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::tearDown</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_tryWriting">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::tryWriting</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_tryWritingPair">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::tryWritingPair</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_testTruncateZeroes">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::testTruncateZeroes</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_testTruncateWithinChunk">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::testTruncateWithinChunk</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_testTruncateOneChunk">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::testTruncateOneChunk</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html#method_testTruncateManyChunks">
+<abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr>::testTruncateManyChunks</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Apps/Files/Folder.html#method_TryGetClientObject">
 <abbr title="Andromeda\Apps\Files\Folder">Folder</abbr>::TryGetClientObject</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></em></dt>
                     <dd><p>Returns a printable client object of this folder</p></dd><dt><a href="Andromeda/Apps/Files/Item.html#method_TryLoadByParentAndName">
 <abbr title="Andromeda\Apps\Files\Item">Item</abbr>::TryLoadByParentAndName</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a></em></dt>
@@ -4413,7 +4495,21 @@
 <abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>::TryPreloadObjectByID</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></em></dt>
                     <dd><p>Attempt to fetch an object from the cache by its ID</p></dd><dt><a href="Andromeda/Core/Database/ObjectDatabase.html#method_TryLoadObjectByUniqueKey">
 <abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>::TryLoadObjectByUniqueKey</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></em></dt>
-                    <dd><p>Attempt to load a unique object by the value of a field</p></dd><dt><a href="Andromeda/Core/Database/StandardObject.html#method_TryGetDate">
+                    <dd><p>Attempt to load a unique object by the value of a field</p></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html#method_testEscapeWildcards">
+<abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr>::testEscapeWildcards</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html#method_testQuery">
+<abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr>::testQuery</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html#method_testBasic">
+<abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr>::testBasic</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html#method_testLike">
+<abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr>::testLike</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html#method_testCombos">
+<abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr>::testCombos</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html#method_testSpecial">
+<abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr>::testSpecial</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/QueryBuilderTest.html#method_testJoins">
+<abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr>::testJoins</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/Database/StandardObject.html#method_TryGetDate">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr>::TryGetDate</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></em></dt>
                     <dd><p>Returns the timestamp value stored in the given date field</p></dd><dt><a href="Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr>::TryGetFeature</a>() &mdash; <em>Method in class <a href="Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></em></dt>
@@ -4427,12 +4523,145 @@
 <abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr>::TryGet</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></em></dt>
                     <dd><p>Constructs and returns a singleton of the appropriate interface type</p></dd><dt><a href="Andromeda/Core/IOFormat/Input.html#method_TryGetFile">
 <abbr title="Andromeda\Core\IOFormat\Input">Input</abbr>::TryGetFile</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></em></dt>
-                    <dd><p>Same as GetFile() but returns null rather than throwing an exception</p></dd><dt>$<a href="Andromeda/Core/Main.html#property_total_stats">
+                    <dd><p>Same as GetFile() but returns null rather than throwing an exception</p></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testSuccess">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testSuccess</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testMultiSuccess">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testMultiSuccess</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testClientException">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testClientException</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testServerException">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testServerException</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testGetAsString">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testGetAsString</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testParseArrayGood">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testParseArrayGood</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testParseArrayBad1">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testParseArrayBad1</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testParseArrayBad2">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testParseArrayBad2</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testParseArrayBad3">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testParseArrayBad3</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/OutputTest.html#method_testParseArrayBad4">
+<abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr>::testParseArrayBad4</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testNoKey">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testNoKey</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testBadKey1">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testBadKey1</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testBadKey2">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testBadKey2</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testBadKey3">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testBadKey3</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testGetKey">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testGetKey</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testRawValue">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testRawValue</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testMaxLength">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testMaxLength</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testGood">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testGood</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testGoodMatch">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testGoodMatch</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testBad">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testBad</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testNull">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testNull</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testTrimming">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testTrimming</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testUnknown">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testUnknown</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testBool">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testBool</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testNumeric">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testNumeric</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testInt">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testInt</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testUint">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testUint</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testFloat">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testFloat</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testRandstr">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testRandstr</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testAlphanum">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testAlphanum</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testName">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testName</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testEmail">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testEmail</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testFSName">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testFSName</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testFSPath">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testFSPath</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testText">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testText</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testObject">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamTest.html#method_testArray">
+<abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr>::testArray</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testBasic">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testBasic</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testBadType">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testBadType</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetParamSuccess">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetParamSuccess</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetParamMissingGood">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetParamMissingGood</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetParamMissingBad1">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetParamMissingBad1</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetParamMissingBad2">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetParamMissingBad2</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetParamNullGood">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetParamNullGood</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetParamNullBad1">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetParamNullBad1</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetParamNullBad2">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetParamNullBad2</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testGetClientObject">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testGetClientObject</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testLogging">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testLogging</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testNestedLog">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testNestedLog</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/SafeParamsTest.html#method_testArrayLog">
+<abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr>::testArrayLog</a>() &mdash; <em>Method in class <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/IOFormat/TestClientException.html"><abbr title="Andromeda\Core\IOFormat\TestClientException">TestClientException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core/IOFormat.html">Andromeda\Core\IOFormat</a></em></dt>
+                    <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_total_stats">
 <abbr title="Andromeda\Core\Main">Main</abbr>#total_stats</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd></dd><dt>$<a href="Andromeda/Core/Main.html#property_time">
 <abbr title="Andromeda\Core\Main">Main</abbr>#time</a> &mdash; <em>Property in class <a href="Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></em></dt>
                     <dd></dd><dt><a href="Andromeda/Core/Transactions.html"><abbr title="Andromeda\Core\Transactions">Transactions</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
-                    <dd><p>Simple interface with rollback() and commit()</p></dd>        </dl><h2 id="letterU">U</h2>
+                    <dd><p>Simple interface with rollback() and commit()</p></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testInit">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testInit</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testSingletonEmpty">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testSingletonEmpty</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testSingletonConstruct">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testSingletonConstruct</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testSingletonFetch">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testSingletonFetch</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testSingletonDuplicate">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testSingletonDuplicate</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testVersionInfo">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testVersionInfo</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testBadJSONEncode">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testBadJSONEncode</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testBadJSONDecode">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testBadJSONDecode</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testArrayLast">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testArrayLast</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testDeleteValue">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testDeleteValue</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testShortClassName">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testShortClassName</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testFirstUpper">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testFirstUpper</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testReturnBytes">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testReturnBytes</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testReplaceFirst">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testReplaceFirst</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testArrayMapKeys">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testArrayMapKeys</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd><dt><a href="Andromeda/Core/UtilitiesTest.html#method_testCaptureOutput">
+<abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr>::testCaptureOutput</a>() &mdash; <em>Method in class <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a></em></dt>
+                    <dd></dd>        </dl><h2 id="letterU">U</h2>
         <dl id="indexU"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_UnlockCryptoFromPassword">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::UnlockCryptoFromPassword</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Attemps to unlock crypto using the given password</p></dd><dt><a href="Andromeda/Apps/Accounts/Account.html#method_UnlockCryptoFromKeySource">
@@ -4486,7 +4715,8 @@ and has upgrade scripts for upgrading the database</p></dd><dt><a href="Andromed
                     <dd><p>Iterates over the list of upgrade scripts, running them
 sequentially until the DB is up to date with the code</p></dd><dt><a href="Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
                     <dd><p>Exception indicating that the database upgrade scripts must be run</p></dd><dt><a href="Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
-                    <dd><p>Abstract with some global static utility functions</p></dd>        </dl><h2 id="letterV">V</h2>
+                    <dd><p>Abstract with some global static utility functions</p></dd><dt><a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a> &mdash; <em>Class in namespace <a href="Andromeda/Core.html">Andromeda\Core</a></em></dt>
+                    <dd></dd>        </dl><h2 id="letterV">V</h2>
         <dl id="indexV"><dt><a href="Andromeda/Apps/Accounts/Account.html#method_VerifyPassword">
 <abbr title="Andromeda\Apps\Accounts\Account">Account</abbr>::VerifyPassword</a>() &mdash; <em>Method in class <a href="Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a></em></dt>
                     <dd><p>Returns true if the given password is correct for this account</p></dd><dt><a href="Andromeda/Apps/Accounts/AccountsApp.html#method_VerifyTwoFactor">

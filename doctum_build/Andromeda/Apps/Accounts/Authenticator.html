@@ -82,8 +82,7 @@
         
 
             <div class="description">
-            <p><p>The class used to authenticate requests</p></p>            <p><p>This is the API class that should be used in other apps.
-Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>        </div>
+            <p><p>The class used to authenticate requests</p></p>            <p><p>This is the API class that should be used in other apps.</p></p>        </div>
             
         
     
@@ -161,12 +160,32 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetAccount">TryGetAccount</a>()
+        
+                                            <p><p>Returns the authenticated user account (or null)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_GetAccount">GetAccount</a>()
         
-                                            <p><p>Returns the authenticated user account</p></p>                </div>
+                                            <p><p>Returns the authenticated user account (not null)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetRealAccount">TryGetRealAccount</a>()
+        
+                                            <p><p>Returns the actual account used for the request, not the masqueraded one (or null)</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -176,7 +195,7 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
                 <div class="col-md-8">
                     <a href="#method_GetRealAccount">GetRealAccount</a>()
         
-                                            <p><p>Returns the actual account used for the request, not the masqueraded one</p></p>                </div>
+                                            <p><p>Returns the actual account used for the request, not the masqueraded one (not null)</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -194,9 +213,19 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
                     <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null
                 </div>
                 <div class="col-md-8">
+                    <a href="#method_TryGetSession">TryGetSession</a>()
+        
+                                            <p><p>Returns the session used for the request (or null)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Accounts/Session.html"><abbr title="Andromeda\Apps\Accounts\Session">Session</abbr></a>
+                </div>
+                <div class="col-md-8">
                     <a href="#method_GetSession">GetSession</a>()
         
-                                            <p><p>Returns the session used for the request</p></p>                </div>
+                                            <p><p>Returns the session used for the request (not null)</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -204,9 +233,19 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
                     <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Client">Client</abbr>|null
                 </div>
                 <div class="col-md-8">
+                    <a href="#method_TryGetClient">TryGetClient</a>()
+        
+                                            <p><p>Returns the client used for the request or null</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a>
+                </div>
+                <div class="col-md-8">
                     <a href="#method_GetClient">GetClient</a>()
         
-                                            <p><p>Returns the client used for the request</p></p>                </div>
+                                            <p><p>Returns the client used for the request (not null)</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -348,7 +387,7 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
                 <div class="col-md-8">
                     <a href="#method_TryRequireCryptoFor">TryRequireCryptoFor</a>(<a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         
-                                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators</p></p>                </div>
+                                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators for $account</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -358,8 +397,40 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method_TryGetAccount">
+        <div class="location">at line 62</div>
+        <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+    <strong>TryGetAccount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the authenticated user account (or null)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_GetAccount">
-        <div class="location">at line 57</div>
+        <div class="location">at line 65</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>GetAccount</strong>()
         </code>
@@ -369,7 +440,7 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             
 
         <div class="method-description">
-                            <p><p>Returns the authenticated user account</p></p>                        
+                            <p><p>Returns the authenticated user account (not null)</p></p>                        
         </div>
         <div class="tags">
             
@@ -390,8 +461,40 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_TryGetRealAccount">
+        <div class="location">at line 75</div>
+        <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
+    <strong>TryGetRealAccount</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the actual account used for the request, not the masqueraded one (or null)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_GetRealAccount">
-        <div class="location">at line 62</div>
+        <div class="location">at line 78</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>GetRealAccount</strong>()
         </code>
@@ -401,7 +504,7 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             
 
         <div class="method-description">
-                            <p><p>Returns the actual account used for the request, not the masqueraded one</p></p>                        
+                            <p><p>Returns the actual account used for the request, not the masqueraded one (not null)</p></p>                        
         </div>
         <div class="tags">
             
@@ -423,7 +526,7 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             </div>
                     <div class="method-item">
                     <h3 id="method_isSudoUser">
-        <div class="location">at line 65</div>
+        <div class="location">at line 86</div>
         <code>                    bool
     <strong>isSudoUser</strong>()
         </code>
@@ -454,10 +557,10 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GetSession">
-        <div class="location">at line 70</div>
+                    <h3 id="method_TryGetSession">
+        <div class="location">at line 91</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null
-    <strong>GetSession</strong>()
+    <strong>TryGetSession</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -465,7 +568,7 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             
 
         <div class="method-description">
-                            <p><p>Returns the session used for the request</p></p>                        
+                            <p><p>Returns the session used for the request (or null)</p></p>                        
         </div>
         <div class="tags">
             
@@ -486,10 +589,10 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GetClient">
-        <div class="location">at line 75</div>
-        <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Client">Client</abbr>|null
-    <strong>GetClient</strong>()
+                    <h3 id="method_GetSession">
+        <div class="location">at line 94</div>
+        <code>                    <a href="../../../Andromeda/Apps/Accounts/Session.html"><abbr title="Andromeda\Apps\Accounts\Session">Session</abbr></a>
+    <strong>GetSession</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -497,7 +600,39 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             
 
         <div class="method-description">
-                            <p><p>Returns the client used for the request</p></p>                        
+                            <p><p>Returns the session used for the request (not null)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/Session.html"><abbr title="Andromeda\Apps\Accounts\Session">Session</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetClient">
+        <div class="location">at line 104</div>
+        <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Client">Client</abbr>|null
+    <strong>TryGetClient</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the client used for the request or null</p></p>                        
         </div>
         <div class="tags">
             
@@ -518,8 +653,40 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_GetClient">
+        <div class="location">at line 107</div>
+        <code>                    <a href="../../../Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a>
+    <strong>GetClient</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the client used for the request (not null)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 89</div>
+        <div class="location">at line 126</div>
         <code>                private    
     <strong>__construct</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
         </code>
@@ -529,7 +696,7 @@ Allows admins to masquerade as other users (&quot;sudouser&quot;)</p></p>       
             
 
         <div class="method-description">
-                            <p><p>The primary authentication routine</p></p>                <p><p>Loads the specified session, checks validity, updates dates, checks sudouser.
+                            <p><p>The primary authentication routine</p></p>                <p><p>Loads the specified session, checks validity, updates dates.
 Note that only a session must be provided, not the client that owns it.</p></p>        
         </div>
         <div class="tags">
@@ -580,7 +747,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Authenticate">
-        <div class="location">at line 149</div>
+        <div class="location">at line 188</div>
         <code>        static            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>Authenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
         </code>
@@ -644,7 +811,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryAuthenticate">
-        <div class="location">at line 158</div>
+        <div class="location">at line 197</div>
         <code>        static            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>|null
     <strong>TryAuthenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
         </code>
@@ -708,7 +875,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isAdmin">
-        <div class="location">at line 165</div>
+        <div class="location">at line 204</div>
         <code>                    bool
     <strong>isAdmin</strong>()
         </code>
@@ -740,7 +907,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isRealAdmin">
-        <div class="location">at line 168</div>
+        <div class="location">at line 207</div>
         <code>                    bool
     <strong>isRealAdmin</strong>()
         </code>
@@ -772,7 +939,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RequireAdmin">
-        <div class="location">at line 174</div>
+        <div class="location">at line 213</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>RequireAdmin</strong>()
         </code>
@@ -813,7 +980,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryRequireTwoFactor">
-        <div class="location">at line 184</div>
+        <div class="location">at line 223</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>TryRequireTwoFactor</strong>()
         </code>
@@ -858,7 +1025,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_StaticTryRequireTwoFactor">
-        <div class="location">at line 190</div>
+        <div class="location">at line 231</div>
         <code>        static            void
     <strong>StaticTryRequireTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null $session = null)
         </code>
@@ -923,7 +1090,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RequirePassword">
-        <div class="location">at line 207</div>
+        <div class="location">at line 248</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>RequirePassword</strong>()
         </code>
@@ -968,7 +1135,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryRequireCrypto">
-        <div class="location">at line 223</div>
+        <div class="location">at line 266</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>TryRequireCrypto</strong>()
         </code>
@@ -1012,7 +1179,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_StaticTryRequireCrypto">
-        <div class="location">at line 232</div>
+        <div class="location">at line 277</div>
         <code>        static            void
     <strong>StaticTryRequireCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null $session = null)
         </code>
@@ -1076,7 +1243,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RequireCrypto">
-        <div class="location">at line 244</div>
+        <div class="location">at line 289</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>RequireCrypto</strong>()
         </code>
@@ -1121,7 +1288,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_StaticRequireCrypto">
-        <div class="location">at line 250</div>
+        <div class="location">at line 297</div>
         <code>        static            void
     <strong>StaticRequireCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null $session = null)
         </code>
@@ -1186,7 +1353,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryRequireCryptoFor">
-        <div class="location">at line 276</div>
+        <div class="location">at line 323</div>
         <code>        static            void
     <strong>TryRequireCryptoFor</strong>(<a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
@@ -1196,7 +1363,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators</p></p>                        
+                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators for $account</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>

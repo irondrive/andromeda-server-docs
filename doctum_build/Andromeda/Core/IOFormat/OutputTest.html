@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Andromeda\Apps\Accounts\GroupInherit | Andromeda Server API</title>
+    <title>Andromeda\Core\IOFormat\OutputTest | Andromeda Server API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
 
     </head>
 
-    <body id="class" data-name="class:Andromeda_Apps_Accounts_GroupInherit" data-root-path="../../../">
+    <body id="class" data-name="class:Andromeda_Core_IOFormat_OutputTest" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -62,27 +62,25 @@
 
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
-                <li><span class="label label-default">trait</span></li>
-                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps.html">Apps</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Apps/Accounts.html">Accounts</a></li><li class="backslash">\</li><li>GroupInherit</li>
+                <li><span class="label label-default">class</span></li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/IOFormat.html">IOFormat</a></li><li class="backslash">\</li><li>OutputTest</li>
             </ol>
         </div>
                 <div id="page-content">
     <div class="page-header">
-        <h1>GroupInherit    
+        <h1>OutputTest    
             </h1>
     </div>
 
     
-    <p>        trait
-    <strong>GroupInherit</strong>
+    <p>        class
+    <strong>OutputTest</strong>        extends <abbr title="PHPUnit\Framework\TestCase">TestCase</abbr>
 </p>
 
         
     
         
 
-            <div class="description">
-            <p><p>Trait that overrides some BaseObject functions to allow inheriting properties from Groups</p></p>            <p><p>Classes using this trait must implement GetGroups()</p></p>        </div>
             
         
     
@@ -92,10 +90,10 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetScalar">GetScalar</a>(string $field, bool $allowTemp = true)
+                    <a href="#method_testSuccess">testSuccess</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -103,10 +101,10 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetScalar">TryGetScalar</a>(string $field, bool $allowTemp = true)
+                    <a href="#method_testMultiSuccess">testMultiSuccess</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -114,10 +112,10 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetObject">GetObject</a>(string $field)
+                    <a href="#method_testClientException">testClientException</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -125,10 +123,10 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetObject">TryGetObject</a>(string $field)
+                    <a href="#method_testServerException">testServerException</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -136,32 +134,68 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetInheritsScalarFrom">TryGetInheritsScalarFrom</a>(string $field)
+                    <a href="#method_testGetAsString">testGetAsString</a>()
         
-                                            <p><p>Returns the object that the value of the given field is inherited from</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetInheritsObjectFrom">TryGetInheritsObjectFrom</a>(string $field)
+                    <a href="#method_testParseArrayGood">testParseArrayGood</a>()
         
-                                            <p><p>Returns the object that the value of the given field is inherited from</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a>
+                    void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetInheritable">TryGetInheritable</a>(string $field, bool $useobj = false)
+                    <a href="#method_testParseArrayBad1">testParseArrayBad1</a>()
         
-                                            <p><p>Returns an inherited property value and source pair</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testParseArrayBad2">testParseArrayBad2</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testParseArrayBad3">testParseArrayBad3</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_testParseArrayBad4">testParseArrayBad4</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -171,10 +205,10 @@
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_GetScalar">
-        <div class="location">at line 806</div>
-        <code>            protected        
-    <strong>GetScalar</strong>(string $field, bool $allowTemp = true)
+                    <h3 id="method_testSuccess">
+        <div class="location">at line 13</div>
+        <code>                    void
+    <strong>testSuccess</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -186,100 +220,12 @@
                     
         </div>
         <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$field</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$allowTemp</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_TryGetScalar">
-        <div class="location">at line 814</div>
-        <code>            protected        
-    <strong>TryGetScalar</strong>(string $field, bool $allowTemp = true)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$field</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$allowTemp</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_GetObject">
-        <div class="location">at line 821</div>
-        <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
-    <strong>GetObject</strong>(string $field)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$field</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -292,10 +238,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_TryGetObject">
-        <div class="location">at line 829</div>
-        <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
-    <strong>TryGetObject</strong>(string $field)
+                    <h3 id="method_testMultiSuccess">
+        <div class="location">at line 25</div>
+        <code>                    void
+    <strong>testMultiSuccess</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -307,22 +253,12 @@
                     
         </div>
         <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$field</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -335,10 +271,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_TryGetInheritsScalarFrom">
-        <div class="location">at line 837</div>
-        <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
-    <strong>TryGetInheritsScalarFrom</strong>(string $field)
+                    <h3 id="method_testClientException">
+        <div class="location">at line 38</div>
+        <code>                    void
+    <strong>testClientException</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -346,25 +282,16 @@
             
 
         <div class="method-description">
-                            <p><p>Returns the object that the value of the given field is inherited from</p></p>                        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$field</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -377,10 +304,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_TryGetInheritsObjectFrom">
-        <div class="location">at line 843</div>
-        <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
-    <strong>TryGetInheritsObjectFrom</strong>(string $field)
+                    <h3 id="method_testServerException">
+        <div class="location">at line 51</div>
+        <code>                    void
+    <strong>testServerException</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -388,25 +315,16 @@
             
 
         <div class="method-description">
-                            <p><p>Returns the object that the value of the given field is inherited from</p></p>                        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$field</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
+            <td>void</td>
             <td></td>
         </tr>
     </table>
@@ -419,10 +337,10 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_TryGetInheritable">
-        <div class="location">at line 857</div>
-        <code>            protected        <a href="../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a>
-    <strong>TryGetInheritable</strong>(string $field, bool $useobj = false)
+                    <h3 id="method_testGetAsString">
+        <div class="location">at line 64</div>
+        <code>                    void
+    <strong>testGetAsString</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -430,32 +348,182 @@
             
 
         <div class="method-description">
-                            <p><p>Returns an inherited property value and source pair</p></p>                <p><p>Values can be inherited from this account, from any group it is
-a member of, or if using a default value, null</p></p>        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$field</td>
-                <td><p>the inherited property to find</p></td>
-            </tr>
-                    <tr>
-                <td>bool</td>
-                <td>$useobj</td>
-                <td><p>true if this is an object reference, not a scalar</p></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a></td>
-            <td><p>value/source pair</p></td>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testParseArrayGood">
+        <div class="location">at line 76</div>
+        <code>                    void
+    <strong>testParseArrayGood</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testParseArrayBad1">
+        <div class="location">at line 105</div>
+        <code>                    void
+    <strong>testParseArrayBad1</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testParseArrayBad2">
+        <div class="location">at line 112</div>
+        <code>                    void
+    <strong>testParseArrayBad2</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testParseArrayBad3">
+        <div class="location">at line 119</div>
+        <code>                    void
+    <strong>testParseArrayBad3</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_testParseArrayBad4">
+        <div class="location">at line 126</div>
+        <code>                    void
+    <strong>testParseArrayBad4</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
         </tr>
     </table>
 
