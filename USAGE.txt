@@ -1,11 +1,158 @@
-SERVER_ERROR
-Array
-1637521631.337
-CLI
-CLI
-/var/www/html/Andromeda2/api/Andromeda/Core/Database/Database.php(117)
-Typed property Andromeda\Core\Database\Database::$config must be array, int used
-Array
-#0 /var/www/html/Andromeda2/api/Andromeda/Core/Main.php(183): Andromeda\Core\Database\Database->__construct()
-#1 /var/www/html/Andromeda2/api/Andromeda/index.php(29): Andromeda\Core\Main->__construct()
-#2 {main}
+core install [--username alphanum --password raw]
+core upgrade
+core usage [--appname alphanum]
+core dbconf --driver mysql|pgsql|sqlite [--outfile [fspath]]
+core (dbconf) --driver mysql --dbname alphanum (--unix_socket fspath | (--host hostname [--port uint16])) [--dbuser name] [--dbpass raw] [--persistent bool]
+core (dbconf) --driver pgsql --dbname alphanum --host hostname [--port uint16] [--dbuser name] [--dbpass raw] [--persistent bool]
+core (dbconf) --driver sqlite --dbpath fspath
+core listapps
+core phpinfo
+core serverinfo
+core testmail [--mailid id] [--dest email]
+core enableapp --appname alphanum
+core disableapp --appname alphanum
+core getconfig
+core getdbconfig
+core setconfig [--requestlog_db bool] [--requestlog_file bool] [--requestlog_details none|basic|full] [--debug none|errors|development|sensitive] [--debug_http bool] [--debug_dblog bool] [--debug_filelog bool] [--metrics none|basic|extended] [--metrics_dblog bool] [--metrics_filelog bool] [--read_only bool] [--enabled bool] [--email bool] [--datadir ?text]
+core getmailers
+core createmailer [--test email] --type phpmail|sendmail|qmail|smtp --from_address email [--from_name name] [--use_reply bool]
+core (createmailer) --type smtp ((--host alphanum [--port uint16] [--proto ssl|tls]) | --hosts json[]) [--username text] [--password raw]
+core deletemailer --mailid id
+core geterrors [--mintime float] [--maxtime float] [--code raw] [--addr raw] [--agent raw] [--app alphanum] [--action alphanum] [--message text] [--logic and|or] [--limit uint] [--offset uint] [--desc bool]
+core counterrors [--mintime float] [--maxtime float] [--code raw] [--addr raw] [--agent raw] [--app alphanum] [--action alphanum] [--message text] [--logic and|or]
+core getrequests [--mintime float] [--maxtime float] [--addr raw] [--agent raw] [--errcode int] [--errtext alphanum] [--desc bool] [--logic and|or] [--limit uint] [--offset uint] [--expand bool] [--applogs bool]
+core countrequests [--mintime float] [--maxtime float] [--addr raw] [--agent raw] [--errcode int] [--errtext alphanum] [--desc bool] [--logic and|or]
+core getallactions [--mintime float] [--maxtime float] [--addr raw] [--agent raw] [--errcode int] [--errtext alphanum] [--desc bool] [--appname alphanum] [--action alphanum] [--logic and|or] [--limit uint] [--offset uint] [--expand bool] [--applogs bool]
+core countallactions [--mintime float] [--maxtime float] [--addr raw] [--agent raw] [--errcode int] [--errtext alphanum] [--desc bool] [--appname alphanum] [--action alphanum] [--logic and|or]
+core getactions --appname core|accounts|files [--mintime float] [--maxtime float] [--addr raw] [--agent raw] [--errcode int] [--errtext alphanum] [--desc bool] [--action alphanum] [--logic and|or] [--limit uint] [--offset uint] [--expand bool]
+core (getactions) --appname core [--admin bool] [--account id] [--sudouser id] [--client id]
+core (getactions) --appname accounts [--admin bool] [--account id] [--sudouser id] [--client id]
+core (getactions) --appname files [--admin bool] [--account id] [--sudouser id] [--client id] [--file id] [--folder id] [--file_share id] [--folder_share id]
+core countactions --appname core|accounts|files [--mintime float] [--maxtime float] [--addr raw] [--agent raw] [--errcode int] [--errtext alphanum] [--desc bool] [--action alphanum] [--logic and|or] [--expand bool]
+core (countactions) --appname core [--admin bool] [--account id] [--sudouser id] [--client id]
+core (countactions) --appname accounts [--admin bool] [--account id] [--sudouser id] [--client id]
+core (countactions) --appname files [--admin bool] [--account id] [--sudouser id] [--client id] [--file id] [--folder id] [--file_share id] [--folder_share id]
+accounts install [--username alphanum --password raw]
+accounts upgrade
+accounts - GENERAL AUTH: [--auth_sessionid id --auth_sessionkey alphanum] [--auth_sudouser text | --auth_sudoacct id]
+accounts getconfig
+accounts setconfig [--createaccount disable|whitelist|public] [--requirecontact none|exist|valid] [--usernameiscontact bool] [--createdefgroup bool] [--default_auth ?id]
+accounts getaccount [--account id] [--full bool]
+accounts setfullname --fullname name
+accounts enablecrypto --auth_password raw [--auth_twofactor int]
+accounts disablecrypto --auth_password raw
+accounts changepassword --new_password raw ((--username text --auth_password raw) | --auth_recoverykey text)
+accounts emailrecovery (--username text | --email email)
+accounts createaccount (--username alphanum | --email email) --password raw [--admin bool]
+accounts createsession (--username text | --email email) --auth_password raw [--authsource id] [--old_password raw] [--new_password raw]
+accounts (createsession) [--auth_recoverykey text | --auth_twofactor int] [--name name]
+accounts (createsession) --auth_clientid id --auth_clientkey alphanum
+accounts createrecoverykeys --auth_password raw --auth_twofactor int [--replace bool]
+accounts createtwofactor --auth_password raw [--comment text]
+accounts verifytwofactor --auth_twofactor int
+accounts createcontact --email email
+accounts verifycontact --authkey text
+accounts deleteaccount --auth_password raw --auth_twofactor int
+accounts deletesession [--session id --auth_password raw]
+accounts deleteclient [--client id --auth_password raw]
+accounts deleteallauth --auth_password raw [--everyone bool]
+accounts deletetwofactor --auth_password raw --twofactor id
+accounts deletecontact --contact id
+accounts editcontact --contact id [--usefrom bool] [--public bool]
+accounts searchaccounts --name text
+accounts searchgroups --name text
+accounts listaccounts [--limit uint] [--offset uint]
+accounts listgroups [--limit uint] [--offset uint]
+accounts creategroup --name name [--priority int8] [--comment text]
+accounts editgroup --group id [--name name] [--priority int8] [--comment ?text]
+accounts getgroup --group id
+accounts deletegroup --group id
+accounts addgroupmember --account id --group id
+accounts removegroupmember --account id --group id
+accounts getmembership --account id --group id
+accounts getauthsources
+accounts createauthsource --auth_password raw --type ldap|imap|ftp [--enabled disable|exist|full] [--description ?text] [--createdefgroup bool] [--test_username text --test_password raw]
+accounts (createauthsource) --type ldap --hostname alphanum [--secure bool] [--userprefix ?text]
+accounts (createauthsource) --type imap --protocol imap|pop3|nntp --hostname alphanum [--port ?uint16] [--implssl bool] [--secauth bool]
+accounts (createauthsource) --type ftp --hostname alphanum [--port ?uint16] [--implssl bool]
+accounts testauthsource --manager id [--test_username text --test_password raw]
+accounts editauthsource --manager id --auth_password raw --type ldap|imap|ftp [--enabled disable|exist|full] [--description ?text] [--createdefgroup bool] [--test_username text --test_password raw]
+accounts deleteauthsource --manager id --auth_password raw
+accounts setaccountprops --account id [--session_timeout ?uint] [--client_timeout ?uint] [--max_password_age ?uint] [--max_sessions ?uint8] [--max_contacts ?uint8] [--max_recoverykeys ?uint8] [--admin ?bool] [--disabled ?bool] [--forcetf ?bool] [--allowcrypto ?bool] [--accountsearch ?uint8] [--groupsearch ?uint8] [--userdelete ?bool] [--expirepw bool]
+accounts setgroupprops --group id [--session_timeout ?uint] [--client_timeout ?uint] [--max_password_age ?uint] [--max_sessions ?uint8] [--max_contacts ?uint8] [--max_recoverykeys ?uint8] [--admin ?bool] [--disabled ?bool] [--forcetf ?bool] [--allowcrypto ?bool] [--accountsearch ?uint8] [--groupsearch ?uint8] [--userdelete ?bool]
+accounts sendmessage (--account id | --group id) --subject text --text text [--html raw]
+accounts addwhitelist --type username|contact --value text
+accounts removewhitelist --type username|contact --value text
+accounts getwhitelist
+files install
+files upgrade
+files getconfig
+files setconfig [--rwchunksize uint32] [--crchunksize uint32] [--upload_maxsize ?uint] [--timedstats bool] [--apiurl ?string]
+files - AUTH for shared items: --sid id [--skey alphanum] [--spassword raw]
+files upload (--file% path [name] | --file- --name fsname) --parent id [--overwrite bool]
+files download --file id [--fstart uint] [--flast int] [--debugdl bool]
+files ftruncate --file id --size uint
+files writefile (--data% path | --data-) --file id [--offset uint]
+files getfilelikes --file id [--limit uint] [--offset uint]
+files getfolderlikes --folder id [--limit uint] [--offset uint]
+files getfilecomments --file id [--limit uint] [--offset uint]
+files getfoldercomments --folder id [--limit uint] [--offset uint]
+files fileinfo --file id [--details bool]
+files getfolder [--folder id | --filesystem id] [--files bool] [--folders bool] [--recursive bool] [--limit uint] [--offset uint] [--details bool]
+files getitembypath --path fspath [--folder id | --filesystem id] [--isfile bool]
+files editfilemeta --file id [--description ?text]
+files editfoldermeta --folder id [--description ?text]
+files ownfile --file id
+files ownfolder --folder id
+files createfolder --parent id --name fsname
+files deletefile --file id
+files deletefolder --folder id
+files renamefile --file id --name fsname [--overwrite bool] [--copy bool]
+files renamefolder --folder id --name fsname [--overwrite bool] [--copy bool]
+files movefile --parent id --file id  [--overwrite bool] [--copy bool]
+files movefolder --parent id --folder id [--overwrite bool] [--copy bool]
+files likefile --file id --value ?bool
+files likefolder --folder id --value ?bool
+files tagfile --file id --tag alphanum
+files tagfolder --folder id --tag alphanum
+files deletetag --tag id
+files commentfile --file id --comment text
+files commentfolder --folder id --comment text
+files editcomment --commentid id [--comment text]
+files deletecomment --commentid id
+files sharefile --file id (--link bool [--email email] | --account id | --group id | --everyone bool) [--read bool] [--upload bool] [--modify bool] [--social bool] [--reshare bool] [--keepowner bool] [--label text] [--spassword ?raw] [--expires ?uint] [--maxaccess ?uint32]
+files sharefolder --folder id (--link bool [--email email] | --account id | --group id | --everyone bool) [--read bool] [--upload bool] [--modify bool] [--social bool] [--reshare bool] [--keepowner bool] [--label text] [--spassword ?raw] [--expires ?uint] [--maxaccess ?uint32]
+files editshare --share id [--read bool] [--upload bool] [--modify bool] [--social bool] [--reshare bool] [--keepowner bool] [--label text] [--spassword ?raw] [--expires ?uint] [--maxaccess ?uint32]
+files deleteshare --share id
+files shareinfo --sid id [--skey alphanum] [--spassword raw]
+files listshares [--mine bool]
+files listadopted
+files getfilesystem [--filesystem id] [--activate bool]
+files getfilesystems [--everyone bool [--limit uint] [--offset uint]]
+files createfilesystem --sttype local|ftp|sftp|smb|s3 [--fstype native|crypt|external] [--name name] [--global bool] [--readonly bool] [--chunksize uint]
+files (createfilesystem) --sttype local  --path fspath
+files (createfilesystem) --sttype ftp  --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--port uint16] [--implssl bool]
+files (createfilesystem) --sttype sftp  --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--port uint16] [--privkey% path | --privkey-] [--keypass raw]
+files (createfilesystem) --sttype smb  --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--workgroup alphanum]
+files (createfilesystem) --sttype s3  [--fieldcrypt bool] --endpoint fspath --bucket alphanum --region alphanum [--path_style bool][--port uint16] [--usetls bool] [--accesskey randstr] [--secretkey randstr]
+files deletefilesystem --filesystem id --auth_password raw [--unlink bool]
+files editfilesystem --filesystem id [--name ?name] [--readonly bool]
+files (editfilesystem) local:  [--path fspath]
+files (editfilesystem) ftp:  [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--port ?uint16] [--implssl bool]
+files (editfilesystem) sftp:  [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--port ?uint16] [--privkey% path | --privkey-] [--keypass ?raw] [--resethost bool]
+files (editfilesystem) smb:  [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--workgroup ?alphanum]
+files (editfilesystem) s3:  [--fieldcrypt bool] [--endpoint fspath] [--bucket alphanum] [--region alphanum] [--path_style ?bool][--port ?uint16] [--usetls ?bool] [--accesskey ?randstr] [--secretkey ?randstr]
+files getlimits [--account ?id | --group ?id | --filesystem ?id] [--limit uint] [--offset uint]
+files gettimedlimits [--account ?id | --group ?id | --filesystem ?id] [--limit uint] [--offset uint]
+files gettimedstatsfor [--account id | --group id | --filesystem id] --timeperiod uint [--limit uint] [--offset uint]
+files gettimedstatsat (--account ?id | --group ?id | --filesystem ?id) --timeperiod uint --matchtime uint [--limit uint] [--offset uint]
+files configlimits (--account id | --group id | --filesystem id) [--randomwrite ?bool] [--publicmodify ?bool] [--publicupload ?bool] [--itemsharing ?bool] [--share2groups ?bool] [--share2everyone ?bool] [--max_size ?uint] [--max_items ?uint32] [--max_shares ?uint32]
+files (configlimits) --account id [--track_items ?bool] [--track_dlstats ?bool] [--emailshare ?bool] [--userstorage ?bool]
+files (configlimits) --group id [--track_items ?(none|accounts|wholegroup)] [--track_dlstats ?(none|accounts|wholegroup)] [--emailshare ?bool] [--userstorage ?bool]
+files (configlimits) --filesystem id [--track_items bool] [--track_dlstats bool]
+files configtimedlimits (--account id | --group id | --filesystem id) --timeperiod uint32 [--max_pubdownloads ?uint32] [--max_bandwidth ?uint]
+files (configtimedlimits) --account id [--track_items ?bool] [--track_dlstats ?bool] [--max_stats_age -1 (forever)|0 (none)|?int]
+files (configtimedlimits) --group id [--track_items ?(none|accounts|wholegroup)] [--track_dlstats ?(none|accounts|wholegroup)] [--max_stats_age -1 (forever)|0 (none)|?int]
+files (configtimedlimits) --filesystem id [--track_items bool] [--track_dlstats bool] [--max_stats_age -1 (forever)|0 (none)|int]
+files purgelimits (--account id | --group id | --filesystem id)
+files purgetimedlimits (--account id | --group id | --filesystem id) --period uint
