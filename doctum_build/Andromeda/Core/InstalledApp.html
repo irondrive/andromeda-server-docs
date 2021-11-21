@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Andromeda\Core\UpgradableApp | Andromeda Server API</title>
+    <title>Andromeda\Core\InstalledApp | Andromeda Server API</title>
 
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
 
     </head>
 
-    <body id="class" data-name="class:Andromeda_Core_UpgradableApp" data-root-path="../../">
+    <body id="class" data-name="class:Andromeda_Core_InstalledApp" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -63,18 +63,18 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li>UpgradableApp</li>
+                        <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li>InstalledApp</li>
             </ol>
         </div>
                 <div id="page-content">
     <div class="page-header">
-        <h1>UpgradableApp    
+        <h1>InstalledApp    
             </h1>
     </div>
 
     
     <p>    abstract     class
-    <strong>UpgradableApp</strong>        extends <a href="../../Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a>
+    <strong>InstalledApp</strong>        extends <a href="../../Andromeda/Core/BaseApp.html"><abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a>
 </p>
 
         
@@ -82,7 +82,7 @@
         
 
             <div class="description">
-            <p><p>Describes an app that stores database versions
+            <p><p>Describes an app that needs database installation
 and has upgrade scripts for upgrading the database</p></p>                    </div>
             
         
@@ -97,8 +97,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                                     </td>
                 <td>$API</td>
                 <td class="last"><p>Reference to the main API, for convenience</p></td>
-                <td><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#property_API">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#property_API">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_metadata">
@@ -107,8 +107,26 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                                     </td>
                 <td>$metadata</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#property_metadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#property_metadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_config">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$config</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_database">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$database</td>
+                <td class="last"></td>
+                <td></td>
             </tr>
             </table>
 
@@ -124,8 +142,7 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                     <a href="#method___construct">__construct</a>(<a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $API)
         
                                             <p><p>All apps are constructed when Andromeda runs</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method___construct">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -134,9 +151,9 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                 <div class="col-md-8">
                     <a href="#method_Run">Run</a>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
-                                            <p><p>The main entry point into the app</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_Run">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                                            <p><p>Checks if the client is running/needs to run install/upgrade
+{@inheritDoc}</p></p>                </div>
+                <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -157,8 +174,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_getName">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getName">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -168,8 +185,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                     <a href="#method_getLogClass">getLogClass</a>()
         
                                             <p><p>Return this app's BaseAppLog class name, if used (or null)</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_getLogClass">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getLogClass">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -179,8 +196,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                     <a href="#method_getMetadata">getMetadata</a>(string $app, string $key)
         
                                             <p><p>Loads a metadata for the given app with the given key</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_getMetadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getMetadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -191,8 +208,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_getAppRequires">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getAppRequires">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -203,8 +220,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -215,8 +232,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_getVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -226,8 +243,8 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                     <a href="#method_commit">commit</a>()
         
                                             <p><p>Tells the app to commit any changes made outside the database</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_commit">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_commit">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -237,18 +254,70 @@ and has upgrade scripts for upgrading the database</p></p>                    </
                     <a href="#method_rollback">rollback</a>()
         
                                             <p><p>Tells the app to rollback any changes made outside the database</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/AppBase.html#method_rollback">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_rollback">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getDBVersion">getDBVersion</a>()
+                    <a href="#method_getInstallFlags">getInstallFlags</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUpgradeFlags">getUpgradeFlags</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInstallUsage">getInstallUsage</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfigClass">getConfigClass</a>()
+        
+                                            <p><p>Return the BaseConfig class for this app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_allowInstall">allowInstall</a>()
+        
+                                            <p><p>Returns true if the user is allowed to install/upgrade</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTemplateFolder">getTemplateFolder</a>()
+        
+                                            <p><p>Returns the path of the app's code folder</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -264,23 +333,23 @@ and has upgrade scripts for upgrading the database</p></p>                    </
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_Upgrade">Upgrade</a>()
+                    <a href="#method_Install">Install</a>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
-                                            <p><p>Iterates over the list of upgrade scripts, running them
-sequentially until the DB is up to date with the code</p></p>                </div>
+                                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    bool
+                    
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_CheckUpgrade">CheckUpgrade</a>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+                    <a href="#method_Upgrade">Upgrade</a>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
-                                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                </div>
+                                            <p><p>Iterates over the list of upgrade scripts, running them
+sequentially until the DB is up to date with the code</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -291,8 +360,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method___construct">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 24</div>
+        <div class="location">at line 126</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $API)
         </code>
@@ -325,9 +393,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_Run">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 34</div>
-        <code>    abstract                mixed
+        <div class="location">at line 170</div>
+        <code>                    mixed
     <strong>Run</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
     </h3>
@@ -336,7 +403,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             
 
         <div class="method-description">
-                            <p><p>The main entry point into the app</p></p>                        
+                            <p><p>Checks if the client is running/needs to run install/upgrade
+{@inheritDoc}</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -360,7 +428,32 @@ sequentially until the DB is up to date with the code</p></p>                </d
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a></td>
+                <td><p>if the DB is not installed</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
+                <td><p>if the DB version does not match</p></td>
+            </tr>
+            </table>
+
             
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../Andromeda/Core/BaseApp.html#method_Run">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr>::Run</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
@@ -368,7 +461,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUsage">
-        <div class="location">at line 101</div>
+        <div class="location">at line 118</div>
         <code>        static            array
     <strong>getUsage</strong>()
         </code>
@@ -400,8 +493,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getName">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_getName">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 43</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getName">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 47</div>
         <code>    abstract    static            string
     <strong>getName</strong>()
         </code>
@@ -421,7 +514,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td><p>the name of the app</p></td>
+            <td><p>the lowercase name of the app</p></td>
         </tr>
     </table>
 
@@ -434,8 +527,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogClass">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_getLogClass">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 46</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getLogClass">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 50</div>
         <code>        static    protected        string|null
     <strong>getLogClass</strong>()
         </code>
@@ -467,8 +560,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getMetadata">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_getMetadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 55</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getMetadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 59</div>
         <code>        static    protected        
     <strong>getMetadata</strong>(string $app, string $key)
         </code>
@@ -506,8 +599,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppRequires">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_getAppRequires">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 71</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getAppRequires">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 77</div>
         <code>        static            array
     <strong>getAppRequires</strong>(string $app)
         </code>
@@ -550,8 +643,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppReqVersion">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 77</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 83</div>
         <code>        static            int
     <strong>getAppReqVersion</strong>(string $app)
         </code>
@@ -594,8 +687,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersion">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_getVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 83</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 89</div>
         <code>        static            string
     <strong>getVersion</strong>()
         </code>
@@ -628,8 +721,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_commit">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 89</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_commit">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 95</div>
         <code>                    
     <strong>commit</strong>()
         </code>
@@ -652,8 +745,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">in <a href="../../Andromeda/Core/AppBase.html#method_rollback">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 92</div>
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_rollback">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 98</div>
         <code>                    
     <strong>rollback</strong>()
         </code>
@@ -675,10 +768,10 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getDBVersion">
-        <div class="location">at line 104</div>
-        <code>    abstract        protected        <a href="../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
-    <strong>getDBVersion</strong>()
+                    <h3 id="method_getInstallFlags">
+        <div class="location">at line 107</div>
+        <code>        static    protected        string
+    <strong>getInstallFlags</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -695,8 +788,170 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a></td>
-            <td><p>that database object that stores the app version</p></td>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpgradeFlags">
+        <div class="location">at line 108</div>
+        <code>        static    protected        string
+    <strong>getUpgradeFlags</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstallUsage">
+        <div class="location">at line 110</div>
+        <code>        static    protected        array
+    <strong>getInstallUsage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigClass">
+        <div class="location">at line 121</div>
+        <code>    abstract    static    protected        string
+    <strong>getConfigClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the BaseConfig class for this app</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowInstall">
+        <div class="location">at line 144</div>
+        <code>            protected        bool
+    <strong>allowInstall</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the user is allowed to install/upgrade</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateFolder">
+        <div class="location">at line 151</div>
+        <code>        static    protected        string
+    <strong>getTemplateFolder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the path of the app's code folder</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
         </tr>
     </table>
 
@@ -709,7 +964,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUpgradeScripts">
-        <div class="location">at line 107</div>
+        <div class="location">at line 157</div>
         <code>        static    protected        array
     <strong>getUpgradeScripts</strong>()
         </code>
@@ -741,10 +996,43 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_Install">
+        <div class="location">at line 194</div>
+        <code>            protected        
+    <strong>Install</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_Upgrade">
-        <div class="location">at line 116</div>
-        <code>                    void
-    <strong>Upgrade</strong>()
+        <div class="location">at line 207</div>
+        <code>            protected        
+    <strong>Upgrade</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
     </h3>
     <div class="details">    
@@ -756,68 +1044,18 @@ sequentially until the DB is up to date with the code</p></p>                </d
 sequentially until the DB is up to date with the code</p></p>                        
         </div>
         <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_CheckUpgrade">
-        <div class="location">at line 138</div>
-        <code>            protected        bool
-    <strong>CheckUpgrade</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                        
-        </div>
-        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
                 <td>$input</td>
-                <td><p>the app action input object</p></td>
+                <td></td>
             </tr>
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td><p>true if the upgrade action was performed</p></td>
-        </tr>
-    </table>
-
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
-                <td><p>if the DB version does not match</p></td>
-            </tr>
-            </table>
-
             
             
                     </div>

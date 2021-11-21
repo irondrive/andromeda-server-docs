@@ -142,7 +142,7 @@ to be ignored in favor of more domain-specific alternatives provided by classes 
             </tr>
                     <tr>
                 <td class="type" id="property_modified">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$modified</td>
@@ -151,7 +151,7 @@ to be ignored in favor of more domain-specific alternatives provided by classes 
             </tr>
                     <tr>
                 <td class="type" id="property_deleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$deleted</td>
@@ -160,7 +160,7 @@ to be ignored in favor of more domain-specific alternatives provided by classes 
             </tr>
                     <tr>
                 <td class="type" id="property_dbDeleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$dbDeleted</td>
@@ -168,8 +168,17 @@ to be ignored in favor of more domain-specific alternatives provided by classes 
                 <td></td>
             </tr>
                     <tr>
+                <td class="type" id="property_deleteLater">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$deleteLater</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_created">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$created</td>
@@ -664,16 +673,6 @@ to be ignored in favor of more domain-specific alternatives provided by classes 
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_SubSave">SubSave</a>()
-        
-                                            <p><p>Function to allow subclasses to do something before the object is saved to DB</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
                 </div>
                 <div class="col-md-8">
@@ -710,6 +709,16 @@ to be ignored in favor of more domain-specific alternatives provided by classes 
                     <a href="#method_Delete">Delete</a>()
         
                                             <p><p>Deletes this object from the DB</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteLater">DeleteLater</a>()
+        
+                                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -3148,40 +3157,8 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SubSave">
-        <div class="location">at line 726</div>
-        <code>            protected        void
-    <strong>SubSave</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Function to allow subclasses to do something before the object is saved to DB</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_Save">
-        <div class="location">at line 733</div>
+        <div class="location">at line 730</div>
         <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>Save</strong>(bool $onlyMandatory = false)
         </code>
@@ -3223,7 +3200,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isDeleted">
-        <div class="location">at line 770</div>
+        <div class="location">at line 766</div>
         <code>                    bool
     <strong>isDeleted</strong>()
         </code>
@@ -3255,7 +3232,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_NotifyDBDeleted">
-        <div class="location">at line 776</div>
+        <div class="location">at line 772</div>
         <code>                    void
     <strong>NotifyDBDeleted</strong>()
         </code>
@@ -3287,7 +3264,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Delete">
-        <div class="location">at line 779</div>
+        <div class="location">at line 775</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -3318,8 +3295,40 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_DeleteLater">
+        <div class="location">at line 801</div>
+        <code>                    void
+    <strong>DeleteLater</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isCreated">
-        <div class="location">at line 806</div>
+        <div class="location">at line 812</div>
         <code>                    bool
     <strong>isCreated</strong>()
         </code>
@@ -3351,7 +3360,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_BaseCreate">
-        <div class="location">at line 809</div>
+        <div class="location">at line 815</div>
         <code>        static    protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>BaseCreate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database)
         </code>

@@ -74,7 +74,7 @@
 
     
     <p>        class
-    <strong>AccountsApp</strong>        extends <a href="../../../Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a>
+    <strong>AccountsApp</strong>        extends <a href="../../../Andromeda/Core/InstalledApp.html"><abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a>
 </p>
 
         
@@ -99,8 +99,8 @@ sources, and granular per-account/per-group config.</p></p>        </div>
                                     </td>
                 <td>$API</td>
                 <td class="last"><p>Reference to the main API, for convenience</p></td>
-                <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_API">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#property_API">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_metadata">
@@ -109,26 +109,28 @@ sources, and granular per-account/per-group config.</p></p>        </div>
                                     </td>
                 <td>$metadata</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_metadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#property_metadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_config">
-                                                            private                    
+                                        protected                                        
                                                                                 
                                     </td>
                 <td>$config</td>
                 <td class="last"></td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#property_config">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_database">
-                                                            private                    
+                                        protected                                        
                                                                                 
                                     </td>
                 <td>$database</td>
                 <td class="last"></td>
-                <td></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#property_database">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></td>
             </tr>
             </table>
 
@@ -153,7 +155,8 @@ sources, and granular per-account/per-group config.</p></p>        </div>
                 <div class="col-md-8">
                     <a href="#method_Run">Run</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
-                                            <p><p>The main entry point into the app</p></p>                </div>
+                                            <p><p>Checks if the client is running/needs to run install/upgrade
+{@inheritDoc}</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -195,8 +198,8 @@ sources, and granular per-account/per-group config.</p></p>        </div>
                     <a href="#method_getMetadata">getMetadata</a>(string $app, string $key)
         
                                             <p><p>Loads a metadata for the given app with the given key</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getMetadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -207,8 +210,8 @@ sources, and granular per-account/per-group config.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getAppRequires">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -219,8 +222,8 @@ sources, and granular per-account/per-group config.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -231,8 +234,8 @@ sources, and granular per-account/per-group config.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -242,8 +245,8 @@ sources, and granular per-account/per-group config.</p></p>        </div>
                     <a href="#method_commit">commit</a>()
         
                                             <p><p>Tells the app to commit any changes made outside the database</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_commit">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_commit">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -253,19 +256,75 @@ sources, and granular per-account/per-group config.</p></p>        </div>
                     <a href="#method_rollback">rollback</a>()
         
                                             <p><p>Tells the app to rollback any changes made outside the database</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_rollback">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_rollback">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getDBVersion">getDBVersion</a>()
+                    <a href="#method_getInstallFlags">getInstallFlags</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUpgradeFlags">getUpgradeFlags</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeFlags">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInstallUsage">getInstallUsage</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getInstallUsage">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfigClass">getConfigClass</a>()
+        
+                                            <p><p>Return the BaseConfig class for this app</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_allowInstall">allowInstall</a>()
+        
+                                            <p><p>Returns true if the user is allowed to install/upgrade</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_allowInstall">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTemplateFolder">getTemplateFolder</a>()
+        
+                                            <p><p>Returns the path of the app's code folder</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getTemplateFolder">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -276,41 +335,30 @@ sources, and granular per-account/per-group config.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_getUpgradeScripts">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeScripts">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_Upgrade">Upgrade</a>()
-        
-                                            <p><p>Iterates over the list of upgrade scripts, running them
-sequentially until the DB is up to date with the code</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_Upgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_CheckUpgrade">CheckUpgrade</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        
-                                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    array|null
+                    
                 </div>
                 <div class="col-md-8">
                     <a href="#method_Install">Install</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
                                             <p><p>Installs the app by importing its SQL file and creating config</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Upgrade">Upgrade</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Iterates over the list of upgrade scripts, running them
+sequentially until the DB is up to date with the code</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_Upgrade">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -770,7 +818,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 187</div>
+        <div class="location">at line 179</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
         </code>
@@ -803,7 +851,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 204</div>
+        <div class="location">at line 191</div>
         <code>                    mixed
     <strong>Run</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -813,7 +861,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             
 
         <div class="method-description">
-                            <p><p>The main entry point into the app</p></p>                        
+                            <p><p>Checks if the client is running/needs to run install/upgrade
+{@inheritDoc}</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -837,13 +886,26 @@ sequentially until the DB is up to date with the code</p></p>                </d
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a></td>
+                <td><p>if the DB is not installed</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
+                <td><p>if the DB version does not match</p></td>
+            </tr>
+            </table>
+
             
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Accounts\AppBase::Run()
+                                            \Andromeda\Apps\Accounts\BaseApp::Run()
                                     </td>
                 <td></td>
             </tr>
@@ -856,7 +918,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUsage">
-        <div class="location">at line 132</div>
+        <div class="location">at line 125</div>
         <code>        static            array
     <strong>getUsage</strong>()
         </code>
@@ -888,7 +950,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getName">
-        <div class="location">at line 126</div>
+        <div class="location">at line 117</div>
         <code>        static            string
     <strong>getName</strong>()
         </code>
@@ -908,7 +970,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td><p>the name of the app</p></td>
+            <td><p>the lowercase name of the app</p></td>
         </tr>
     </table>
 
@@ -921,7 +983,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogClass">
-        <div class="location">at line 128</div>
+        <div class="location">at line 119</div>
         <code>        static    protected        string|null
     <strong>getLogClass</strong>()
         </code>
@@ -953,8 +1015,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getMetadata">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 55</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getMetadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 59</div>
         <code>        static    protected        
     <strong>getMetadata</strong>(string $app, string $key)
         </code>
@@ -992,8 +1054,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppRequires">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 71</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getAppRequires">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 77</div>
         <code>        static            array
     <strong>getAppRequires</strong>(string $app)
         </code>
@@ -1036,8 +1098,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppReqVersion">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 77</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 83</div>
         <code>        static            int
     <strong>getAppReqVersion</strong>(string $app)
         </code>
@@ -1080,8 +1142,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersion">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 83</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 89</div>
         <code>        static            string
     <strong>getVersion</strong>()
         </code>
@@ -1114,8 +1176,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_commit">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 89</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_commit">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 95</div>
         <code>                    
     <strong>commit</strong>()
         </code>
@@ -1138,8 +1200,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_rollback">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 92</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_rollback">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 98</div>
         <code>                    
     <strong>rollback</strong>()
         </code>
@@ -1161,10 +1223,10 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getDBVersion">
-        <div class="location">at line 130</div>
-        <code>            protected        <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
-    <strong>getDBVersion</strong>()
+                    <h3 id="method_getInstallFlags">
+        <div class="location">at line 123</div>
+        <code>        static    protected        string
+    <strong>getInstallFlags</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -1181,8 +1243,174 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a></td>
-            <td><p>that database object that stores the app version</p></td>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpgradeFlags">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeFlags">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 108</div>
+        <code>        static    protected        string
+    <strong>getUpgradeFlags</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstallUsage">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getInstallUsage">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 110</div>
+        <code>        static    protected        array
+    <strong>getInstallUsage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigClass">
+        <div class="location">at line 121</div>
+        <code>        static    protected        string
+    <strong>getConfigClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the BaseConfig class for this app</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowInstall">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_allowInstall">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 144</div>
+        <code>            protected        bool
+    <strong>allowInstall</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the user is allowed to install/upgrade</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateFolder">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getTemplateFolder">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 151</div>
+        <code>        static    protected        string
+    <strong>getTemplateFolder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the path of the app's code folder</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1195,8 +1423,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUpgradeScripts">
-        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_getUpgradeScripts">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 107</div>
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeScripts">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 157</div>
         <code>        static    protected        array
     <strong>getUpgradeScripts</strong>()
         </code>
@@ -1228,95 +1456,9 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_Upgrade">
-        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_Upgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 116</div>
-        <code>                    void
-    <strong>Upgrade</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Iterates over the list of upgrade scripts, running them
-sequentially until the DB is up to date with the code</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_CheckUpgrade">
-        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 138</div>
-        <code>            protected        bool
-    <strong>CheckUpgrade</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
-                <td>$input</td>
-                <td><p>the app action input object</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td><p>true if the upgrade action was performed</p></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
-                <td><p>if the DB version does not match</p></td>
-            </tr>
-            </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_Install">
-        <div class="location">at line 289</div>
-        <code>                    array|null
+        <div class="location">at line 268</div>
+        <code>            protected        
     <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
     </h3>
@@ -1325,7 +1467,7 @@ sequentially until the DB is up to date with the code</p></p>
             
 
         <div class="method-description">
-                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                <p><p>Optionally creates an initial administrator account</p></p>        
+                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1339,29 +1481,18 @@ sequentially until the DB is up to date with the code</p></p>
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>array|null</td>
-            <td><p>Account if admin was created</p></td>
-        </tr>
-    </table>
-
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/UnknownActionException.html"><abbr title="Andromeda\Core\UnknownActionException">UnknownActionException</abbr></a></td>
-                <td><p>if config already exists</p></td>
-            </tr>
-            </table>
-
             
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/InstalledApp.html#method_Install">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr>::Install</a>
+                                    </td>
+                <td></td>
+            </tr>
                     <tr>
                 <td>
                                             <a href="../../../Andromeda/Apps/Accounts/Account.html#method_GetClientObject">
@@ -1377,8 +1508,43 @@ sequentially until the DB is up to date with the code</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_Upgrade">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_Upgrade">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 207</div>
+        <code>            protected        
+    <strong>Upgrade</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Iterates over the list of upgrade scripts, running them
+sequentially until the DB is up to date with the code</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_GetConfig">
-        <div class="location">at line 316</div>
+        <div class="location">at line 288</div>
         <code>            protected        array
     <strong>GetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1437,7 +1603,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetConfig">
-        <div class="location">at line 329</div>
+        <div class="location">at line 301</div>
         <code>            protected        array
     <strong>SetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1505,7 +1671,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuthSources">
-        <div class="location">at line 342</div>
+        <div class="location">at line 314</div>
         <code>            protected        array
     <strong>GetAuthSources</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1564,7 +1730,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAccount">
-        <div class="location">at line 359</div>
+        <div class="location">at line 331</div>
         <code>            protected        array|null
     <strong>GetAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1632,7 +1798,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ChangePassword">
-        <div class="location">at line 391</div>
+        <div class="location">at line 364</div>
         <code>            protected        void
     <strong>ChangePassword</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1693,7 +1859,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_capitalizeWords">
-        <div class="location">at line 424</div>
+        <div class="location">at line 397</div>
         <code>        static        private    string
     <strong>capitalizeWords</strong>(string $str)
         </code>
@@ -1735,7 +1901,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_SetFullName">
-        <div class="location">at line 435</div>
+        <div class="location">at line 408</div>
         <code>            protected        void
     <strong>SetFullName</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1791,7 +1957,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_EmailRecovery">
-        <div class="location">at line 449</div>
+        <div class="location">at line 422</div>
         <code>            protected        void
     <strong>EmailRecovery</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1846,7 +2012,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_EnableCrypto">
-        <div class="location">at line 485</div>
+        <div class="location">at line 458</div>
         <code>            protected        array|null
     <strong>EnableCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1914,7 +2080,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_DisableCrypto">
-        <div class="location">at line 521</div>
+        <div class="location">at line 494</div>
         <code>            protected        void
     <strong>DisableCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1970,7 +2136,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateAccount">
-        <div class="location">at line 540</div>
+        <div class="location">at line 513</div>
         <code>            protected        array
     <strong>CreateAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2047,7 +2213,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateSession">
-        <div class="location">at line 614</div>
+        <div class="location">at line 587</div>
         <code>            protected        array
     <strong>CreateSession</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2156,7 +2322,7 @@ Then finally, the session is created and the client is returned.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateRecoveryKeys">
-        <div class="location">at line 746</div>
+        <div class="location">at line 721</div>
         <code>            protected        array
     <strong>CreateRecoveryKeys</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2224,7 +2390,7 @@ Then finally, the session is created and the client is returned.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateTwoFactor">
-        <div class="location">at line 773</div>
+        <div class="location">at line 748</div>
         <code>            protected        array
     <strong>CreateTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2308,7 +2474,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_VerifyTwoFactor">
-        <div class="location">at line 803</div>
+        <div class="location">at line 778</div>
         <code>            protected        void
     <strong>VerifyTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2364,7 +2530,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateContact">
-        <div class="location">at line 824</div>
+        <div class="location">at line 799</div>
         <code>            protected        array
     <strong>CreateContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2441,7 +2607,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_VerifyContact">
-        <div class="location">at line 847</div>
+        <div class="location">at line 822</div>
         <code>            protected        void
     <strong>VerifyContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -2496,7 +2662,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteAccount">
-        <div class="location">at line 862</div>
+        <div class="location">at line 837</div>
         <code>            protected        void
     <strong>DeleteAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2561,7 +2727,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteSession">
-        <div class="location">at line 887</div>
+        <div class="location">at line 862</div>
         <code>            protected        void
     <strong>DeleteSession</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2626,7 +2792,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteClient">
-        <div class="location">at line 915</div>
+        <div class="location">at line 890</div>
         <code>            protected        void
     <strong>DeleteClient</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2691,7 +2857,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteAllAuth">
-        <div class="location">at line 942</div>
+        <div class="location">at line 917</div>
         <code>            protected        void
     <strong>DeleteAllAuth</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2747,7 +2913,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteTwoFactor">
-        <div class="location">at line 963</div>
+        <div class="location">at line 938</div>
         <code>            protected        void
     <strong>DeleteTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2812,7 +2978,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteContact">
-        <div class="location">at line 985</div>
+        <div class="location">at line 960</div>
         <code>            protected        void
     <strong>DeleteContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2881,7 +3047,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditContact">
-        <div class="location">at line 1008</div>
+        <div class="location">at line 983</div>
         <code>            protected        array
     <strong>EditContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2941,7 +3107,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SearchAccounts">
-        <div class="location">at line 1031</div>
+        <div class="location">at line 1006</div>
         <code>            protected        array
     <strong>SearchAccounts</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3020,7 +3186,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SearchGroups">
-        <div class="location">at line 1058</div>
+        <div class="location">at line 1033</div>
         <code>            protected        array
     <strong>SearchGroups</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3099,7 +3265,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListAccounts">
-        <div class="location">at line 1083</div>
+        <div class="location">at line 1058</div>
         <code>            protected        array
     <strong>ListAccounts</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3167,7 +3333,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListGroups">
-        <div class="location">at line 1104</div>
+        <div class="location">at line 1079</div>
         <code>            protected        array
     <strong>ListGroups</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3235,7 +3401,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateGroup">
-        <div class="location">at line 1123</div>
+        <div class="location">at line 1098</div>
         <code>            protected        array
     <strong>CreateGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3312,7 +3478,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditGroup">
-        <div class="location">at line 1150</div>
+        <div class="location">at line 1125</div>
         <code>            protected        array
     <strong>EditGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3384,7 +3550,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetGroup">
-        <div class="location">at line 1183</div>
+        <div class="location">at line 1158</div>
         <code>            protected        array
     <strong>GetGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3456,7 +3622,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteGroup">
-        <div class="location">at line 1201</div>
+        <div class="location">at line 1176</div>
         <code>            protected        void
     <strong>DeleteGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3521,7 +3687,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddGroupMember">
-        <div class="location">at line 1226</div>
+        <div class="location">at line 1201</div>
         <code>            protected        array
     <strong>AddGroupMember</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3601,7 +3767,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveGroupMember">
-        <div class="location">at line 1256</div>
+        <div class="location">at line 1231</div>
         <code>            protected        array
     <strong>RemoveGroupMember</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3685,7 +3851,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetMembership">
-        <div class="location">at line 1288</div>
+        <div class="location">at line 1263</div>
         <code>            protected        array|null
     <strong>GetMembership</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3765,7 +3931,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateAuthSource">
-        <div class="location">at line 1317</div>
+        <div class="location">at line 1292</div>
         <code>            protected        array
     <strong>CreateAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3839,7 +4005,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TestAuthSource">
-        <div class="location">at line 1342</div>
+        <div class="location">at line 1317</div>
         <code>            protected        array
     <strong>TestAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3915,7 +4081,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditAuthSource">
-        <div class="location">at line 1368</div>
+        <div class="location">at line 1343</div>
         <code>            protected        array
     <strong>EditAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3987,7 +4153,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteAuthSource">
-        <div class="location">at line 1388</div>
+        <div class="location">at line 1363</div>
         <code>            protected        void
     <strong>DeleteAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4052,7 +4218,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetAccountProps">
-        <div class="location">at line 1411</div>
+        <div class="location">at line 1386</div>
         <code>            protected        array
     <strong>SetAccountProps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4124,7 +4290,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetGroupProps">
-        <div class="location">at line 1433</div>
+        <div class="location">at line 1408</div>
         <code>            protected        array
     <strong>SetGroupProps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4196,7 +4362,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SendMessage">
-        <div class="location">at line 1452</div>
+        <div class="location">at line 1427</div>
         <code>            protected        void
     <strong>SendMessage</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4260,7 +4426,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddWhitelist">
-        <div class="location">at line 1487</div>
+        <div class="location">at line 1462</div>
         <code>            protected        array
     <strong>AddWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4328,7 +4494,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveWhitelist">
-        <div class="location">at line 1506</div>
+        <div class="location">at line 1481</div>
         <code>            protected        void
     <strong>RemoveWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4384,7 +4550,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetWhitelist">
-        <div class="location">at line 1527</div>
+        <div class="location">at line 1502</div>
         <code>            protected        array
     <strong>GetWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>

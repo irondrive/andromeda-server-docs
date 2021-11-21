@@ -116,10 +116,84 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </tr>
                     <tr>
                 <td>
+                                                            private
+                                                                                TYPE_INT_FIRST
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_INT32
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_INT16
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_INT8
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
                                                                                                                         TYPE_UINT
                                     </td>
                 <td class="last">
                     <p><em><p>An integer value, see FILTER_VALIDATE_UINT</p></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_UINT32
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_UINT16
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                                                                                        TYPE_UINT8
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
+                    <p></p>
+                </td>
+            </tr>
+                    <tr>
+                <td>
+                                                            private
+                                                                                TYPE_INT_LAST
+                                    </td>
+                <td class="last">
+                    <p><em></em></p>
                     <p></p>
                 </td>
             </tr>
@@ -275,7 +349,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
                     static&nbsp;string
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetTypeString">GetTypeString</a>(int|null $type)
+                    <a href="#method_GetTypeString">GetTypeString</a>(int $type)
         
                                             <p><p>Returns the string representing the given param type for printing</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -338,9 +412,9 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_GetTypeString">
-        <div class="location">at line 114</div>
+        <div class="location">at line 125</div>
         <code>        static            string
-    <strong>GetTypeString</strong>(int|null $type)
+    <strong>GetTypeString</strong>(int $type)
         </code>
     </h3>
     <div class="details">    
@@ -355,7 +429,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
 
                     <table class="table table-condensed">
                     <tr>
-                <td>int|null</td>
+                <td>int</td>
                 <td>$type</td>
                 <td></td>
             </tr>
@@ -380,7 +454,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 128</div>
+        <div class="location">at line 139</div>
         <code>                    
     <strong>__construct</strong>(string $key, $value)
         </code>
@@ -418,7 +492,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_GetKey">
-        <div class="location">at line 139</div>
+        <div class="location">at line 150</div>
         <code>                    string
     <strong>GetKey</strong>()
         </code>
@@ -450,7 +524,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_GetRawValue">
-        <div class="location">at line 142</div>
+        <div class="location">at line 153</div>
         <code>                    
     <strong>GetRawValue</strong>()
         </code>
@@ -473,7 +547,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_MaxLength">
-        <div class="location">at line 145</div>
+        <div class="location">at line 156</div>
         <code>        static            callable
     <strong>MaxLength</strong>(int $len)
         </code>
@@ -515,7 +589,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_GetValue">
-        <div class="location">at line 159</div>
+        <div class="location">at line 170</div>
         <code>                    null|mixed|<a href="../../../Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>[]|<a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
     <strong>GetValue</strong>(int $type, callable ...$valfuncs)
         </code>

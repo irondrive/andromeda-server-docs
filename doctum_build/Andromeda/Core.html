@@ -79,8 +79,13 @@
     <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="../Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a>    </div>
+                    <a href="../Andromeda/Core/BaseApp.html"><abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a>    </div>
                 <div class="col-md-6"><p>The base class from which apps must inherit</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../Andromeda/Core/BaseConfig.html"><abbr title="Andromeda\Core\BaseConfig">BaseConfig</abbr></a>    </div>
+                <div class="col-md-6"><p>A singleton object that stores a version field</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -109,11 +114,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>    </div>
-                <div class="col-md-6"><p>A singleton object that stores a version field</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="../Andromeda/Core/DecryptionFailedException.html"><abbr title="Andromeda\Core\DecryptionFailedException">DecryptionFailedException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that decryption failed</p></div>
             </div>
@@ -139,6 +139,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                    <a href="../Andromeda/Core/InstalledApp.html"><abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a>    </div>
+                <div class="col-md-6"><p>Describes an app that needs database installation
+and has upgrade scripts for upgrading the database</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                     <a href="../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>    </div>
                 <div class="col-md-6"><p>The main container class managing API singletons and running apps</p></div>
             </div>
@@ -146,11 +152,6 @@
                 <div class="col-md-6">
                     <a href="../Andromeda/Core/MissingMetadataException.html"><abbr title="Andromeda\Core\MissingMetadataException">MissingMetadataException</abbr></a>    </div>
                 <div class="col-md-6"><p>An exception indicating that the metadata file is missing</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../Andromeda/Core/MySingleton.html"><abbr title="Andromeda\Core\MySingleton">MySingleton</abbr></a>    </div>
-                <div class="col-md-6"></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -174,19 +175,13 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="../Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a>    </div>
-                <div class="col-md-6"><p>Describes an app that stores database versions
-and has upgrade scripts for upgrading the database</p></div>
+                    <a href="../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the database upgrade scripts must be run</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
                     <a href="../Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a>    </div>
                 <div class="col-md-6"><p>Abstract with some global static utility functions</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -220,11 +215,6 @@ and has upgrade scripts for upgrading the database</p></div>
                 <div class="col-md-6">
                     <a href="../Andromeda/Core/CommitAfterRollbackException.html"><abbr title="Andromeda\Core\CommitAfterRollbackException">CommitAfterRollbackException</abbr></a>    </div>
                 <div class="col-md-6"><p>Andromeda cannot rollback and then commit since database/objects state is not sufficiently reset</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../Andromeda/Core/DisableRequiredException.html"><abbr title="Andromeda\Core\DisableRequiredException">DisableRequiredException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the server must be disabled for this request</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -300,11 +290,6 @@ and has upgrade scripts for upgrading the database</p></div>
                 <div class="col-md-6">
                     <a href="../Andromeda/Core/UnwriteableDatadirException.html"><abbr title="Andromeda\Core\UnwriteableDatadirException">UnwriteableDatadirException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that the configured data directory is not valid</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the database upgrade scripts must be run</p></div>
             </div>
             </div>
 </div><div id="footer">

@@ -274,13 +274,13 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Apps/Accounts/CrptoNotUnlockedException.html"><abbr title="Andromeda\Apps\Accounts\CrptoNotUnlockedException">CrptoNotUnlockedException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that crypto has not been unlocked on the requied account</p></div>
+                    <a href="Andromeda/Apps/Accounts/CryptoAlreadyInitializedException.html"><abbr title="Andromeda\Apps\Accounts\CryptoAlreadyInitializedException">CryptoAlreadyInitializedException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that crypto cannot be initialized because it already exists</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Apps/Accounts/CryptoAlreadyInitializedException.html"><abbr title="Andromeda\Apps\Accounts\CryptoAlreadyInitializedException">CryptoAlreadyInitializedException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that crypto cannot be initialized because it already exists</p></div>
+                    <a href="Andromeda/Apps/Accounts/CryptoInitRequiredException.html"><abbr title="Andromeda\Apps\Accounts\CryptoInitRequiredException">CryptoInitRequiredException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the account does not have crypto initialized</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -291,11 +291,6 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Accounts/CryptoNotAllowedException.html"><abbr title="Andromeda\Apps\Accounts\CryptoNotAllowedException">CryptoNotAllowedException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that server-side crypto is not allowed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Accounts/CryptoNotAvailableException.html"><abbr title="Andromeda\Apps\Accounts\CryptoNotAvailableException">CryptoNotAvailableException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that crypto has not been initialized on the required account</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -479,6 +474,36 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
+                    <a href="Andromeda/Apps/Core/AccessLog.html"><abbr title="Andromeda\Apps\Core\AccessLog">AccessLog</abbr></a>    </div>
+                <div class="col-md-6"><p>Core app access log for use without the accounts app installed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Apps/Core/AdminRequiredException.html"><abbr title="Andromeda\Apps\Core\AdminRequiredException">AdminRequiredException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that admin-level access is required</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Apps/Core/CoreApp.html"><abbr title="Andromeda\Apps\Core\CoreApp">CoreApp</abbr></a>    </div>
+                <div class="col-md-6"><p>Server management/info app included with the framework.</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Apps/Core/DatabaseFailException.html"><abbr title="Andromeda\Apps\Core\DatabaseFailException">DatabaseFailException</abbr></a>    </div>
+                <div class="col-md-6"><p>Client error indicating that the database config failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Apps/Core/MailSendFailException.html"><abbr title="Andromeda\Apps\Core\MailSendFailException">MailSendFailException</abbr></a>    </div>
+                <div class="col-md-6"><p>Client error indicating that the mailer config failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Apps/Core/UnknownMailerException.html"><abbr title="Andromeda\Apps\Core\UnknownMailerException">UnknownMailerException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the specified mailer object does not exist</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/AccessLog.html"><abbr title="Andromeda\Apps\Files\AccessLog">AccessLog</abbr></a>    </div>
                 <div class="col-md-6"><p>Access log for the files app</p></div>
             </div>
@@ -524,11 +549,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/FileUtilsTest.html"><abbr title="Andromeda\Apps\Files\FileUtilsTest">FileUtilsTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/FilesApp.html"><abbr title="Andromeda\Apps\Files\FilesApp">FilesApp</abbr></a>    </div>
                 <div class="col-md-6"><p>App that provides user-facing filesystem services.</p></div>
             </div>
@@ -541,11 +561,6 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Filesystem/External.html"><abbr title="Andromeda\Apps\Files\Filesystem\External">External</abbr></a>    </div>
                 <div class="col-md-6"><p>An External Andromeda filesystem is accessible outside Andromeda</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Filesystem/ExternalTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\ExternalTest">ExternalTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -581,11 +596,6 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a>    </div>
                 <div class="col-md-6"><p>Implements an encryption layer on top of the native filesystem.</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Files/Filesystem/NativeCryptTest.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCryptTest">NativeCryptTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1141,41 +1151,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Apps/Server/AccessLog.html"><abbr title="Andromeda\Apps\Server\AccessLog">AccessLog</abbr></a>    </div>
-                <div class="col-md-6"><p>Server app access log for use without the accounts app installed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Server/AuthFailedException.html"><abbr title="Andromeda\Apps\Server\AuthFailedException">AuthFailedException</abbr></a>    </div>
-                <div class="col-md-6"><p>Client error indicating authentication failed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Server/DatabaseFailException.html"><abbr title="Andromeda\Apps\Server\DatabaseFailException">DatabaseFailException</abbr></a>    </div>
-                <div class="col-md-6"><p>Client error indicating that the database config failed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Server/MailSendFailException.html"><abbr title="Andromeda\Apps\Server\MailSendFailException">MailSendFailException</abbr></a>    </div>
-                <div class="col-md-6"><p>Client error indicating that the mailer config failed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Server/ServerApp.html"><abbr title="Andromeda\Apps\Server\ServerApp">ServerApp</abbr></a>    </div>
-                <div class="col-md-6"><p>Server management/info app included with the framework.</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Apps/Server/UnknownMailerException.html"><abbr title="Andromeda\Apps\Server\UnknownMailerException">UnknownMailerException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the specified mailer object does not exist</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Core/AppBase.html"><abbr title="Andromeda\Core\AppBase">AppBase</abbr></a>    </div>
-                <div class="col-md-6"><p>The base class from which apps must inherit</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/AppDependencyException.html"><abbr title="Andromeda\Core\AppDependencyException">AppDependencyException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that an app dependency was not met</p></div>
             </div>
@@ -1183,6 +1158,16 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Core/AppVersionException.html"><abbr title="Andromeda\Core\AppVersionException">AppVersionException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that the app is not compatible with this framework version</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/BaseApp.html"><abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a>    </div>
+                <div class="col-md-6"><p>The base class from which apps must inherit</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/BaseConfig.html"><abbr title="Andromeda\Core\BaseConfig">BaseConfig</abbr></a>    </div>
+                <div class="col-md-6"><p>A singleton object that stores a version field</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1216,11 +1201,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>    </div>
-                <div class="col-md-6"><p>A singleton object that stores a version field</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>    </div>
                 <div class="col-md-6"><p>The base class for representing objects stored in the database.</p></div>
             </div>
@@ -1242,22 +1222,32 @@
                     <div class="row">
                 <div class="col-md-6">
                     <a href="Andromeda/Core/Database/DatabaseConfigException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigException">DatabaseConfigException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the database connection is not configured</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Core/Database/DatabaseConfigFailException.html"><abbr title="Andromeda\Core\Database\DatabaseConfigFailException">DatabaseConfigFailException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that database config failed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Core/Database/DatabaseErrorException.html"><abbr title="Andromeda\Core\Database\DatabaseErrorException">DatabaseErrorException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that PDO failed to execute the given query</p></div>
+                <div class="col-md-6"><p>Base class for database initialization exceptions</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
                     <a href="Andromeda/Core/Database/DatabaseException.html"><abbr title="Andromeda\Core\Database\DatabaseException">DatabaseException</abbr></a>    </div>
-                <div class="col-md-6"><p>Base class representing a database exception</p></div>
+                <div class="col-md-6"><p>Base class representing a run-time database error</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/Database/DatabaseInstallException.html"><abbr title="Andromeda\Core\Database\DatabaseInstallException">DatabaseInstallException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that database install config failed</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/Database/DatabaseInvalidException.html"><abbr title="Andromeda\Core\Database\DatabaseInvalidException">DatabaseInvalidException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the database connection failed to initialize</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/Database/DatabaseMissingException.html"><abbr title="Andromeda\Core\Database\DatabaseMissingException">DatabaseMissingException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that the database configuration is not found</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/Database/DatabaseQueryException.html"><abbr title="Andromeda\Core\Database\DatabaseQueryException">DatabaseQueryException</abbr></a>    </div>
+                <div class="col-md-6"><p>Exception indicating that PDO failed to execute the given query</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1356,11 +1346,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/Database/QueryBuilderTest.html"><abbr title="Andromeda\Core\Database\QueryBuilderTest">QueryBuilderTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/Database/RowWriteFailedException.html"><abbr title="Andromeda\Core\Database\RowWriteFailedException">RowWriteFailedException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that the desired row was not written to</p></div>
             </div>
@@ -1378,11 +1363,6 @@
                 <div class="col-md-6">
                     <a href="Andromeda/Core/DecryptionFailedException.html"><abbr title="Andromeda\Core\DecryptionFailedException">DecryptionFailedException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that decryption failed</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Core/DisableRequiredException.html"><abbr title="Andromeda\Core\DisableRequiredException">DisableRequiredException</abbr></a>    </div>
-                <div class="col-md-6"><p>Exception indicating that the server must be disabled for this request</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1591,11 +1571,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/IOFormat/OutputTest.html"><abbr title="Andromeda\Core\IOFormat\OutputTest">OutputTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>    </div>
                 <div class="col-md-6"><p>Class representing a client input parameter</p></div>
             </div>
@@ -1621,11 +1596,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/IOFormat/SafeParamTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamTest">SafeParamTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that an invalid type was requested</p></div>
             </div>
@@ -1636,18 +1606,14 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/IOFormat/SafeParamsTest.html"><abbr title="Andromeda\Core\IOFormat\SafeParamsTest">SafeParamsTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Core/IOFormat/TestClientException.html"><abbr title="Andromeda\Core\IOFormat\TestClientException">TestClientException</abbr></a>    </div>
-                <div class="col-md-6"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a>    </div>
                 <div class="col-md-6"><p>An exception indicating that the app is not installed and needs to be</p></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="Andromeda/Core/InstalledApp.html"><abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a>    </div>
+                <div class="col-md-6"><p>Describes an app that needs database installation
+and has upgrade scripts for upgrading the database</p></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">
@@ -1736,11 +1702,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/MySingleton.html"><abbr title="Andromeda\Core\MySingleton">MySingleton</abbr></a>    </div>
-                <div class="col-md-6"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/RunContext.html"><abbr title="Andromeda\Core\RunContext">RunContext</abbr></a>    </div>
                 <div class="col-md-6"></div>
             </div>
@@ -1777,12 +1738,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-6">
-                    <a href="Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a>    </div>
-                <div class="col-md-6"><p>Describes an app that stores database versions
-and has upgrade scripts for upgrading the database</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
                     <a href="Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a>    </div>
                 <div class="col-md-6"><p>Exception indicating that the database upgrade scripts must be run</p></div>
             </div>
@@ -1790,11 +1745,6 @@ and has upgrade scripts for upgrading the database</p></div>
                 <div class="col-md-6">
                     <a href="Andromeda/Core/Utilities.html"><abbr title="Andromeda\Core\Utilities">Utilities</abbr></a>    </div>
                 <div class="col-md-6"><p>Abstract with some global static utility functions</p></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-6">
-                    <a href="Andromeda/Core/UtilitiesTest.html"><abbr title="Andromeda\Core\UtilitiesTest">UtilitiesTest</abbr></a>    </div>
-                <div class="col-md-6"></div>
             </div>
                     <div class="row">
                 <div class="col-md-6">

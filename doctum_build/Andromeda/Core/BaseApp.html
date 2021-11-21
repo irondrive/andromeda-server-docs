@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Andromeda\Core\AppBase | Andromeda Server API</title>
+    <title>Andromeda\Core\BaseApp | Andromeda Server API</title>
 
             <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
 
     </head>
 
-    <body id="class" data-name="class:Andromeda_Core_AppBase" data-root-path="../../">
+    <body id="class" data-name="class:Andromeda_Core_BaseApp" data-root-path="../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -63,18 +63,18 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li>AppBase</li>
+                        <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li>BaseApp</li>
             </ol>
         </div>
                 <div id="page-content">
     <div class="page-header">
-        <h1>AppBase    
+        <h1>BaseApp    
             </h1>
     </div>
 
     
     <p>    abstract     class
-    <strong>AppBase</strong>        implements
+    <strong>BaseApp</strong>        implements
         <a href="../../Andromeda/Core/Transactions.html"><abbr title="Andromeda\Core\Transactions">Transactions</abbr></a>
 </p>
 
@@ -236,7 +236,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 24</div>
+        <div class="location">at line 28</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $API)
         </code>
@@ -269,7 +269,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 34</div>
+        <div class="location">at line 38</div>
         <code>    abstract                mixed
     <strong>Run</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -311,7 +311,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getUsage">
-        <div class="location">at line 40</div>
+        <div class="location">at line 44</div>
         <code>    abstract    static            array
     <strong>getUsage</strong>()
         </code>
@@ -343,7 +343,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getName">
-        <div class="location">at line 43</div>
+        <div class="location">at line 47</div>
         <code>    abstract    static            string
     <strong>getName</strong>()
         </code>
@@ -363,7 +363,7 @@
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td><p>the name of the app</p></td>
+            <td><p>the lowercase name of the app</p></td>
         </tr>
     </table>
 
@@ -376,7 +376,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogClass">
-        <div class="location">at line 46</div>
+        <div class="location">at line 50</div>
         <code>        static    protected        string|null
     <strong>getLogClass</strong>()
         </code>
@@ -408,7 +408,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getMetadata">
-        <div class="location">at line 55</div>
+        <div class="location">at line 59</div>
         <code>        static    protected        
     <strong>getMetadata</strong>(string $app, string $key)
         </code>
@@ -446,7 +446,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppRequires">
-        <div class="location">at line 71</div>
+        <div class="location">at line 77</div>
         <code>        static            array
     <strong>getAppRequires</strong>(string $app)
         </code>
@@ -489,7 +489,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppReqVersion">
-        <div class="location">at line 77</div>
+        <div class="location">at line 83</div>
         <code>        static            int
     <strong>getAppReqVersion</strong>(string $app)
         </code>
@@ -532,7 +532,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersion">
-        <div class="location">at line 83</div>
+        <div class="location">at line 89</div>
         <code>        static            string
     <strong>getVersion</strong>()
         </code>
@@ -565,7 +565,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">at line 89</div>
+        <div class="location">at line 95</div>
         <code>                    
     <strong>commit</strong>()
         </code>
@@ -588,7 +588,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">at line 92</div>
+        <div class="location">at line 98</div>
         <code>                    
     <strong>rollback</strong>()
         </code>

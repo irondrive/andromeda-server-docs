@@ -156,7 +156,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_modified">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$modified</td>
@@ -166,7 +166,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_deleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$deleted</td>
@@ -176,7 +176,7 @@
             </tr>
                     <tr>
                 <td class="type" id="property_dbDeleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$dbDeleted</td>
@@ -185,8 +185,18 @@
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
             </tr>
                     <tr>
+                <td class="type" id="property_deleteLater">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$deleteLater</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#property_deleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_created">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$created</td>
@@ -780,17 +790,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_SubSave">SubSave</a>()
-        
-                                            <p><p>Close all open handles when Saving</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubSave">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
                 </div>
                 <div class="col-md-8">
@@ -831,6 +830,17 @@
         
                                             <p><p>Deletes this object from the DB</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteLater">DeleteLater</a>()
+        
+                                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -904,7 +914,7 @@
                     int
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetFeature">GetFeature</a>(string $name)
+                    <a href="#method_GetFeature">GetFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
@@ -915,7 +925,7 @@
                     int|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetFeature">TryGetFeature</a>(string $name)
+                    <a href="#method_TryGetFeature">TryGetFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
@@ -926,7 +936,7 @@
                     bool|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetBoolFeature">TryGetBoolFeature</a>(string $name)
+                    <a href="#method_TryGetBoolFeature">TryGetBoolFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Returns TryGetFeature() but as a bool</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
@@ -1897,7 +1907,7 @@
                     <div class="method-item">
                     <h3 id="method_GetFieldTemplate">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetFieldTemplate">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 33</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 26</div>
         <code>        static            array
     <strong>GetFieldTemplate</strong>()
         </code>
@@ -4375,42 +4385,9 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SubSave">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubSave">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 277</div>
-        <code>            protected        void
-    <strong>SubSave</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Close all open handles when Saving</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_Save">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Save">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 733</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 730</div>
         <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>Save</strong>(bool $onlyMandatory = false)
         </code>
@@ -4453,7 +4430,7 @@
                     <div class="method-item">
                     <h3 id="method_isDeleted">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 770</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 766</div>
         <code>                    bool
     <strong>isDeleted</strong>()
         </code>
@@ -4486,7 +4463,7 @@
                     <div class="method-item">
                     <h3 id="method_NotifyDBDeleted">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDBDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 776</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 772</div>
         <code>                    void
     <strong>NotifyDBDeleted</strong>()
         </code>
@@ -4519,7 +4496,7 @@
                     <div class="method-item">
                     <h3 id="method_Delete">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 779</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 775</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -4550,9 +4527,42 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_DeleteLater">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 801</div>
+        <code>                    void
+    <strong>DeleteLater</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isCreated">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isCreated">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 806</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 812</div>
         <code>                    bool
     <strong>isCreated</strong>()
         </code>
@@ -4845,7 +4855,7 @@
         <div class="location">in <a href="../../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 56</div>
         <code>            protected        int
-    <strong>GetFeature</strong>(string $name)
+    <strong>GetFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4862,6 +4872,11 @@
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -4900,7 +4915,7 @@
         <div class="location">in <a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 63</div>
         <code>            protected        int|null
-    <strong>TryGetFeature</strong>(string $name)
+    <strong>TryGetFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4917,6 +4932,11 @@
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -4955,7 +4975,7 @@
         <div class="location">in <a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 70</div>
         <code>            protected        bool|null
-    <strong>TryGetBoolFeature</strong>(string $name)
+    <strong>TryGetBoolFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4972,6 +4992,11 @@
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -5450,7 +5475,7 @@
                     <div class="method-item">
                     <h3 id="method_GetAccount">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetAccount">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 27</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 20</div>
         <code>    abstract        protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
     <strong>GetAccount</strong>()
         </code>
@@ -5516,7 +5541,7 @@
                     <div class="method-item">
                     <h3 id="method_LoadByAccount">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_LoadByAccount">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 30</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 23</div>
         <code>    abstract    static            array
     <strong>LoadByAccount</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
@@ -8336,7 +8361,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_getEncryptedFields">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_getEncryptedFields">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 24</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 17</div>
         <code>    abstract    static    protected        array
     <strong>getEncryptedFields</strong>()
         </code>
@@ -8369,7 +8394,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_isFieldEncrypted">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_isFieldEncrypted">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 42</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 35</div>
         <code>            protected        bool
     <strong>isFieldEncrypted</strong>($field)
         </code>
@@ -8412,7 +8437,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_isCryptoAvailable">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_isCryptoAvailable">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 46</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 39</div>
         <code>            protected        bool
     <strong>isCryptoAvailable</strong>()
         </code>
@@ -8445,7 +8470,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_GetEncryptedScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetEncryptedScalar">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 62</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 55</div>
         <code>            protected        string
     <strong>GetEncryptedScalar</strong>(string $field)
         </code>
@@ -8509,7 +8534,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_RequireCrypto">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_RequireCrypto">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 70</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 63</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>RequireCrypto</strong>()
         </code>
@@ -8542,7 +8567,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_TryGetEncryptedScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_TryGetEncryptedScalar">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 90</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 78</div>
         <code>            protected        string|null
     <strong>TryGetEncryptedScalar</strong>(string $field)
         </code>
@@ -8576,15 +8601,6 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
     </table>
 
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../../Andromeda/Apps/Accounts/CrptoNotUnlockedException.html"><abbr title="Andromeda\Apps\Accounts\CrptoNotUnlockedException">CrptoNotUnlockedException</abbr></a></td>
-                <td><p>if account crypto is not unlocked</p></td>
-            </tr>
-            </table>
-
             
             
                     </div>
@@ -8594,7 +8610,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_SetEncryptedScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncryptedScalar">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 116</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 103</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
     <strong>SetEncryptedScalar</strong>(string $field, string|null $value, bool|null $fieldcrypt = null)
         </code>
@@ -8638,15 +8654,6 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
     </table>
 
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../../Andromeda/Apps/Accounts/CryptoNotAvailableException.html"><abbr title="Andromeda\Apps\Accounts\CryptoNotAvailableException">CryptoNotAvailableException</abbr></a></td>
-                <td><p>if account crypto is not unlocked</p></td>
-            </tr>
-            </table>
-
             
             
                     </div>
@@ -8656,7 +8663,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_SetEncrypted">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncrypted">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 142</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 129</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
     <strong>SetEncrypted</strong>(bool $crypt)
         </code>
@@ -8699,7 +8706,7 @@ if $activate and supported, add <code>{freespace:int}</code></p></td>
                     <div class="method-item">
                     <h3 id="method_DecryptAccount">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_DecryptAccount">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 158</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 145</div>
         <code>        static            void
     <strong>DecryptAccount</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>

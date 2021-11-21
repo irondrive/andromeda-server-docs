@@ -250,36 +250,6 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
-                </div>
-                <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
-        
-                                            <p><p>The primary authentication routine</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;<a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_Authenticate">Authenticate</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
-        
-                                            <p><p>Returns a new authenticator object</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;<a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>|null
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_TryAuthenticate">TryAuthenticate</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
-        
-                                            <p><p>Returns a new authenticator object, or null if it fails (instead of exceptions)</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8">
@@ -300,12 +270,33 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;<a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryAuthenticate">TryAuthenticate</a>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+        
+                                            <p><p>The primary authentication routine</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_RequireAdmin">RequireAdmin</a>()
         
-                                            <p><p>Requires that the real user is an administrator</p></p>                </div>
+                                            <p><p>Requires that the user is an administrator</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -385,9 +376,10 @@
                     static&nbsp;void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryRequireCryptoFor">TryRequireCryptoFor</a>(<a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+                    <a href="#method_RequireCryptoFor">RequireCryptoFor</a>(<a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         
-                                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators for $account</p></p>                </div>
+                                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators
+for $account and throws if not unlocked</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -398,7 +390,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_TryGetAccount">
-        <div class="location">at line 62</div>
+        <div class="location">at line 65</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
     <strong>TryGetAccount</strong>()
         </code>
@@ -430,7 +422,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAccount">
-        <div class="location">at line 65</div>
+        <div class="location">at line 68</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>GetAccount</strong>()
         </code>
@@ -462,7 +454,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetRealAccount">
-        <div class="location">at line 75</div>
+        <div class="location">at line 78</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
     <strong>TryGetRealAccount</strong>()
         </code>
@@ -494,7 +486,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetRealAccount">
-        <div class="location">at line 78</div>
+        <div class="location">at line 81</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>GetRealAccount</strong>()
         </code>
@@ -526,7 +518,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_isSudoUser">
-        <div class="location">at line 86</div>
+        <div class="location">at line 89</div>
         <code>                    bool
     <strong>isSudoUser</strong>()
         </code>
@@ -558,7 +550,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetSession">
-        <div class="location">at line 91</div>
+        <div class="location">at line 94</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null
     <strong>TryGetSession</strong>()
         </code>
@@ -590,7 +582,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetSession">
-        <div class="location">at line 94</div>
+        <div class="location">at line 97</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Session.html"><abbr title="Andromeda\Apps\Accounts\Session">Session</abbr></a>
     <strong>GetSession</strong>()
         </code>
@@ -622,7 +614,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetClient">
-        <div class="location">at line 104</div>
+        <div class="location">at line 107</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Client">Client</abbr>|null
     <strong>TryGetClient</strong>()
         </code>
@@ -654,7 +646,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClient">
-        <div class="location">at line 107</div>
+        <div class="location">at line 110</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Client.html"><abbr title="Andromeda\Apps\Accounts\Client">Client</abbr></a>
     <strong>GetClient</strong>()
         </code>
@@ -685,10 +677,113 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_isAdmin">
+        <div class="location">at line 118</div>
+        <code>                    bool
+    <strong>isAdmin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the account used for the request is an admin</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_isRealAdmin">
+        <div class="location">at line 121</div>
+        <code>                    bool
+    <strong>isRealAdmin</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the real account used for the request is an admin</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 126</div>
+        <div class="location">at line 127</div>
         <code>                private    
-    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
+    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+                <td>$database</td>
+                <td><p>database reference</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td><p>the input containing auth details</p></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryAuthenticate">
+        <div class="location">at line 146</div>
+        <code>        static            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>|null
+    <strong>TryAuthenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
         </code>
     </h3>
     <div class="details">    
@@ -721,6 +816,15 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>|null</td>
+            <td></td>
+        </tr>
+    </table>
+
             
                             <h4>Exceptions</h4>
 
@@ -746,200 +850,8 @@ Note that only a session must be provided, not the client that owns it.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_Authenticate">
-        <div class="location">at line 188</div>
-        <code>        static            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
-    <strong>Authenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns a new authenticator object</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
-                <td>$database</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
-                <td>$input</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></td>
-                <td>$interface</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html#method___construct">
-<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::__construct</a>
-                                    </td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_TryAuthenticate">
-        <div class="location">at line 197</div>
-        <code>        static            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>|null
-    <strong>TryAuthenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns a new authenticator object, or null if it fails (instead of exceptions)</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
-                <td>$database</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
-                <td>$input</td>
-                <td></td>
-            </tr>
-                    <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a></td>
-                <td>$interface</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>|null</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <a href="../../../Andromeda/Apps/Accounts/Authenticator.html#method___construct">
-<abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>::__construct</a>
-                                    </td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_isAdmin">
-        <div class="location">at line 204</div>
-        <code>                    bool
-    <strong>isAdmin</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns true if the account used for the request is an admin</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_isRealAdmin">
-        <div class="location">at line 207</div>
-        <code>                    bool
-    <strong>isRealAdmin</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns true if the real account used for the request is an admin</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_RequireAdmin">
-        <div class="location">at line 213</div>
+        <div class="location">at line 210</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>RequireAdmin</strong>()
         </code>
@@ -949,7 +861,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Requires that the real user is an administrator</p></p>                        
+                            <p><p>Requires that the user is an administrator</p></p>                        
         </div>
         <div class="tags">
             
@@ -980,7 +892,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryRequireTwoFactor">
-        <div class="location">at line 223</div>
+        <div class="location">at line 220</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>TryRequireTwoFactor</strong>()
         </code>
@@ -1025,7 +937,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_StaticTryRequireTwoFactor">
-        <div class="location">at line 231</div>
+        <div class="location">at line 228</div>
         <code>        static            void
     <strong>StaticTryRequireTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null $session = null)
         </code>
@@ -1090,7 +1002,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RequirePassword">
-        <div class="location">at line 248</div>
+        <div class="location">at line 245</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>RequirePassword</strong>()
         </code>
@@ -1135,7 +1047,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryRequireCrypto">
-        <div class="location">at line 266</div>
+        <div class="location">at line 263</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>TryRequireCrypto</strong>()
         </code>
@@ -1179,7 +1091,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_StaticTryRequireCrypto">
-        <div class="location">at line 277</div>
+        <div class="location">at line 274</div>
         <code>        static            void
     <strong>StaticTryRequireCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null $session = null)
         </code>
@@ -1243,7 +1155,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RequireCrypto">
-        <div class="location">at line 289</div>
+        <div class="location">at line 286</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/Authenticator.html"><abbr title="Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr></a>
     <strong>RequireCrypto</strong>()
         </code>
@@ -1288,7 +1200,7 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_StaticRequireCrypto">
-        <div class="location">at line 297</div>
+        <div class="location">at line 294</div>
         <code>        static            void
     <strong>StaticRequireCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Session">Session</abbr>|null $session = null)
         </code>
@@ -1352,10 +1264,10 @@ Note that only a session must be provided, not the client that owns it.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_TryRequireCryptoFor">
-        <div class="location">at line 323</div>
+                    <h3 id="method_RequireCryptoFor">
+        <div class="location">at line 328</div>
         <code>        static            void
-    <strong>TryRequireCryptoFor</strong>(<a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
+    <strong>RequireCryptoFor</strong>(<a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
     </h3>
     <div class="details">    
@@ -1363,7 +1275,8 @@ Note that only a session must be provided, not the client that owns it.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators for $account</p></p>                        
+                            <p><p>Runs TryRequireCrypto() on all instantiated authenticators
+for $account and throws if not unlocked</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>

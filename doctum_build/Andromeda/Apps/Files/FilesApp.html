@@ -74,7 +74,7 @@
 
     
     <p>        class
-    <strong>FilesApp</strong>        extends <a href="../../../Andromeda/Core/UpgradableApp.html"><abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a>
+    <strong>FilesApp</strong>        extends <a href="../../../Andromeda/Core/InstalledApp.html"><abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a>
 </p>
 
         
@@ -102,8 +102,8 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
                                     </td>
                 <td>$API</td>
                 <td class="last"><p>Reference to the main API, for convenience</p></td>
-                <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_API">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#property_API">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_metadata">
@@ -112,26 +112,28 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
                                     </td>
                 <td>$metadata</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#property_metadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#property_metadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_config">
-                                                            private                    
+                                        protected                                        
                                                                                 
                                     </td>
                 <td>$config</td>
-                <td class="last"><p>files app config</p></td>
-                <td></td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#property_config">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_database">
-                                                            private                    
+                                        protected                                        
                                                                                 
                                     </td>
                 <td>$database</td>
-                <td class="last"><p>database reference</p></td>
-                <td></td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#property_database">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></td>
             </tr>
             </table>
 
@@ -144,10 +146,11 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
+                    <a href="#method___construct">__construct</a>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $API)
         
                                             <p><p>All apps are constructed when Andromeda runs</p></p>                </div>
-                <div class="col-md-2"></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method___construct">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -156,7 +159,8 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
                 <div class="col-md-8">
                     <a href="#method_Run">Run</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
-                                            <p><p>The main entry point into the app</p></p>                </div>
+                                            <p><p>Checks if the client is running/needs to run install/upgrade
+{@inheritDoc}</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -198,8 +202,8 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
                     <a href="#method_getMetadata">getMetadata</a>(string $app, string $key)
         
                                             <p><p>Loads a metadata for the given app with the given key</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getMetadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -210,8 +214,8 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getAppRequires">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -222,8 +226,8 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -234,8 +238,8 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/AppBase.html#method_getVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -259,14 +263,71 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getDBVersion">getDBVersion</a>()
+                    <a href="#method_getInstallFlags">getInstallFlags</a>()
         
                                             <p class="no-description">No description</p>
                                     </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getInstallFlags">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getUpgradeFlags">getUpgradeFlags</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeFlags">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;array
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getInstallUsage">getInstallUsage</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getInstallUsage">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getConfigClass">getConfigClass</a>()
+        
+                                            <p><p>Return the BaseConfig class for this app</p></p>                </div>
                 <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_allowInstall">allowInstall</a>()
+        
+                                            <p><p>Returns true if the user is allowed to install/upgrade</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_allowInstall">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_getTemplateFolder">getTemplateFolder</a>()
+        
+                                            <p><p>Returns the path of the app's code folder</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getTemplateFolder">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -277,31 +338,31 @@ gathering and limiting for accounts/groups/filesystems.</p></p>        </div>
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_getUpgradeScripts">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeScripts">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
+                    
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_Upgrade">Upgrade</a>()
+                    <a href="#method_Install">Install</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        
+                                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_Install">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_Upgrade">Upgrade</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
                                             <p><p>Iterates over the list of upgrade scripts, running them
 sequentially until the DB is up to date with the code</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_Upgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    bool
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_CheckUpgrade">CheckUpgrade</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        
-                                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/InstalledApp.html#method_Upgrade">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
@@ -371,16 +432,6 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <a href="#method_AuthenticateItemObjAccess">AuthenticateItemObjAccess</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, bool $isParent = false)
         
                                             <p><p>Returns an ItemAccess authenticating the given already-loaded object</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_Install">Install</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        
-                                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -1031,9 +1082,10 @@ sequentially until the DB is up to date with the code</p></p>                </d
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 188</div>
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method___construct">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 126</div>
         <code>                    
-    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
+    <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $API)
         </code>
     </h3>
     <div class="details">    
@@ -1049,7 +1101,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
-                <td>$api</td>
+                <td>$API</td>
                 <td></td>
             </tr>
             </table>
@@ -1064,7 +1116,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 206</div>
+        <div class="location">at line 186</div>
         <code>                    mixed
     <strong>Run</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1074,7 +1126,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             
 
         <div class="method-description">
-                            <p><p>The main entry point into the app</p></p>                        
+                            <p><p>Checks if the client is running/needs to run install/upgrade
+{@inheritDoc}</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1098,13 +1151,26 @@ sequentially until the DB is up to date with the code</p></p>                </d
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/InstallRequiredException.html"><abbr title="Andromeda\Core\InstallRequiredException">InstallRequiredException</abbr></a></td>
+                <td><p>if the DB is not installed</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
+                <td><p>if the DB version does not match</p></td>
+            </tr>
+            </table>
+
             
                             <h4>See also</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td>
-                                            \Andromeda\Apps\Files\AppBase::Run()
+                                            \Andromeda\Apps\Files\BaseApp::Run()
                                     </td>
                 <td></td>
             </tr>
@@ -1117,7 +1183,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUsage">
-        <div class="location">at line 115</div>
+        <div class="location">at line 110</div>
         <code>        static            array
     <strong>getUsage</strong>()
         </code>
@@ -1149,7 +1215,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getName">
-        <div class="location">at line 109</div>
+        <div class="location">at line 104</div>
         <code>        static            string
     <strong>getName</strong>()
         </code>
@@ -1169,7 +1235,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     <table class="table table-condensed">
         <tr>
             <td>string</td>
-            <td><p>the name of the app</p></td>
+            <td><p>the lowercase name of the app</p></td>
         </tr>
     </table>
 
@@ -1182,7 +1248,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getLogClass">
-        <div class="location">at line 111</div>
+        <div class="location">at line 106</div>
         <code>        static    protected        string|null
     <strong>getLogClass</strong>()
         </code>
@@ -1214,8 +1280,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getMetadata">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getMetadata">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 55</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getMetadata">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 59</div>
         <code>        static    protected        
     <strong>getMetadata</strong>(string $app, string $key)
         </code>
@@ -1253,8 +1319,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppRequires">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppRequires">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 71</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getAppRequires">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 77</div>
         <code>        static            array
     <strong>getAppRequires</strong>(string $app)
         </code>
@@ -1297,8 +1363,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getAppReqVersion">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getAppReqVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 77</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 83</div>
         <code>        static            int
     <strong>getAppReqVersion</strong>(string $app)
         </code>
@@ -1341,8 +1407,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getVersion">
-        <div class="location">in <a href="../../../Andromeda/Core/AppBase.html#method_getVersion">
-<abbr title="Andromeda\Core\AppBase">AppBase</abbr></a> at line 83</div>
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getVersion">
+<abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 89</div>
         <code>        static            string
     <strong>getVersion</strong>()
         </code>
@@ -1375,7 +1441,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">at line 197</div>
+        <div class="location">at line 178</div>
         <code>                    
     <strong>commit</strong>()
         </code>
@@ -1398,7 +1464,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">at line 198</div>
+        <div class="location">at line 179</div>
         <code>                    
     <strong>rollback</strong>()
         </code>
@@ -1420,10 +1486,11 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getDBVersion">
-        <div class="location">at line 113</div>
-        <code>            protected        <a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a>
-    <strong>getDBVersion</strong>()
+                    <h3 id="method_getInstallFlags">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getInstallFlags">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 107</div>
+        <code>        static    protected        string
+    <strong>getInstallFlags</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -1440,8 +1507,174 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../../Andromeda/Core/DBVersion.html"><abbr title="Andromeda\Core\DBVersion">DBVersion</abbr></a></td>
-            <td><p>that database object that stores the app version</p></td>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getUpgradeFlags">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeFlags">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 108</div>
+        <code>        static    protected        string
+    <strong>getUpgradeFlags</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getInstallUsage">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getInstallUsage">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 110</div>
+        <code>        static    protected        array
+    <strong>getInstallUsage</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>array</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getConfigClass">
+        <div class="location">at line 108</div>
+        <code>        static    protected        string
+    <strong>getConfigClass</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Return the BaseConfig class for this app</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_allowInstall">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_allowInstall">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 144</div>
+        <code>            protected        bool
+    <strong>allowInstall</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns true if the user is allowed to install/upgrade</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_getTemplateFolder">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getTemplateFolder">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 151</div>
+        <code>        static    protected        string
+    <strong>getTemplateFolder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the path of the app's code folder</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td></td>
         </tr>
     </table>
 
@@ -1454,8 +1687,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUpgradeScripts">
-        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_getUpgradeScripts">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 107</div>
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_getUpgradeScripts">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 157</div>
         <code>        static    protected        array
     <strong>getUpgradeScripts</strong>()
         </code>
@@ -1487,11 +1720,45 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_Install">
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_Install">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 194</div>
+        <code>            protected        
+    <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
+                <td>$input</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_Upgrade">
-        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_Upgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 116</div>
-        <code>                    void
-    <strong>Upgrade</strong>()
+        <div class="location">in <a href="../../../Andromeda/Core/InstalledApp.html#method_Upgrade">
+<abbr title="Andromeda\Core\InstalledApp">InstalledApp</abbr></a> at line 207</div>
+        <code>            protected        
+    <strong>Upgrade</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
     </h3>
     <div class="details">    
@@ -1503,69 +1770,18 @@ sequentially until the DB is up to date with the code</p></p>                </d
 sequentially until the DB is up to date with the code</p></p>                        
         </div>
         <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_CheckUpgrade">
-        <div class="location">in <a href="../../../Andromeda/Core/UpgradableApp.html#method_CheckUpgrade">
-<abbr title="Andromeda\Core\UpgradableApp">UpgradableApp</abbr></a> at line 138</div>
-        <code>            protected        bool
-    <strong>CheckUpgrade</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Complements Run() with checking if upgrade is required and running it</p></p>                        
-        </div>
-        <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
                 <td>$input</td>
-                <td><p>the app action input object</p></td>
+                <td></td>
             </tr>
             </table>
 
             
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>bool</td>
-            <td><p>true if the upgrade action was performed</p></td>
-        </tr>
-    </table>
-
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/UpgradeRequiredException.html"><abbr title="Andromeda\Core\UpgradeRequiredException">UpgradeRequiredException</abbr></a></td>
-                <td><p>if the DB version does not match</p></td>
-            </tr>
-            </table>
-
             
             
                     </div>
@@ -1574,7 +1790,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AuthenticateFileAccess">
-        <div class="location">at line 292</div>
+        <div class="location">at line 266</div>
         <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
     <strong>AuthenticateFileAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null)
         </code>
@@ -1631,7 +1847,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AuthenticateFolderAccess">
-        <div class="location">at line 299</div>
+        <div class="location">at line 273</div>
         <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
     <strong>AuthenticateFolderAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null, bool $isParent = false)
         </code>
@@ -1693,7 +1909,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryAuthenticateFolderAccess">
-        <div class="location">at line 306</div>
+        <div class="location">at line 280</div>
         <code>                private    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null
     <strong>TryAuthenticateFolderAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string|null $id = null, bool $isParent = false)
         </code>
@@ -1755,7 +1971,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_UnknownItemException">
-        <div class="location">at line 313</div>
+        <div class="location">at line 287</div>
         <code>        static        private    void
     <strong>UnknownItemException</strong>(string|null $class = null)
         </code>
@@ -1797,7 +2013,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AuthenticateItemAccess">
-        <div class="location">at line 324</div>
+        <div class="location">at line 298</div>
         <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
     <strong>AuthenticateItemAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string $class, string|null $id, bool $isParent = false)
         </code>
@@ -1864,7 +2080,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryAuthenticateItemAccess">
-        <div class="location">at line 343</div>
+        <div class="location">at line 317</div>
         <code>                private    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr>|null
     <strong>TryAuthenticateItemAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, string $class, string|null $id, bool $isParent = false)
         </code>
@@ -1931,7 +2147,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AuthenticateItemObjAccess">
-        <div class="location">at line 363</div>
+        <div class="location">at line 337</div>
         <code>                private    <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
     <strong>AuthenticateItemObjAccess</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog, <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, bool $isParent = false)
         </code>
@@ -1992,59 +2208,8 @@ sequentially until the DB is up to date with the code</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_Install">
-        <div class="location">at line 376</div>
-        <code>                    void
-    <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Installs the app by importing its SQL file and creating config</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a></td>
-                <td>$input</td>
-                <td></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../Andromeda/Core/UnknownActionException.html"><abbr title="Andromeda\Core\UnknownActionException">UnknownActionException</abbr></a></td>
-                <td><p>if config already exists</p></td>
-            </tr>
-            </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_GetConfig">
-        <div class="location">at line 390</div>
+        <div class="location">at line 351</div>
         <code>            protected        array
     <strong>GetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2103,7 +2268,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetConfig">
-        <div class="location">at line 403</div>
+        <div class="location">at line 364</div>
         <code>            protected        array
     <strong>SetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2171,7 +2336,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_UploadFile">
-        <div class="location">at line 419</div>
+        <div class="location">at line 380</div>
         <code>            protected        array
     <strong>UploadFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2248,7 +2413,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DownloadFile">
-        <div class="location">at line 468</div>
+        <div class="location">at line 429</div>
         <code>            protected        void
     <strong>DownloadFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2313,7 +2478,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_WriteToFile">
-        <div class="location">at line 554</div>
+        <div class="location">at line 515</div>
         <code>            protected        array
     <strong>WriteToFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2396,7 +2561,7 @@ The FS will restore the original size of the file but writes within the original
             </div>
                     <div class="method-item">
                     <h3 id="method_TruncateFile">
-        <div class="location">at line 616</div>
+        <div class="location">at line 577</div>
         <code>            protected        array
     <strong>TruncateFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2478,7 +2643,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFileInfo">
-        <div class="location">at line 642</div>
+        <div class="location">at line 603</div>
         <code>            protected        array|null
     <strong>GetFileInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2551,7 +2716,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFolder">
-        <div class="location">at line 663</div>
+        <div class="location">at line 624</div>
         <code>            protected        array|null
     <strong>GetFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2636,7 +2801,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItemByPath">
-        <div class="location">at line 720</div>
+        <div class="location">at line 681</div>
         <code>            protected        array
     <strong>GetItemByPath</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2732,7 +2897,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_EditFileMeta">
-        <div class="location">at line 786</div>
+        <div class="location">at line 747</div>
         <code>            protected        array|null
     <strong>EditFileMeta</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2796,7 +2961,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_EditFolderMeta">
-        <div class="location">at line 795</div>
+        <div class="location">at line 756</div>
         <code>            protected        array|null
     <strong>EditFolderMeta</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2860,7 +3025,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_EditItemMeta">
-        <div class="location">at line 807</div>
+        <div class="location">at line 768</div>
         <code>                private    array|null
     <strong>EditItemMeta</strong>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -2928,7 +3093,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_OwnFile">
-        <div class="location">at line 823</div>
+        <div class="location">at line 784</div>
         <code>            protected        array
     <strong>OwnFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2992,7 +3157,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_OwnFolder">
-        <div class="location">at line 846</div>
+        <div class="location">at line 807</div>
         <code>            protected        array
     <strong>OwnFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3056,7 +3221,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
-        <div class="location">at line 880</div>
+        <div class="location">at line 841</div>
         <code>            protected        array
     <strong>CreateFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3133,7 +3298,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFile">
-        <div class="location">at line 908</div>
+        <div class="location">at line 869</div>
         <code>            protected        void
     <strong>DeleteFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3197,7 +3362,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
-        <div class="location">at line 917</div>
+        <div class="location">at line 878</div>
         <code>            protected        void
     <strong>DeleteFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3261,7 +3426,7 @@ The FS will restore the original size of the file but if the file was shrunk, da
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteItem">
-        <div class="location">at line 933</div>
+        <div class="location">at line 894</div>
         <code>                private    void
     <strong>DeleteItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3338,7 +3503,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFile">
-        <div class="location">at line 957</div>
+        <div class="location">at line 918</div>
         <code>            protected        array
     <strong>RenameFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3409,7 +3574,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
-        <div class="location">at line 968</div>
+        <div class="location">at line 929</div>
         <code>            protected        array
     <strong>RenameFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3480,7 +3645,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameItem">
-        <div class="location">at line 981</div>
+        <div class="location">at line 942</div>
         <code>                private    array
     <strong>RenameItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3555,7 +3720,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFile">
-        <div class="location">at line 1031</div>
+        <div class="location">at line 992</div>
         <code>            protected        array
     <strong>MoveFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3626,7 +3791,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
-        <div class="location">at line 1042</div>
+        <div class="location">at line 1003</div>
         <code>            protected        array
     <strong>MoveFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3697,7 +3862,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveItem">
-        <div class="location">at line 1054</div>
+        <div class="location">at line 1015</div>
         <code>                private    array
     <strong>MoveItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3772,7 +3937,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LikeFile">
-        <div class="location">at line 1090</div>
+        <div class="location">at line 1051</div>
         <code>            protected        array
     <strong>LikeFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3836,7 +4001,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LikeFolder">
-        <div class="location">at line 1099</div>
+        <div class="location">at line 1060</div>
         <code>            protected        array
     <strong>LikeFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3900,7 +4065,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LikeItem">
-        <div class="location">at line 1113</div>
+        <div class="location">at line 1074</div>
         <code>                private    array|null
     <strong>LikeItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3987,7 +4152,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TagFile">
-        <div class="location">at line 1135</div>
+        <div class="location">at line 1096</div>
         <code>            protected        array
     <strong>TagFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4051,7 +4216,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TagFolder">
-        <div class="location">at line 1144</div>
+        <div class="location">at line 1105</div>
         <code>            protected        array
     <strong>TagFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4115,7 +4280,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TagItem">
-        <div class="location">at line 1158</div>
+        <div class="location">at line 1119</div>
         <code>                private    array
     <strong>TagItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4202,7 +4367,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteTag">
-        <div class="location">at line 1185</div>
+        <div class="location">at line 1146</div>
         <code>            protected        void
     <strong>DeleteTag</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4271,7 +4436,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CommentFile">
-        <div class="location">at line 1209</div>
+        <div class="location">at line 1170</div>
         <code>            protected        array
     <strong>CommentFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4335,7 +4500,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CommentFolder">
-        <div class="location">at line 1218</div>
+        <div class="location">at line 1179</div>
         <code>            protected        array
     <strong>CommentFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4399,7 +4564,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CommentItem">
-        <div class="location">at line 1232</div>
+        <div class="location">at line 1193</div>
         <code>                private    array
     <strong>CommentItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4486,7 +4651,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditComment">
-        <div class="location">at line 1258</div>
+        <div class="location">at line 1219</div>
         <code>            protected        array
     <strong>EditComment</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4558,7 +4723,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteComment">
-        <div class="location">at line 1279</div>
+        <div class="location">at line 1240</div>
         <code>            protected        void
     <strong>DeleteComment</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4623,7 +4788,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFileComments">
-        <div class="location">at line 1299</div>
+        <div class="location">at line 1260</div>
         <code>            protected        array
     <strong>GetFileComments</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4687,7 +4852,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFolderComments">
-        <div class="location">at line 1308</div>
+        <div class="location">at line 1269</div>
         <code>            protected        array
     <strong>GetFolderComments</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4751,7 +4916,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItemComments">
-        <div class="location">at line 1320</div>
+        <div class="location">at line 1281</div>
         <code>                private    array
     <strong>GetItemComments</strong>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -4819,7 +4984,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFileLikes">
-        <div class="location">at line 1338</div>
+        <div class="location">at line 1299</div>
         <code>            protected        array
     <strong>GetFileLikes</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4883,7 +5048,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFolderLikes">
-        <div class="location">at line 1347</div>
+        <div class="location">at line 1308</div>
         <code>            protected        array
     <strong>GetFolderLikes</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $auth, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4947,7 +5112,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItemLikes">
-        <div class="location">at line 1359</div>
+        <div class="location">at line 1320</div>
         <code>                private    array
     <strong>GetItemLikes</strong>(<a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a> $access, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -5015,7 +5180,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ShareFile">
-        <div class="location">at line 1377</div>
+        <div class="location">at line 1338</div>
         <code>            protected        array
     <strong>ShareFile</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5079,7 +5244,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ShareFolder">
-        <div class="location">at line 1386</div>
+        <div class="location">at line 1347</div>
         <code>            protected        array
     <strong>ShareFolder</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5143,7 +5308,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ShareItem">
-        <div class="location">at line 1403</div>
+        <div class="location">at line 1364</div>
         <code>                private    array
     <strong>ShareItem</strong>(string $class, string $key, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5242,7 +5407,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditShare">
-        <div class="location">at line 1493</div>
+        <div class="location">at line 1454</div>
         <code>            protected        array
     <strong>EditShare</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5323,7 +5488,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteShare">
-        <div class="location">at line 1516</div>
+        <div class="location">at line 1477</div>
         <code>            protected        void
     <strong>DeleteShare</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5392,7 +5557,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ShareInfo">
-        <div class="location">at line 1545</div>
+        <div class="location">at line 1506</div>
         <code>            protected        array
     <strong>ShareInfo</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5456,7 +5621,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListShares">
-        <div class="location">at line 1562</div>
+        <div class="location">at line 1523</div>
         <code>            protected        array
     <strong>ListShares</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -5524,7 +5689,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListAdopted">
-        <div class="location">at line 1586</div>
+        <div class="location">at line 1547</div>
         <code>            protected        array
     <strong>ListAdopted</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -5599,7 +5764,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilesystem">
-        <div class="location">at line 1607</div>
+        <div class="location">at line 1568</div>
         <code>            protected        array
     <strong>GetFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5676,7 +5841,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilesystems">
-        <div class="location">at line 1635</div>
+        <div class="location">at line 1596</div>
         <code>            protected        array
     <strong>GetFilesystems</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -5744,7 +5909,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFilesystem">
-        <div class="location">at line 1659</div>
+        <div class="location">at line 1620</div>
         <code>            protected        array
     <strong>CreateFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5821,7 +5986,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditFilesystem">
-        <div class="location">at line 1683</div>
+        <div class="location">at line 1644</div>
         <code>            protected        array
     <strong>EditFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -5893,7 +6058,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFilesystem">
-        <div class="location">at line 1704</div>
+        <div class="location">at line 1665</div>
         <code>            protected        void
     <strong>DeleteFilesystem</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -5958,7 +6123,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetLimitObject">
-        <div class="location">at line 1738</div>
+        <div class="location">at line 1699</div>
         <code>                private    array
     <strong>GetLimitObject</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, bool $allowAuto, bool $allowMany, bool $timed)
         </code>
@@ -6041,7 +6206,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetLimits">
-        <div class="location">at line 1801</div>
+        <div class="location">at line 1762</div>
         <code>            protected        array|null
     <strong>GetLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -6109,7 +6274,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTimedLimits">
-        <div class="location">at line 1832</div>
+        <div class="location">at line 1793</div>
         <code>            protected        array
     <strong>GetTimedLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -6177,7 +6342,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTimedStatsFor">
-        <div class="location">at line 1863</div>
+        <div class="location">at line 1824</div>
         <code>            protected        array|null
     <strong>GetTimedStatsFor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -6245,7 +6410,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTimedStatsAt">
-        <div class="location">at line 1890</div>
+        <div class="location">at line 1851</div>
         <code>            protected        array|null
     <strong>GetTimedStatsAt</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -6313,7 +6478,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ConfigLimits">
-        <div class="location">at line 1931</div>
+        <div class="location">at line 1892</div>
         <code>            protected        array
     <strong>ConfigLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -6381,7 +6546,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ConfigTimedLimits">
-        <div class="location">at line 1949</div>
+        <div class="location">at line 1910</div>
         <code>            protected        array
     <strong>ConfigTimedLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -6449,7 +6614,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_PurgeLimits">
-        <div class="location">at line 1965</div>
+        <div class="location">at line 1926</div>
         <code>            protected        void
     <strong>PurgeLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -6505,7 +6670,7 @@ will still be deleted on disk though the database objects will remain.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_PurgeTimedLimits">
-        <div class="location">at line 1981</div>
+        <div class="location">at line 1942</div>
         <code>            protected        void
     <strong>PurgeTimedLimits</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>

@@ -172,7 +172,7 @@ that manages them and provides a way to enumerate them efficiently.</p></p>     
             </tr>
                     <tr>
                 <td class="type" id="property_modified">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$modified</td>
@@ -182,7 +182,7 @@ that manages them and provides a way to enumerate them efficiently.</p></p>     
             </tr>
                     <tr>
                 <td class="type" id="property_deleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$deleted</td>
@@ -192,7 +192,7 @@ that manages them and provides a way to enumerate them efficiently.</p></p>     
             </tr>
                     <tr>
                 <td class="type" id="property_dbDeleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$dbDeleted</td>
@@ -201,23 +201,24 @@ that manages them and provides a way to enumerate them efficiently.</p></p>     
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
             </tr>
                     <tr>
+                <td class="type" id="property_deleteLater">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$deleteLater</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#property_deleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_created">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$created</td>
                 <td class="last"><p>True if this object has been created and not yet saved to DB</p></td>
                 <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#property_created">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
-            </tr>
-                    <tr>
-                <td class="type" id="property_auth_types">
-                    static                                        private                    
-                                                                                
-                                    </td>
-                <td>$auth_types</td>
-                <td class="last"></td>
-                <td></td>
             </tr>
             </table>
 
@@ -754,17 +755,6 @@ that manages them and provides a way to enumerate them efficiently.</p></p>     
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_SubSave">SubSave</a>()
-        
-                                            <p><p>Function to allow subclasses to do something before the object is saved to DB</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_SubSave">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
                 </div>
                 <div class="col-md-8">
@@ -808,6 +798,17 @@ that manages them and provides a way to enumerate them efficiently.</p></p>     
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteLater">DeleteLater</a>()
+        
+                                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8">
@@ -830,12 +831,12 @@ that manages them and provides a way to enumerate them efficiently.</p></p>     
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;void
+                    static&nbsp;array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_RegisterAuthType">RegisterAuthType</a>(string $class)
+                    <a href="#method_getAuthClasses">getAuthClasses</a>()
         
-                                            <p><p>Registers a class that provides external authentication</p></p>                </div>
+                                            <p><p>Returns a map of all external Auth classes as $name=&gt;$class</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -3431,42 +3432,9 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SubSave">
-        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_SubSave">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 726</div>
-        <code>            protected        void
-    <strong>SubSave</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Function to allow subclasses to do something before the object is saved to DB</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_Save">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Save">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 733</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 730</div>
         <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>Save</strong>(bool $onlyMandatory = false)
         </code>
@@ -3509,7 +3477,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_isDeleted">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 770</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 766</div>
         <code>                    bool
     <strong>isDeleted</strong>()
         </code>
@@ -3542,7 +3510,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_NotifyDBDeleted">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDBDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 776</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 772</div>
         <code>                    void
     <strong>NotifyDBDeleted</strong>()
         </code>
@@ -3574,7 +3542,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Delete">
-        <div class="location">at line 107</div>
+        <div class="location">at line 112</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -3605,9 +3573,42 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_DeleteLater">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 801</div>
+        <code>                    void
+    <strong>DeleteLater</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isCreated">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isCreated">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 806</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 812</div>
         <code>                    bool
     <strong>isCreated</strong>()
         </code>
@@ -3640,7 +3641,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_BaseCreate">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_BaseCreate">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 809</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 815</div>
         <code>        static    protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>BaseCreate</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database)
         </code>
@@ -3681,10 +3682,10 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_RegisterAuthType">
-        <div class="location">at line 41</div>
-        <code>        static            void
-    <strong>RegisterAuthType</strong>(string $class)
+                    <h3 id="method_getAuthClasses">
+        <div class="location">at line 39</div>
+        <code>        static        private    array
+    <strong>getAuthClasses</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -3692,25 +3693,15 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Registers a class that provides external authentication</p></p>                        
+                            <p><p>Returns a map of all external Auth classes as $name=&gt;$class</p></p>                        
         </div>
         <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$class</td>
-                <td></td>
-            </tr>
-            </table>
-
             
                             <h4>Return Value</h4>
 
                     <table class="table table-condensed">
         <tr>
-            <td>void</td>
+            <td>array</td>
             <td></td>
         </tr>
     </table>
@@ -3724,7 +3715,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetPropUsage">
-        <div class="location">at line 47</div>
+        <div class="location">at line 50</div>
         <code>        static            string
     <strong>GetPropUsage</strong>()
         </code>
@@ -3756,7 +3747,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetPropUsages">
-        <div class="location">at line 52</div>
+        <div class="location">at line 55</div>
         <code>        static            array
     <strong>GetPropUsages</strong>()
         </code>
@@ -3788,7 +3779,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Create">
-        <div class="location">at line 61</div>
+        <div class="location">at line 64</div>
         <code>        static            <a href="../../../../Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a>
     <strong>Create</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -3835,7 +3826,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Edit">
-        <div class="location">at line 89</div>
+        <div class="location">at line 94</div>
         <code>                    <a href="../../../../Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a>
     <strong>Edit</strong>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -3877,7 +3868,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDefaultGroup">
-        <div class="location">at line 119</div>
+        <div class="location">at line 124</div>
         <code>                    <abbr title="Andromeda\Apps\Accounts\Auth\Andromeda\Apps\Accounts\Group">Group</abbr>|null
     <strong>GetDefaultGroup</strong>()
         </code>
@@ -3909,7 +3900,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDefaultGroupID">
-        <div class="location">at line 122</div>
+        <div class="location">at line 127</div>
         <code>                    string|null
     <strong>GetDefaultGroupID</strong>()
         </code>
@@ -3941,7 +3932,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateDefaultGroup">
-        <div class="location">at line 125</div>
+        <div class="location">at line 130</div>
         <code>                private    <a href="../../../../Andromeda/Apps/Accounts/Auth/Manager.html"><abbr title="Andromeda\Apps\Accounts\Auth\Manager">Manager</abbr></a>
     <strong>CreateDefaultGroup</strong>()
         </code>
@@ -3973,7 +3964,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuthSource">
-        <div class="location">at line 135</div>
+        <div class="location">at line 140</div>
         <code>                    <a href="../../../../Andromeda/Apps/Accounts/Auth/External.html"><abbr title="Andromeda\Apps\Accounts\Auth\External">External</abbr></a>
     <strong>GetAuthSource</strong>()
         </code>
@@ -4005,7 +3996,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuthSourceType">
-        <div class="location">at line 138</div>
+        <div class="location">at line 143</div>
         <code>                    string
     <strong>GetAuthSourceType</strong>()
         </code>
@@ -4037,7 +4028,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetShortSourceType">
-        <div class="location">at line 141</div>
+        <div class="location">at line 146</div>
         <code>                private    string
     <strong>GetShortSourceType</strong>()
         </code>
@@ -4069,7 +4060,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetEnabled">
-        <div class="location">at line 149</div>
+        <div class="location">at line 154</div>
         <code>                    int
     <strong>GetEnabled</strong>()
         </code>
@@ -4101,7 +4092,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDescription">
-        <div class="location">at line 152</div>
+        <div class="location">at line 157</div>
         <code>                    string
     <strong>GetDescription</strong>()
         </code>
@@ -4133,7 +4124,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 165</div>
+        <div class="location">at line 170</div>
         <code>                    array
     <strong>GetClientObject</strong>(bool $admin)
         </code>

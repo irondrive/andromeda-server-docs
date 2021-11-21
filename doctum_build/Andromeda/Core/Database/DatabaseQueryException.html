@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Andromeda\Core\Database\DatabaseErrorException | Andromeda Server API</title>
+    <title>Andromeda\Core\Database\DatabaseQueryException | Andromeda Server API</title>
 
             <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
@@ -19,7 +19,7 @@
 
     </head>
 
-    <body id="class" data-name="class:Andromeda_Core_Database_DatabaseErrorException" data-root-path="../../../">
+    <body id="class" data-name="class:Andromeda_Core_Database_DatabaseQueryException" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
@@ -63,18 +63,18 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/Database.html">Database</a></li><li class="backslash">\</li><li>DatabaseErrorException</li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/Database.html">Database</a></li><li class="backslash">\</li><li>DatabaseQueryException</li>
             </ol>
         </div>
                 <div id="page-content">
     <div class="page-header">
-        <h1>DatabaseErrorException    
+        <h1>DatabaseQueryException    
             </h1>
     </div>
 
     
     <p>        class
-    <strong>DatabaseErrorException</strong>        extends <a href="../../../Andromeda/Core/Database/DatabaseException.html"><abbr title="Andromeda\Core\Database\DatabaseException">DatabaseException</abbr></a>
+    <strong>DatabaseQueryException</strong>        extends <a href="../../../Andromeda/Core/Database/DatabaseException.html"><abbr title="Andromeda\Core\Database\DatabaseException">DatabaseException</abbr></a>
 </p>
 
         
@@ -116,6 +116,18 @@
             <div class="container-fluid underlined">
                     <div class="row">
                 <div class="col-md-2 type">
+                    
+                </div>
+                <div class="col-md-8">
+                    <a href="#method___construct">__construct</a>(string $details = null)
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/BaseException.html#method___construct">
+<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     static&nbsp;<a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
                 </div>
                 <div class="col-md-8">
@@ -127,15 +139,14 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    
+                    static&nbsp;<a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(string $details = null)
+                    <a href="#method_Append">Append</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
         
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/ServerException.html#method___construct">
-<abbr title="Andromeda\Core\Exceptions\ServerException">ServerException</abbr></a></small></div>
+                                            <p><p>Copy another exception, converting its type</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/BaseException.html#method_Append">
+<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></small></div>
             </div>
             </div>
 
@@ -144,9 +155,44 @@
 
             <div id="method-details">
                     <div class="method-item">
+                    <h3 id="method___construct">
+        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/BaseException.html#method___construct">
+<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 8</div>
+        <code>                    
+    <strong>__construct</strong>(string $details = null)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$details</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_Copy">
         <div class="location">in <a href="../../../Andromeda/Core/Exceptions/BaseException.html#method_Copy">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 9</div>
+<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 14</div>
         <code>        static            <a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
     <strong>Copy</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
         </code>
@@ -187,11 +233,11 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method___construct">
-        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/ServerException.html#method___construct">
-<abbr title="Andromeda\Core\Exceptions\ServerException">ServerException</abbr></a> at line 48</div>
-        <code>                    
-    <strong>__construct</strong>(string $details = null)
+                    <h3 id="method_Append">
+        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/BaseException.html#method_Append">
+<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 20</div>
+        <code>        static            <a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
+    <strong>Append</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
         </code>
     </h3>
     <div class="details">    
@@ -199,21 +245,29 @@
             
 
         <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
+                            <p><p>Copy another exception, converting its type</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
-                <td>$details</td>
+                <td><a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a></td>
+                <td>$e</td>
                 <td></td>
             </tr>
             </table>
 
             
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
             
             
             

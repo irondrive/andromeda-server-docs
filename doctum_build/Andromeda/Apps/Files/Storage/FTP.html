@@ -171,7 +171,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </tr>
                     <tr>
                 <td class="type" id="property_modified">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$modified</td>
@@ -181,7 +181,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </tr>
                     <tr>
                 <td class="type" id="property_deleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$deleted</td>
@@ -191,7 +191,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </tr>
                     <tr>
                 <td class="type" id="property_dbDeleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$dbDeleted</td>
@@ -200,8 +200,18 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
             </tr>
                     <tr>
+                <td class="type" id="property_deleteLater">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$deleteLater</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#property_deleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_created">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$created</td>
@@ -803,17 +813,6 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_SubSave">SubSave</a>()
-        
-                                            <p><p>Close all open handles when Saving</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubSave">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
                 </div>
                 <div class="col-md-8">
@@ -854,6 +853,17 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
         
                                             <p><p>Deletes this object from the DB</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteLater">DeleteLater</a>()
+        
+                                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -927,7 +937,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     int
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetFeature">GetFeature</a>(string $name)
+                    <a href="#method_GetFeature">GetFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
@@ -938,7 +948,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     int|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetFeature">TryGetFeature</a>(string $name)
+                    <a href="#method_TryGetFeature">TryGetFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
@@ -949,7 +959,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     bool|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetBoolFeature">TryGetBoolFeature</a>(string $name)
+                    <a href="#method_TryGetBoolFeature">TryGetBoolFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Returns TryGetFeature() but as a bool</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
@@ -1954,7 +1964,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_GetFieldTemplate">
-        <div class="location">at line 42</div>
+        <div class="location">at line 40</div>
         <code>        static            array
     <strong>GetFieldTemplate</strong>()
         </code>
@@ -4401,7 +4411,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubConstruct">
-        <div class="location">at line 87</div>
+        <div class="location">at line 85</div>
         <code>                    void
     <strong>SubConstruct</strong>()
         </code>
@@ -4432,42 +4442,9 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SubSave">
-        <div class="location">in <a href="../../../../Andromeda/Apps/Files/Storage/FWrapper.html#method_SubSave">
-<abbr title="Andromeda\Apps\Files\Storage\FWrapper">FWrapper</abbr></a> at line 277</div>
-        <code>            protected        void
-    <strong>SubSave</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Close all open handles when Saving</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_Save">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Save">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 733</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 730</div>
         <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>Save</strong>(bool $onlyMandatory = false)
         </code>
@@ -4510,7 +4487,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_isDeleted">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 770</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 766</div>
         <code>                    bool
     <strong>isDeleted</strong>()
         </code>
@@ -4543,7 +4520,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_NotifyDBDeleted">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDBDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 776</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 772</div>
         <code>                    void
     <strong>NotifyDBDeleted</strong>()
         </code>
@@ -4576,7 +4553,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_Delete">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 779</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 775</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -4607,9 +4584,42 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_DeleteLater">
+        <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 801</div>
+        <code>                    void
+    <strong>DeleteLater</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isCreated">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/BaseObject.html#method_isCreated">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 806</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 812</div>
         <code>                    bool
     <strong>isCreated</strong>()
         </code>
@@ -4902,7 +4912,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
         <div class="location">in <a href="../../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 56</div>
         <code>            protected        int
-    <strong>GetFeature</strong>(string $name)
+    <strong>GetFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4919,6 +4929,11 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -4957,7 +4972,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
         <div class="location">in <a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 63</div>
         <code>            protected        int|null
-    <strong>TryGetFeature</strong>(string $name)
+    <strong>TryGetFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4974,6 +4989,11 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -5012,7 +5032,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
         <div class="location">in <a href="../../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 70</div>
         <code>            protected        bool|null
-    <strong>TryGetBoolFeature</strong>(string $name)
+    <strong>TryGetBoolFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -5029,6 +5049,11 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -5507,7 +5532,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_GetAccount">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetAccount">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 27</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 20</div>
         <code>    abstract        protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Account">Account</abbr>|null
     <strong>GetAccount</strong>()
         </code>
@@ -5573,7 +5598,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_LoadByAccount">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_LoadByAccount">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 30</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 23</div>
         <code>    abstract    static            array
     <strong>LoadByAccount</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
@@ -5620,7 +5645,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 56</div>
+        <div class="location">at line 54</div>
         <code>                    array
     <strong>GetClientObject</strong>(bool $activate = false)
         </code>
@@ -5674,7 +5699,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_GetCreateUsage">
-        <div class="location">at line 65</div>
+        <div class="location">at line 63</div>
         <code>        static            string
     <strong>GetCreateUsage</strong>()
         </code>
@@ -5707,7 +5732,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_Create">
-        <div class="location">at line 67</div>
+        <div class="location">at line 65</div>
         <code>        static            <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Create</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $filesystem)
         </code>
@@ -5760,7 +5785,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_GetEditUsage">
-        <div class="location">at line 75</div>
+        <div class="location">at line 73</div>
         <code>        static            string
     <strong>GetEditUsage</strong>()
         </code>
@@ -5793,7 +5818,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_Edit">
-        <div class="location">at line 77</div>
+        <div class="location">at line 75</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Edit</strong>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -6001,7 +6026,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_Activate">
-        <div class="location">at line 94</div>
+        <div class="location">at line 92</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>Activate</strong>()
         </code>
@@ -6066,7 +6091,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_assertWriteable">
-        <div class="location">at line 154</div>
+        <div class="location">at line 152</div>
         <code>            protected        void
     <strong>assertWriteable</strong>()
         </code>
@@ -6239,7 +6264,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_ItemStat">
-        <div class="location">at line 134</div>
+        <div class="location">at line 132</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Storage/ItemStat.html"><abbr title="Andromeda\Apps\Files\Storage\ItemStat">ItemStat</abbr></a>
     <strong>ItemStat</strong>(string $path)
         </code>
@@ -6324,7 +6349,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_isFolder">
-        <div class="location">at line 142</div>
+        <div class="location">at line 140</div>
         <code>                    bool
     <strong>isFolder</strong>(string $path)
         </code>
@@ -6366,7 +6391,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_isFile">
-        <div class="location">at line 148</div>
+        <div class="location">at line 146</div>
         <code>                    bool
     <strong>isFile</strong>(string $path)
         </code>
@@ -6451,7 +6476,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubReadFolder">
-        <div class="location">at line 156</div>
+        <div class="location">at line 154</div>
         <code>            protected        array
     <strong>SubReadFolder</strong>(string $path)
         </code>
@@ -6536,7 +6561,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubCreateFolder">
-        <div class="location">at line 163</div>
+        <div class="location">at line 161</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubCreateFolder</strong>(string $path)
         </code>
@@ -6621,7 +6646,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubCreateFile">
-        <div class="location">at line 170</div>
+        <div class="location">at line 168</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubCreateFile</strong>(string $path)
         </code>
@@ -6716,7 +6741,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubImportFile">
-        <div class="location">at line 184</div>
+        <div class="location">at line 182</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubImportFile</strong>(string $src, string $dest, bool $istemp)
         </code>
@@ -7028,7 +7053,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubTruncate">
-        <div class="location">at line 223</div>
+        <div class="location">at line 221</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubTruncate</strong>(string $path, int $length)
         </code>
@@ -7128,7 +7153,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubDeleteFile">
-        <div class="location">at line 231</div>
+        <div class="location">at line 229</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubDeleteFile</strong>(string $path)
         </code>
@@ -7213,7 +7238,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubDeleteFolder">
-        <div class="location">at line 240</div>
+        <div class="location">at line 238</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubDeleteFolder</strong>(string $path)
         </code>
@@ -7303,7 +7328,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubRenameFile">
-        <div class="location">at line 247</div>
+        <div class="location">at line 245</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubRenameFile</strong>(string $old, string $new)
         </code>
@@ -7398,7 +7423,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubRenameFolder">
-        <div class="location">at line 256</div>
+        <div class="location">at line 254</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubRenameFolder</strong>(string $old, string $new)
         </code>
@@ -7493,7 +7518,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubMoveFile">
-        <div class="location">at line 263</div>
+        <div class="location">at line 261</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubMoveFile</strong>(string $old, string $new)
         </code>
@@ -7588,7 +7613,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubMoveFolder">
-        <div class="location">at line 272</div>
+        <div class="location">at line 270</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubMoveFolder</strong>(string $old, string $new)
         </code>
@@ -7683,7 +7708,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_SubCopyFile">
-        <div class="location">at line 279</div>
+        <div class="location">at line 277</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>SubCopyFile</strong>(string $old, string $new)
         </code>
@@ -8060,7 +8085,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFullURL">
-        <div class="location">at line 116</div>
+        <div class="location">at line 114</div>
         <code>            protected        string
     <strong>GetFullURL</strong>(string $path = &quot;&quot;)
         </code>
@@ -8102,7 +8127,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_supportsReadWrite">
-        <div class="location">at line 194</div>
+        <div class="location">at line 192</div>
         <code>        static    protected        bool
     <strong>supportsReadWrite</strong>()
         </code>
@@ -8134,7 +8159,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_supportsSeekReuse">
-        <div class="location">at line 195</div>
+        <div class="location">at line 193</div>
         <code>        static    protected        bool
     <strong>supportsSeekReuse</strong>()
         </code>
@@ -8166,7 +8191,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_OpenReadHandle">
-        <div class="location">at line 197</div>
+        <div class="location">at line 195</div>
         <code>            protected        
     <strong>OpenReadHandle</strong>(string $path)
         </code>
@@ -8199,7 +8224,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_OpenWriteHandle">
-        <div class="location">at line 198</div>
+        <div class="location">at line 196</div>
         <code>            protected        
     <strong>OpenWriteHandle</strong>(string $path)
         </code>
@@ -8232,7 +8257,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
             </div>
                     <div class="method-item">
                     <h3 id="method_OpenContext">
-        <div class="location">at line 200</div>
+        <div class="location">at line 198</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/FileContext.html"><abbr title="Andromeda\Apps\Files\Storage\FileContext">FileContext</abbr></a>
     <strong>OpenContext</strong>(string $path, int $offset, bool $isWrite)
         </code>
@@ -8480,7 +8505,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_getEncryptedFields">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_getEncryptedFields">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 24</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 17</div>
         <code>    abstract    static    protected        array
     <strong>getEncryptedFields</strong>()
         </code>
@@ -8513,7 +8538,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_isFieldEncrypted">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_isFieldEncrypted">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 42</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 35</div>
         <code>            protected        bool
     <strong>isFieldEncrypted</strong>($field)
         </code>
@@ -8556,7 +8581,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_isCryptoAvailable">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_isCryptoAvailable">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 46</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 39</div>
         <code>            protected        bool
     <strong>isCryptoAvailable</strong>()
         </code>
@@ -8589,7 +8614,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_GetEncryptedScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_GetEncryptedScalar">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 62</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 55</div>
         <code>            protected        string
     <strong>GetEncryptedScalar</strong>(string $field)
         </code>
@@ -8653,7 +8678,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_RequireCrypto">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_RequireCrypto">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 70</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 63</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>RequireCrypto</strong>()
         </code>
@@ -8686,7 +8711,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_TryGetEncryptedScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_TryGetEncryptedScalar">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 90</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 78</div>
         <code>            protected        string|null
     <strong>TryGetEncryptedScalar</strong>(string $field)
         </code>
@@ -8720,15 +8745,6 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
     </table>
 
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../../Andromeda/Apps/Accounts/CrptoNotUnlockedException.html"><abbr title="Andromeda\Apps\Accounts\CrptoNotUnlockedException">CrptoNotUnlockedException</abbr></a></td>
-                <td><p>if account crypto is not unlocked</p></td>
-            </tr>
-            </table>
-
             
             
                     </div>
@@ -8738,7 +8754,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_SetEncryptedScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncryptedScalar">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 116</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 103</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
     <strong>SetEncryptedScalar</strong>(string $field, string|null $value, bool|null $fieldcrypt = null)
         </code>
@@ -8782,15 +8798,6 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
     </table>
 
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../../../Andromeda/Apps/Accounts/CryptoNotAvailableException.html"><abbr title="Andromeda\Apps\Accounts\CryptoNotAvailableException">CryptoNotAvailableException</abbr></a></td>
-                <td><p>if account crypto is not unlocked</p></td>
-            </tr>
-            </table>
-
             
             
                     </div>
@@ -8800,7 +8807,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_SetEncrypted">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_SetEncrypted">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 142</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 129</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html"><abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a>
     <strong>SetEncrypted</strong>(bool $crypt)
         </code>
@@ -8843,7 +8850,7 @@ Uses the fieldcrypt trait for optionally encrypting server credentials.</p></p> 
                     <div class="method-item">
                     <h3 id="method_DecryptAccount">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/FieldCrypt.html#method_DecryptAccount">
-<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 158</div>
+<abbr title="Andromeda\Apps\Accounts\FieldCrypt">FieldCrypt</abbr></a> at line 145</div>
         <code>        static            void
     <strong>DecryptAccount</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>

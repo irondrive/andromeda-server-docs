@@ -86,19 +86,6 @@
 A Main handles a single request, with an arbitrary number of appruns.</p></p>        </div>
             
         
-            <h2>Constants</h2>    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                                            private
-                                                                                SERVERAPP
-                                    </td>
-                <td class="last">
-                    <p><em><p>the name of the standard server app</p></em></p>
-                    <p></p>
-                </td>
-            </tr>
-            </table>
-
     
             <h2>Properties</h2>
 
@@ -169,7 +156,7 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             </tr>
                     <tr>
                 <td class="type" id="property_apps">
-                                                            private                    <abbr title="Andromeda\Core\array&lt;string,\Andromeda\Core\AppBase&gt;">AppBase&gt;</abbr>
+                                                            private                    <abbr title="Andromeda\Core\array&lt;string,\Andromeda\Core\BaseApp&gt;">BaseApp&gt;</abbr>
                                                                                 
                                     </td>
                 <td>$apps</td>
@@ -239,6 +226,15 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
                 <td class="last"></td>
                 <td></td>
             </tr>
+                    <tr>
+                <td class="type" id="property_dbException">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$dbException</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
             </table>
 
     
@@ -288,22 +284,42 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Andromeda\Core\Andromeda\Core\Config">Config</abbr>|null
+                    bool
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetConfig">GetConfig</a>()
+                    <a href="#method_HasDatabase">HasDatabase</a>()
         
-                                            <p><p>Returns the global config object</p></p>                </div>
+                                            <p><p>Returns true if the global ObjectDatabase instance is valid</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <abbr title="Andromeda\Core\Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>|null
+                    <a href="../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_GetDatabase">GetDatabase</a>()
         
-                                            <p><p>Returns the global ObjectDatabase instance</p></p>                </div>
+                                            <p><p>Returns the global ObjectDatabase instance or throws if not configured</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <abbr title="Andromeda\Core\Andromeda\Core\Config">Config</abbr>|null
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryGetConfig">TryGetConfig</a>()
+        
+                                            <p><p>Returns the global config object or null if not installed</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../Andromeda/Core/Config.html"><abbr title="Andromeda\Core\Config">Config</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetConfig">GetConfig</a>()
+        
+                                            <p><p>Returns the global config object if installed else throws</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -408,16 +424,6 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_requireDisabled">requireDisabled</a>()
-        
-                                            <p><p>Asserts that the server is disabled via config</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     int
                 </div>
                 <div class="col-md-8">
@@ -486,7 +492,7 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 149</div>
+        <div class="location">at line 166</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface, <a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a> $errorman)
         </code>
@@ -538,7 +544,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetTime">
-        <div class="location">at line 111</div>
+        <div class="location">at line 105</div>
         <code>                    float
     <strong>GetTime</strong>()
         </code>
@@ -570,7 +576,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetApps">
-        <div class="location">at line 117</div>
+        <div class="location">at line 111</div>
         <code>                    array
     <strong>GetApps</strong>()
         </code>
@@ -601,10 +607,10 @@ database, loads global config, loads and constructs registered apps</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GetConfig">
-        <div class="location">at line 120</div>
-        <code>                    <abbr title="Andromeda\Core\Andromeda\Core\Config">Config</abbr>|null
-    <strong>GetConfig</strong>()
+                    <h3 id="method_HasDatabase">
+        <div class="location">at line 114</div>
+        <code>                    bool
+    <strong>HasDatabase</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -612,7 +618,71 @@ database, loads global config, loads and constructs registered apps</p></p>
             
 
         <div class="method-description">
-                            <p><p>Returns the global config object</p></p>                        
+                            <p><p>Returns true if the global ObjectDatabase instance is valid</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetDatabase">
+        <div class="location">at line 117</div>
+        <code>                    <a href="../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+    <strong>GetDatabase</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the global ObjectDatabase instance or throws if not configured</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetConfig">
+        <div class="location">at line 128</div>
+        <code>                    <abbr title="Andromeda\Core\Andromeda\Core\Config">Config</abbr>|null
+    <strong>TryGetConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the global config object or null if not installed</p></p>                        
         </div>
         <div class="tags">
             
@@ -633,10 +703,10 @@ database, loads global config, loads and constructs registered apps</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GetDatabase">
-        <div class="location">at line 123</div>
-        <code>                    <abbr title="Andromeda\Core\Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>|null
-    <strong>GetDatabase</strong>()
+                    <h3 id="method_GetConfig">
+        <div class="location">at line 131</div>
+        <code>                    <a href="../../Andromeda/Core/Config.html"><abbr title="Andromeda\Core\Config">Config</abbr></a>
+    <strong>GetConfig</strong>()
         </code>
     </h3>
     <div class="details">    
@@ -644,7 +714,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             
 
         <div class="method-description">
-                            <p><p>Returns the global ObjectDatabase instance</p></p>                        
+                            <p><p>Returns the global config object if installed else throws</p></p>                        
         </div>
         <div class="tags">
             
@@ -652,7 +722,7 @@ database, loads global config, loads and constructs registered apps</p></p>
 
                     <table class="table table-condensed">
         <tr>
-            <td><abbr title="Andromeda\Core\Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr>|null</td>
+            <td><a href="../../Andromeda/Core/Config.html"><abbr title="Andromeda\Core\Config">Config</abbr></a></td>
             <td></td>
         </tr>
     </table>
@@ -666,7 +736,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetInterface">
-        <div class="location">at line 126</div>
+        <div class="location">at line 144</div>
         <code>                    <a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a>
     <strong>GetInterface</strong>()
         </code>
@@ -698,7 +768,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetErrorManager">
-        <div class="location">at line 129</div>
+        <div class="location">at line 147</div>
         <code>                    <a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a>
     <strong>GetErrorManager</strong>()
         </code>
@@ -730,7 +800,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetContext">
-        <div class="location">at line 132</div>
+        <div class="location">at line 150</div>
         <code>                    <abbr title="Andromeda\Core\Andromeda\Core\RunContext">RunContext</abbr>|null
     <strong>GetContext</strong>()
         </code>
@@ -762,7 +832,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadApp">
-        <div class="location">at line 208</div>
+        <div class="location">at line 226</div>
         <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
     <strong>LoadApp</strong>(string $app)
         </code>
@@ -804,7 +874,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 243</div>
+        <div class="location">at line 254</div>
         <code>                    
     <strong>Run</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -848,7 +918,7 @@ other apps but should always do so via the API, not directly to the app</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RunRemote">
-        <div class="location">at line 288</div>
+        <div class="location">at line 296</div>
         <code>                    
     <strong>RunRemote</strong>(string $url, <a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -899,7 +969,7 @@ commit before we get the response to this remote call.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">at line 301</div>
+        <div class="location">at line 309</div>
         <code>                    void
     <strong>rollback</strong>(<abbr title="Andromeda\Core\Throwable">Throwable</abbr>|null $e = null)
         </code>
@@ -941,7 +1011,7 @@ commit before we get the response to this remote call.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">at line 336</div>
+        <div class="location">at line 344</div>
         <code>                    void
     <strong>commit</strong>()
         </code>
@@ -983,7 +1053,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_innerCommit">
-        <div class="location">at line 370</div>
+        <div class="location">at line 378</div>
         <code>                private    void
     <strong>innerCommit</strong>(bool $apps)
         </code>
@@ -1025,7 +1095,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isEnabled">
-        <div class="location">at line 380</div>
+        <div class="location">at line 388</div>
         <code>                private    bool
     <strong>isEnabled</strong>()
         </code>
@@ -1056,49 +1126,8 @@ instead if the request was specified as a dry run.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_requireDisabled">
-        <div class="location">at line 391</div>
-        <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
-    <strong>requireDisabled</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Asserts that the server is disabled via config</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../Andromeda/Core/DisableRequiredException.html"><abbr title="Andromeda\Core\DisableRequiredException">DisableRequiredException</abbr></a></td>
-                <td><p>if not</p></td>
-            </tr>
-            </table>
-
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_GetDebugLevel">
-        <div class="location">at line 400</div>
+        <div class="location">at line 396</div>
         <code>                    int
     <strong>GetDebugLevel</strong>()
         </code>
@@ -1130,7 +1159,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_FinalizeOutput">
-        <div class="location">at line 419</div>
+        <div class="location">at line 415</div>
         <code>                    void
     <strong>FinalizeOutput</strong>(<a href="../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> $output, bool $isError = false)
         </code>

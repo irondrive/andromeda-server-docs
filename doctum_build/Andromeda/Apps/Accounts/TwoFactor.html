@@ -162,7 +162,7 @@ If account crypto is available, the secret is stored encrypted in the database.<
             </tr>
                     <tr>
                 <td class="type" id="property_modified">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$modified</td>
@@ -172,7 +172,7 @@ If account crypto is available, the secret is stored encrypted in the database.<
             </tr>
                     <tr>
                 <td class="type" id="property_deleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$deleted</td>
@@ -182,7 +182,7 @@ If account crypto is available, the secret is stored encrypted in the database.<
             </tr>
                     <tr>
                 <td class="type" id="property_dbDeleted">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$dbDeleted</td>
@@ -191,8 +191,18 @@ If account crypto is available, the secret is stored encrypted in the database.<
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
             </tr>
                     <tr>
+                <td class="type" id="property_deleteLater">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$deleteLater</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#property_deleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></td>
+            </tr>
+                    <tr>
                 <td class="type" id="property_created">
-                                        protected                                        
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$created</td>
@@ -735,17 +745,6 @@ If account crypto is available, the secret is stored encrypted in the database.<
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    void
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_SubSave">SubSave</a>()
-        
-                                            <p><p>Function to allow subclasses to do something before the object is saved to DB</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_SubSave">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
                 </div>
                 <div class="col-md-8">
@@ -786,6 +785,17 @@ If account crypto is available, the secret is stored encrypted in the database.<
         
                                             <p><p>Deletes this object from the DB</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    void
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_DeleteLater">DeleteLater</a>()
+        
+                                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -859,7 +869,7 @@ If account crypto is available, the secret is stored encrypted in the database.<
                     int
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetFeature">GetFeature</a>(string $name)
+                    <a href="#method_GetFeature">GetFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
@@ -870,7 +880,7 @@ If account crypto is available, the secret is stored encrypted in the database.<
                     int|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetFeature">TryGetFeature</a>(string $name)
+                    <a href="#method_TryGetFeature">TryGetFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
@@ -881,7 +891,7 @@ If account crypto is available, the secret is stored encrypted in the database.<
                     bool|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetBoolFeature">TryGetBoolFeature</a>(string $name)
+                    <a href="#method_TryGetBoolFeature">TryGetBoolFeature</a>(string $name, bool $allowTemp = true)
         
                                             <p><p>Returns TryGetFeature() but as a bool</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
@@ -3592,42 +3602,9 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SubSave">
-        <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_SubSave">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 726</div>
-        <code>            protected        void
-    <strong>SubSave</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Function to allow subclasses to do something before the object is saved to DB</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>void</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_Save">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_Save">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 733</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 730</div>
         <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>Save</strong>(bool $onlyMandatory = false)
         </code>
@@ -3670,7 +3647,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_isDeleted">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_isDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 770</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 766</div>
         <code>                    bool
     <strong>isDeleted</strong>()
         </code>
@@ -3703,7 +3680,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_NotifyDBDeleted">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDBDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 776</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 772</div>
         <code>                    void
     <strong>NotifyDBDeleted</strong>()
         </code>
@@ -3736,7 +3713,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_Delete">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 779</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 775</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -3767,9 +3744,42 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_DeleteLater">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 801</div>
+        <code>                    void
+    <strong>DeleteLater</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Schedules the object to be deleted when Save() is called</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>void</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isCreated">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_isCreated">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 806</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 812</div>
         <code>                    bool
     <strong>isCreated</strong>()
         </code>
@@ -4062,7 +4072,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 56</div>
         <code>            protected        int
-    <strong>GetFeature</strong>(string $name)
+    <strong>GetFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4079,6 +4089,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -4117,7 +4132,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 63</div>
         <code>            protected        int|null
-    <strong>TryGetFeature</strong>(string $name)
+    <strong>TryGetFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4134,6 +4149,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -4172,7 +4192,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 70</div>
         <code>            protected        bool|null
-    <strong>TryGetBoolFeature</strong>(string $name)
+    <strong>TryGetBoolFeature</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4189,6 +4209,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <tr>
                 <td>string</td>
                 <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
                 <td></td>
             </tr>
             </table>
@@ -4930,7 +4955,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetSecret">
-        <div class="location">at line 119</div>
+        <div class="location">at line 114</div>
         <code>                private    string
     <strong>GetSecret</strong>()
         </code>
@@ -4962,7 +4987,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_InitializeCrypto">
-        <div class="location">at line 133</div>
+        <div class="location">at line 128</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/TwoFactor.html"><abbr title="Andromeda\Apps\Accounts\TwoFactor">TwoFactor</abbr></a>
     <strong>InitializeCrypto</strong>()
         </code>
@@ -4994,7 +5019,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DestroyCrypto">
-        <div class="location">at line 143</div>
+        <div class="location">at line 138</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/TwoFactor.html"><abbr title="Andromeda\Apps\Accounts\TwoFactor">TwoFactor</abbr></a>
     <strong>DestroyCrypto</strong>()
         </code>
@@ -5026,7 +5051,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CheckCode">
-        <div class="location">at line 149</div>
+        <div class="location">at line 144</div>
         <code>                    bool
     <strong>CheckCode</strong>(string $code)
         </code>
@@ -5068,7 +5093,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetURL">
-        <div class="location">at line 170</div>
+        <div class="location">at line 165</div>
         <code>                    string
     <strong>GetURL</strong>()
         </code>
@@ -5100,7 +5125,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 183</div>
+        <div class="location">at line 178</div>
         <code>                    array
     <strong>GetClientObject</strong>(bool $secret = false)
         </code>
