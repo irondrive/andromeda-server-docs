@@ -255,7 +255,8 @@ This is used to provide methods of unlocking crypto in a request other than havi
                 <div class="col-md-8">
                     <a href="#method_GetObjClass">GetObjClass</a>(array $row)
         
-                                            <p><p>Returns the name of the class that should be used for a given DB row (cast up at load)</p></p>                </div>
+                                            <p class="no-description">No description</p>
+                                    </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetObjClass">
 <abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></small></div>
             </div>
@@ -737,7 +738,7 @@ This is used to provide methods of unlocking crypto in a request other than havi
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_AddField">AddField</a>(string $key, $field)
+                    <a href="#method_AddField">AddField</a>(string $key, <a href="../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> $field)
         
                                             <p><p>Adds the given field object to the correct internal array</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/BaseObject.html#method_AddField">
@@ -880,10 +881,10 @@ This is used to provide methods of unlocking crypto in a request other than havi
                     int
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetFeature">GetFeature</a>(string $name, bool $allowTemp = true)
+                    <a href="#method_GetFeatureInt">GetFeatureInt</a>(string $name, bool $allowTemp = true)
         
-                                            <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
+                                            <p><p>Gets the value of the given feature field as an int (used for config)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeatureInt">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -891,10 +892,21 @@ This is used to provide methods of unlocking crypto in a request other than havi
                     int|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetFeature">TryGetFeature</a>(string $name, bool $allowTemp = true)
+                    <a href="#method_TryGetFeatureInt">TryGetFeatureInt</a>(string $name, bool $allowTemp = true)
         
-                                            <p><p>Gets the value of the given feature field (used for config)</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
+                                            <p><p>Gets the value of the given feature field as an int (used for config)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeatureInt">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFeatureBool">GetFeatureBool</a>(string $name, bool $allowTemp = true)
+        
+                                            <p><p>Gets the value of the given feature field as a bool (used for config)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeatureBool">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -902,10 +914,10 @@ This is used to provide methods of unlocking crypto in a request other than havi
                     bool|null
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_TryGetBoolFeature">TryGetBoolFeature</a>(string $name, bool $allowTemp = true)
+                    <a href="#method_TryGetFeatureBool">TryGetFeatureBool</a>(string $name, bool $allowTemp = true)
         
-                                            <p><p>Returns TryGetFeature() but as a bool</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
+                                            <p><p>Gets the value of the given feature field as a bool (used for config)</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeatureBool">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -913,10 +925,21 @@ This is used to provide methods of unlocking crypto in a request other than havi
                     <a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_SetFeature">SetFeature</a>(string $name, int|null $value, bool $temp = false)
+                    <a href="#method_SetFeatureInt">SetFeatureInt</a>(string $name, int|null $value, bool $temp = false)
         
-                                            <p><p>Sets the value of the given feature field to the given value</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetFeature">
+                                            <p><p>Sets the value of the given feature field to the given (?int) value</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetFeatureInt">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SetFeatureBool">SetFeatureBool</a>(string $name, bool|null $value, bool $temp = false)
+        
+                                            <p><p>Sets the value of the given feature field to the given (?bool) value</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetFeatureBool">
 <abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -1049,17 +1072,6 @@ This is used to provide methods of unlocking crypto in a request other than havi
         
                                             <p><p>Sets the auth key to the given value and hashes it</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_ChangeAuthKey">
-<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a>
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_InformUnlockedKey">InformUnlockedKey</a>(string $key)
-        
-                                            <p><p>Sets the unlocked key in memory to the given value, possibly rehashing if required</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_InformUnlockedKey">
 <abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -1207,7 +1219,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetObjClass">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetObjClass">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 59</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 60</div>
         <code>        static            string
     <strong>GetObjClass</strong>(array $row)
         </code>
@@ -1217,7 +1229,8 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Returns the name of the class that should be used for a given DB row (cast up at load)</p></p>                <p><p>Defaults to the actual class used. Allows polymorphism on DB rows based on properties</p></p>        
+                            <p class="no-description">No description</p>
+                    
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -1250,7 +1263,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_CountByQuery">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_CountByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 67</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 68</div>
         <code>        static            int
     <strong>CountByQuery</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -1298,7 +1311,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_LoadByQuery">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_LoadByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 78</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 79</div>
         <code>        static            array
     <strong>LoadByQuery</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -1346,7 +1359,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteByQuery">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 91</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 92</div>
         <code>        static            int
     <strong>DeleteByQuery</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -1394,7 +1407,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryLoadUniqueByQuery">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadUniqueByQuery">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 102</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 103</div>
         <code>        static            <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadUniqueByQuery</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -1442,7 +1455,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_NotNull">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_NotNull">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 114</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 116</div>
         <code>        static            <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>NotNull</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $obj)
         </code>
@@ -1471,7 +1484,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td><a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a></td>
-            <td></td>
+            <td><p>object if not null</p></td>
         </tr>
     </table>
 
@@ -1494,7 +1507,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryLoadByID">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadByID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 125</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 127</div>
         <code>        static            <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadByID</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $id)
         </code>
@@ -1542,7 +1555,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteByID">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 135</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 137</div>
         <code>        static            void
     <strong>DeleteByID</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $id)
         </code>
@@ -1590,7 +1603,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_LoadAll">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_LoadAll">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 148</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 150</div>
         <code>        static            array
     <strong>LoadAll</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, int|null $limit = null, int|null $offset = null)
         </code>
@@ -1643,7 +1656,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteAll">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteAll">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 158</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 160</div>
         <code>        static            int
     <strong>DeleteAll</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database)
         </code>
@@ -1686,7 +1699,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_LoadByObjectID">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_LoadByObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 173</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 176</div>
         <code>        static            array
     <strong>LoadByObjectID</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $id, string|null $class = null)
         </code>
@@ -1744,7 +1757,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteByObjectID">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 189</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 193</div>
         <code>        static            int
     <strong>DeleteByObjectID</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $id, string|null $class = null)
         </code>
@@ -1802,7 +1815,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryLoadUniqueByKey">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadUniqueByKey">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 202</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 206</div>
         <code>        static    protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadUniqueByKey</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $key)
         </code>
@@ -1855,7 +1868,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryDeleteByUniqueKey">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryDeleteByUniqueKey">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 214</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 218</div>
         <code>        static    protected        bool
     <strong>TryDeleteByUniqueKey</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, string $key)
         </code>
@@ -1908,7 +1921,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_LoadByObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_LoadByObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 229</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 233</div>
         <code>        static            array
     <strong>LoadByObject</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -1966,7 +1979,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteByObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteByObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 243</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 247</div>
         <code>        static            int
     <strong>DeleteByObject</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -2024,7 +2037,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryLoadUniqueByObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryLoadUniqueByObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 257</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 261</div>
         <code>        static            <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryLoadUniqueByObject</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -2082,7 +2095,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryDeleteByUniqueObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryDeleteByUniqueObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 271</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 275</div>
         <code>        static            bool
     <strong>TryDeleteByUniqueObject</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $isPoly = false)
         </code>
@@ -2140,7 +2153,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_ID">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_ID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 280</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 284</div>
         <code>                    string
     <strong>ID</strong>()
         </code>
@@ -2173,7 +2186,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method___toString">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method___toString">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 283</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 287</div>
         <code>                    string
     <strong>__toString</strong>()
         </code>
@@ -2206,7 +2219,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_toString">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_toString">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 286</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 290</div>
         <code>        static            string|null
     <strong>toString</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $obj)
         </code>
@@ -2249,7 +2262,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetScalar">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetScalar">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 305</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 309</div>
         <code>            protected        mixed
     <strong>GetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -2310,7 +2323,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetScalar">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryGetScalar">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 317</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 322</div>
         <code>            protected        
     <strong>TryGetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -2361,7 +2374,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetScalarDelta">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetScalarDelta">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 330</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 336</div>
         <code>            protected        int
     <strong>GetScalarDelta</strong>(string $field)
         </code>
@@ -2413,7 +2426,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 344</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 351</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>GetObject</strong>(string $field)
         </code>
@@ -2469,7 +2482,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryGetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 356</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 365</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null
     <strong>TryGetObject</strong>(string $field)
         </code>
@@ -2524,7 +2537,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_HasObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_HasObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 369</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 379</div>
         <code>            protected        bool
     <strong>HasObject</strong>(string $field)
         </code>
@@ -2576,7 +2589,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetObjectID">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 383</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 394</div>
         <code>            protected        string
     <strong>GetObjectID</strong>(string $field)
         </code>
@@ -2632,7 +2645,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetObjectID">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryGetObjectID">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 395</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 408</div>
         <code>            protected        string|null
     <strong>TryGetObjectID</strong>(string $field)
         </code>
@@ -2687,7 +2700,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetObjectType">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetObjectType">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 408</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 422</div>
         <code>            protected        string
     <strong>GetObjectType</strong>(string $field)
         </code>
@@ -2739,7 +2752,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetObjectType">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryGetObjectType">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 422</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 438</div>
         <code>            protected        string|null
     <strong>TryGetObjectType</strong>(string $field)
         </code>
@@ -2791,7 +2804,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 434</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 451</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>DeleteObject</strong>(string $field)
         </code>
@@ -2834,7 +2847,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetObjectRefs">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetObjectRefs">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 449</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 467</div>
         <code>            protected        array
     <strong>GetObjectRefs</strong>(string $field, int|null $limit = null, int|null $offset = null)
         </code>
@@ -2896,7 +2909,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_CountObjectRefs">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_CountObjectRefs">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 462</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 481</div>
         <code>            protected        int
     <strong>CountObjectRefs</strong>(string $field)
         </code>
@@ -2948,7 +2961,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetJoinObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetJoinObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 477</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 497</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
     <strong>GetJoinObject</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $obj)
         </code>
@@ -3009,7 +3022,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetJoinObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_TryGetJoinObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 489</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 514</div>
         <code>            protected        <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\StandardObject">StandardObject</abbr>|null
     <strong>TryGetJoinObject</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $obj)
         </code>
@@ -3069,7 +3082,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteObjects">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteObjects">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 501</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 530</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>DeleteObjects</strong>(string $field)
         </code>
@@ -3112,7 +3125,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_SetScalar">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_SetScalar">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 516</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 546</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>SetScalar</strong>(string $field, mixed $value, bool $temp = false)
         </code>
@@ -3174,7 +3187,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeltaCounter">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_DeltaCounter">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 152</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 173</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>DeltaCounter</strong>(string $name, int $delta = 1, bool $ignoreLimit = false)
         </code>
@@ -3247,7 +3260,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_BoolSetObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_BoolSetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 565</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 598</div>
         <code>            protected        bool
     <strong>BoolSetObject</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $object, bool $notification = false)
         </code>
@@ -3309,7 +3322,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_SetObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_SetObject">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 614</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 649</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>SetObject</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>|null $object, bool $notification = false)
         </code>
@@ -3374,7 +3387,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_AddObjectRef">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_AddObjectRef">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 164</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 185</div>
         <code>            protected        bool
     <strong>AddObjectRef</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         </code>
@@ -3448,7 +3461,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_RemoveObjectRef">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_RemoveObjectRef">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 659</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 696</div>
         <code>            protected        bool
     <strong>RemoveObjectRef</strong>(string $field, <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, bool $notification = false)
         </code>
@@ -3510,7 +3523,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method___construct">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 688</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 727</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, array $data)
         </code>
@@ -3549,9 +3562,9 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_AddField">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_AddField">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 711</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 750</div>
         <code>                private    
-    <strong>AddField</strong>(string $key, $field)
+    <strong>AddField</strong>(string $key, <a href="../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> $field)
         </code>
     </h3>
     <div class="details">    
@@ -3571,7 +3584,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                 <td></td>
             </tr>
                     <tr>
-                <td></td>
+                <td><a href="../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a></td>
                 <td>$field</td>
                 <td></td>
             </tr>
@@ -3588,7 +3601,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_SubConstruct">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_SubConstruct">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 723</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 763</div>
         <code>            protected        void
     <strong>SubConstruct</strong>()
         </code>
@@ -3621,7 +3634,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_Save">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_Save">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 730</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 771</div>
         <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>Save</strong>(bool $onlyMandatory = false)
         </code>
@@ -3655,6 +3668,15 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/RowInsertFailedException.html"><abbr title="Andromeda\Core\Database\RowInsertFailedException">RowInsertFailedException</abbr></a></td>
+                <td><p>if the insert fails (duplicate?)</p></td>
+            </tr>
+            </table>
+
             
             
                     </div>
@@ -3664,7 +3686,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_isDeleted">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_isDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 766</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 814</div>
         <code>                    bool
     <strong>isDeleted</strong>()
         </code>
@@ -3697,7 +3719,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_NotifyDBDeleted">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_NotifyDBDeleted">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 772</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 820</div>
         <code>                    void
     <strong>NotifyDBDeleted</strong>()
         </code>
@@ -3730,7 +3752,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_Delete">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_Delete">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 775</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 823</div>
         <code>                    void
     <strong>Delete</strong>()
         </code>
@@ -3763,8 +3785,8 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_DeleteLater">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_DeleteLater">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 801</div>
-        <code>                    void
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 849</div>
+        <code>            protected        void
     <strong>DeleteLater</strong>()
         </code>
     </h3>
@@ -3796,7 +3818,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_isCreated">
         <div class="location">in <a href="../../../Andromeda/Core/Database/BaseObject.html#method_isCreated">
-<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 812</div>
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> at line 855</div>
         <code>                    bool
     <strong>isCreated</strong>()
         </code>
@@ -3987,7 +4009,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_SetDate">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetDate">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 37</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 38</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
     <strong>SetDate</strong>(string $name, float|null $value = null)
         </code>
@@ -4047,7 +4069,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetDateCreated">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetDateCreated">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 43</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 44</div>
         <code>                    float
     <strong>GetDateCreated</strong>()
         </code>
@@ -4078,11 +4100,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GetFeature">
-        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeature">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 56</div>
+                    <h3 id="method_GetFeatureInt">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeatureInt">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 58</div>
         <code>            protected        int
-    <strong>GetFeature</strong>(string $name, bool $allowTemp = true)
+    <strong>GetFeatureInt</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4090,7 +4112,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Gets the value of the given feature field (used for config)</p></p>                        
+                            <p><p>Gets the value of the given feature field as an int (used for config)</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -4138,11 +4160,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_TryGetFeature">
-        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeature">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 63</div>
+                    <h3 id="method_TryGetFeatureInt">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeatureInt">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 65</div>
         <code>            protected        int|null
-    <strong>TryGetFeature</strong>(string $name, bool $allowTemp = true)
+    <strong>TryGetFeatureInt</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4150,7 +4172,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Gets the value of the given feature field (used for config)</p></p>                        
+                            <p><p>Gets the value of the given feature field as an int (used for config)</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -4198,11 +4220,11 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_TryGetBoolFeature">
-        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetBoolFeature">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 70</div>
-        <code>            protected        bool|null
-    <strong>TryGetBoolFeature</strong>(string $name, bool $allowTemp = true)
+                    <h3 id="method_GetFeatureBool">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetFeatureBool">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 75</div>
+        <code>            protected        bool
+    <strong>GetFeatureBool</strong>(string $name, bool $allowTemp = true)
         </code>
     </h3>
     <div class="details">    
@@ -4210,7 +4232,67 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Returns TryGetFeature() but as a bool</p></p>                        
+                            <p><p>Gets the value of the given feature field as a bool (used for config)</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$allowTemp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetScalar">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::GetScalar</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_TryGetFeatureBool">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetFeatureBool">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 82</div>
+        <code>            protected        bool|null
+    <strong>TryGetFeatureBool</strong>(string $name, bool $allowTemp = true)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Gets the value of the given feature field as a bool (used for config)</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -4240,17 +4322,29 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             
             
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/Database/BaseObject.html#method_GetScalar">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::GetScalar</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
             
                     </div>
     </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SetFeature">
-        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetFeature">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 80</div>
+                    <h3 id="method_SetFeatureInt">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetFeatureInt">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 93</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
-    <strong>SetFeature</strong>(string $name, int|null $value, bool $temp = false)
+    <strong>SetFeatureInt</strong>(string $name, int|null $value, bool $temp = false)
         </code>
     </h3>
     <div class="details">    
@@ -4258,7 +4352,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             
 
         <div class="method-description">
-                            <p><p>Sets the value of the given feature field to the given value</p></p>                        
+                            <p><p>Sets the value of the given feature field to the given (?int) value</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -4311,9 +4405,74 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_SetFeatureBool">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetFeatureBool">
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 101</div>
+        <code>            protected        <a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
+    <strong>SetFeatureBool</strong>(string $name, bool|null $value, bool $temp = false)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Sets the value of the given feature field to the given (?bool) value</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$name</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool|null</td>
+                <td>$value</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$temp</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+                            <h4>See also</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>
+                                            <a href="../../../Andromeda/Core/Database/BaseObject.html#method_SetScalar">
+<abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr>::SetScalar</a>
+                                    </td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_isFeatureModified">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_isFeatureModified">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 85</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 105</div>
         <code>            protected        bool
     <strong>isFeatureModified</strong>(string $name)
         </code>
@@ -4356,7 +4515,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetCounter">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetCounter">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 94</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 114</div>
         <code>            protected        int
     <strong>GetCounter</strong>(string $name)
         </code>
@@ -4411,7 +4570,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetCounterLimit">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetCounterLimit">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 101</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 121</div>
         <code>            protected        int
     <strong>GetCounterLimit</strong>(string $name)
         </code>
@@ -4466,7 +4625,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_TryGetCounterLimit">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_TryGetCounterLimit">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 108</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 128</div>
         <code>            protected        int|null
     <strong>TryGetCounterLimit</strong>(string $name)
         </code>
@@ -4521,7 +4680,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_SetCounterLimit">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_SetCounterLimit">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 119</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 140</div>
         <code>            protected        <a href="../../../Andromeda/Core/Database/StandardObject.html"><abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a>
     <strong>SetCounterLimit</strong>(string $name, int|null $value, bool $temp = false)
         </code>
@@ -4586,7 +4745,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_CheckCounter">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_CheckCounter">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 130</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 151</div>
         <code>            protected        bool
     <strong>CheckCounter</strong>(string $name, int $delta = 0, bool $except = true)
         </code>
@@ -4648,7 +4807,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetAllScalars">
         <div class="location">in <a href="../../../Andromeda/Core/Database/StandardObject.html#method_GetAllScalars">
-<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 181</div>
+<abbr title="Andromeda\Core\Database\StandardObject">StandardObject</abbr></a> at line 202</div>
         <code>            protected        array
     <strong>GetAllScalars</strong>(string|null $prefix)
         </code>
@@ -4798,7 +4957,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_GetAuthKey">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_GetAuthKey">
-<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 73</div>
+<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 85</div>
         <code>                    string
     <strong>GetAuthKey</strong>(bool $asHash = false)
         </code>
@@ -4850,7 +5009,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_InitAuthKey">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_InitAuthKey">
-<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 83</div>
+<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 98</div>
         <code>            protected        <a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a>
     <strong>InitAuthKey</strong>()
         </code>
@@ -4883,7 +5042,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <div class="method-item">
                     <h3 id="method_ChangeAuthKey">
         <div class="location">in <a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_ChangeAuthKey">
-<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 93</div>
+<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 108</div>
         <code>            protected        <a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a>
     <strong>ChangeAuthKey</strong>(string|null $key)
         </code>
@@ -4903,49 +5062,6 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                 <td>string|null</td>
                 <td>$key</td>
                 <td><p>new auth key</p></td>
-            </tr>
-            </table>
-
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a></td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_InformUnlockedKey">
-        <div class="location">in <a href="../../../Andromeda/Apps/Accounts/AuthObject.html#method_InformUnlockedKey">
-<abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a> at line 109</div>
-        <code>                private    <a href="../../../Andromeda/Apps/Accounts/AuthObject.html"><abbr title="Andromeda\Apps\Accounts\AuthObject">AuthObject</abbr></a>
-    <strong>InformUnlockedKey</strong>(string $key)
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Sets the unlocked key in memory to the given value, possibly rehashing if required</p></p>                        
-        </div>
-        <div class="tags">
-                            <h4>Parameters</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>string</td>
-                <td>$key</td>
-                <td><p>unlocked key</p></td>
             </tr>
             </table>
 
@@ -5132,7 +5248,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetUnlockedKey">
-        <div class="location">at line 68</div>
+        <div class="location">at line 69</div>
         <code>                    string
     <strong>GetUnlockedKey</strong>()
         </code>
@@ -5163,6 +5279,10 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                 <td><a href="../../../Andromeda/Apps/Accounts/CryptoNotInitializedException.html"><abbr title="Andromeda\Apps\Accounts\CryptoNotInitializedException">CryptoNotInitializedException</abbr></a></td>
                 <td><p>if no key material exists</p></td>
             </tr>
+                    <tr>
+                <td><abbr title="Andromeda\Apps\Accounts\DecryptionFailedException">DecryptionFailedException</abbr></td>
+                <td><p>if decryption fails</p></td>
+            </tr>
             </table>
 
             
@@ -5185,7 +5305,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DestroyCrypto">
-        <div class="location">at line 82</div>
+        <div class="location">at line 83</div>
         <code>                    <a href="../../../Andromeda/Apps/Accounts/KeySource.html"><abbr title="Andromeda\Apps\Accounts\KeySource">KeySource</abbr></a>
     <strong>DestroyCrypto</strong>()
         </code>
@@ -5217,7 +5337,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 95</div>
+        <div class="location">at line 96</div>
         <code>                    array
     <strong>GetClientObject</strong>(bool $secret = false)
         </code>
@@ -5246,7 +5366,7 @@ If a field maps to null, a basic Scalar fieldtype will be used.</p></p>
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td><p><code>{authkey:string}</code> if $secret, else null</p></td>
+            <td><p><code>{authkey:string}</code> if $secret, else empty</p></td>
         </tr>
     </table>
 

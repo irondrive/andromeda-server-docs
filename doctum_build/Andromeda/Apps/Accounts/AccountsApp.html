@@ -215,14 +215,14 @@ sources, and granular per-account/per-group config.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;int
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getAppReqVersion">getAppReqVersion</a>(string $app)
+                    <a href="#method_getAppApiVersion">getAppApiVersion</a>(string $app)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/BaseApp.html#method_getAppApiVersion">
 <abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -362,10 +362,21 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Accounts/Config.html"><abbr title="Andromeda\Apps\Accounts\Config">Config</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetConfig">GetConfig</a>()
+        
+                                            <p class="no-description">No description</p>
+                                    </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetConfig">GetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+                    <a href="#method_RunGetConfig">RunGetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         
                                             <p><p>Gets config for this app</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -375,7 +386,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
                     array
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_SetConfig">SetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+                    <a href="#method_RunSetConfig">RunSetConfig</a>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         
                                             <p><p>Sets config for this app</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -818,7 +829,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 179</div>
+        <div class="location">at line 181</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a> $api)
         </code>
@@ -851,7 +862,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 191</div>
+        <div class="location">at line 193</div>
         <code>                    mixed
     <strong>Run</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -918,7 +929,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getUsage">
-        <div class="location">at line 125</div>
+        <div class="location">at line 127</div>
         <code>        static            array
     <strong>getUsage</strong>()
         </code>
@@ -1097,11 +1108,11 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getAppReqVersion">
-        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+                    <h3 id="method_getAppApiVersion">
+        <div class="location">in <a href="../../../Andromeda/Core/BaseApp.html#method_getAppApiVersion">
 <abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 83</div>
-        <code>        static            int
-    <strong>getAppReqVersion</strong>(string $app)
+        <code>        static            string
+    <strong>getAppApiVersion</strong>(string $app)
         </code>
     </h3>
     <div class="details">    
@@ -1128,8 +1139,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
-            <td><p>Returns the major API version this app is compatible with</p></td>
+            <td>string</td>
+            <td><p>Returns the major.minor API version this app is compatible with</p></td>
         </tr>
     </table>
 
@@ -1224,7 +1235,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_getInstallFlags">
-        <div class="location">at line 123</div>
+        <div class="location">at line 125</div>
         <code>        static    protected        string
     <strong>getInstallFlags</strong>()
         </code>
@@ -1457,7 +1468,7 @@ sequentially until the DB is up to date with the code</p></p>                </d
             </div>
                     <div class="method-item">
                     <h3 id="method_Install">
-        <div class="location">at line 268</div>
+        <div class="location">at line 270</div>
         <code>            protected        
     <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -1544,9 +1555,42 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetConfig">
-        <div class="location">at line 288</div>
+        <div class="location">at line 123</div>
+        <code>            protected        <a href="../../../Andromeda/Apps/Accounts/Config.html"><abbr title="Andromeda\Apps\Accounts\Config">Config</abbr></a>
+    <strong>GetConfig</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p class="no-description">No description</p>
+                    
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Accounts/Config.html"><abbr title="Andromeda\Apps\Accounts\Config">Config</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_RunGetConfig">
+        <div class="location">at line 291</div>
         <code>            protected        array
-    <strong>GetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+    <strong>RunGetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
     </h3>
     <div class="details">    
@@ -1602,10 +1646,10 @@ sequentially until the DB is up to date with the code</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SetConfig">
-        <div class="location">at line 301</div>
+                    <h3 id="method_RunSetConfig">
+        <div class="location">at line 304</div>
         <code>            protected        array
-    <strong>SetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
+    <strong>RunSetConfig</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
     </h3>
     <div class="details">    
@@ -1671,7 +1715,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuthSources">
-        <div class="location">at line 314</div>
+        <div class="location">at line 317</div>
         <code>            protected        array
     <strong>GetAuthSources</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1730,7 +1774,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAccount">
-        <div class="location">at line 331</div>
+        <div class="location">at line 334</div>
         <code>            protected        array|null
     <strong>GetAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1798,7 +1842,7 @@ sequentially until the DB is up to date with the code</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ChangePassword">
-        <div class="location">at line 364</div>
+        <div class="location">at line 367</div>
         <code>            protected        void
     <strong>ChangePassword</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1859,7 +1903,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_capitalizeWords">
-        <div class="location">at line 397</div>
+        <div class="location">at line 400</div>
         <code>        static        private    string
     <strong>capitalizeWords</strong>(string $str)
         </code>
@@ -1901,7 +1945,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_SetFullName">
-        <div class="location">at line 408</div>
+        <div class="location">at line 411</div>
         <code>            protected        void
     <strong>SetFullName</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -1957,7 +2001,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_EmailRecovery">
-        <div class="location">at line 422</div>
+        <div class="location">at line 425</div>
         <code>            protected        void
     <strong>EmailRecovery</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -2012,7 +2056,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_EnableCrypto">
-        <div class="location">at line 458</div>
+        <div class="location">at line 461</div>
         <code>            protected        array|null
     <strong>EnableCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2080,7 +2124,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_DisableCrypto">
-        <div class="location">at line 494</div>
+        <div class="location">at line 497</div>
         <code>            protected        void
     <strong>DisableCrypto</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2136,7 +2180,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateAccount">
-        <div class="location">at line 513</div>
+        <div class="location">at line 516</div>
         <code>            protected        array
     <strong>CreateAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2213,7 +2257,7 @@ If not logged in, this allows account recovery by resetting the password via a r
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateSession">
-        <div class="location">at line 587</div>
+        <div class="location">at line 591</div>
         <code>            protected        array
     <strong>CreateSession</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2322,7 +2366,7 @@ Then finally, the session is created and the client is returned.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateRecoveryKeys">
-        <div class="location">at line 721</div>
+        <div class="location">at line 726</div>
         <code>            protected        array
     <strong>CreateRecoveryKeys</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2390,7 +2434,7 @@ Then finally, the session is created and the client is returned.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateTwoFactor">
-        <div class="location">at line 748</div>
+        <div class="location">at line 753</div>
         <code>            protected        array
     <strong>CreateTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2474,7 +2518,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_VerifyTwoFactor">
-        <div class="location">at line 778</div>
+        <div class="location">at line 783</div>
         <code>            protected        void
     <strong>VerifyTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2530,7 +2574,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateContact">
-        <div class="location">at line 799</div>
+        <div class="location">at line 804</div>
         <code>            protected        array
     <strong>CreateContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2607,7 +2651,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_VerifyContact">
-        <div class="location">at line 822</div>
+        <div class="location">at line 827</div>
         <code>            protected        void
     <strong>VerifyContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -2662,7 +2706,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteAccount">
-        <div class="location">at line 837</div>
+        <div class="location">at line 842</div>
         <code>            protected        void
     <strong>DeleteAccount</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2727,7 +2771,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteSession">
-        <div class="location">at line 862</div>
+        <div class="location">at line 867</div>
         <code>            protected        void
     <strong>DeleteSession</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2792,7 +2836,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteClient">
-        <div class="location">at line 890</div>
+        <div class="location">at line 895</div>
         <code>            protected        void
     <strong>DeleteClient</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2857,7 +2901,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteAllAuth">
-        <div class="location">at line 917</div>
+        <div class="location">at line 922</div>
         <code>            protected        void
     <strong>DeleteAllAuth</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -2913,7 +2957,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteTwoFactor">
-        <div class="location">at line 938</div>
+        <div class="location">at line 943</div>
         <code>            protected        void
     <strong>DeleteTwoFactor</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -2978,7 +3022,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteContact">
-        <div class="location">at line 960</div>
+        <div class="location">at line 965</div>
         <code>            protected        void
     <strong>DeleteContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3047,7 +3091,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditContact">
-        <div class="location">at line 983</div>
+        <div class="location">at line 988</div>
         <code>            protected        array
     <strong>EditContact</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3107,7 +3151,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SearchAccounts">
-        <div class="location">at line 1006</div>
+        <div class="location">at line 1011</div>
         <code>            protected        array
     <strong>SearchAccounts</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3186,7 +3230,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SearchGroups">
-        <div class="location">at line 1033</div>
+        <div class="location">at line 1037</div>
         <code>            protected        array
     <strong>SearchGroups</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3265,7 +3309,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListAccounts">
-        <div class="location">at line 1058</div>
+        <div class="location">at line 1061</div>
         <code>            protected        array
     <strong>ListAccounts</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3333,7 +3377,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ListGroups">
-        <div class="location">at line 1079</div>
+        <div class="location">at line 1082</div>
         <code>            protected        array
     <strong>ListGroups</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3401,7 +3445,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateGroup">
-        <div class="location">at line 1098</div>
+        <div class="location">at line 1101</div>
         <code>            protected        array
     <strong>CreateGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3478,7 +3522,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditGroup">
-        <div class="location">at line 1125</div>
+        <div class="location">at line 1129</div>
         <code>            protected        array
     <strong>EditGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3550,7 +3594,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetGroup">
-        <div class="location">at line 1158</div>
+        <div class="location">at line 1163</div>
         <code>            protected        array
     <strong>GetGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3622,7 +3666,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteGroup">
-        <div class="location">at line 1176</div>
+        <div class="location">at line 1181</div>
         <code>            protected        void
     <strong>DeleteGroup</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -3687,7 +3731,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddGroupMember">
-        <div class="location">at line 1201</div>
+        <div class="location">at line 1206</div>
         <code>            protected        array
     <strong>AddGroupMember</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3767,7 +3811,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveGroupMember">
-        <div class="location">at line 1231</div>
+        <div class="location">at line 1236</div>
         <code>            protected        array
     <strong>RemoveGroupMember</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3851,7 +3895,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetMembership">
-        <div class="location">at line 1263</div>
+        <div class="location">at line 1268</div>
         <code>            protected        array|null
     <strong>GetMembership</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -3931,7 +3975,7 @@ Doing so will delete all other sessions for the account.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateAuthSource">
-        <div class="location">at line 1292</div>
+        <div class="location">at line 1297</div>
         <code>            protected        array
     <strong>CreateAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4005,7 +4049,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_TestAuthSource">
-        <div class="location">at line 1317</div>
+        <div class="location">at line 1323</div>
         <code>            protected        array
     <strong>TestAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4081,7 +4125,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_EditAuthSource">
-        <div class="location">at line 1343</div>
+        <div class="location">at line 1349</div>
         <code>            protected        array
     <strong>EditAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4153,7 +4197,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteAuthSource">
-        <div class="location">at line 1363</div>
+        <div class="location">at line 1370</div>
         <code>            protected        void
     <strong>DeleteAuthSource</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\AccessLog">AccessLog</abbr>|null $accesslog)
         </code>
@@ -4218,7 +4262,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetAccountProps">
-        <div class="location">at line 1386</div>
+        <div class="location">at line 1393</div>
         <code>            protected        array
     <strong>SetAccountProps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4290,7 +4334,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetGroupProps">
-        <div class="location">at line 1408</div>
+        <div class="location">at line 1415</div>
         <code>            protected        array
     <strong>SetGroupProps</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4362,7 +4406,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SendMessage">
-        <div class="location">at line 1427</div>
+        <div class="location">at line 1434</div>
         <code>            protected        void
     <strong>SendMessage</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4426,7 +4470,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddWhitelist">
-        <div class="location">at line 1462</div>
+        <div class="location">at line 1469</div>
         <code>            protected        array
     <strong>AddWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4494,7 +4538,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveWhitelist">
-        <div class="location">at line 1481</div>
+        <div class="location">at line 1488</div>
         <code>            protected        void
     <strong>RemoveWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>
@@ -4550,7 +4594,7 @@ that successfully authenticates against the auth source</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetWhitelist">
-        <div class="location">at line 1502</div>
+        <div class="location">at line 1509</div>
         <code>            protected        array
     <strong>GetWhitelist</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Accounts\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator)
         </code>

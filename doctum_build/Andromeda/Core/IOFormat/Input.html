@@ -230,7 +230,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetParam">GetParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetParam">GetParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -241,7 +241,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetOptParam">GetOptParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetOptParam">GetOptParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -252,7 +252,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetNullParam">GetNullParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetNullParam">GetNullParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -263,7 +263,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetOptNullParam">GetOptNullParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetOptNullParam">GetOptNullParam</a>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
@@ -337,7 +337,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_GetApp">
-        <div class="location">at line 33</div>
+        <div class="location">at line 36</div>
         <code>                    string
     <strong>GetApp</strong>()
         </code>
@@ -369,7 +369,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAction">
-        <div class="location">at line 39</div>
+        <div class="location">at line 42</div>
         <code>                    string
     <strong>GetAction</strong>()
         </code>
@@ -401,7 +401,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuth">
-        <div class="location">at line 45</div>
+        <div class="location">at line 48</div>
         <code>                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null
     <strong>GetAuth</strong>()
         </code>
@@ -433,7 +433,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetLogger">
-        <div class="location">at line 50</div>
+        <div class="location">at line 53</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
     <strong>SetLogger</strong>(<abbr title="Andromeda\Core\IOFormat\Andromeda\Core\Logging\BaseAppLog">BaseAppLog</abbr>|null $logger)
         </code>
@@ -475,7 +475,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetParams">
-        <div class="location">at line 68</div>
+        <div class="location">at line 71</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
     <strong>GetParams</strong>()
         </code>
@@ -507,7 +507,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_HasParam">
-        <div class="location">at line 71</div>
+        <div class="location">at line 74</div>
         <code>                    bool
     <strong>HasParam</strong>(string $key)
         </code>
@@ -562,7 +562,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddParam">
-        <div class="location">at line 75</div>
+        <div class="location">at line 78</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
     <strong>AddParam</strong>(string $key, $value)
         </code>
@@ -622,9 +622,9 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetParam">
-        <div class="location">at line 79</div>
+        <div class="location">at line 82</div>
         <code>                    
-    <strong>GetParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -655,8 +655,13 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                 <td></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -683,9 +688,9 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetOptParam">
-        <div class="location">at line 83</div>
+        <div class="location">at line 86</div>
         <code>                    
-    <strong>GetOptParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetOptParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -716,8 +721,13 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                 <td></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -744,9 +754,9 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetNullParam">
-        <div class="location">at line 87</div>
+        <div class="location">at line 90</div>
         <code>                    
-    <strong>GetNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -777,8 +787,13 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                 <td></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -805,9 +820,9 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetOptNullParam">
-        <div class="location">at line 91</div>
+        <div class="location">at line 94</div>
         <code>                    
-    <strong>GetOptNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetOptNullParam</strong>(string $key, int $type, int $minlog = SafeParams::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -838,8 +853,13 @@ as any input parameters or files, or basic authentication</p></p>        </div>
                 <td></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -866,7 +886,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFiles">
-        <div class="location">at line 98</div>
+        <div class="location">at line 101</div>
         <code>                    array
     <strong>GetFiles</strong>()
         </code>
@@ -898,7 +918,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_HasFile">
-        <div class="location">at line 105</div>
+        <div class="location">at line 108</div>
         <code>                    bool
     <strong>HasFile</strong>(string $key)
         </code>
@@ -940,7 +960,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_AddFile">
-        <div class="location">at line 114</div>
+        <div class="location">at line 117</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a>
     <strong>AddFile</strong>(string $key, <a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a> $file)
         </code>
@@ -987,7 +1007,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFile">
-        <div class="location">at line 123</div>
+        <div class="location">at line 126</div>
         <code>                    <a href="../../../Andromeda/Core/IOFormat/InputStream.html"><abbr title="Andromeda\Core\IOFormat\InputStream">InputStream</abbr></a>
     <strong>GetFile</strong>(string $key)
         </code>
@@ -1038,7 +1058,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetFile">
-        <div class="location">at line 134</div>
+        <div class="location">at line 137</div>
         <code>                    <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputStream">InputStream</abbr>|null
     <strong>TryGetFile</strong>(string $key)
         </code>
@@ -1092,7 +1112,7 @@ as any input parameters or files, or basic authentication</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 141</div>
+        <div class="location">at line 144</div>
         <code>                    
     <strong>__construct</strong>(string $app, string $action, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr>|null $params = null, array|null $files = null, <abbr title="Andromeda\Core\IOFormat\Andromeda\Core\IOFormat\InputAuth">InputAuth</abbr>|null $auth = null)
         </code>

@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="robots" content="index, follow, all" />
-    <title>Andromeda\Core\EncryptionFailedException | Andromeda Server API</title>
+    <title>Andromeda\Core\Database\FieldTypeException | Andromeda Server API</title>
 
-            <link rel="stylesheet" type="text/css" href="../../css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="../../css/bootstrap-theme.min.css">
-        <link rel="stylesheet" type="text/css" href="../../css/doctum.css">
-        <link rel="stylesheet" type="text/css" href="../../fonts/doctum-font.css">
-        <script src="../../js/jquery-3.5.1.slim.min.js"></script>
-        <script async defer src="../../js/bootstrap.min.js"></script>
-        <script src="../../js/typeahead.min.js"></script>
-        <script src="../../doctum.js"></script>
+            <link rel="stylesheet" type="text/css" href="../../../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="../../../css/doctum.css">
+        <link rel="stylesheet" type="text/css" href="../../../fonts/doctum-font.css">
+        <script src="../../../js/jquery-3.5.1.slim.min.js"></script>
+        <script async defer src="../../../js/bootstrap.min.js"></script>
+        <script src="../../../js/typeahead.min.js"></script>
+        <script src="../../../doctum.js"></script>
         <meta name="MobileOptimized" content="width">
         <meta name="HandheldFriendly" content="true">
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
 
     </head>
 
-    <body id="class" data-name="class:Andromeda_Core_EncryptionFailedException" data-root-path="../../">
+    <body id="class" data-name="class:Andromeda_Core_Database_FieldTypeException" data-root-path="../../../">
             <div id="content">
         <div id="left-column">
                 <div id="control-panel">
-                <form id="search-form" action="../../search.html">
+                <form id="search-form" action="../../../search.html">
             <span class="icon icon-search"></span>
             <input name="search"
                    class="typeahead form-control"
@@ -45,16 +45,16 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="../../index.html">Andromeda Server API</a>
+                <a class="navbar-brand" href="../../../index.html">Andromeda Server API</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-elements">
                 <ul class="nav navbar-nav">
-                    <li><a href="../../classes.html">Classes</a></li>
-                    <li><a href="../../namespaces.html">Namespaces</a></li>
-                    <li><a href="../../interfaces.html">Interfaces</a></li>
-                    <li><a href="../../traits.html">Traits</a></li>
-                    <li><a href="../../doc-index.html">Index</a></li>
-                    <li><a href="../../search.html">Search</a></li>
+                    <li><a href="../../../classes.html">Classes</a></li>
+                    <li><a href="../../../namespaces.html">Namespaces</a></li>
+                    <li><a href="../../../interfaces.html">Interfaces</a></li>
+                    <li><a href="../../../traits.html">Traits</a></li>
+                    <li><a href="../../../doc-index.html">Index</a></li>
+                    <li><a href="../../../search.html">Search</a></li>
                 </ul>
             </div>
         </div>
@@ -63,18 +63,18 @@
                         <div class="namespace-breadcrumbs">
             <ol class="breadcrumb">
                 <li><span class="label label-default">class</span></li>
-                        <li><a href="../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li>EncryptionFailedException</li>
+                        <li><a href="../../../Andromeda.html">Andromeda</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core.html">Core</a></li><li class="backslash">\</li><li><a href="../../../Andromeda/Core/Database.html">Database</a></li><li class="backslash">\</li><li>FieldTypeException</li>
             </ol>
         </div>
                 <div id="page-content">
     <div class="page-header">
-        <h1>EncryptionFailedException    
+        <h1>FieldTypeException    
             </h1>
     </div>
 
     
     <p>        class
-    <strong>EncryptionFailedException</strong>        extends <a href="../../Andromeda/Core/Exceptions/ServerException.html"><abbr title="Andromeda\Core\Exceptions\ServerException">ServerException</abbr></a>
+    <strong>FieldTypeException</strong>        extends <a href="../../../Andromeda/Core/Database/DatabaseException.html"><abbr title="Andromeda\Core\Database\DatabaseException">DatabaseException</abbr></a>
 </p>
 
         
@@ -82,9 +82,19 @@
         
 
             <div class="description">
-            <p><p>Exception indicating that encryption failed</p></p>                    </div>
+            <p><p>Exception indicating that the requested counter name is not a counter</p></p>                    </div>
             
+                <h2>Traits</h2>
+
         
+    <div class="container-fluid underlined">
+                    <div class="row">
+                <div class="col-md-6">
+                    <a href="../../../Andromeda/Core/Exceptions/Copyable.html"><abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a>    </div>
+                <div class="col-md-6"><p>An exception that can be created by copying the message from another</p></div>
+            </div>
+            </div>
+    
     
             <h2>Properties</h2>
 
@@ -96,7 +106,7 @@
                                     </td>
                 <td>$code</td>
                 <td class="last"></td>
-                <td><small>from&nbsp;<a href="../../Andromeda/Core/Exceptions/ServerException.html#property_code">
+                <td><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/ServerException.html#property_code">
 <abbr title="Andromeda\Core\Exceptions\ServerException">ServerException</abbr></a></small></td>
             </tr>
                     <tr>
@@ -119,34 +129,34 @@
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method___construct">__construct</a>(string $details = null)
+                    <a href="#method___construct">__construct</a>(string|null $details = null)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/Exceptions/BaseException.html#method___construct">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/Copyable.html#method___construct">
+<abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
+                    static&nbsp;<a href="../../../Andromeda/Core/Exceptions/Copyable.html"><abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_Copy">Copy</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
         
                                             <p><p>Copy another exception, converting its type</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/Exceptions/BaseException.html#method_Copy">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/Copyable.html#method_Copy">
+<abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a></small></div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;<a href="../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
+                    static&nbsp;<a href="../../../Andromeda/Core/Exceptions/Copyable.html"><abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a>
                 </div>
                 <div class="col-md-8">
                     <a href="#method_Append">Append</a>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
         
                                             <p><p>Copy another exception, converting its type</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/Exceptions/BaseException.html#method_Append">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></small></div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Exceptions/Copyable.html#method_Append">
+<abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a></small></div>
             </div>
             </div>
 
@@ -156,10 +166,10 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">in <a href="../../Andromeda/Core/Exceptions/BaseException.html#method___construct">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 8</div>
-        <code>                    
-    <strong>__construct</strong>(string $details = null)
+        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/Copyable.html#method___construct">
+<abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a> at line 18</div>
+        <code>final                    
+    <strong>__construct</strong>(string|null $details = null)
         </code>
     </h3>
     <div class="details">    
@@ -175,7 +185,7 @@
 
                     <table class="table table-condensed">
                     <tr>
-                <td>string</td>
+                <td>string|null</td>
                 <td>$details</td>
                 <td></td>
             </tr>
@@ -191,9 +201,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Copy">
-        <div class="location">in <a href="../../Andromeda/Core/Exceptions/BaseException.html#method_Copy">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 14</div>
-        <code>        static            <a href="../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
+        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/Copyable.html#method_Copy">
+<abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a> at line 24</div>
+        <code>        static            <a href="../../../Andromeda/Core/Exceptions/Copyable.html"><abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a>
     <strong>Copy</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
         </code>
     </h3>
@@ -220,7 +230,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></td>
+            <td><a href="../../../Andromeda/Core/Exceptions/Copyable.html"><abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a></td>
             <td></td>
         </tr>
     </table>
@@ -234,9 +244,9 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Append">
-        <div class="location">in <a href="../../Andromeda/Core/Exceptions/BaseException.html#method_Append">
-<abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a> at line 20</div>
-        <code>        static            <a href="../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a>
+        <div class="location">in <a href="../../../Andromeda/Core/Exceptions/Copyable.html#method_Append">
+<abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a> at line 30</div>
+        <code>        static            <a href="../../../Andromeda/Core/Exceptions/Copyable.html"><abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a>
     <strong>Append</strong>(<a target="_blank" rel="noopener" href="https://www.php.net/Throwable">Throwable</a> $e)
         </code>
     </h3>
@@ -263,7 +273,7 @@
 
                     <table class="table table-condensed">
         <tr>
-            <td><a href="../../Andromeda/Core/Exceptions/BaseException.html"><abbr title="Andromeda\Core\Exceptions\BaseException">BaseException</abbr></a></td>
+            <td><a href="../../../Andromeda/Core/Exceptions/Copyable.html"><abbr title="Andromeda\Core\Exceptions\Copyable">Copyable</abbr></a></td>
             <td></td>
         </tr>
     </table>

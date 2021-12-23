@@ -163,7 +163,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </tr>
                     <tr>
                 <td class="type" id="property_objects">
-                                        protected                                        <abbr title="Andromeda\Core\Database\FieldTypes\array&lt;string,\Andromeda\Core\Database\BaseObject&gt;">BaseObject&gt;</abbr>
+                                        protected                                        <abbr title="Andromeda\Core\Database\FieldTypes\array&lt;string,\Andromeda\Core\Database\FieldTypes\T&gt;">T&gt;</abbr>
                                                                                 
                                     </td>
                 <td>$objects</td>
@@ -181,11 +181,11 @@ The practical value is that the field stores a reference counter and acts as a c
             </tr>
                     <tr>
                 <td class="type" id="property_refclass">
-                                        protected                                        
+                                        protected                                        <abbr title="Andromeda\Core\Database\FieldTypes\class-string&lt;\Andromeda\Core\Database\FieldTypes\T&gt;">T&gt;</abbr>
                                                                                 
                                     </td>
                 <td>$refclass</td>
-                <td class="last"><p>The class of the object that is referenced</p></td>
+                <td class="last"></td>
                 <td></td>
             </tr>
                     <tr>
@@ -217,7 +217,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </tr>
                     <tr>
                 <td class="type" id="property_refs_added">
-                                        protected                                        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>[]
+                                        protected                                        <abbr title="Andromeda\Core\Database\FieldTypes\T">T</abbr>[]
                                                                                 
                                     </td>
                 <td>$refs_added</td>
@@ -226,7 +226,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </tr>
                     <tr>
                 <td class="type" id="property_refs_deleted">
-                                        protected                                        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>[]
+                                        protected                                        <abbr title="Andromeda\Core\Database\FieldTypes\T">T</abbr>[]
                                                                                 
                                     </td>
                 <td>$refs_deleted</td>
@@ -239,27 +239,6 @@ The practical value is that the field stores a reference counter and acts as a c
             <h2>Methods</h2>
 
             <div class="container-fluid underlined">
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;int
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_GetOperatorType">GetOperatorType</a>()
-        
-                                            <p><p>Returns OPERATOR_INCREMENT as the operator used to update this field a DB query</p></p>                </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Core/Database/FieldTypes/Counter.html#method_GetOperatorType">
-<abbr title="Andromeda\Core\Database\FieldTypes\Counter">Counter</abbr></a></small></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;int
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_GetReturnType">GetReturnType</a>()
-        
-                                            <p><p>Returns RETURN_OBJECTS as the basic type of value stored in this field</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
                     <div class="row">
                 <div class="col-md-2 type">
                     
@@ -537,73 +516,8 @@ The practical value is that the field stores a reference counter and acts as a c
 
             <div id="method-details">
                     <div class="method-item">
-                    <h3 id="method_GetOperatorType">
-        <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Counter.html#method_GetOperatorType">
-<abbr title="Andromeda\Core\Database\FieldTypes\Counter">Counter</abbr></a> at line 150</div>
-        <code>        static            int
-    <strong>GetOperatorType</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns OPERATOR_INCREMENT as the operator used to update this field a DB query</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>int</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_GetReturnType">
-        <div class="location">at line 411</div>
-        <code>        static            int
-    <strong>GetReturnType</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns RETURN_OBJECTS as the basic type of value stored in this field</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>int</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 428</div>
+        <div class="location">at line 408</div>
         <code>                    
     <strong>__construct</strong>(string $refclass, string|null $reffield = null, bool $parentPoly = false)
         </code>
@@ -670,7 +584,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_Initialize">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_Initialize">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 73</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 60</div>
         <code>                    void
     <strong>Initialize</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $parent, string $myfield)
         </code>
@@ -745,7 +659,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_InitValue">
-        <div class="location">at line 455</div>
+        <div class="location">at line 435</div>
         <code>                    void
     <strong>InitValue</strong>($value)
         </code>
@@ -788,7 +702,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_GetMyField">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetMyField">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 89</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 76</div>
         <code>                    string
     <strong>GetMyField</strong>()
         </code>
@@ -833,7 +747,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_isMandatorySave">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_isMandatorySave">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 92</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 79</div>
         <code>                    bool
     <strong>isMandatorySave</strong>()
         </code>
@@ -878,7 +792,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_GetParent">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetParent">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 95</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 82</div>
         <code>                    <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>GetParent</strong>()
         </code>
@@ -923,7 +837,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_GetValue">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetValue">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 101</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 88</div>
         <code>                    
     <strong>GetValue</strong>(bool $allowTemp = true)
         </code>
@@ -957,7 +871,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_GetDelta">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_GetDelta">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 104</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 91</div>
         <code>                    int
     <strong>GetDelta</strong>()
         </code>
@@ -1002,7 +916,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_ResetDelta">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_ResetDelta">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 107</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 94</div>
         <code>                    <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html"><abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a>
     <strong>ResetDelta</strong>()
         </code>
@@ -1035,7 +949,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_GetDBValue">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Counter.html#method_GetDBValue">
-<abbr title="Andromeda\Core\Database\FieldTypes\Counter">Counter</abbr></a> at line 178</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Counter">Counter</abbr></a> at line 162</div>
         <code>                    
     <strong>GetDBValue</strong>()
         </code>
@@ -1059,7 +973,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_SetValue">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_SetValue">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 123</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 110</div>
         <code>                    bool
     <strong>SetValue</strong>(mixed $value, bool $temp = false)
         </code>
@@ -1108,7 +1022,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_EraseValue">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Scalar.html#method_EraseValue">
-<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 136</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Scalar">Scalar</abbr></a> at line 123</div>
         <code>                    void
     <strong>EraseValue</strong>()
         </code>
@@ -1141,7 +1055,7 @@ The practical value is that the field stores a reference counter and acts as a c
                     <div class="method-item">
                     <h3 id="method_Delta">
         <div class="location">in <a href="../../../../Andromeda/Core/Database/FieldTypes/Counter.html#method_Delta">
-<abbr title="Andromeda\Core\Database\FieldTypes\Counter">Counter</abbr></a> at line 169</div>
+<abbr title="Andromeda\Core\Database\FieldTypes\Counter">Counter</abbr></a> at line 153</div>
         <code>                    bool
     <strong>Delta</strong>(int $delta = 1)
         </code>
@@ -1183,7 +1097,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_GetIsRefsMany">
-        <div class="location">at line 414</div>
+        <div class="location">at line 393</div>
         <code>        static            bool
     <strong>GetIsRefsMany</strong>()
         </code>
@@ -1215,7 +1129,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_isAutoDelete">
-        <div class="location">at line 417</div>
+        <div class="location">at line 396</div>
         <code>                    bool
     <strong>isAutoDelete</strong>()
         </code>
@@ -1259,7 +1173,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_autoDelete">
-        <div class="location">at line 420</div>
+        <div class="location">at line 399</div>
         <code>                    <a href="../../../../Andromeda/Core/Database/FieldTypes/ObjectRefs.html"><abbr title="Andromeda\Core\Database\FieldTypes\ObjectRefs">ObjectRefs</abbr></a>
     <strong>autoDelete</strong>(bool $val = true)
         </code>
@@ -1313,7 +1227,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_GetRefClass">
-        <div class="location">at line 434</div>
+        <div class="location">at line 414</div>
         <code>                    string
     <strong>GetRefClass</strong>()
         </code>
@@ -1339,17 +1253,6 @@ The practical value is that the field stores a reference counter and acts as a c
 
             
             
-                            <h4>See also</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td>
-                                            <abbr title="Andromeda\Core\Database\FieldTypes\ObjectRefs::$refclass">ObjectRefs::$refclass</abbr>
-                                    </td>
-                <td></td>
-            </tr>
-            </table>
-
             
                     </div>
     </div>
@@ -1357,7 +1260,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_GetRefField">
-        <div class="location">at line 437</div>
+        <div class="location">at line 417</div>
         <code>                    string
     <strong>GetRefField</strong>()
         </code>
@@ -1401,7 +1304,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_GetObjects">
-        <div class="location">at line 447</div>
+        <div class="location">at line 427</div>
         <code>                    array
     <strong>GetObjects</strong>(int|null $limit = null, int|null $offset = null)
         </code>
@@ -1448,7 +1351,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadObjects">
-        <div class="location">at line 463</div>
+        <div class="location">at line 443</div>
         <code>            protected        void
     <strong>LoadObjects</strong>(int|null $limit = null, int|null $offset = null)
         </code>
@@ -1495,7 +1398,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_InnerLoadObjects">
-        <div class="location">at line 483</div>
+        <div class="location">at line 463</div>
         <code>            protected        void
     <strong>InnerLoadObjects</strong>(int|null $limit = null, int|null $offset = null)
         </code>
@@ -1542,7 +1445,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_MergeWithObjectChanges">
-        <div class="location">at line 491</div>
+        <div class="location">at line 471</div>
         <code>            protected        void
     <strong>MergeWithObjectChanges</strong>()
         </code>
@@ -1574,7 +1477,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteObjects">
-        <div class="location">at line 498</div>
+        <div class="location">at line 478</div>
         <code>                    void
     <strong>DeleteObjects</strong>()
         </code>
@@ -1606,7 +1509,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_AddObject">
-        <div class="location">at line 514</div>
+        <div class="location">at line 494</div>
         <code>                    bool
     <strong>AddObject</strong>(<a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object)
         </code>
@@ -1648,7 +1551,7 @@ The practical value is that the field stores a reference counter and acts as a c
             </div>
                     <div class="method-item">
                     <h3 id="method_RemoveObject">
-        <div class="location">at line 544</div>
+        <div class="location">at line 524</div>
         <code>                    bool
     <strong>RemoveObject</strong>(<a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object)
         </code>

@@ -90,6 +90,39 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_fsmanager">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$fsmanager</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#property_fsmanager">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></small></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_masterkey">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$masterkey</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_chunksize">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$chunksize</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -164,7 +197,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
                     <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true)
         
                                             <p><p>no-op</p></p>                </div>
                 <div class="col-md-2"><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RefreshFolder">
@@ -401,7 +434,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 26</div>
+        <div class="location">at line 29</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $filesystem, string $masterkey, int $chunksize)
         </code>
@@ -445,7 +478,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetChunkSize">
-        <div class="location">at line 33</div>
+        <div class="location">at line 36</div>
         <code>                    int|null
     <strong>GetChunkSize</strong>()
         </code>
@@ -478,7 +511,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
                     <div class="method-item">
                     <h3 id="method_GetFSManager">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetFSManager">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 38</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 40</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>
     <strong>GetFSManager</strong>()
         </code>
@@ -511,7 +544,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
                     <div class="method-item">
                     <h3 id="method_GetStorage">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetStorage">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 41</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 43</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>GetStorage</strong>()
         </code>
@@ -544,7 +577,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
                     <div class="method-item">
                     <h3 id="method_GetDatabase">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetDatabase">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 44</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 46</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
     <strong>GetDatabase</strong>()
         </code>
@@ -622,7 +655,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/Native.html#method_RefreshFolder">
 <abbr title="Andromeda\Apps\Files\Filesystem\Native">Native</abbr></a> at line 78</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
-    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
+    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true)
         </code>
     </h3>
     <div class="details">    
@@ -639,6 +672,11 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
                     <tr>
                 <td><a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
                 <td>$folder</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>bool</td>
+                <td>$doContents</td>
                 <td></td>
             </tr>
             </table>
@@ -748,7 +786,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ImportFile">
-        <div class="location">at line 44</div>
+        <div class="location">at line 47</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>ImportFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Core/IOFormat/InputPath.html"><abbr title="Andromeda\Core\IOFormat\InputPath">InputPath</abbr></a> $infile)
         </code>
@@ -881,7 +919,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ReadBytes">
-        <div class="location">at line 70</div>
+        <div class="location">at line 73</div>
         <code>                    string
     <strong>ReadBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, int $length)
         </code>
@@ -933,7 +971,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_WriteBytes">
-        <div class="location">at line 98</div>
+        <div class="location">at line 101</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>WriteBytes</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $start, string $data)
         </code>
@@ -985,7 +1023,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Truncate">
-        <div class="location">at line 137</div>
+        <div class="location">at line 140</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>Truncate</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $length)
         </code>
@@ -1424,7 +1462,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAuthString">
-        <div class="location">at line 36</div>
+        <div class="location">at line 39</div>
         <code>                private    
     <strong>GetAuthString</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $index)
         </code>
@@ -1462,7 +1500,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetChunkIndex">
-        <div class="location">at line 39</div>
+        <div class="location">at line 42</div>
         <code>            protected        int
     <strong>GetChunkIndex</strong>(int $byte)
         </code>
@@ -1504,7 +1542,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetNumChunks">
-        <div class="location">at line 42</div>
+        <div class="location">at line 45</div>
         <code>            protected        int
     <strong>GetNumChunks</strong>(int $bytes)
         </code>
@@ -1546,7 +1584,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ReadChunk">
-        <div class="location">at line 186</div>
+        <div class="location">at line 189</div>
         <code>            protected        string
     <strong>ReadChunk</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $index)
         </code>
@@ -1593,7 +1631,7 @@ Client-side crypto should be used for any case where the API is not trusted.</p>
             </div>
                     <div class="method-item">
                     <h3 id="method_WriteChunk">
-        <div class="location">at line 220</div>
+        <div class="location">at line 223</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/NativeCrypt.html"><abbr title="Andromeda\Apps\Files\Filesystem\NativeCrypt">NativeCrypt</abbr></a>
     <strong>WriteChunk</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, int $index, string $data)
         </code>

@@ -89,6 +89,29 @@
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_item">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$item</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_share">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$share</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -112,6 +135,26 @@
                     <a href="#method_GetItem">GetItem</a>()
         
                                             <p><p>Returns the item that is being accessed</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFile">GetFile</a>()
+        
+                                            <p><p>Returns the item that is being accessed (if applicable)</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    <a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a>
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_GetFolder">GetFolder</a>()
+        
+                                            <p><p>Returns the item that is being accessed (if applicable)</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -162,7 +205,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 24</div>
+        <div class="location">at line 27</div>
         <code>                private    
     <strong>__construct</strong>(<a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Share">Share</abbr>|null $share)
         </code>
@@ -201,7 +244,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItem">
-        <div class="location">at line 28</div>
+        <div class="location">at line 31</div>
         <code>                    <a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a>
     <strong>GetItem</strong>()
         </code>
@@ -232,8 +275,72 @@
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_GetFile">
+        <div class="location">at line 34</div>
+        <code>                    <a href="../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a>
+    <strong>GetFile</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the item that is being accessed (if applicable)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
+                    <h3 id="method_GetFolder">
+        <div class="location">at line 37</div>
+        <code>                    <a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a>
+    <strong>GetFolder</strong>()
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the item that is being accessed (if applicable)</p></p>                        
+        </div>
+        <div class="tags">
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td><a href="../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a></td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_GetShare">
-        <div class="location">at line 31</div>
+        <div class="location">at line 40</div>
         <code>                    <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Share">Share</abbr>|null
     <strong>GetShare</strong>()
         </code>
@@ -265,7 +372,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_Authenticate">
-        <div class="location">at line 50</div>
+        <div class="location">at line 59</div>
         <code>        static            <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>
     <strong>Authenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null $item = null)
         </code>
@@ -362,7 +469,7 @@ a share key must be provided.  The shared object will be used if one is not give
             </div>
                     <div class="method-item">
                     <h3 id="method_ItemOwnerAccess">
-        <div class="location">at line 105</div>
+        <div class="location">at line 114</div>
         <code>        static    protected        bool
     <strong>ItemOwnerAccess</strong>(<a href="../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, <a href="../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account)
         </code>
@@ -409,7 +516,7 @@ a share key must be provided.  The shared object will be used if one is not give
             </div>
                     <div class="method-item">
                     <h3 id="method_TryAuthenticate">
-        <div class="location">at line 119</div>
+        <div class="location">at line 128</div>
         <code>        static            <a href="../../../Andromeda/Apps/Files/ItemAccess.html"><abbr title="Andromeda\Apps\Files\ItemAccess">ItemAccess</abbr></a>|null
     <strong>TryAuthenticate</strong>(<a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Accounts\Authenticator">Authenticator</abbr>|null $authenticator, <abbr title="Andromeda\Apps\Files\Andromeda\Apps\Files\Item">Item</abbr>|null $item = null)
         </code>

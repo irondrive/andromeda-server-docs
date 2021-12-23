@@ -199,7 +199,7 @@ because a param can itself contain a collection of other params
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetParam">GetParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetParam">GetParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p><p>Gets the requested parameter (present and not null)</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -209,7 +209,7 @@ because a param can itself contain a collection of other params
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetOptParam">GetOptParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetOptParam">GetOptParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p><p>Same as GetParam() but returns null if the param is not present</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -219,7 +219,7 @@ because a param can itself contain a collection of other params
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetNullParam">GetNullParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetNullParam">GetNullParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p><p>Same as GetParam() but returns null if the param is present and null</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -229,7 +229,7 @@ because a param can itself contain a collection of other params
                     
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetOptNullParam">GetOptNullParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+                    <a href="#method_GetOptNullParam">GetOptNullParam</a>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         
                                             <p><p>Same as GetParam() but returns null if the param is not present, or is present and null</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -445,9 +445,9 @@ because a param can itself contain a collection of other params
             </div>
                     <div class="method-item">
                     <h3 id="method_GetParam">
-        <div class="location">at line 81</div>
+        <div class="location">at line 78</div>
         <code>                    
-    <strong>GetParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -464,12 +464,12 @@ because a param can itself contain a collection of other params
                     <tr>
                 <td>string</td>
                 <td>$key</td>
-                <td><p>the name of the parameter</p></td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
                 <td>$type</td>
-                <td><p>the type of the parameter</p></td>
+                <td></td>
             </tr>
                     <tr>
                 <td>int</td>
@@ -477,8 +477,13 @@ because a param can itself contain a collection of other params
                 <td><p>minimum log level for logging (0 for never) - RAW is never logged!</p></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -490,7 +495,7 @@ because a param can itself contain a collection of other params
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../Andromeda/Core/IOFormat/SafeParamKeyMissingException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamKeyMissingException">SafeParamKeyMissingException</abbr></a></td>
-                <td><p>if the parameter is not present</p></td>
+                <td><p>if the parameter is missing</p></td>
             </tr>
                     <tr>
                 <td><a href="../../../Andromeda/Core/IOFormat/SafeParamNullValueException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamNullValueException">SafeParamNullValueException</abbr></a></td>
@@ -518,9 +523,9 @@ because a param can itself contain a collection of other params
             </div>
                     <div class="method-item">
                     <h3 id="method_GetOptParam">
-        <div class="location">at line 92</div>
+        <div class="location">at line 89</div>
         <code>                    
-    <strong>GetOptParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetOptParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -550,8 +555,13 @@ because a param can itself contain a collection of other params
                 <td></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -566,9 +576,9 @@ because a param can itself contain a collection of other params
             </div>
                     <div class="method-item">
                     <h3 id="method_GetNullParam">
-        <div class="location">at line 103</div>
+        <div class="location">at line 100</div>
         <code>                    
-    <strong>GetNullParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetNullParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -598,8 +608,13 @@ because a param can itself contain a collection of other params
                 <td></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -614,9 +629,9 @@ because a param can itself contain a collection of other params
             </div>
                     <div class="method-item">
                     <h3 id="method_GetOptNullParam">
-        <div class="location">at line 113</div>
+        <div class="location">at line 110</div>
         <code>                    
-    <strong>GetOptNullParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, callable ...$valfuncs)
+    <strong>GetOptNullParam</strong>(string $key, int $type, int $minlog = self::PARAMLOG_ONLYFULL, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -646,8 +661,13 @@ because a param can itself contain a collection of other params
                 <td></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
                 <td></td>
             </tr>
             </table>
@@ -662,7 +682,7 @@ because a param can itself contain a collection of other params
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 123</div>
+        <div class="location">at line 120</div>
         <code>                    array
     <strong>GetClientObject</strong>()
         </code>

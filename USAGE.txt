@@ -13,7 +13,7 @@ core enableapp --appname alphanum
 core disableapp --appname alphanum
 core getconfig
 core getdbconfig
-core setconfig [--requestlog_db bool] [--requestlog_file bool] [--requestlog_details none|basic|full] [--debug none|errors|development|sensitive] [--debug_http bool] [--debug_dblog bool] [--debug_filelog bool] [--metrics none|basic|extended] [--metrics_dblog bool] [--metrics_filelog bool] [--read_only bool] [--enabled bool] [--email bool] [--datadir ?text]
+core setconfig [--requestlog_db bool] [--requestlog_file bool] [--requestlog_details none|basic|full] [--debug none|errors|details|sensitive] [--debug_http bool] [--debug_dblog bool] [--debug_filelog bool] [--metrics none|basic|extended] [--metrics_dblog bool] [--metrics_filelog bool] [--read_only bool] [--enabled bool] [--email bool] [--datadir ?text]
 core getmailers
 core createmailer [--test email] --type phpmail|sendmail|qmail|smtp --from_address email [--from_name name] [--use_reply bool]
 core (createmailer) --type smtp ((--host alphanum [--port uint16] [--proto ssl|tls]) | --hosts json[]) [--username text] [--password raw]
@@ -130,18 +130,18 @@ files listadopted
 files getfilesystem [--filesystem id] [--activate bool]
 files getfilesystems [--everyone bool [--limit uint] [--offset uint]]
 files createfilesystem --sttype local|ftp|sftp|smb|s3 [--fstype native|crypt|external] [--name name] [--global bool] [--readonly bool] [--chunksize uint]
-files (createfilesystem) --sttype local  --path fspath
-files (createfilesystem) --sttype ftp  --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--port uint16] [--implssl bool]
-files (createfilesystem) --sttype sftp  --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--port uint16] [--privkey% path | --privkey-] [--keypass raw]
-files (createfilesystem) --sttype smb  --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--workgroup alphanum]
-files (createfilesystem) --sttype s3  [--fieldcrypt bool] --endpoint fspath --bucket alphanum --region alphanum [--path_style bool][--port uint16] [--usetls bool] [--accesskey randstr] [--secretkey randstr]
+files (createfilesystem) --sttype local --path fspath
+files (createfilesystem) --sttype ftp --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--port uint16] [--implssl bool]
+files (createfilesystem) --sttype sftp --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--port uint16] [--privkey% path | --privkey-] [--keypass raw]
+files (createfilesystem) --sttype smb --path fspath [--fieldcrypt bool] [--username alphanum] [--password raw] --hostname alphanum [--workgroup alphanum]
+files (createfilesystem) --sttype s3 [--fieldcrypt bool] --endpoint fspath --bucket alphanum --region alphanum [--path_style bool] [--port uint16] [--usetls bool] [--accesskey randstr] [--secretkey randstr]
 files deletefilesystem --filesystem id --auth_password raw [--unlink bool]
 files editfilesystem --filesystem id [--name ?name] [--readonly bool]
-files (editfilesystem) local:  [--path fspath]
-files (editfilesystem) ftp:  [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--port ?uint16] [--implssl bool]
-files (editfilesystem) sftp:  [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--port ?uint16] [--privkey% path | --privkey-] [--keypass ?raw] [--resethost bool]
-files (editfilesystem) smb:  [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--workgroup ?alphanum]
-files (editfilesystem) s3:  [--fieldcrypt bool] [--endpoint fspath] [--bucket alphanum] [--region alphanum] [--path_style ?bool][--port ?uint16] [--usetls ?bool] [--accesskey ?randstr] [--secretkey ?randstr]
+files (editfilesystem) (local) [--path fspath]
+files (editfilesystem) (ftp) [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--port ?uint16] [--implssl bool]
+files (editfilesystem) (sftp) [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--port ?uint16] [--privkey% path | --privkey-] [--keypass ?raw] [--resethost bool]
+files (editfilesystem) (smb) [--path fspath] [--fieldcrypt bool] [--username ?alphanum] [--password ?raw] [--hostname alphanum] [--workgroup ?alphanum]
+files (editfilesystem) (s3) [--fieldcrypt bool] [--endpoint fspath] [--bucket alphanum] [--region alphanum] [--path_style ?bool] [--port ?uint16] [--usetls ?bool] [--accesskey ?randstr] [--secretkey ?randstr]
 files getlimits [--account ?id | --group ?id | --filesystem ?id] [--limit uint] [--offset uint]
 files gettimedlimits [--account ?id | --group ?id | --filesystem ?id] [--limit uint] [--offset uint]
 files gettimedstatsfor [--account id | --group id | --filesystem id] --timeperiod uint [--limit uint] [--offset uint]

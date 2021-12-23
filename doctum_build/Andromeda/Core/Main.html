@@ -218,20 +218,29 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
                 <td></td>
             </tr>
                     <tr>
-                <td class="type" id="property_requireUpgrade">
-                                                            private                    
-                                                                                
-                                    </td>
-                <td>$requireUpgrade</td>
-                <td class="last"></td>
-                <td></td>
-            </tr>
-                    <tr>
                 <td class="type" id="property_dbException">
                                                             private                    
                                                                                 
                                     </td>
                 <td>$dbException</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_cfgException">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$cfgException</td>
+                <td class="last"></td>
+                <td></td>
+            </tr>
+                    <tr>
+                <td class="type" id="property_rolledback">
+                                                            private                    
+                                                                                
+                                    </td>
+                <td>$rolledback</td>
                 <td class="last"></td>
                 <td></td>
             </tr>
@@ -354,6 +363,16 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    bool
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_TryLoadApp">TryLoadApp</a>(string $app)
+        
+                                            <p><p>Loads the main include file for an app and constructs it</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
                 </div>
                 <div class="col-md-8">
@@ -380,6 +399,16 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
                     <a href="#method_RunRemote">RunRemote</a>(string $url, <a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         
                                             <p><p>Calls into a remote API to run the given Input command</p></p>                </div>
+                <div class="col-md-2"></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
+                    static&nbsp;
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_LoggedTry">LoggedTry</a>(callable $func)
+        
+                                            <p><p>Runs the given $func in try/catch and logs if exception</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -451,7 +480,7 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
                     <div class="method-item">
                     <h3 id="method_GetInstance">
         <div class="location">in <a href="../../Andromeda/Core/Singleton.html#method_GetInstance">
-<abbr title="Andromeda\Core\Singleton">Singleton</abbr></a> at line 20</div>
+<abbr title="Andromeda\Core\Singleton">Singleton</abbr></a> at line 21</div>
         <code>        static            <a href="../../Andromeda/Core/Singleton.html"><abbr title="Andromeda\Core\Singleton">Singleton</abbr></a>
     <strong>GetInstance</strong>()
         </code>
@@ -492,7 +521,7 @@ A Main handles a single request, with an arbitrary number of appruns.</p></p>   
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 166</div>
+        <div class="location">at line 165</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../Andromeda/Core/IOFormat/IOInterface.html"><abbr title="Andromeda\Core\IOFormat\IOInterface">IOInterface</abbr></a> $interface, <a href="../../Andromeda/Core/Exceptions/ErrorManager.html"><abbr title="Andromeda\Core\Exceptions\ErrorManager">ErrorManager</abbr></a> $errorman)
         </code>
@@ -831,8 +860,50 @@ database, loads global config, loads and constructs registered apps</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_TryLoadApp">
+        <div class="location">at line 228</div>
+        <code>            protected        bool
+    <strong>TryLoadApp</strong>(string $app)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Loads the main include file for an app and constructs it</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$app</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>bool</td>
+            <td></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_LoadApp">
-        <div class="location">at line 226</div>
+        <div class="location">at line 247</div>
         <code>                    <a href="../../Andromeda/Core/Main.html"><abbr title="Andromeda\Core\Main">Main</abbr></a>
     <strong>LoadApp</strong>(string $app)
         </code>
@@ -874,7 +945,7 @@ database, loads global config, loads and constructs registered apps</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_Run">
-        <div class="location">at line 254</div>
+        <div class="location">at line 263</div>
         <code>                    
     <strong>Run</strong>(<a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -918,7 +989,7 @@ other apps but should always do so via the API, not directly to the app</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RunRemote">
-        <div class="location">at line 296</div>
+        <div class="location">at line 305</div>
         <code>                    
     <strong>RunRemote</strong>(string $url, <a href="../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -968,8 +1039,41 @@ commit before we get the response to this remote call.</p></p>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_LoggedTry">
+        <div class="location">at line 315</div>
+        <code>        static            
+    <strong>LoggedTry</strong>(callable $func)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Runs the given $func in try/catch and logs if exception</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>callable</td>
+                <td>$func</td>
+                <td></td>
+            </tr>
+            </table>
+
+            
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_rollback">
-        <div class="location">at line 309</div>
+        <div class="location">at line 327</div>
         <code>                    void
     <strong>rollback</strong>(<abbr title="Andromeda\Core\Throwable">Throwable</abbr>|null $e = null)
         </code>
@@ -1011,7 +1115,7 @@ commit before we get the response to this remote call.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_commit">
-        <div class="location">at line 344</div>
+        <div class="location">at line 362</div>
         <code>                    void
     <strong>commit</strong>()
         </code>
@@ -1053,7 +1157,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_innerCommit">
-        <div class="location">at line 378</div>
+        <div class="location">at line 394</div>
         <code>                private    void
     <strong>innerCommit</strong>(bool $apps)
         </code>
@@ -1095,7 +1199,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_isEnabled">
-        <div class="location">at line 388</div>
+        <div class="location">at line 407</div>
         <code>                private    bool
     <strong>isEnabled</strong>()
         </code>
@@ -1127,7 +1231,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetDebugLevel">
-        <div class="location">at line 396</div>
+        <div class="location">at line 415</div>
         <code>                    int
     <strong>GetDebugLevel</strong>()
         </code>
@@ -1159,7 +1263,7 @@ instead if the request was specified as a dry run.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_FinalizeOutput">
-        <div class="location">at line 415</div>
+        <div class="location">at line 434</div>
         <code>                    void
     <strong>FinalizeOutput</strong>(<a href="../../Andromeda/Core/IOFormat/Output.html"><abbr title="Andromeda\Core\IOFormat\Output">Output</abbr></a> $output, bool $isError = false)
         </code>

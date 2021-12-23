@@ -91,6 +91,21 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             
         
     
+            <h2>Properties</h2>
+
+            <table class="table table-condensed">
+                    <tr>
+                <td class="type" id="property_fsmanager">
+                                        protected                                        
+                                                                                
+                                    </td>
+                <td>$fsmanager</td>
+                <td class="last"></td>
+                <td><small>from&nbsp;<a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#property_fsmanager">
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a></small></td>
+            </tr>
+            </table>
+
     
             <h2>Methods</h2>
 
@@ -166,7 +181,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $fileSw = null, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $folderSw = null)
+                    <a href="#method_RefreshFolder">RefreshFolder</a>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\FileCreator">FileCreator</abbr>|null $fileCr = null, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\FolderCreator">FolderCreator</abbr>|null $folderCr = null)
         
                                             <p><p>Updates the given DB folder (and contents) from disk</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -358,7 +373,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method___construct">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 24</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 26</div>
         <code>                    
     <strong>__construct</strong>(<a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a> $fsmanager)
         </code>
@@ -393,7 +408,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <div class="method-item">
                     <h3 id="method_GetChunkSize">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetChunkSize">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 35</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 37</div>
         <code>                    int|null
     <strong>GetChunkSize</strong>()
         </code>
@@ -426,7 +441,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <div class="method-item">
                     <h3 id="method_GetFSManager">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetFSManager">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 38</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 40</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Filesystem/FSManager.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSManager">FSManager</abbr></a>
     <strong>GetFSManager</strong>()
         </code>
@@ -459,7 +474,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <div class="method-item">
                     <h3 id="method_GetStorage">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetStorage">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 41</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 43</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Files/Storage/Storage.html"><abbr title="Andromeda\Apps\Files\Storage\Storage">Storage</abbr></a>
     <strong>GetStorage</strong>()
         </code>
@@ -492,7 +507,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
                     <div class="method-item">
                     <h3 id="method_GetDatabase">
         <div class="location">in <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html#method_GetDatabase">
-<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 44</div>
+<abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a> at line 46</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
     <strong>GetDatabase</strong>()
         </code>
@@ -524,7 +539,7 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFile">
-        <div class="location">at line 50</div>
+        <div class="location">at line 54</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RefreshFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -566,9 +581,9 @@ record of what exists, and the database is merely a metadata cache.</p></p>     
             </div>
                     <div class="method-item">
                     <h3 id="method_RefreshFolder">
-        <div class="location">at line 75</div>
+        <div class="location">at line 79</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
-    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $fileSw = null, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null $folderSw = null)
+    <strong>RefreshFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, bool $doContents = true, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\FileCreator">FileCreator</abbr>|null $fileCr = null, <abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\FolderCreator">FolderCreator</abbr>|null $folderCr = null)
         </code>
     </h3>
     <div class="details">    
@@ -591,16 +606,16 @@ Also scans for new items and creates objects for them.</p></p>
                     <tr>
                 <td>bool</td>
                 <td>$doContents</td>
-                <td><p>if true, recurse, else just this folder</p></td>
+                <td></td>
             </tr>
                     <tr>
-                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null</td>
-                <td>$fileSw</td>
+                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\FileCreator">FileCreator</abbr>|null</td>
+                <td>$fileCr</td>
                 <td><p>MUST BE NULL (unit testing only)</p></td>
             </tr>
                     <tr>
-                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Core\StaticWrapper">StaticWrapper</abbr>|null</td>
-                <td>$folderSw</td>
+                <td><abbr title="Andromeda\Apps\Files\Filesystem\Andromeda\Apps\Files\Filesystem\FolderCreator">FolderCreator</abbr>|null</td>
+                <td>$folderCr</td>
                 <td><p>MUST BE NULL (unit testing only)</p></td>
             </tr>
             </table>
@@ -624,7 +639,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CreateFolder">
-        <div class="location">at line 132</div>
+        <div class="location">at line 136</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CreateFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -666,7 +681,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteFolder">
-        <div class="location">at line 139</div>
+        <div class="location">at line 143</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>DeleteFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder)
         </code>
@@ -996,7 +1011,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFile">
-        <div class="location">at line 146</div>
+        <div class="location">at line 150</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, string $name)
         </code>
@@ -1043,7 +1058,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_RenameFolder">
-        <div class="location">at line 154</div>
+        <div class="location">at line 158</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>RenameFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, string $name)
         </code>
@@ -1090,7 +1105,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFile">
-        <div class="location">at line 162</div>
+        <div class="location">at line 166</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFile</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1137,7 +1152,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_MoveFolder">
-        <div class="location">at line 170</div>
+        <div class="location">at line 174</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>MoveFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $parent)
         </code>
@@ -1232,7 +1247,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_CopyFolder">
-        <div class="location">at line 178</div>
+        <div class="location">at line 182</div>
         <code>                    <a href="../../../../Andromeda/Apps/Files/Filesystem/FSImpl.html"><abbr title="Andromeda\Apps\Files\Filesystem\FSImpl">FSImpl</abbr></a>
     <strong>CopyFolder</strong>(<a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $folder, <a href="../../../../Andromeda/Apps/Files/Folder.html"><abbr title="Andromeda\Apps\Files\Folder">Folder</abbr></a> $dest)
         </code>
@@ -1279,7 +1294,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetFilePath">
-        <div class="location">at line 43</div>
+        <div class="location">at line 47</div>
         <code>            protected        string
     <strong>GetFilePath</strong>(<a href="../../../../Andromeda/Apps/Files/File.html"><abbr title="Andromeda\Apps\Files\File">File</abbr></a> $file)
         </code>
@@ -1369,7 +1384,7 @@ Also scans for new items and creates objects for them.</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetItemPath">
-        <div class="location">at line 32</div>
+        <div class="location">at line 36</div>
         <code>            protected        string
     <strong>GetItemPath</strong>(<a href="../../../../Andromeda/Apps/Files/Item.html"><abbr title="Andromeda\Apps\Files\Item">Item</abbr></a> $item, string|null $child = null)
         </code>

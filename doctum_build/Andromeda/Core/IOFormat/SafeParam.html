@@ -399,7 +399,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
                     null|mixed|<a href="../../../Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>[]|<a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_GetValue">GetValue</a>(int $type, callable ...$valfuncs)
+                    <a href="#method_GetValue">GetValue</a>(int $type, array|null $values = null, callable|null $valfunc = null)
         
                                             <p><p>Gets the value of the parameter, doing filtering/validation, and JSON decoding for objects/arrays</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -412,7 +412,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_GetTypeString">
-        <div class="location">at line 125</div>
+        <div class="location">at line 139</div>
         <code>        static            string
     <strong>GetTypeString</strong>(int $type)
         </code>
@@ -454,7 +454,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method___construct">
-        <div class="location">at line 139</div>
+        <div class="location">at line 153</div>
         <code>                    
     <strong>__construct</strong>(string $key, $value)
         </code>
@@ -492,7 +492,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_GetKey">
-        <div class="location">at line 150</div>
+        <div class="location">at line 164</div>
         <code>                    string
     <strong>GetKey</strong>()
         </code>
@@ -524,7 +524,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_GetRawValue">
-        <div class="location">at line 153</div>
+        <div class="location">at line 167</div>
         <code>                    
     <strong>GetRawValue</strong>()
         </code>
@@ -547,7 +547,7 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_MaxLength">
-        <div class="location">at line 156</div>
+        <div class="location">at line 170</div>
         <code>        static            callable
     <strong>MaxLength</strong>(int $len)
         </code>
@@ -589,9 +589,9 @@ A value is considered null if it is an empty string or the string &quot;null&quo
             </div>
                     <div class="method-item">
                     <h3 id="method_GetValue">
-        <div class="location">at line 170</div>
+        <div class="location">at line 186</div>
         <code>                    null|mixed|<a href="../../../Andromeda/Core/IOFormat/SafeParam.html"><abbr title="Andromeda\Core\IOFormat\SafeParam">SafeParam</abbr></a>[]|<a href="../../../Andromeda/Core/IOFormat/SafeParams.html"><abbr title="Andromeda\Core\IOFormat\SafeParams">SafeParams</abbr></a>
-    <strong>GetValue</strong>(int $type, callable ...$valfuncs)
+    <strong>GetValue</strong>(int $type, array|null $values = null, callable|null $valfunc = null)
         </code>
     </h3>
     <div class="details">    
@@ -612,9 +612,14 @@ If the parameter is an array type, returns an array of SafeParams</p></p>
                 <td><p>the requested type of the parameter</p></td>
             </tr>
                     <tr>
-                <td>callable</td>
-                <td>...$valfuncs</td>
-                <td></td>
+                <td>array|null</td>
+                <td>$values</td>
+                <td><p>if not null, the value must be in this array</p></td>
+            </tr>
+                    <tr>
+                <td>callable|null</td>
+                <td>$valfunc</td>
+                <td><p>if not null, check the value against this function</p></td>
             </tr>
             </table>
 
@@ -634,7 +639,11 @@ If the parameter is an array type, returns an array of SafeParams</p></p>
                     <table class="table table-condensed">
                     <tr>
                 <td><a href="../../../Andromeda/Core/IOFormat/SafeParamInvalidException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamInvalidException">SafeParamInvalidException</abbr></a></td>
-                <td><p>if the value fails validation</p></td>
+                <td><p>if the value fails type validation</p></td>
+            </tr>
+                    <tr>
+                <td><a href="../../../Andromeda/Core/IOFormat/SafeParamInvalidEnumException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamInvalidEnumException">SafeParamInvalidEnumException</abbr></a></td>
+                <td><p>if the value is not in the given array</p></td>
             </tr>
                     <tr>
                 <td><a href="../../../Andromeda/Core/IOFormat/SafeParamUnknownTypeException.html"><abbr title="Andromeda\Core\IOFormat\SafeParamUnknownTypeException">SafeParamUnknownTypeException</abbr></a></td>

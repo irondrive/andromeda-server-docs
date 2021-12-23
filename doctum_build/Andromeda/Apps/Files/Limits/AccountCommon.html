@@ -218,27 +218,6 @@ that the account is part of has a limit object.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    int
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_GetMaxStatsAge">GetMaxStatsAge</a>()
-        
-                                            <p class="no-description">No description</p>
-                                    </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    <abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_GetsMaxStatsAgeFrom">GetsMaxStatsAgeFrom</a>()
-        
-                                            <p><p>Returns the object from which this account limit inherits its max stats age</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     array
                 </div>
                 <div class="col-md-8">
@@ -284,7 +263,7 @@ that the account is part of has a limit object.</p></p>        </div>
                     void
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_ProcessGroupRemove">ProcessGroupRemove</a>(<a href="../../../../Andromeda/Apps/Files/Limits/IGroupLimit.html"><abbr title="Andromeda\Apps\Files\Limits\IGroupLimit">IGroupLimit</abbr></a> $grlim)
+                    <a href="#method_BaseProcessGroupRemove">BaseProcessGroupRemove</a>(<a href="../../../../Andromeda/Apps/Files/Limits/Base.html"><abbr title="Andromeda\Apps\Files\Limits\Base">Base</abbr></a> $grlim)
         
                                             <p><p>Processes a group membership removal, possibly deleting this account limit</p></p>                </div>
                 <div class="col-md-2"></div>
@@ -298,7 +277,7 @@ that the account is part of has a limit object.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_GetScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetScalar">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 806</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 817</div>
         <code>            protected        
     <strong>GetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -338,7 +317,7 @@ that the account is part of has a limit object.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_TryGetScalar">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetScalar">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 814</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 825</div>
         <code>            protected        
     <strong>TryGetScalar</strong>(string $field, bool $allowTemp = true)
         </code>
@@ -378,7 +357,7 @@ that the account is part of has a limit object.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_GetObject">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_GetObject">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 821</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 832</div>
         <code>            protected        <a href="../../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
     <strong>GetObject</strong>(string $field)
         </code>
@@ -422,7 +401,7 @@ that the account is part of has a limit object.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_TryGetObject">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetObject">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 829</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 840</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetObject</strong>(string $field)
         </code>
@@ -465,7 +444,7 @@ that the account is part of has a limit object.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritsScalarFrom">
-        <div class="location">at line 47</div>
+        <div class="location">at line 45</div>
         <code>            protected        <abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetInheritsScalarFrom</strong>(string $field)
         </code>
@@ -509,7 +488,7 @@ that the account is part of has a limit object.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritsObjectFrom">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritsObjectFrom">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 843</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 854</div>
         <code>            protected        <abbr title="Andromeda\Apps\Accounts\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryGetInheritsObjectFrom</strong>(string $field)
         </code>
@@ -552,7 +531,7 @@ that the account is part of has a limit object.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_TryGetInheritable">
         <div class="location">in <a href="../../../../Andromeda/Apps/Accounts/GroupInherit.html#method_TryGetInheritable">
-<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 857</div>
+<abbr title="Andromeda\Apps\Accounts\GroupInherit">GroupInherit</abbr></a> at line 868</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/InheritedProperty.html"><abbr title="Andromeda\Apps\Accounts\InheritedProperty">InheritedProperty</abbr></a>
     <strong>TryGetInheritable</strong>(string $field, bool $useobj = false)
         </code>
@@ -600,7 +579,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetObjectClass">
-        <div class="location">at line 38</div>
+        <div class="location">at line 36</div>
         <code>        static    protected        string
     <strong>GetObjectClass</strong>()
         </code>
@@ -633,7 +612,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAccountID">
-        <div class="location">at line 41</div>
+        <div class="location">at line 39</div>
         <code>            protected        string
     <strong>GetAccountID</strong>()
         </code>
@@ -665,7 +644,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetAccount">
-        <div class="location">at line 44</div>
+        <div class="location">at line 42</div>
         <code>            protected        <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a>
     <strong>GetAccount</strong>()
         </code>
@@ -696,73 +675,8 @@ a member of, or if using a default value, null</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GetMaxStatsAge">
-        <div class="location">at line 53</div>
-        <code>                    int
-    <strong>GetMaxStatsAge</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p class="no-description">No description</p>
-                    
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>int</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
-                    <h3 id="method_GetsMaxStatsAgeFrom">
-        <div class="location">at line 56</div>
-        <code>                    <abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
-    <strong>GetsMaxStatsAgeFrom</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns the object from which this account limit inherits its max stats age</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td><abbr title="Andromeda\Apps\Files\Limits\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_GetClientObject">
-        <div class="location">at line 68</div>
+        <div class="location">at line 61</div>
         <code>                    array
     <strong>GetClientObject</strong>(bool $isadmin = false)
         </code>
@@ -823,7 +737,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetBaseUsage">
-        <div class="location">at line 87</div>
+        <div class="location">at line 82</div>
         <code>        static            string
     <strong>GetBaseUsage</strong>()
         </code>
@@ -856,7 +770,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_SetBaseLimits">
-        <div class="location">at line 89</div>
+        <div class="location">at line 84</div>
         <code>            protected        void
     <strong>SetBaseLimits</strong>(<a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -899,7 +813,7 @@ a member of, or if using a default value, null</p></p>
             </div>
                     <div class="method-item">
                     <h3 id="method_ConfigLimits">
-        <div class="location">at line 109</div>
+        <div class="location">at line 104</div>
         <code>        static            <a href="../../../../Andromeda/Apps/Files/Limits/AccountCommon.html"><abbr title="Andromeda\Apps\Files\Limits\AccountCommon">AccountCommon</abbr></a>
     <strong>ConfigLimits</strong>(<a href="../../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a> $database, <a href="../../../../Andromeda/Apps/Accounts/Account.html"><abbr title="Andromeda\Apps\Accounts\Account">Account</abbr></a> $account, <a href="../../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -950,10 +864,10 @@ a member of, or if using a default value, null</p></p>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_ProcessGroupRemove">
-        <div class="location">at line 121</div>
-        <code>                    void
-    <strong>ProcessGroupRemove</strong>(<a href="../../../../Andromeda/Apps/Files/Limits/IGroupLimit.html"><abbr title="Andromeda\Apps\Files\Limits\IGroupLimit">IGroupLimit</abbr></a> $grlim)
+                    <h3 id="method_BaseProcessGroupRemove">
+        <div class="location">at line 116</div>
+        <code>            protected        void
+    <strong>BaseProcessGroupRemove</strong>(<a href="../../../../Andromeda/Apps/Files/Limits/Base.html"><abbr title="Andromeda\Apps\Files\Limits\Base">Base</abbr></a> $grlim)
         </code>
     </h3>
     <div class="details">    
@@ -969,7 +883,7 @@ were set specifically for it, and no other group limits applicable to it exist</
 
                     <table class="table table-condensed">
                     <tr>
-                <td><a href="../../../../Andromeda/Apps/Files/Limits/IGroupLimit.html"><abbr title="Andromeda\Apps\Files\Limits\IGroupLimit">IGroupLimit</abbr></a></td>
+                <td><a href="../../../../Andromeda/Apps/Files/Limits/Base.html"><abbr title="Andromeda\Apps\Files\Limits\Base">Base</abbr></a></td>
                 <td>$grlim</td>
                 <td><p>group to remove</p></td>
             </tr>

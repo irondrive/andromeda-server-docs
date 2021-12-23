@@ -210,17 +210,17 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </tr>
                     <tr>
                 <td class="type" id="property_queries">
-                                                            private                    string[]
+                                                            private                    
                                                                                 
                                     </td>
                 <td>$queries</td>
-                <td class="last"></td>
+                <td class="last"><p>global history of SQL queries sent to the DB (not a stack)</p></td>
                 <td><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#property_queries">
 <abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></td>
             </tr>
                     <tr>
                 <td class="type" id="property_objects">
-                                                            private                    <abbr title="Andromeda\Core\Database\array&lt;string,array&lt;string,\Andromeda\Core\Database\BaseObject&gt;&gt;">BaseObject&gt;&gt;</abbr>
+                                                            private                    <abbr title="Andromeda\Core\Database\array&lt;class-string&lt;\Andromeda\Core\Database\T&gt;,array&lt;string,\Andromeda\Core\Database\T&gt;&gt;">T&gt;&gt;</abbr>
                                                                                 
                                     </td>
                 <td>$objects</td>
@@ -432,6 +432,17 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
+                    string
+                </div>
+                <div class="col-md-8">
+                    <a href="#method_SQLUpsert">SQLUpsert</a>(string $query)
+        
+                                            <p><p>Returns the driver-specific SQL UPSERT DO NOTHING query</p></p>                </div>
+                <div class="col-md-2"><small>from&nbsp;<a href="../../../Andromeda/Core/Database/Database.html#method_SQLUpsert">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a></small></div>
+            </div>
+                    <div class="row">
+                <div class="col-md-2 type">
                     bool
                 </div>
                 <div class="col-md-8">
@@ -443,7 +454,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    mixed
+                    array|int|null
                 </div>
                 <div class="col-md-8">
                     <a href="#method_query">query</a>(string $sql, int $type, array|null $data = null)
@@ -689,9 +700,9 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_SaveNewObject">SaveNewObject</a>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, array $values)
+                    <a href="#method_InsertObject">InsertObject</a>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, array $values)
         
-                                            <p><p>INSERTs and new object into the database with the given data</p></p>                </div>
+                                            <p><p>INSERTs a new object into the database with the given data</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -699,9 +710,9 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_CreateObject">CreateObject</a>(string $class)
+                    <a href="#method_GenerateObject">GenerateObject</a>(string $class)
         
-                                            <p><p>Creates a new object of the given class</p></p>                </div>
+                                            <p><p>Generates a new blank object of the given class</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
             </div>
@@ -713,7 +724,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_getDriver">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_getDriver">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 89</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 90</div>
         <code>                    int
     <strong>getDriver</strong>()
         </code>
@@ -758,7 +769,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method___construct">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method___construct">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 97</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 98</div>
         <code>                    
     <strong>__construct</strong>(string|null $config = null)
         </code>
@@ -805,7 +816,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_GetInstallUsage">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_GetInstallUsage">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 152</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 155</div>
         <code>        static            string
     <strong>GetInstallUsage</strong>()
         </code>
@@ -838,7 +849,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_GetInstallUsages">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_GetInstallUsages">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 158</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 161</div>
         <code>        static            array
     <strong>GetInstallUsages</strong>()
         </code>
@@ -871,7 +882,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_Install">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_Install">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 174</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 177</div>
         <code>        static            string|null
     <strong>Install</strong>(<a href="../../../Andromeda/Core/IOFormat/Input.html"><abbr title="Andromeda\Core\IOFormat\Input">Input</abbr></a> $input)
         </code>
@@ -935,7 +946,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_GetClientObject">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_GetClientObject">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 234</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 237</div>
         <code>                    array
     <strong>GetClientObject</strong>()
         </code>
@@ -968,7 +979,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_getInfo">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_getInfo">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 247</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 250</div>
         <code>                    array
     <strong>getInfo</strong>()
         </code>
@@ -1001,7 +1012,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_setReadOnly">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_setReadOnly">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 262</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 265</div>
         <code>                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
     <strong>setReadOnly</strong>(bool $ro = true)
         </code>
@@ -1044,7 +1055,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_isReadOnly">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_isReadOnly">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 265</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 268</div>
         <code>                    bool
     <strong>isReadOnly</strong>()
         </code>
@@ -1077,7 +1088,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_importTemplate">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_importTemplate">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 271</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 274</div>
         <code>                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
     <strong>importTemplate</strong>(string $path)
         </code>
@@ -1120,7 +1131,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_importFile">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_importFile">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 277</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 280</div>
         <code>                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
     <strong>importFile</strong>(string $path)
         </code>
@@ -1163,7 +1174,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_SupportsRETURNING">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_SupportsRETURNING">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 285</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 288</div>
         <code>            protected        bool
     <strong>SupportsRETURNING</strong>()
         </code>
@@ -1196,7 +1207,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_RequiresSAVEPOINT">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_RequiresSAVEPOINT">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 288</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 295</div>
         <code>            protected        bool
     <strong>RequiresSAVEPOINT</strong>()
         </code>
@@ -1229,7 +1240,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_BinaryAsStreams">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_BinaryAsStreams">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 291</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 298</div>
         <code>            protected        bool
     <strong>BinaryAsStreams</strong>()
         </code>
@@ -1262,7 +1273,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_BinaryEscapeInput">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_BinaryEscapeInput">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 294</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 301</div>
         <code>            protected        bool
     <strong>BinaryEscapeInput</strong>()
         </code>
@@ -1295,7 +1306,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_UsePublicSchema">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_UsePublicSchema">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 297</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 304</div>
         <code>            protected        bool
     <strong>UsePublicSchema</strong>()
         </code>
@@ -1328,7 +1339,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_SQLConcat">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_SQLConcat">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 300</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 307</div>
         <code>                    string
     <strong>SQLConcat</strong>(string ...$args)
         </code>
@@ -1369,9 +1380,52 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
 
             </div>
                     <div class="method-item">
+                    <h3 id="method_SQLUpsert">
+        <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_SQLUpsert">
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 321</div>
+        <code>                    string
+    <strong>SQLUpsert</strong>(string $query)
+        </code>
+    </h3>
+    <div class="details">    
+    
+            
+
+        <div class="method-description">
+                            <p><p>Returns the driver-specific SQL UPSERT DO NOTHING query</p></p>                        
+        </div>
+        <div class="tags">
+                            <h4>Parameters</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td>string</td>
+                <td>$query</td>
+                <td><p>the query after INSERT INTO (e.g. table (columns) VALUES (vals)</p></td>
+            </tr>
+            </table>
+
+            
+                            <h4>Return Value</h4>
+
+                    <table class="table table-condensed">
+        <tr>
+            <td>string</td>
+            <td><p>compiled query</p></td>
+        </tr>
+    </table>
+
+            
+            
+            
+                    </div>
+    </div>
+
+            </div>
+                    <div class="method-item">
                     <h3 id="method_inTransaction">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_inTransaction">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 310</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 331</div>
         <code>                    bool
     <strong>inTransaction</strong>()
         </code>
@@ -1404,8 +1458,8 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_query">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_query">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 322</div>
-        <code>                    mixed
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 343</div>
+        <code>                    array|int|null
     <strong>query</strong>(string $sql, int $type, array|null $data = null)
         </code>
     </h3>
@@ -1442,8 +1496,8 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
 
                     <table class="table table-condensed">
         <tr>
-            <td>mixed</td>
-            <td><p>if the query is a read, an associative array of the result, else count of affected rows</p></td>
+            <td>array|int|null</td>
+            <td><p>an associative array of the query results for reads, row count for writes</p></td>
         </tr>
     </table>
 
@@ -1466,7 +1520,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_logQuery">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_logQuery">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 390</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 411</div>
         <code>                private    string
     <strong>logQuery</strong>(string $sql, array|null $data)
         </code>
@@ -1514,7 +1568,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_fetchStreams">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_fetchStreams">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 412</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 433</div>
         <code>                private    void
     <strong>fetchStreams</strong>(array $rows)
         </code>
@@ -1557,7 +1611,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_beginTransaction">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_beginTransaction">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 425</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 446</div>
         <code>                    void
     <strong>beginTransaction</strong>()
         </code>
@@ -1590,7 +1644,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_rollback">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_rollback">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 438</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 459</div>
         <code>                    
     <strong>rollback</strong>()
         </code>
@@ -1614,7 +1668,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_commit">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_commit">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 451</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 472</div>
         <code>                    
     <strong>commit</strong>()
         </code>
@@ -1638,7 +1692,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_startTimingQuery">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_startTimingQuery">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 464</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 485</div>
         <code>                private    void
     <strong>startTimingQuery</strong>()
         </code>
@@ -1671,7 +1725,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_stopTimingQuery">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_stopTimingQuery">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 471</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 492</div>
         <code>                private    void
     <strong>stopTimingQuery</strong>(string $sql, int $type, bool $count = true)
         </code>
@@ -1724,7 +1778,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_pushStatsContext">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_pushStatsContext">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 478</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 499</div>
         <code>                    <a href="../../../Andromeda/Core/Database/Database.html"><abbr title="Andromeda\Core\Database\Database">Database</abbr></a>
     <strong>pushStatsContext</strong>()
         </code>
@@ -1757,7 +1811,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_popStatsContext">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_popStatsContext">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 484</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 505</div>
         <code>                    <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\DBStats">DBStats</abbr>|null
     <strong>popStatsContext</strong>()
         </code>
@@ -1790,7 +1844,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <div class="method-item">
                     <h3 id="method_getAllQueries">
         <div class="location">in <a href="../../../Andromeda/Core/Database/Database.html#method_getAllQueries">
-<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 493</div>
+<abbr title="Andromeda\Core\Database\Database">Database</abbr></a> at line 514</div>
         <code>                    array
     <strong>getAllQueries</strong>()
         </code>
@@ -1822,7 +1876,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_getLoadedObjectIDs">
-        <div class="location">at line 31</div>
+        <div class="location">at line 40</div>
         <code>                    array
     <strong>getLoadedObjectIDs</strong>()
         </code>
@@ -1842,7 +1896,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <table class="table table-condensed">
         <tr>
             <td>array</td>
-            <td><p>list of ID arrays indexed by class</p></td>
+            <td><p>&lt;string, string[]&gt; list of ID arrays indexed by class of loaded objects</p></td>
         </tr>
     </table>
 
@@ -1855,7 +1909,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_saveObjects">
-        <div class="location">at line 37</div>
+        <div class="location">at line 46</div>
         <code>                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
     <strong>saveObjects</strong>(bool $onlyMandatory = false)
         </code>
@@ -1897,7 +1951,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_GetClassTableName">
-        <div class="location">at line 46</div>
+        <div class="location">at line 59</div>
         <code>                    string
     <strong>GetClassTableName</strong>(string $class)
         </code>
@@ -1916,7 +1970,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
                     <tr>
                 <td>string</td>
                 <td>$class</td>
-                <td></td>
+                <td><p>the class name</p></td>
             </tr>
             </table>
 
@@ -1939,7 +1993,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_Rows2Objects">
-        <div class="location">at line 60</div>
+        <div class="location">at line 74</div>
         <code>                private    array
     <strong>Rows2Objects</strong>(array $rows, string $class)
         </code>
@@ -1986,7 +2040,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryPreloadObjectByID">
-        <div class="location">at line 97</div>
+        <div class="location">at line 114</div>
         <code>                private    <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryPreloadObjectByID</strong>(string $class, string $id)
         </code>
@@ -2042,7 +2096,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_TryLoadObjectByUniqueKey">
-        <div class="location">at line 123</div>
+        <div class="location">at line 141</div>
         <code>                    <abbr title="Andromeda\Core\Database\Andromeda\Core\Database\BaseObject">BaseObject</abbr>|null
     <strong>TryLoadObjectByUniqueKey</strong>(string $class, string $field, string $value)
         </code>
@@ -2103,7 +2157,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_CountObjectsByQuery">
-        <div class="location">at line 143</div>
+        <div class="location">at line 162</div>
         <code>                    int
     <strong>CountObjectsByQuery</strong>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -2150,7 +2204,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_LoadObjectsByQuery">
-        <div class="location">at line 158</div>
+        <div class="location">at line 178</div>
         <code>                    array
     <strong>LoadObjectsByQuery</strong>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -2197,7 +2251,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_UnsetObject">
-        <div class="location">at line 171</div>
+        <div class="location">at line 191</div>
         <code>                private    void
     <strong>UnsetObject</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object)
         </code>
@@ -2240,7 +2294,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteObjectsByQuery">
-        <div class="location">at line 184</div>
+        <div class="location">at line 205</div>
         <code>                    int
     <strong>DeleteObjectsByQuery</strong>(string $class, <a href="../../../Andromeda/Core/Database/QueryBuilder.html"><abbr title="Andromeda\Core\Database\QueryBuilder">QueryBuilder</abbr></a> $query)
         </code>
@@ -2287,7 +2341,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_DeleteObject">
-        <div class="location">at line 226</div>
+        <div class="location">at line 244</div>
         <code>                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
     <strong>DeleteObject</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object)
         </code>
@@ -2321,6 +2375,15 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/RowDeleteFailedException.html"><abbr title="Andromeda\Core\Database\RowDeleteFailedException">RowDeleteFailedException</abbr></a></td>
+                <td><p>if nothing is deleted</p></td>
+            </tr>
+            </table>
+
             
             
                     </div>
@@ -2329,7 +2392,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             </div>
                     <div class="method-item">
                     <h3 id="method_SaveObject">
-        <div class="location">at line 246</div>
+        <div class="location">at line 264</div>
         <code>                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
     <strong>SaveObject</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, array $values, array $counters)
         </code>
@@ -2380,10 +2443,10 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_SaveNewObject">
-        <div class="location">at line 280</div>
-        <code>                private    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
-    <strong>SaveNewObject</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, array $values)
+                    <h3 id="method_InsertObject">
+        <div class="location">at line 297</div>
+        <code>                    <a href="../../../Andromeda/Core/Database/ObjectDatabase.html"><abbr title="Andromeda\Core\Database\ObjectDatabase">ObjectDatabase</abbr></a>
+    <strong>InsertObject</strong>(<a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a> $object, array $values)
         </code>
     </h3>
     <div class="details">    
@@ -2391,7 +2454,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             
 
         <div class="method-description">
-                            <p><p>INSERTs and new object into the database with the given data</p></p>                        
+                            <p><p>INSERTs a new object into the database with the given data</p></p>                        
         </div>
         <div class="tags">
                             <h4>Parameters</h4>
@@ -2420,6 +2483,15 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
     </table>
 
             
+                            <h4>Exceptions</h4>
+
+                    <table class="table table-condensed">
+                    <tr>
+                <td><a href="../../../Andromeda/Core/Database/RowInsertFailedException.html"><abbr title="Andromeda\Core\Database\RowInsertFailedException">RowInsertFailedException</abbr></a></td>
+                <td><p>if nothing is inserted</p></td>
+            </tr>
+            </table>
+
             
             
                     </div>
@@ -2427,10 +2499,10 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_CreateObject">
-        <div class="location">at line 310</div>
+                    <h3 id="method_GenerateObject">
+        <div class="location">at line 332</div>
         <code>                    <a href="../../../Andromeda/Core/Database/BaseObject.html"><abbr title="Andromeda\Core\Database\BaseObject">BaseObject</abbr></a>
-    <strong>CreateObject</strong>(string $class)
+    <strong>GenerateObject</strong>(string $class)
         </code>
     </h3>
     <div class="details">    
@@ -2438,7 +2510,7 @@ This class should only be used internally for BaseObjects.</p></p>        </div>
             
 
         <div class="method-description">
-                            <p><p>Creates a new object of the given class</p></p>                <p><p>The object will not actually exist in the DB until Save() is called,
+                            <p><p>Generates a new blank object of the given class</p></p>                <p><p>The object will not actually exist in the DB until Save() is called,
 and its fields will have only the defaults given in its field template</p></p>        
         </div>
         <div class="tags">

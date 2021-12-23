@@ -102,32 +102,12 @@
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;int
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_NonceLength">NonceLength</a>()
-        
-                                            <p><p>Returns the length of a nonce for use with this class</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
                     static&nbsp;string
                 </div>
                 <div class="col-md-8">
                     <a href="#method_GenerateKey">GenerateKey</a>()
         
                                             <p><p>Generates a crypto key for use with this class</p></p>                </div>
-                <div class="col-md-2"></div>
-            </div>
-                    <div class="row">
-                <div class="col-md-2 type">
-                    static&nbsp;string
-                </div>
-                <div class="col-md-8">
-                    <a href="#method_GenerateNonce">GenerateNonce</a>()
-        
-                                            <p><p>Generates a crypto nonce for use with this class</p></p>                </div>
                 <div class="col-md-2"></div>
             </div>
                     <div class="row">
@@ -168,7 +148,7 @@
             <div id="method-details">
                     <div class="method-item">
                     <h3 id="method_KeyLength">
-        <div class="location">at line 158</div>
+        <div class="location">at line 151</div>
         <code>        static            int
     <strong>KeyLength</strong>()
         </code>
@@ -199,40 +179,8 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_NonceLength">
-        <div class="location">at line 161</div>
-        <code>        static            int
-    <strong>NonceLength</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Returns the length of a nonce for use with this class</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>int</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_GenerateKey">
-        <div class="location">at line 164</div>
+        <div class="location">at line 154</div>
         <code>        static            string
     <strong>GenerateKey</strong>()
         </code>
@@ -263,40 +211,8 @@
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_GenerateNonce">
-        <div class="location">at line 167</div>
-        <code>        static            string
-    <strong>GenerateNonce</strong>()
-        </code>
-    </h3>
-    <div class="details">    
-    
-            
-
-        <div class="method-description">
-                            <p><p>Generates a crypto nonce for use with this class</p></p>                        
-        </div>
-        <div class="tags">
-            
-                            <h4>Return Value</h4>
-
-                    <table class="table table-condensed">
-        <tr>
-            <td>string</td>
-            <td></td>
-        </tr>
-    </table>
-
-            
-            
-            
-                    </div>
-    </div>
-
-            </div>
-                    <div class="method-item">
                     <h3 id="method_MakeAuthCode">
-        <div class="location">at line 176</div>
+        <div class="location">at line 162</div>
         <code>        static            string
     <strong>MakeAuthCode</strong>(string $message, string $key)
         </code>
@@ -335,15 +251,6 @@
     </table>
 
             
-                            <h4>Exceptions</h4>
-
-                    <table class="table table-condensed">
-                    <tr>
-                <td><a href="../../Andromeda/Core/EncryptionFailedException.html"><abbr title="Andromeda\Core\EncryptionFailedException">EncryptionFailedException</abbr></a></td>
-                <td><p>if encryption fails</p></td>
-            </tr>
-            </table>
-
             
             
                     </div>
@@ -352,7 +259,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_TryCheckAuthCode">
-        <div class="location">at line 191</div>
+        <div class="location">at line 176</div>
         <code>        static            bool
     <strong>TryCheckAuthCode</strong>(string $mac, string $message, string $key)
         </code>
@@ -404,7 +311,7 @@
             </div>
                     <div class="method-item">
                     <h3 id="method_CheckAuthCode">
-        <div class="location">at line 203</div>
+        <div class="location">at line 188</div>
         <code>        static            void
     <strong>CheckAuthCode</strong>(string $mac, string $message, string $key)
         </code>

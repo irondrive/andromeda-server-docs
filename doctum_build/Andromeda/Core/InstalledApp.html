@@ -213,14 +213,14 @@ and has upgrade scripts for upgrading the database</p></p>                    </
             </div>
                     <div class="row">
                 <div class="col-md-2 type">
-                    static&nbsp;int
+                    static&nbsp;string
                 </div>
                 <div class="col-md-8">
-                    <a href="#method_getAppReqVersion">getAppReqVersion</a>(string $app)
+                    <a href="#method_getAppApiVersion">getAppApiVersion</a>(string $app)
         
                                             <p class="no-description">No description</p>
                                     </div>
-                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+                <div class="col-md-2"><small>from&nbsp;<a href="../../Andromeda/Core/BaseApp.html#method_getAppApiVersion">
 <abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a></small></div>
             </div>
                     <div class="row">
@@ -642,11 +642,11 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
             </div>
                     <div class="method-item">
-                    <h3 id="method_getAppReqVersion">
-        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getAppReqVersion">
+                    <h3 id="method_getAppApiVersion">
+        <div class="location">in <a href="../../Andromeda/Core/BaseApp.html#method_getAppApiVersion">
 <abbr title="Andromeda\Core\BaseApp">BaseApp</abbr></a> at line 83</div>
-        <code>        static            int
-    <strong>getAppReqVersion</strong>(string $app)
+        <code>        static            string
+    <strong>getAppApiVersion</strong>(string $app)
         </code>
     </h3>
     <div class="details">    
@@ -673,8 +673,8 @@ sequentially until the DB is up to date with the code</p></p>                </d
 
                     <table class="table table-condensed">
         <tr>
-            <td>int</td>
-            <td><p>Returns the major API version this app is compatible with</p></td>
+            <td>string</td>
+            <td><p>Returns the major.minor API version this app is compatible with</p></td>
         </tr>
     </table>
 
